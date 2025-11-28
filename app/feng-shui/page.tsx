@@ -82,7 +82,7 @@ export default function FengShuiPage() {
         <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-purple-500/20">
             <Header />
 
-            <main className="flex-1 container max-w-2xl mx-auto py-12 px-4 flex flex-col justify-center min-h-[600px]">
+            <main className="flex-1 container max-w-2xl mx-auto py-12 md:py-20 px-4 flex flex-col">
                 <div className="space-y-8 animate-fade-in-up">
                     {/* Progress */}
                     <div className="space-y-3">
