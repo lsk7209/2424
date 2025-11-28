@@ -21,13 +21,41 @@ export const guidePosts: GuidePost[] = [
     faq: [
       {
         question: '등기부등본은 어디서 발급받나요?',
-        answer: '대법원 인터넷등기소(iros.go.kr)에서 누구나 열람 및 발급이 가능합니다.'
+        answer: '대법원 인터넷등기소(iros.go.kr)에서 누구나 열람 및 발급이 가능합니다. PC에서는 1,000원, 모바일에서는 700원에 발급받을 수 있으며, 공인인증서 없이도 간편인증으로 가능합니다.'
+      },
+      {
+        question: '채권최고액과 실제 대출금액은 어떻게 다른가요?',
+        answer: '채권최고액은 은행이 담보로 잡을 수 있는 최대 금액입니다. 실제 대출금은 보통 채권최고액의 70~80% 수준이지만, 안전을 위해서는 채권최고액 전액을 빚으로 계산해야 합니다.'
+      },
+      {
+        question: '말소기준권리란 무엇인가요?',
+        answer: '경매 시 소멸되는 권리와 살아남는 권리를 구분하는 기준점입니다. 보통 가장 선순위 근저당권이 말소기준권리가 되며, 이보다 후순위 권리들은 경매로 모두 소멸됩니다.'
+      },
+      {
+        question: '등기부등본은 얼마나 자주 확인해야 하나요?',
+        answer: '최소 3번 확인하세요. ①계약 전 ②잔금 치르기 직전 ③전입신고 당일. 집주인이 계약 후 몰래 대출을 받는 경우가 있어 반드시 여러 번 확인해야 합니다.'
+      },
+      {
+        question: '신탁등기가 있으면 무조건 위험한가요?',
+        answer: '신탁등기 자체가 문제는 아니지만, 반드시 신탁원부를 확인하고 수탁자(신탁회사)의 임대차 동의서를 받아야 합니다. 전문가 상담 없이는 계약하지 않는 것이 안전합니다.'
       }
     ],
     content: `
       <article class="prose prose-slate max-w-none">
-        <p class="lead text-xl text-slate-600 font-medium">부동산 계약 전, 등기부등본을 볼 줄 모르면 내 보증금은 '운'에 맡겨야 합니다. 표제부, 갑구, 을구의 핵심만 짚어드립니다.</p>
+        <p class="lead text-xl text-slate-600 font-medium">2023년 한 해에만 전세 사기 피해액이 1조 원을 넘었습니다. 피해자의 90% 이상이 "등기부등본을 제대로 확인하지 않았다"고 답했습니다. 이 가이드 하나면 당신의 보증금을 지킬 수 있습니다.</p>
         
+        <div class="my-8 p-6 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+            <h3 class="text-red-900 font-bold text-lg mb-3">📢 실제 사례: 2억 전세금을 날린 김모씨의 이야기</h3>
+            <p class="text-red-800 text-sm leading-relaxed">
+                서울 강서구에 거주하던 김모씨(32세)는 2022년 보증금 2억 원에 빌라를 계약했습니다. 공인중개사가 보여준 등기부등본을 대충 훑어보고 "괜찮다"는 말만 믿고 계약했죠. 
+                <br/><br/>
+                하지만 1년 후 집주인이 잠적했고, 알고 보니 <strong>근저당권 1억 5천만 원 + 선순위 전세 보증금 1억 원</strong>이 이미 설정되어 있었습니다. 집 시세는 2억 5천만 원. 
+                경매로 넘어갔고 김씨가 받은 돈은 <strong>단 1,000만 원</strong>. 나머지 1억 9천만 원은 날렸습니다.
+                <br/><br/>
+                <span class="font-bold text-red-900">만약 을구의 근저당권만 제대로 확인했어도 막을 수 있었던 비극입니다.</span>
+            </p>
+        </div>
+
         <div class="my-8 p-6 bg-blue-50 border border-blue-100 rounded-2xl">
             <h3 class="text-blue-900 font-bold text-lg mb-2">💡 3초 요약</h3>
             <ul class="list-disc list-inside text-blue-800 space-y-1">
@@ -37,51 +65,234 @@ export const guidePosts: GuidePost[] = [
             </ul>
         </div>
 
+        <h2>📋 등기부등본 발급 방법 (5분 완성)</h2>
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 my-6">
+            <h4 class="font-bold text-slate-900 mb-4">Step-by-Step 발급 가이드</h4>
+            <ol class="space-y-3 text-slate-700">
+                <li class="flex items-start gap-3">
+                    <span class="bg-indigo-100 text-indigo-700 font-bold rounded-full w-6 h-6 flex items-center justify-center shrink-0">1</span>
+                    <div>
+                        <strong>인터넷등기소 접속</strong><br/>
+                        <span class="text-sm">www.iros.go.kr 접속 → 상단 메뉴 '열람/발급' 클릭</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-indigo-100 text-indigo-700 font-bold rounded-full w-6 h-6 flex items-center justify-center shrink-0">2</span>
+                    <div>
+                        <strong>부동산 검색</strong><br/>
+                        <span class="text-sm">주소 또는 고유번호로 검색 (계약서에 적힌 주소 그대로 입력)</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-indigo-100 text-indigo-700 font-bold rounded-full w-6 h-6 flex items-center justify-center shrink-0">3</span>
+                    <div>
+                        <strong>등기사항전부증명서 선택</strong><br/>
+                        <span class="text-sm text-red-600">⚠️ '등기사항일부증명서'가 아닌 <strong>'전부증명서'</strong>를 선택해야 합니다!</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-indigo-100 text-indigo-700 font-bold rounded-full w-6 h-6 flex items-center justify-center shrink-0">4</span>
+                    <div>
+                        <strong>결제 및 다운로드</strong><br/>
+                        <span class="text-sm">PC 1,000원 / 모바일 700원 (간편인증 가능)</span>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <hr class="my-8 border-slate-200" />
+
         <h2>1. 표제부: 집의 신분증</h2>
-        <p>건물의 주소, 면적, 용도 등이 적혀 있습니다. 계약서상의 주소와 100% 일치해야 합니다.</p>
-        <ul class="list-none pl-0 space-y-2">
-            <li class="flex items-start gap-2">
-                <span class="text-red-500 font-bold">⚠️ 주의:</span>
-                <span>다세대주택(빌라)은 지번뿐만 아니라 <strong>동, 호수</strong>까지 정확히 일치해야 합니다.</span>
-            </li>
-            <li class="flex items-start gap-2">
-                <span class="text-blue-500 font-bold">Tip:</span>
-                <span>'근린생활시설'로 표기되어 있다면 전세자금대출이 불가능할 수 있으니 주의하세요.</span>
-            </li>
-        </ul>
+        <p>건물의 주소, 면적, 용도 등이 적혀 있습니다. <strong>계약서상의 주소와 100% 일치</strong>해야 합니다.</p>
+        
+        <div class="overflow-x-auto my-6">
+            <table class="w-full text-sm border-collapse">
+                <thead class="bg-slate-100">
+                    <tr>
+                        <th class="border px-4 py-3 text-left">항목</th>
+                        <th class="border px-4 py-3 text-left">확인 내용</th>
+                        <th class="border px-4 py-3 text-left">주의사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">소재지번</td>
+                        <td class="border px-4 py-3">서울시 강남구 역삼동 123-45</td>
+                        <td class="border px-4 py-3 text-red-600">계약서와 1글자라도 다르면 안 됨</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">건물명칭</td>
+                        <td class="border px-4 py-3">○○빌라 101동 502호</td>
+                        <td class="border px-4 py-3 text-red-600">동, 호수까지 정확히 일치해야 함</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">건물 용도</td>
+                        <td class="border px-4 py-3">공동주택(아파트/다세대)</td>
+                        <td class="border px-4 py-3 text-yellow-600">'근린생활시설'이면 대출 불가능할 수 있음</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">전유면적</td>
+                        <td class="border px-4 py-3">59.98㎡ (약 18평)</td>
+                        <td class="border px-4 py-3">공급면적과 전용면적 구분 필요</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-200 my-4">
+            <span class="font-bold text-yellow-800">⚠️ 실전 주의사항</span>
+            <ul class="text-sm text-yellow-700 mt-2 space-y-1 list-disc list-inside">
+                <li>다세대주택(빌라)은 <strong>동, 호수</strong>까지 정확히 일치해야 합니다</li>
+                <li>'근린생활시설'로 표기되어 있으면 전세자금대출이 불가능할 수 있습니다</li>
+                <li>위반건축물로 표시되어 있으면 전세보증보험 가입이 거절됩니다</li>
+            </ul>
+        </div>
 
         <hr class="my-8 border-slate-200" />
 
         <h2>2. 갑구: 소유권에 관한 사항</h2>
-        <p>현재 집주인이 누구인지, 소유권에 문제가 없는지 보여줍니다.</p>
+        <p>현재 집주인이 누구인지, 소유권에 문제가 없는지 보여줍니다. <strong>가장 마지막 순위의 소유자가 현재 집주인</strong>입니다.</p>
+
+        <h3 class="text-lg font-bold mt-6 mb-3">✅ 반드시 확인해야 할 것</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                <h4 class="font-bold text-slate-900 mb-2">✅ 확인해야 할 것</h4>
-                <p class="text-sm text-slate-600">가장 마지막 순위의 소유자가 현재 집주인입니다. 신분증과 대조하여 이름, 주민번호 앞자리가 일치하는지 확인하세요.</p>
+            <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                <h4 class="font-bold text-green-900 mb-2">1. 소유자 일치 여부</h4>
+                <p class="text-sm text-green-800">계약하러 나온 사람의 신분증과 등기부상 소유자의 이름, 주민번호 앞자리가 일치하는지 확인하세요.</p>
+                <p class="text-xs text-green-700 mt-2">💡 대리인이 나왔다면? → 위임장 + 인감증명서(본인발급) 필수</p>
             </div>
-            <div class="p-4 bg-red-50 rounded-xl border border-red-200">
-                <h4 class="font-bold text-red-900 mb-2">❌ 피해야 할 단어</h4>
-                <p class="text-sm text-red-800">가압류, 가처분, 가등기, 예고등기, 경매개시결정. 이런 단어가 보이면 즉시 계약을 중단하세요.</p>
+            <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                <h4 class="font-bold text-green-900 mb-2">2. 소유권 이전 이력</h4>
+                <p class="text-sm text-green-800">최근 1년 내에 소유권이 여러 번 바뀌었다면 의심해봐야 합니다. 전세 사기범들이 자주 쓰는 수법입니다.</p>
+            </div>
+        </div>
+
+        <h3 class="text-lg font-bold mt-6 mb-3">❌ 즉시 계약 중단해야 하는 위험 신호</h3>
+        <div class="space-y-3 my-4">
+            <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-200">
+                <span class="text-2xl">🚨</span>
+                <div>
+                    <strong class="text-red-900">가압류 / 가처분</strong>
+                    <p class="text-sm text-red-800 mt-1">집주인이 빚을 갚지 못해 법원이 재산을 동결한 상태입니다. 계약하면 100% 피해를 봅니다.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-200">
+                <span class="text-2xl">🚨</span>
+                <div>
+                    <strong class="text-red-900">가등기 / 예고등기</strong>
+                    <p class="text-sm text-red-800 mt-1">소유권 분쟁이 진행 중이거나 예정되어 있다는 뜻입니다. 절대 계약하지 마세요.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-200">
+                <span class="text-2xl">🚨</span>
+                <div>
+                    <strong class="text-red-900">경매개시결정</strong>
+                    <p class="text-sm text-red-800 mt-1">이미 경매가 시작되었습니다. 계약하면 보증금을 한 푼도 못 받을 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-orange-50 rounded-lg border border-orange-200">
+                <span class="text-2xl">⚠️</span>
+                <div>
+                    <strong class="text-orange-900">신탁 등기</strong>
+                    <p class="text-sm text-orange-800 mt-1">실제 소유자가 신탁회사입니다. 반드시 <strong>신탁원부</strong>를 확인하고 수탁자의 임대차 동의서를 받아야 합니다. 전문가 상담 필수!</p>
+                </div>
             </div>
         </div>
 
         <hr class="my-8 border-slate-200" />
 
-        <h2>3. 을구: 소유권 이외의 권리 (빚)</h2>
-        <p>이 집을 담보로 빚이 얼마나 있는지 보여줍니다. <strong>깡통전세</strong>를 피하기 위해 가장 꼼꼼히 봐야 합니다.</p>
+        <h2>3. 을구: 소유권 이외의 권리 (빚) - 가장 중요!</h2>
+        <p>이 집을 담보로 빚이 얼마나 있는지 보여줍니다. <strong>깡통전세</strong>를 피하기 위해 가장 꼼꼼히 봐야 하는 부분입니다.</p>
         
-        <h3 class="text-lg font-bold mt-6 mb-3">안전한 집 계산 공식</h3>
+        <h3 class="text-lg font-bold mt-6 mb-3">🔍 근저당권 읽는 법</h3>
+        <div class="bg-slate-900 text-white p-6 rounded-xl my-6">
+            <p class="text-sm text-slate-300 mb-2">등기부등본 을구 예시:</p>
+            <div class="bg-slate-800 p-4 rounded font-mono text-sm">
+                <p>순위번호: 1</p>
+                <p>등기목적: 근저당권설정</p>
+                <p>접수일자: 2023년 3월 15일</p>
+                <p>채권최고액: <span class="text-yellow-400 font-bold">금 180,000,000원</span></p>
+                <p>채무자: 홍길동</p>
+                <p>근저당권자: ○○은행</p>
+            </div>
+        </div>
+
+        <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 my-6">
+            <h4 class="font-bold text-yellow-900 mb-3">💰 채권최고액 vs 실제 대출금</h4>
+            <p class="text-sm text-yellow-800 mb-3">
+                <strong>채권최고액 1억 8천만 원</strong>이라고 해서 실제 대출금이 1억 8천만 원은 아닙니다.
+                보통 실제 대출금은 채권최고액의 <strong>70~80%</strong> 수준입니다.
+            </p>
+            <div class="bg-white p-4 rounded-lg">
+                <p class="text-sm font-bold text-slate-900 mb-2">계산 예시:</p>
+                <p class="text-sm text-slate-700">채권최고액: 1억 8천만 원</p>
+                <p class="text-sm text-slate-700">→ 실제 대출금 추정: 1억 2천만 원 ~ 1억 4천만 원</p>
+                <p class="text-sm text-red-600 mt-2 font-bold">⚠️ 하지만 안전을 위해서는 채권최고액 전액(1억 8천)을 빚으로 계산해야 합니다!</p>
+            </div>
+        </div>
+
+        <h3 class="text-lg font-bold mt-6 mb-3">📊 안전한 집 계산 공식</h3>
         <div class="bg-slate-900 text-white p-6 rounded-xl text-center mb-6">
             <p class="text-lg font-medium">
                 (근저당권 설정액 + 내 전세 보증금) <br/>
-                <span class="text-yellow-400">≤ 집 시세의 70%</span>
+                <span class="text-yellow-400 text-2xl font-bold">≤ 집 시세의 70%</span>
             </p>
         </div>
-        <p>채권최고액(은행이 빌려준 돈의 120~130%)을 기준으로 계산해야 안전합니다. 말소된 권리는 빨간 줄이 그어져 있으니, 살아있는 권리만 합산하세요.</p>
+
+        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-6">
+            <h4 class="font-bold text-indigo-900 mb-3">📝 실전 계산 예시</h4>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg">
+                    <p class="font-bold text-green-700 mb-2">✅ 안전한 경우</p>
+                    <ul class="text-sm text-slate-700 space-y-1">
+                        <li>• 집 시세: 4억 원</li>
+                        <li>• 근저당권: 1억 원</li>
+                        <li>• 내 전세금: 1억 5천만 원</li>
+                        <li class="font-bold text-green-700">→ 합계 2억 5천만 원 (시세의 62.5%) ✅ 안전</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <p class="font-bold text-red-700 mb-2">❌ 위험한 경우 (깡통전세)</p>
+                    <ul class="text-sm text-slate-700 space-y-1">
+                        <li>• 집 시세: 3억 원</li>
+                        <li>• 근저당권: 1억 5천만 원</li>
+                        <li>• 내 전세금: 1억 5천만 원</li>
+                        <li class="font-bold text-red-700">→ 합계 3억 원 (시세의 100%) ❌ 매우 위험!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-lg font-bold mt-6 mb-3">🎯 말소된 권리 vs 살아있는 권리</h3>
+        <p class="text-slate-700 mb-4">등기부등본에는 과거에 있었다가 사라진 권리도 모두 기록됩니다. <strong>빨간 줄(밑줄)</strong>이 그어진 권리는 이미 말소된 것이므로 계산에서 제외합니다.</p>
         
-        <div class="mt-8">
-            <a href="/safety-check" class="block w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white text-center font-bold rounded-xl transition-colors no-underline">
-                내 보증금 안전할까? 1분 만에 진단하기 →
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 mb-2">살아있는 권리 (계산 O)</h4>
+                <p class="text-sm text-slate-600">밑줄 없이 그대로 표시된 근저당권, 전세권 등</p>
+            </div>
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 mb-2">말소된 권리 (계산 X)</h4>
+                <p class="text-sm text-slate-600">빨간 줄이 그어진 권리 (이미 해지됨)</p>
+            </div>
+        </div>
+
+        <hr class="my-8 border-slate-200" />
+
+        <h2>📚 관련 법령 및 근거</h2>
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+            <ul class="space-y-2 text-sm text-slate-700">
+                <li>• <strong>부동산등기법 제14조</strong> (등기사항증명서의 발급)</li>
+                <li>• <strong>주택임대차보호법 제3조</strong> (대항력의 취득)</li>
+                <li>• <strong>주택임대차보호법 제3조의2</strong> (보증금의 회수)</li>
+                <li>• <strong>민법 제303조</strong> (저당권의 효력)</li>
+            </ul>
+        </div>
+
+        <div class="mt-8 p-6 bg-indigo-50 rounded-2xl text-center">
+            <h3 class="text-indigo-900 font-bold text-xl mb-2">내 보증금, 정말 안전할까요?</h3>
+            <p class="text-indigo-700 mb-6">복잡한 계산은 AI에게 맡기세요. 보증금과 융자금만 입력하면 1분 만에 위험도 분석!</p>
+            <a href="/safety-check" class="inline-block px-8 py-4 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-700 transition-all transform hover:scale-105 no-underline shadow-lg text-lg">
+                🏠 전세 안전진단 무료로 받기 →
             </a>
         </div>
       </article>
