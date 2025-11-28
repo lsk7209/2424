@@ -4,7 +4,7 @@ import { blogPosts } from '@/data/blog-posts';
 import { guidePosts } from '@/data/guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://indie-life.vercel.app'; // TODO: 실제 배포 도메인으로 변경
+  const baseUrl = 'https://today2424.kr';
 
   // Static Pages
   const staticPages = [
