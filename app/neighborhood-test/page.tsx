@@ -31,13 +31,21 @@ export default function NeighborhoodTestPage() {
     const handleOptionSelect = (optionIndex: number) => {
         setSelectedOption(optionIndex);
         setAnswer(currentQuestion, optionIndex);
+
+        // Auto-advance after 300ms
+        setTimeout(() => {
+            if (currentQuestion < neighborhoodQuestions.length) {
+                nextQuestion();
+            } else {
+                router.push('/neighborhood-test/result');
+            }
+        }, 300);
     };
 
     const handleNext = () => {
         if (selectedOption === null) return;
 
         if (currentQuestion === neighborhoodQuestions.length) {
-            // 마지막 질문이면 결과 페이지로 이동
             router.push('/neighborhood-test/result');
         } else {
             nextQuestion();
@@ -82,8 +90,8 @@ export default function NeighborhoodTestPage() {
                                         key={index}
                                         onClick={() => handleOptionSelect(index)}
                                         className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-200 ${selectedOption === index
-                                                ? 'border-primary bg-primary/5 shadow-md'
-                                                : 'border-border hover:border-primary/50 hover:bg-muted/50'
+                                            ? 'border-primary bg-primary/5 shadow-md'
+                                            : 'border-border hover:border-primary/50 hover:bg-muted/50'
                                             }`}
                                     >
                                         <div className="flex items-center justify-between">

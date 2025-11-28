@@ -32,45 +32,77 @@ export const blogPosts: BlogPost[] = [
       <article>
         <p class="lead">최근 전세 사기 피해가 급증하면서 불안해하는 분들이 많습니다. "설마 나한테 그런 일이 생기겠어?"라는 안일한 생각이 가장 위험합니다. 정확한 지식과 꼼꼼한 확인만이 내 소중한 보증금을 지킬 수 있는 유일한 방법입니다. 사회초년생도 쉽게 이해할 수 있도록 전세 계약 전 반드시 확인해야 할 핵심 포인트를 정리해 드립니다.</p>
 
-        <h2>1. 등기부등본, 3번 확인의 법칙</h2>
-        <p>등기부등본은 부동산의 신분증과 같습니다. 계약 전, 잔금 치르기 전, 그리고 전입신고 당일 등 최소 3번은 확인해야 합니다.</p>
-        
-        <h3>갑구(소유권) 확인하기</h3>
-        <ul>
-          <li><strong>소유자 일치 여부:</strong> 계약하러 나온 사람이 등기부상 소유자와 동일인인지 신분증을 대조하여 확인하세요.</li>
-          <li><strong>가압류, 가처분 등기:</strong> 갑구에 가압류, 가처분, 가등기 등이 있다면 절대 계약하면 안 됩니다. 소유권 분쟁이 있는 위험한 집입니다.</li>
-        </ul>
-
-        <h3>을구(소유권 이외의 권리) 확인하기</h3>
-        <ul>
-          <li><strong>근저당권 설정액:</strong> 집주인이 집을 담보로 빌린 돈입니다.</li>
-          <li><strong>안전한 집의 기준:</strong> (근저당권 설정액 + 내 전세 보증금)이 집 시세의 70% 이하여야 안전합니다. 이를 넘어가면 '깡통전세' 위험이 높습니다.</li>
-        </ul>
-
-        <div class="bg-red-50 p-4 rounded-lg border border-red-200 my-4">
-          <h4 class="text-red-700 font-bold mb-2">🚨 주의! 신탁 등기가 있는 경우</h4>
-          <p class="text-sm text-red-600">등기부등본에 '신탁'이라는 단어가 보이면 일단 멈추세요. 신탁 회사 소유의 집일 수 있으며, 이 경우 집주인(위탁자)과 계약해도 효력이 없을 수 있습니다. 반드시 신탁 원부를 발급받아 권리 관계를 확인해야 합니다.</p>
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg not-prose">
+          <h4 class="text-blue-900 font-bold mb-2 text-lg">💡 계약 전, 1분 만에 안전 진단해보세요!</h4>
+          <p class="text-blue-800 mb-4">계약하려는 집의 보증금과 시세만 알면, AI가 깡통전세 위험도를 분석해 드립니다.</p>
+          <a href="/safety-check" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline shadow-md">
+            🏠 전세 사기 위험도 무료 진단하기 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </a>
         </div>
 
-        <h2>2. 전세보증보험 가입 가능 여부 확인</h2>
-        <p>전세보증보험은 집주인이 보증금을 돌려주지 않을 때 보증 기관(HUG, HF, SGI)이 대신 돌려주는 제도입니다. 계약 전 집주인에게 "보증보험 가입에 동의하시나요?"라고 묻는 것만으로도 사기꾼을 걸러내는 효과가 있습니다.</p>
+        <h2>1. 등기부등본, '3번 확인의 법칙'을 기억하세요</h2>
+        <p>등기부등본은 부동산의 신분증입니다. 계약 전, 잔금 치르기 전, 그리고 전입신고 당일 등 <strong>최소 3번</strong>은 확인해야 합니다. 공인중개사가 보여주는 것만 믿지 말고, 대법원 인터넷등기소에서 직접 열람해보는 습관을 들이세요.</p>
+        
+        <h3>갑구(소유권)에서 봐야 할 것</h3>
         <ul>
-          <li><strong>HUG(주택도시보증공사):</strong> 가장 많이 이용하며, 전세금 안심대출보증도 가능합니다.</li>
-          <li><strong>가입 조건:</strong> 전세 보증금과 선순위 채권의 합이 주택 가격의 90% 이내여야 합니다 (2024년 기준 강화됨).</li>
+          <li><strong>소유자 일치 여부:</strong> 계약하러 나온 사람이 등기부상 소유자와 동일인인지 신분증을 대조하여 확인하세요. 대리인이 나왔다면 위임장과 인감증명서를 반드시 요구해야 합니다.</li>
+          <li><strong>위험한 단어 찾기:</strong> '가압류', '가처분', '가등기', '예고등기' 등의 단어가 보이면 뒤도 돌아보지 말고 피해야 합니다. 소유권 분쟁이 있는 매우 위험한 집입니다.</li>
         </ul>
 
-        <h2>3. 특약사항으로 안전장치 걸기</h2>
-        <p>계약서 특약사항 한 줄이 법적 효력을 발휘하여 나를 지켜줍니다. 아래 특약은 꼭 넣으세요.</p>
-        <ol>
-          <li><strong>"전세자금대출 미승인 시 계약금 전액을 즉시 반환한다."</strong> (대출이 안 돼서 계약금을 날리는 것을 방지)</li>
-          <li><strong>"임대인은 잔금 지급일 다음 날까지 현재의 권리 상태(근저당권 등)를 유지한다."</strong> (잔금 날 몰래 대출받는 것을 방지)</li>
-          <li><strong>"전세보증보험 가입 불가 시 계약을 무효로 하고 계약금을 반환한다."</strong></li>
-        </ol>
+        <h3>을구(소유권 이외의 권리)에서 봐야 할 것</h3>
+        <ul>
+          <li><strong>근저당권 설정액:</strong> 집주인이 집을 담보로 은행에서 빌린 돈입니다.</li>
+          <li><strong>안전한 집의 공식:</strong> <span class="bg-yellow-100 px-2 py-1 rounded font-bold">(근저당권 설정액 + 내 전세 보증금) < 집 시세의 70%</span></li>
+          <li>이 비율을 넘어가면 집이 경매로 넘어갔을 때 보증금을 전액 돌려받지 못할 확률이 매우 높은 '깡통전세'입니다.</li>
+        </ul>
 
-        <h2>4. 전입신고와 확정일자는 필수!</h2>
-        <p>이사 당일 반드시 주민센터를 방문하거나 정부24 앱을 통해 전입신고를 하고 확정일자를 받으세요. 그래야 '대항력'과 '우선변제권'이 생겨 집이 경매로 넘어가도 보증금을 보호받을 수 있습니다.</p>
+        <div class="bg-red-50 p-6 rounded-xl border border-red-200 my-8">
+          <h4 class="text-red-700 font-bold mb-3 flex items-center text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+            절대 계약하면 안 되는 '신탁 등기'
+          </h4>
+          <p class="text-red-800 leading-relaxed">
+            등기부등본 갑구에 <strong>'신탁'</strong>이라는 단어가 있다면 일단 멈추세요. 이는 집의 실제 소유권이 집주인이 아닌 '신탁 회사'에 있다는 뜻입니다.<br><br>
+            이 경우 집주인(위탁자)과 맺은 계약은 <strong>무효</strong>가 될 수 있으며, 보증금을 한 푼도 돌려받지 못하고 쫓겨날 수 있습니다. 반드시 신탁 원부를 발급받아 신탁 회사의 동의가 있는지 확인해야 하며, 전문가의 도움 없이는 계약하지 않는 것이 좋습니다.
+          </p>
+        </div>
+
+        <h2>2. 전세보증보험, 선택이 아닌 필수</h2>
+        <p>전세보증보험은 집주인이 보증금을 돌려주지 않을 때 보증 기관(HUG, HF, SGI)이 대신 돌려주는 제도입니다. 계약 전 집주인에게 "보증보험 가입에 동의하시나요?"라고 묻는 것만으로도 사기꾼을 1차적으로 걸러낼 수 있습니다.</p>
+        <ul>
+          <li><strong>HUG(주택도시보증공사):</strong> 가장 많이 이용하며, 전세금 안심대출보증도 가능합니다.</li>
+          <li><strong>가입 조건 체크:</strong> 전세 보증금과 선순위 채권의 합이 주택 가격의 90% 이내여야 합니다 (2024년 기준 강화됨). 공시지가의 126% 룰을 꼭 기억하세요.</li>
+        </ul>
+
+        <h2>3. 특약사항으로 나를 지키는 방패 만들기</h2>
+        <p>계약서 특약사항 한 줄이 법적 효력을 발휘하여 나를 지켜줍니다. 공인중개사에게 아래 특약들을 넣어달라고 당당하게 요구하세요.</p>
+        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 my-6">
+          <h4 class="font-bold text-gray-900 mb-4">✅ 필수 특약사항 복사해서 쓰세요</h4>
+          <ol class="space-y-3 list-decimal list-inside text-gray-700">
+            <li><strong>"전세자금대출 미승인 시 계약금 전액을 즉시 반환한다."</strong> <br><span class="text-sm text-gray-500 pl-6">- 건물의 문제로 대출이 안 될 경우 계약금을 날리는 것을 방지합니다.</span></li>
+            <li><strong>"임대인은 잔금 지급일 다음 날까지 현재의 권리 상태(근저당권 등)를 유지한다."</strong> <br><span class="text-sm text-gray-500 pl-6">- 내가 전입신고를 하기 전에 집주인이 몰래 대출을 받는 '시간차 공격'을 막습니다.</span></li>
+            <li><strong>"전세보증보험 가입 불가 시 계약을 무효로 하고 계약금을 반환한다."</strong></li>
+            <li><strong>"임대인은 국세 및 지방세 체납 사실이 없음을 확인한다."</strong></li>
+          </ol>
+        </div>
+
+        <h2>4. 전입신고와 확정일자는 '이사 당일' 즉시!</h2>
+        <p>이사 당일은 정신이 없겠지만, 무엇보다 먼저 해야 할 일은 <strong>전입신고</strong>와 <strong>확정일자</strong> 받기입니다.</p>
+        <ul>
+          <li><strong>대항력 확보:</strong> 전입신고 + 점유(이사)를 하면 다음 날 0시부터 제3자에게 내 권리를 주장할 수 있는 힘이 생깁니다.</li>
+          <li><strong>우선변제권 확보:</strong> 여기에 확정일자까지 받으면, 집이 경매로 넘어갔을 때 후순위 권리자보다 먼저 배당받을 수 있습니다.</li>
+          <li><strong>팁:</strong> 주민센터 방문이 어렵다면 '정부24' 앱과 '인터넷등기소'를 통해 온라인으로도 가능합니다.</li>
+        </ul>
+
+        <div class="mt-12 p-6 bg-indigo-50 rounded-xl text-center">
+          <h3 class="text-xl font-bold text-indigo-900 mb-2">아직도 불안하신가요?</h3>
+          <p class="text-indigo-700 mb-6">복잡한 계산은 저희에게 맡기세요. 보증금과 융자금만 입력하면 끝!</p>
+          <a href="/safety-check" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-full font-bold hover:bg-indigo-700 transition-all transform hover:scale-105 no-underline shadow-lg">
+            👉 전세 안전진단 계산기 바로가기
+          </a>
+        </div>
       </article>
-    `
+    `,
   },
   {
     slug: 'moving-checklist-d30',
@@ -93,44 +125,67 @@ export const blogPosts: BlogPost[] = [
       <article>
         <p class="lead">이사는 단순한 짐 옮기기가 아닙니다. 수많은 행정 절차와 예약이 필요한 거대한 프로젝트죠. D-30부터 차근차근 준비해야 이사 당일 당황하지 않고 여유롭게 새 출발을 할 수 있습니다. 시기별 필수 체크리스트를 확인하세요.</p>
 
-        <h2>📅 D-30: 이사 준비의 시작</h2>
+        <div class="bg-green-50 border-l-4 border-green-500 p-6 my-8 rounded-r-lg not-prose">
+          <h4 class="text-green-900 font-bold mb-2 text-lg">📅 이사 준비, 헷갈리시나요?</h4>
+          <p class="text-green-800 mb-4">남은 날짜만 입력하면, 오늘 해야 할 일을 자동으로 알려드립니다.</p>
+          <div class="flex gap-3 flex-wrap">
+            <a href="/tools/d-day-counter" class="inline-flex items-center bg-green-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-green-700 transition-colors no-underline shadow-sm text-sm">
+              ⏰ D-Day 카운터 쓰러가기
+            </a>
+            <a href="/checklist" class="inline-flex items-center bg-white text-green-700 border border-green-200 px-5 py-2.5 rounded-lg font-bold hover:bg-green-50 transition-colors no-underline shadow-sm text-sm">
+              ✅ 전체 체크리스트 보기
+            </a>
+          </div>
+        </div>
+
+        <h2>📅 D-30: 이사 준비의 시작 (한 달 전)</h2>
+        <p>이사 한 달 전은 '선택과 예약'의 시기입니다. 인기 있는 업체나 날짜는 금방 마감되니 서둘러야 합니다.</p>
         <ul>
-          <li><strong>이사 날짜 확정:</strong> 현재 살고 있는 집의 만기일과 새집 입주일을 조율합니다. '손 없는 날'은 비용이 비싸니 평일을 공략하는 것도 팁입니다.</li>
-          <li><strong>이사업체 선정 및 계약:</strong> 최소 3군데 이상 견적을 비교하세요. (방문 견적 필수! 추가 비용 여부 확인)</li>
-          <li><strong>불필요한 짐 정리:</strong> 1년 이상 안 쓴 물건은 과감히 버리거나 당근마켓에 판매하세요. 짐이 줄면 이사 비용도 줄어듭니다.</li>
+          <li><strong>이사 날짜 확정:</strong> 현재 살고 있는 집의 만기일과 새집 입주일을 조율합니다. '손 없는 날'이나 '금요일/월말'은 비용이 20~30% 비쌀 수 있으니, 가능하다면 평일 중간을 공략하세요.</li>
+          <li><strong>이사업체 선정 및 계약:</strong> 최소 3군데 이상 견적을 비교하세요. 전화로만 묻지 말고 반드시 <strong>방문 견적</strong>을 받아야 나중에 추가 요금 시비가 없습니다.</li>
+          <li><strong>불필요한 짐 정리 (중요!):</strong> 이사 비용은 '짐의 양'에 비례합니다. 1년 이상 안 쓴 물건, 입지 않는 옷은 과감히 버리거나 당근마켓에 판매하세요. 짐을 줄이는 것이 돈을 버는 길입니다.</li>
         </ul>
 
-        <h2>📅 D-14: 행정 절차 및 예약</h2>
+        <h2>📅 D-14: 행정 절차 및 예약 (2주 전)</h2>
+        <p>이제 구체적인 실행 계획을 세워야 할 때입니다.</p>
         <ul>
-          <li><strong>입주청소 예약:</strong> 새집 청소는 전문가에게 맡기는 것이 정신 건강에 좋습니다.</li>
-          <li><strong>엘리베이터 예약:</strong> 관리사무소에 이사 날짜를 알리고 엘리베이터 사용을 예약하세요. (사용료 발생 가능)</li>
-          <li><strong>가구/가전 배치 구상:</strong> 새집 도면을 구해 가구 배치를 미리 시뮬레이션해보세요.</li>
+          <li><strong>입주청소 예약:</strong> 새집 청소는 전문가에게 맡기는 것이 정신 건강에 좋습니다. 평당 10,000원~15,000원 선이며, 이사 하루 전날 하는 것이 가장 좋습니다.</li>
+          <li><strong>엘리베이터 예약:</strong> 현재 사는 곳과 이사 갈 곳의 관리사무소에 미리 연락하여 이사 날짜를 알리고 엘리베이터 사용을 예약하세요. (사용료 발생 가능)</li>
+          <li><strong>가구/가전 배치 구상:</strong> 새집 도면을 구해 가구 배치를 미리 시뮬레이션해보세요. 이사 당일 직원분들에게 "이건 여기, 저건 저기 놔주세요"라고 명확히 지시해야 두 번 일하지 않습니다.</li>
         </ul>
 
-        <h2>📅 D-7: 공과금 및 주소 이전 준비</h2>
+        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
+          <h4 class="text-indigo-900 font-bold mb-2">💡 이사 비용이 궁금하다면?</h4>
+          <p class="text-indigo-800 mb-4 text-sm">우리 집 평수와 짐 양으로 대략적인 이사 견적을 미리 계산해보세요. 바가지 요금을 예방할 수 있습니다.</p>
+          <a href="/tools/moving-cost-calculator" class="text-indigo-600 font-bold hover:underline flex items-center">
+            💰 이사 견적 계산기 바로가기 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <h2>📅 D-7: 공과금 및 주소 이전 준비 (1주 전)</h2>
         <ul>
-          <li><strong>도시가스/인터넷 이전 신청:</strong> 철거 및 설치 예약을 미리 해야 당일 불편함이 없습니다.</li>
-          <li><strong>우편물 주소 이전 서비스:</strong> 우체국 주거이전 서비스를 신청하여 우편물이 새 주소로 오도록 하세요.</li>
-          <li><strong>금융 주소 변경:</strong> 카드사, 은행 등 금융기관 주소를 한 번에 변경하는 서비스를 이용하세요.</li>
-          <li><strong>폐가전/폐가구 배출 신고:</strong> 버리고 갈 큰 짐들에 스티커를 붙이거나 무상 수거를 예약하세요.</li>
+          <li><strong>도시가스/인터넷 이전 신청:</strong> 철거 및 설치 예약을 미리 해야 당일 인터넷 없이 지내는 불편함을 겪지 않습니다.</li>
+          <li><strong>우편물 주소 이전 서비스:</strong> 우체국 주거이전 서비스를 신청(유료/무료 확인)하여 우편물이 새 주소로 오도록 하세요.</li>
+          <li><strong>금융 주소 변경:</strong> 카드사, 은행 등 금융기관 주소를 한 번에 변경하는 '금융주소 한번에' 서비스를 이용하세요.</li>
+          <li><strong>폐가전/폐가구 배출 신고:</strong> 버리고 갈 큰 짐들에 스티커를 붙이거나 '폐가전 무상방문수거 서비스(1599-0903)'를 예약하세요.</li>
         </ul>
 
-        <h2>📅 D-1: 최종 점검</h2>
+        <h2>📅 D-1: 최종 점검 (하루 전)</h2>
         <ul>
-          <li><strong>귀중품 별도 보관:</strong> 현금, 보석, 중요 서류는 이삿짐에 넣지 말고 개인 가방에 따로 챙기세요.</li>
-          <li><strong>쓰레기봉투 준비:</strong> 100L 종량제 봉투를 넉넉히 준비하세요.</li>
+          <li><strong>귀중품 별도 보관:</strong> 현금, 보석, 중요 서류, 노트북 등은 이삿짐 트럭에 싣지 말고 개인 가방이나 자가용에 따로 챙기세요. 분실 시 보상받기 어렵습니다.</li>
+          <li><strong>쓰레기봉투 준비:</strong> 100L 종량제 봉투를 넉넉히(3~4장) 준비하세요. 이사 당일 나오는 쓰레기가 생각보다 많습니다.</li>
           <li><strong>냉장고 비우기:</strong> 냉장고 음식은 아이스박스에 담거나 미리 먹어서 비워두세요.</li>
-          <li><strong>현금 준비:</strong> 이사 당일 식대나 잔금 정산 등에 필요한 현금을 준비하세요.</li>
+          <li><strong>현금 준비:</strong> 이사 당일 식대, 간식비, 혹은 잔금 정산 시 자투리 금액 처리를 위해 10만 원 정도의 현금을 준비해두면 유용합니다.</li>
         </ul>
 
         <h2>🚚 D-Day: 이사 당일</h2>
-        <ul>
-          <li><strong>공과금 정산:</strong> 전기, 가스, 수도 요금을 계량기 확인 후 정산합니다.</li>
-          <li><strong>이삿짐 확인:</strong> 파손되거나 분실된 물건이 없는지 이사팀 철수 전 확인하세요.</li>
-          <li><strong>전입신고 및 확정일자:</strong> 이사 즉시 주민센터를 방문하거나 온라인으로 신고하세요. (가장 중요!)</li>
-        </ul>
+        <ol>
+          <li><strong>공과금 정산:</strong> 전기, 가스, 수도 요금을 계량기 확인 후 정산합니다. (관리실이나 각 공급업체에 전화)</li>
+          <li><strong>이삿짐 확인:</strong> 파손되거나 분실된 물건이 없는지 이사팀 철수 전 꼼꼼히 확인하세요. 바닥 찍힘 등도 체크해야 합니다.</li>
+          <li><strong>전입신고 및 확정일자:</strong> 짐 정리가 끝나면 즉시 주민센터를 방문하거나 온라인으로 신고하세요. 보증금 보호를 위해 가장 중요한 절차입니다.</li>
+        </ol>
       </article>
-    `
+    `,
   },
   {
     slug: 'feng-shui-interior-tips',

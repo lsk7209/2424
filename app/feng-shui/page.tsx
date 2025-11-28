@@ -30,10 +30,24 @@ export default function FengShuiPage() {
 
     const handleOptionSelect = (optionIndex: number) => {
         setSelectedOption(optionIndex);
-        setAnswers(prev => ({
-            ...prev,
+
+        const newAnswers = {
+            ...answers,
             [currentQuestion]: optionIndex,
-        }));
+        };
+
+        setAnswers(newAnswers);
+
+        // Auto-advance after 300ms
+        setTimeout(() => {
+            if (currentQuestion < fengShuiQuestions.length) {
+                setCurrentQuestion(prev => prev + 1);
+            } else {
+                // 마지막 질문이면 결과 페이지로 이동
+                const answersParam = encodeURIComponent(JSON.stringify(newAnswers));
+                router.push(`/feng-shui/result?answers=${answersParam}`);
+            }
+        }, 300);
     };
 
     const handleNext = () => {
@@ -41,7 +55,6 @@ export default function FengShuiPage() {
 
         if (currentQuestion === fengShuiQuestions.length) {
             // 마지막 질문이면 결과 페이지로 이동
-            // 답변을 URL 파라미터로 전달
             const answersParam = encodeURIComponent(JSON.stringify(answers));
             router.push(`/feng-shui/result?answers=${answersParam}`);
         } else {

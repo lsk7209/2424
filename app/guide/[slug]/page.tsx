@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, ChevronLeft, HelpCircle, CheckCircle2 } from 'lucide-react';
 import ShareButtons from '@/components/ShareButtons';
 import PostCover from '@/components/PostCover';
+import TableOfContents from '@/components/TableOfContents';
+import RelatedPosts from '@/components/RelatedPosts';
+import { processContent } from '@/lib/toc';
 import {
   Accordion,
   AccordionContent,
@@ -50,6 +53,12 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
   if (!post) {
     notFound();
   }
+
+  // Process content for TOC
+  const { processedContent, toc } = processContent(post.content);
+
+  // Find related posts (same category)
+  const relatedPosts = guidePosts.filter(p => p.category === post.category);
 
   return (
     <div className="min-h-screen flex flex-col bg-white font-pretendard">
@@ -97,6 +106,9 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
             </div>
           </header>
 
+          {/* Table of Contents */}
+          <TableOfContents toc={toc} />
+
           {/* Content - Expert Typography */}
           <div
             className="prose prose-lg md:prose-xl max-w-none 
@@ -110,7 +122,7 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
               prose-li:text-gray-700 prose-li:leading-loose prose-li:text-[1.125rem] md:prose-li:text-[1.25rem]
               prose-ul:my-8 prose-ol:my-8
               prose-blockquote:border-l-4 prose-blockquote:border-green-500 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: processedContent }}
           />
 
           {/* FAQ Section (AEO/GEO Optimized) - Enhanced */}
@@ -148,6 +160,9 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
               description={post.excerpt}
             />
           </div>
+
+          {/* Related Posts */}
+          <RelatedPosts posts={relatedPosts} currentSlug={post.slug} type="guide" />
         </article>
       </main>
 

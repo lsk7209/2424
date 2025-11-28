@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // TODO: Google Search Console에서 발급받은 코드로 교체
+    google: 'uNiRiMcBHgmWHzDMwY8XGV42sXJZ9SSaaz3IhPLvHSA',
     other: {
-      'naver-site-verification': 'YOUR_NAVER_VERIFICATION_CODE', // TODO: Naver Search Advisor에서 발급받은 코드로 교체
+      'naver-site-verification': 'ddf23ab0bbb03a73fe3a29afa1bc6bc8fe2c8881',
     },
   },
 };
