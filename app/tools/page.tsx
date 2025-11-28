@@ -17,8 +17,8 @@ export default function ToolsIndexPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
-      
-      <main className="flex-1 container py-12">
+
+      <main className="flex-1 container mx-auto py-12">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">독립만세 도구함</h1>
@@ -63,19 +63,19 @@ export default function ToolsIndexPage() {
           <div className="mt-12 pt-8 border-t">
             <h3 className="text-xl font-semibold mb-6 text-center">준비 중인 도구들</h3>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 opacity-60">
-               {tools.filter(t => !t.isReady).map((tool) => (
-                 <Card key={tool.slug} className="bg-gray-100 border-dashed">
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2">
-                        <tool.icon className="w-4 h-4 text-muted-foreground" />
-                        <span className="font-medium text-muted-foreground">{tool.title}</span>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-xs text-muted-foreground">{tool.description}</p>
-                    </CardContent>
-                 </Card>
-               ))}
+              {tools.filter(t => !t.isReady).map((tool) => (
+                <Card key={tool.slug} className="bg-gray-100 border-dashed">
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center gap-2">
+                      <tool.icon className="w-4 h-4 text-muted-foreground" />
+                      <span className="font-medium text-muted-foreground">{tool.title}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-xs text-muted-foreground">{tool.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

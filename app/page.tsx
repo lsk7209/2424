@@ -47,7 +47,8 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container py-20 md:py-32">
+        {/* Hero Section */}
+        <section className="container mx-auto px-4 md:px-6 py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -80,7 +81,7 @@ export default function Home() {
         </section>
 
         {/* Tools Grid */}
-        <section className="container py-16 bg-muted/30">
+        <section className="container mx-auto py-16 bg-muted/30">
           <div className="max-w-6xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">
@@ -121,7 +122,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="container py-20">
+        <section className="container mx-auto py-20">
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary to-accent rounded-2xl p-12 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               첫 독립, 준비되셨나요?

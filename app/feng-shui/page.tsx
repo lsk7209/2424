@@ -69,7 +69,7 @@ export default function FengShuiPage() {
         <div className="min-h-screen flex flex-col">
             <Header />
 
-            <main className="flex-1 container py-8 md:py-16">
+            <main className="flex-1 container mx-auto py-8 md:py-16">
                 <div className="max-w-2xl mx-auto space-y-8">
                     {/* Title */}
                     <div className="text-center space-y-4">
@@ -103,8 +103,8 @@ export default function FengShuiPage() {
                                         key={index}
                                         onClick={() => handleOptionSelect(index)}
                                         className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-200 ${selectedOption === index
-                                                ? 'border-primary bg-primary/5 shadow-md'
-                                                : 'border-border hover:border-primary/50 hover:bg-muted/50'
+                                            ? 'border-primary bg-primary/5 shadow-md'
+                                            : 'border-border hover:border-primary/50 hover:bg-muted/50'
                                             }`}
                                     >
                                         <div className="flex items-center justify-between">

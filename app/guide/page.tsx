@@ -15,8 +15,8 @@ export default function GuideIndexPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
-      
-      <main className="flex-1 container py-12">
+
+      <main className="flex-1 container mx-auto py-12">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">독립만세 가이드북</h1>

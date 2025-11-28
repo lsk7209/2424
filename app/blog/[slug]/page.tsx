@@ -55,7 +55,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     <div className="min-h-screen flex flex-col bg-white font-pretendard">
       <Header />
 
-      <main className="flex-1 container max-w-4xl py-12 px-4 md:px-6">
+      <main className="flex-1 container max-w-4xl mx-auto py-12 px-4 md:px-6">
         <article className="mx-auto">
           {/* Back Link */}
           <div className="mb-8">
@@ -98,7 +98,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           </header>
 
           {/* Content - Expert Typography */}
-          <div 
+          <div
             className="prose prose-lg md:prose-xl max-w-none 
               prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-gray-900
               prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b prose-h2:border-gray-200
@@ -143,9 +143,9 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           <div className="mt-20 pt-10 border-t border-gray-200 text-center bg-gray-50 rounded-2xl p-10">
             <h3 className="text-2xl font-bold mb-3 text-gray-900">이 정보가 도움이 되셨나요?</h3>
             <p className="text-lg text-gray-600 mb-8">친구들에게 공유하고 함께 똑똑한 독립 생활을 즐겨보세요!</p>
-            <ShareButtons 
-              title={post.title} 
-              description={post.excerpt} 
+            <ShareButtons
+              title={post.title}
+              description={post.excerpt}
             />
           </div>
         </article>

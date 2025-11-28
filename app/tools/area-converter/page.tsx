@@ -38,7 +38,7 @@ export default function AreaConverterPage() {
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
       <Header />
 
-      <main className="flex-1 container max-w-2xl py-12 px-4">
+      <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
             <Ruler className="w-8 h-8 text-blue-600" />
@@ -60,8 +60,8 @@ export default function AreaConverterPage() {
                   <Grid className="w-5 h-5 text-blue-500" /> 평 (Py)
                 </Label>
                 <div className="relative">
-                  <Input 
-                    type="number" 
+                  <Input
+                    type="number"
                     value={pyeong}
                     onChange={handlePyeongChange}
                     placeholder="예: 24"
@@ -81,8 +81,8 @@ export default function AreaConverterPage() {
                   <Grid className="w-5 h-5 text-green-500" /> 제곱미터 (㎡)
                 </Label>
                 <div className="relative">
-                  <Input 
-                    type="number" 
+                  <Input
+                    type="number"
                     value={sqm}
                     onChange={handleSqmChange}
                     placeholder="예: 79.3"

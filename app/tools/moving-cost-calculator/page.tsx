@@ -74,7 +74,7 @@ export default function MovingCostCalculatorPage() {
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
       <Header />
 
-      <main className="flex-1 container max-w-2xl py-12 px-4">
+      <main className="flex-1 container mx-auto max-w-2xl py-8 md:py-16 px-4">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
             <Truck className="w-8 h-8 text-blue-600" />
@@ -95,7 +95,7 @@ export default function MovingCostCalculatorPage() {
               {step === 1 ? '정확한 견적을 위해 아래 정보를 입력해주세요.' : '입력하신 정보를 바탕으로 산출된 예상 비용입니다.'}
             </CardDescription>
           </CardHeader>
-          
+
           <CardContent className="p-6 md:p-8">
             {step === 1 ? (
               <div className="space-y-8">
@@ -174,11 +174,11 @@ export default function MovingCostCalculatorPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <Label className="text-lg font-bold text-gray-800">도착지 층수</Label>
-                    <Input 
-                      type="number" 
-                      value={floor} 
+                    <Input
+                      type="number"
+                      value={floor}
                       onChange={(e) => setFloor(Number(e.target.value))}
-                      min={1} 
+                      min={1}
                       className="h-12 text-lg"
                     />
                   </div>
@@ -196,7 +196,7 @@ export default function MovingCostCalculatorPage() {
                   </div>
                 </div>
 
-                <Button 
+                <Button
                   onClick={calculateCost}
                   className="w-full h-14 text-xl font-bold bg-blue-600 hover:bg-blue-700 shadow-lg mt-8"
                 >
@@ -242,14 +242,14 @@ export default function MovingCostCalculatorPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     onClick={resetCalculator}
                     className="flex-1 h-12 text-lg"
                   >
                     <RefreshCcw className="mr-2 w-4 h-4" /> 다시 계산하기
                   </Button>
-                  <Button 
+                  <Button
                     className="flex-1 h-12 text-lg bg-green-600 hover:bg-green-700"
                     onClick={() => window.open('https://search.naver.com/search.naver?query=포장이사견적비교', '_blank')}
                   >

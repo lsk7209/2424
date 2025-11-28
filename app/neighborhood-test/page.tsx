@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -55,11 +55,11 @@ export default function NeighborhoodTestPage() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-gray-50">
             <Header />
 
-            <main className="flex-1 container py-8 md:py-16">
-                <div className="max-w-2xl mx-auto space-y-8">
+            <main className="flex-1 container max-w-2xl mx-auto py-12 px-4">
+                <div className="space-y-8">
                     {/* Progress */}
                     <div className="space-y-2">
                         <div className="flex justify-between text-sm text-muted-foreground">

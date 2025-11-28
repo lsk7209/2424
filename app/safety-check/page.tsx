@@ -72,7 +72,7 @@ export default function SafetyCheckPage() {
         <div className="min-h-screen flex flex-col">
             <Header />
 
-            <main className="flex-1 container py-8 md:py-16">
+            <main className="flex-1 container mx-auto py-8 md:py-16">
                 <div className="max-w-4xl mx-auto space-y-8">
                     {/* Title */}
                     <div className="text-center space-y-4">

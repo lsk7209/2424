@@ -44,7 +44,7 @@ export default function BrokerageFeeCalculatorPage() {
     }
 
     calculatedFee = Math.floor((price * (rate / 100)));
-    
+
     // 한도액 적용
     if (limit > 0 && calculatedFee > limit) {
       calculatedFee = limit;
@@ -61,7 +61,7 @@ export default function BrokerageFeeCalculatorPage() {
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
       <Header />
 
-      <main className="flex-1 container max-w-2xl py-12 px-4">
+      <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
             <DollarSign className="w-8 h-8 text-blue-600" />
@@ -77,7 +77,7 @@ export default function BrokerageFeeCalculatorPage() {
           <CardHeader className="bg-blue-600 text-white rounded-t-xl p-6">
             <CardTitle className="text-xl font-bold">거래 정보 입력</CardTitle>
           </CardHeader>
-          
+
           <CardContent className="p-6 md:p-8 space-y-8">
             {/* 거래 종류 */}
             <div className="space-y-4">
@@ -110,8 +110,8 @@ export default function BrokerageFeeCalculatorPage() {
                 거래 금액 (보증금/매매가)
               </Label>
               <div className="relative">
-                <Input 
-                  type="number" 
+                <Input
+                  type="number"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
                   placeholder="예: 20000 (2억원)"
@@ -136,17 +136,17 @@ export default function BrokerageFeeCalculatorPage() {
                     {result.limit && result.limit > 0 && ` (한도액 ${result.limit.toLocaleString()}원 적용)`}
                   </p>
                 </div>
-                
-                <Button 
-                  onClick={() => { setResult(null); setAmount(''); }} 
-                  variant="outline" 
+
+                <Button
+                  onClick={() => { setResult(null); setAmount(''); }}
+                  variant="outline"
                   className="w-full mt-6 h-12"
                 >
                   <RefreshCcw className="mr-2 w-4 h-4" /> 다시 계산하기
                 </Button>
               </div>
             ) : (
-              <Button 
+              <Button
                 onClick={calculateFee}
                 className="w-full h-14 text-xl font-bold bg-blue-600 hover:bg-blue-700 shadow-lg"
                 disabled={!amount}

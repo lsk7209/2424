@@ -31,7 +31,7 @@ export default function DDayCounterPage() {
     // Reset time part for accurate day calculation
     targetDate.setHours(0, 0, 0, 0);
     today.setHours(0, 0, 0, 0);
-    
+
     const diff = differenceInDays(targetDate, today);
     setDDay(diff);
   };
@@ -54,7 +54,7 @@ export default function DDayCounterPage() {
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
       <Header />
 
-      <main className="flex-1 container max-w-2xl py-12 px-4">
+      <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
             <Clock className="w-8 h-8 text-blue-600" />
@@ -71,8 +71,8 @@ export default function DDayCounterPage() {
               <div className="w-full max-w-xs space-y-2">
                 <Label className="text-center block text-lg font-bold text-gray-700">이사 예정일</Label>
                 <div className="relative">
-                  <Input 
-                    type="date" 
+                  <Input
+                    type="date"
                     value={movingDate}
                     onChange={handleDateChange}
                     className="h-14 text-xl text-center font-bold"
@@ -102,20 +102,20 @@ export default function DDayCounterPage() {
               <CheckCircle2 className="w-5 h-5 text-green-600" />
               남은 기간별 체크 포인트
             </h2>
-            
+
             <div className="grid gap-4">
               {milestones.map((milestone) => {
                 const isPassed = dDay < milestone.day;
                 const isUpcoming = dDay >= milestone.day && dDay <= milestone.day + 5;
-                
+
                 return (
-                  <div 
+                  <div
                     key={milestone.day}
                     className={`
                       relative p-5 rounded-xl border-2 transition-all
-                      ${isPassed ? 'bg-gray-100 border-gray-200 opacity-60' : 
-                        isUpcoming ? 'bg-white border-blue-500 shadow-md scale-105 z-10' : 
-                        'bg-white border-transparent shadow-sm'}
+                      ${isPassed ? 'bg-gray-100 border-gray-200 opacity-60' :
+                        isUpcoming ? 'bg-white border-blue-500 shadow-md scale-105 z-10' :
+                          'bg-white border-transparent shadow-sm'}
                     `}
                   >
                     <div className="flex justify-between items-start mb-1">
@@ -136,8 +136,8 @@ export default function DDayCounterPage() {
                 );
               })}
             </div>
-            
-            <Button 
+
+            <Button
               className="w-full h-14 text-lg font-bold bg-gray-900 hover:bg-gray-800"
               onClick={() => window.location.href = '/checklist'}
             >
