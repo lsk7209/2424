@@ -1,46 +1,46 @@
 export interface GuidePost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string; // HTML content
-  date: string;
-  category: '법률' | '생활' | '안전' | '청소' | '행정' | '계약' | '금융' | '이사';
-  coverImage?: string;
-  keywords: string[]; // SEO Keywords
-  faq?: { question: string; answer: string }[]; // AEO/GEO Optimized FAQ
+    slug: string;
+    title: string;
+    excerpt: string;
+    content: string; // HTML content
+    date: string;
+    category: '법률' | '생활' | '안전' | '청소' | '행정' | '계약' | '금융' | '이사';
+    coverImage?: string;
+    keywords: string[]; // SEO Keywords
+    faq?: { question: string; answer: string }[]; // AEO/GEO Optimized FAQ
 }
 
 export const guidePosts: GuidePost[] = [
-  {
-    slug: 'how-to-read-registry',
-    title: '등기부등본 보는 법 A to Z: 전세 사기 피하는 필수 생존 지식',
-    excerpt: '집 계약 전 필수! 표제부, 갑구, 을구의 의미와 반드시 확인해야 할 위험 신호를 완벽하게 분석해드립니다.',
-    date: '2025-11-28',
-    category: '법률',
-    keywords: ['등기부등본 보는법', '전세 계약 주의사항', '근저당권 계산', '갑구 을구 차이'],
-    faq: [
-      {
-        question: '등기부등본은 어디서 발급받나요?',
-        answer: '대법원 인터넷등기소(iros.go.kr)에서 누구나 열람 및 발급이 가능합니다. PC에서는 1,000원, 모바일에서는 700원에 발급받을 수 있으며, 공인인증서 없이도 간편인증으로 가능합니다.'
-      },
-      {
-        question: '채권최고액과 실제 대출금액은 어떻게 다른가요?',
-        answer: '채권최고액은 은행이 담보로 잡을 수 있는 최대 금액입니다. 실제 대출금은 보통 채권최고액의 70~80% 수준이지만, 안전을 위해서는 채권최고액 전액을 빚으로 계산해야 합니다.'
-      },
-      {
-        question: '말소기준권리란 무엇인가요?',
-        answer: '경매 시 소멸되는 권리와 살아남는 권리를 구분하는 기준점입니다. 보통 가장 선순위 근저당권이 말소기준권리가 되며, 이보다 후순위 권리들은 경매로 모두 소멸됩니다.'
-      },
-      {
-        question: '등기부등본은 얼마나 자주 확인해야 하나요?',
-        answer: '최소 3번 확인하세요. ①계약 전 ②잔금 치르기 직전 ③전입신고 당일. 집주인이 계약 후 몰래 대출을 받는 경우가 있어 반드시 여러 번 확인해야 합니다.'
-      },
-      {
-        question: '신탁등기가 있으면 무조건 위험한가요?',
-        answer: '신탁등기 자체가 문제는 아니지만, 반드시 신탁원부를 확인하고 수탁자(신탁회사)의 임대차 동의서를 받아야 합니다. 전문가 상담 없이는 계약하지 않는 것이 안전합니다.'
-      }
-    ],
-    content: `
+    {
+        slug: 'how-to-read-registry',
+        title: '등기부등본 보는 법 A to Z: 전세 사기 피하는 필수 생존 지식',
+        excerpt: '집 계약 전 필수! 표제부, 갑구, 을구의 의미와 반드시 확인해야 할 위험 신호를 완벽하게 분석해드립니다.',
+        date: '2025-11-28',
+        category: '법률',
+        keywords: ['등기부등본 보는법', '전세 계약 주의사항', '근저당권 계산', '갑구 을구 차이'],
+        faq: [
+            {
+                question: '등기부등본은 어디서 발급받나요?',
+                answer: '대법원 인터넷등기소(iros.go.kr)에서 누구나 열람 및 발급이 가능합니다. PC에서는 1,000원, 모바일에서는 700원에 발급받을 수 있으며, 공인인증서 없이도 간편인증으로 가능합니다.'
+            },
+            {
+                question: '채권최고액과 실제 대출금액은 어떻게 다른가요?',
+                answer: '채권최고액은 은행이 담보로 잡을 수 있는 최대 금액입니다. 실제 대출금은 보통 채권최고액의 70~80% 수준이지만, 안전을 위해서는 채권최고액 전액을 빚으로 계산해야 합니다.'
+            },
+            {
+                question: '말소기준권리란 무엇인가요?',
+                answer: '경매 시 소멸되는 권리와 살아남는 권리를 구분하는 기준점입니다. 보통 가장 선순위 근저당권이 말소기준권리가 되며, 이보다 후순위 권리들은 경매로 모두 소멸됩니다.'
+            },
+            {
+                question: '등기부등본은 얼마나 자주 확인해야 하나요?',
+                answer: '최소 3번 확인하세요. ①계약 전 ②잔금 치르기 직전 ③전입신고 당일. 집주인이 계약 후 몰래 대출을 받는 경우가 있어 반드시 여러 번 확인해야 합니다.'
+            },
+            {
+                question: '신탁등기가 있으면 무조건 위험한가요?',
+                answer: '신탁등기 자체가 문제는 아니지만, 반드시 신탁원부를 확인하고 수탁자(신탁회사)의 임대차 동의서를 받아야 합니다. 전문가 상담 없이는 계약하지 않는 것이 안전합니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">2023년 한 해에만 전세 사기 피해액이 1조 원을 넘었습니다. 피해자의 90% 이상이 "등기부등본을 제대로 확인하지 않았다"고 답했습니다. 이 가이드 하나면 당신의 보증금을 지킬 수 있습니다.</p>
         
@@ -297,21 +297,33 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'standard-rental-contract',
-    title: '표준임대차계약서 작성 가이드: 특약사항 한 줄이 내 돈을 지킨다',
-    excerpt: '법무부가 권장하는 표준임대차계약서, 빈칸 없이 꼼꼼하게 채우는 방법과 필수 특약사항 5가지.',
-    date: '2025-11-28',
-    category: '법률',
-    keywords: ['표준임대차계약서', '전세 계약 특약', '임대차계약 주의사항'],
-    faq: [
-      {
-        question: '특약사항은 법적 효력이 있나요?',
-        answer: '네, 강행규정을 위반하지 않는 한 유효합니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'standard-rental-contract',
+        title: '표준임대차계약서 작성 가이드: 특약사항 한 줄이 내 돈을 지킨다',
+        excerpt: '법무부가 권장하는 표준임대차계약서, 빈칸 없이 꼼꼼하게 채우는 방법과 필수 특약사항 5가지.',
+        date: '2025-11-28',
+        category: '법률',
+        keywords: ['표준임대차계약서', '전세 계약 특약', '임대차계약 주의사항'],
+        faq: [
+            {
+                question: '특약사항은 법적 효력이 있나요?',
+                answer: '네, 강행규정(임대차보호법 등)을 위반하지 않는 한 계약서의 특약사항은 법적으로 유효합니다. 구두 약속은 효력이 약하므로 반드시 서면으로 작성해야 합니다.'
+            },
+            {
+                question: '계약서를 작성할 때 꼭 공인중개사가 있어야 하나요?',
+                answer: '아니요, 임대인과 임차인이 직접 계약하는 것도 가능합니다. 다만 공인중개사를 통하면 계약서 작성과 확인 절차가 안전하며, 중개보수를 지불해야 합니다.'
+            },
+            {
+                question: '계약금은 얼마나 내야 하나요?',
+                answer: '법적으로 정해진 금액은 없지만, 관례상 전체 보증금의 10% 정도를 계약금으로 지불합니다. 계약금은 계약 성립의 증거이며, 일방적으로 계약을 파기할 경우 위약금이 됩니다.'
+            },
+            {
+                question: '계약서에 도장 대신 서명만 해도 되나요?',
+                answer: '네, 법적으로 서명만으로도 유효합니다. 다만 분쟁 시 본인 확인을 위해 도장(인감도장 또는 서명)과 함께 신분증 사본을 첨부하는 것이 안전합니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">계약서는 집주인과 나 사이의 법입니다. "좋은 게 좋은 거지"라고 넘겼다가는 나중에 피눈물 흘릴 수 있습니다. 빈칸 하나도 허투루 넘기지 마세요.</p>
 
@@ -359,21 +371,33 @@ export const guidePosts: GuidePost[] = [
         <p>이 외에도 반려동물 키우기, 못 박기, 옵션 수리 비용 부담 등 애매한 부분은 미리 협의하여 적어두는 것이 좋습니다.</p>
       </article>
     `
-  },
-  {
-    slug: 'jeonse-insurance-guide',
-    title: '전세보증보험 가입 조건 및 반려 사유 총정리 (HUG, HF, SGI)',
-    excerpt: '내 보증금을 지키는 최후의 보루. 보증보험 가입 조건부터 거절되는 이유까지 상세하게 알려드립니다.',
-    date: '2025-11-28',
-    category: '금융',
-    keywords: ['전세보증보험', 'HUG 보증보험', '전세금 반환 보증', '보증보험 가입조건'],
-    faq: [
-      {
-        question: '집주인 동의가 필요한가요?',
-        answer: '아니요, 집주인 동의 없이도 가입 가능합니다. 단, 집주인에게 통지는 갑니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'jeonse-insurance-guide',
+        title: '전세보증보험 가입 조건 및 반려 사유 총정리 (HUG, HF, SGI)',
+        excerpt: '내 보증금을 지키는 최후의 보루. 보증보험 가입 조건부터 거절되는 이유까지 상세하게 알려드립니다.',
+        date: '2025-11-28',
+        category: '금융',
+        keywords: ['전세보증보험', 'HUG 보증보험', '전세금 반환 보증', '보증보험 가입조건'],
+        faq: [
+            {
+                question: '집주인 동의가 필요한가요?',
+                answer: '아니요, 집주인 동의 없이도 가입 가능합니다. 단, 보증보험 가입 사실은 집주인에게 통지됩니다. 집주인이 거부하더라도 가입은 가능합니다.'
+            },
+            {
+                question: 'HUG, HF, SGI 중 어디가 좋나요?',
+                answer: 'HUG(주택도시보증공사)가 가장 대중적이고 안심대출 연계도 가능합니다. HF는 보증료가 저렴하지만 소득요건이 있고, SGI는 고액 전세에 유리하지만 보증료가 비쌉니다.'
+            },
+            {
+                question: '보증보험료는 얼마나 하나요?',
+                answer: '보증금액과 보증기간에 따라 다르지만, 일반적으로 보증금의 0.128%~0.214% 수준입니다. 예를 들어 보증금 2억 원, 2년 계약 시 약 25만~40만 원 정도입니다.'
+            },
+            {
+                question: '가입이 거절되면 어떻게 하나요?',
+                answer: '위반건축물이나 선순위 채권 과다 등의 이유로 거절될 수 있습니다. 이 경우 계약 특약에 "보증보험 가입 불가 시 계약 무효"를 넣었다면 계약금을 돌려받을 수 있습니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">전세보증보험은 선택이 아닌 필수입니다. 내 소중한 보증금을 지키는 최후의 보루, 가입 조건부터 거절 사유까지 꼼꼼히 따져보세요.</p>
 
@@ -436,21 +460,33 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'moving-center-selection',
-    title: '호구 당하지 않는 포장이사 업체 선정 체크리스트',
-    excerpt: '이사 비용, 부르는 게 값? 견적 비교하는 법부터 추가 비용 폭탄 피하는 노하우 공개.',
-    date: '2025-11-28',
-    category: '이사',
-    keywords: ['포장이사 견적', '이사업체 추천', '이사 비용 줄이기', '방문견적'],
-    faq: [
-      {
-        question: '방문 견적은 꼭 받아야 하나요?',
-        answer: '네, 전화 견적과 실제 짐 양이 다르면 당일 추가 비용 시비가 생길 수 있습니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'moving-center-selection',
+        title: '호구 당하지 않는 포장이사 업체 선정 체크리스트',
+        excerpt: '이사 비용, 부르는 게 값? 견적 비교하는 법부터 추가 비용 폭탄 피하는 노하우 공개.',
+        date: '2025-11-28',
+        category: '이사',
+        keywords: ['포장이사 견적', '이사업체 추천', '이사 비용 줄이기', '방문견적'],
+        faq: [
+            {
+                question: '방문 견적은 꼭 받아야 하나요?',
+                answer: '네, 전화 견적과 실제 짐 양이 다르면 당일 추가 비용 시비가 생길 수 있습니다. 최소 3곳 이상 방문 견적을 받아 비교하는 것이 좋습니다.'
+            },
+            {
+                question: '이사 비용은 언제 지불하나요?',
+                answer: '일반적으로 이사 작업이 완료된 후 현금 또는 계좌이체로 지불합니다. 계약금을 요구하는 업체는 주의해야 하며, 반드시 영수증을 받아야 합니다.'
+            },
+            {
+                question: '포장이사와 일반이사의 차이는?',
+                answer: '포장이사는 짐 싸기부터 풀기까지 업체가 전담하고, 일반이사는 짐만 운반합니다. 포장이사가 2-3배 비싸지만 시간과 노력을 절약할 수 있습니다.'
+            },
+            {
+                question: '이사 중 물건이 파손되면 보상받을 수 있나요?',
+                answer: '정식 허가업체는 적재물배상책임보험에 가입되어 있어 파손 시 보상받을 수 있습니다. 이사 전 보험 가입 여부를 확인하고, 파손 발생 시 즉시 사진을 찍어두세요.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">이사업체 잘 고르면 이사가 편해지고, 잘못 고르면 가구가 상하고 마음도 상합니다. 호구 당하지 않는 견적 비교 노하우를 공개합니다.</p>
 
@@ -504,21 +540,33 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'administrative-welfare-center',
-    title: '이사 당일 주민센터 업무: 전입신고, 확정일자, 대형폐기물',
-    excerpt: '이사 날 정신없는데 주민센터 가서 뭐 해야 하지? 한 번에 끝내는 행정 업무 가이드.',
-    date: '2025-11-28',
-    category: '행정',
-    keywords: ['전입신고', '확정일자', '대형폐기물 스티커', '이사 행정'],
-    faq: [
-      {
-        question: '인터넷으로도 가능한가요?',
-        answer: '네, 정부24에서 전입신고, 인터넷등기소에서 확정일자 부여가 가능합니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'administrative-welfare-center',
+        title: '이사 당일 주민센터 업무: 전입신고, 확정일자, 대형폐기물',
+        excerpt: '이사 날 정신없는데 주민센터 가서 뭐 해야 하지? 한 번에 끝내는 행정 업무 가이드.',
+        date: '2025-11-28',
+        category: '행정',
+        keywords: ['전입신고', '확정일자', '대형폐기물 스티커', '이사 행정'],
+        faq: [
+            {
+                question: '인터넷으로도 가능한가요?',
+                answer: '네, 정부24(www.gov.kr)에서 전입신고, 인터넷등기소(www.iros.go.kr)에서 확정일자 부여가 가능합니다. 단, 본인인증(공인인증서 또는 간편인증)이 필요합니다.'
+            },
+            {
+                question: '전입신고는 언제까지 해야 하나요?',
+                answer: '이사한 날로부터 14일 이내에 해야 하며, 기한을 넘기면 5만 원 이하의 과태료가 부과됩니다. 대항력은 전입신고 다음 날 0시부터 발생합니다.'
+            },
+            {
+                question: '확정일자를 안 받으면 어떻게 되나요?',
+                answer: '확정일자가 없으면 우선변제권이 없어 집이 경매로 넘어갔을 때 후순위로 밀려 보증금을 못 받을 수 있습니다. 전입신고와 함께 반드시 받아야 합니다.'
+            },
+            {
+                question: '전입신고 시 필요한 서류는?',
+                answer: '신분증과 임대차계약서 원본만 있으면 됩니다. 온라인 신고 시에는 계약서를 스캔하여 첨부하면 됩니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">이사 당일은 몸이 열 개라도 모자랍니다. 짐 정리는 나중에 해도 되지만, 법적 효력이 있는 행정 업무는 반드시 당일에 끝내야 합니다.</p>
 
@@ -561,21 +609,21 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'safe-door-lock-password',
-    title: '자취방 도어락 비밀번호 안전하게 관리하는 법',
-    excerpt: '몰래카메라, 지문 흔적... 도어락 비밀번호 노출을 막는 보안 수칙.',
-    date: '2025-11-28',
-    category: '안전',
-    keywords: ['도어락 비밀번호', '자취방 보안', '현관문 안전'],
-    faq: [
-      {
-        question: '비밀번호는 얼마나 자주 바꿔야 하나요?',
-        answer: '최소 3개월에 한 번은 변경하는 것이 좋습니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'safe-door-lock-password',
+        title: '자취방 도어락 비밀번호 안전하게 관리하는 법',
+        excerpt: '몰래카메라, 지문 흔적... 도어락 비밀번호 노출을 막는 보안 수칙.',
+        date: '2025-11-28',
+        category: '안전',
+        keywords: ['도어락 비밀번호', '자취방 보안', '현관문 안전'],
+        faq: [
+            {
+                question: '비밀번호는 얼마나 자주 바꿔야 하나요?',
+                answer: '최소 3개월에 한 번은 변경하는 것이 좋습니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">혼자 사는 집, 보안은 과할수록 좋습니다. 도어락 비밀번호 관리만 잘해도 침입 범죄를 예방할 수 있습니다.</p>
 
@@ -622,21 +670,21 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'mold-removal-tips',
-    title: '벽지 곰팡이 제거 및 결로 예방 가이드',
-    excerpt: '지긋지긋한 곰팡이, 락스만 뿌린다고 해결될까? 근본적인 원인 해결과 제거 방법.',
-    date: '2025-11-28',
-    category: '청소',
-    keywords: ['곰팡이 제거', '결로 예방', '벽지 곰팡이', '원룸 습기'],
-    faq: [
-      {
-        question: '환기는 얼마나 해야 하나요?',
-        answer: '하루 2번, 10분 이상 맞통풍이 되도록 환기하는 것이 가장 좋습니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'mold-removal-tips',
+        title: '벽지 곰팡이 제거 및 결로 예방 가이드',
+        excerpt: '지긋지긋한 곰팡이, 락스만 뿌린다고 해결될까? 근본적인 원인 해결과 제거 방법.',
+        date: '2025-11-28',
+        category: '청소',
+        keywords: ['곰팡이 제거', '결로 예방', '벽지 곰팡이', '원룸 습기'],
+        faq: [
+            {
+                question: '환기는 얼마나 해야 하나요?',
+                answer: '하루 2번, 10분 이상 맞통풍이 되도록 환기하는 것이 가장 좋습니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">지긋지긋한 곰팡이, 단순히 닦아내기만 하면 100% 다시 생깁니다. 근본적인 원인을 잡고 완벽하게 제거하는 루틴을 알려드립니다.</p>
 
@@ -690,21 +738,21 @@ export const guidePosts: GuidePost[] = [
         </ul>
       </article>
     `
-  },
-  {
-    slug: 'real-estate-app-tips',
-    title: '직방, 다방, 피터팬... 부동산 앱 허위매물 거르는 법',
-    excerpt: '사진에 속지 마세요. 부동산 앱으로 방 구할 때 호구 잡히지 않는 필터링 노하우.',
-    date: '2025-11-28',
-    category: '생활',
-    keywords: ['부동산 앱', '허위매물 구별', '자취방 구하기'],
-    faq: [
-      {
-        question: '시세보다 너무 싼 방은 왜 그런가요?',
-        answer: '99% 허위매물이거나 융자가 많은 위험한 집, 혹은 반지하일 가능성이 높습니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'real-estate-app-tips',
+        title: '직방, 다방, 피터팬... 부동산 앱 허위매물 거르는 법',
+        excerpt: '사진에 속지 마세요. 부동산 앱으로 방 구할 때 호구 잡히지 않는 필터링 노하우.',
+        date: '2025-11-28',
+        category: '생활',
+        keywords: ['부동산 앱', '허위매물 구별', '자취방 구하기'],
+        faq: [
+            {
+                question: '시세보다 너무 싼 방은 왜 그런가요?',
+                answer: '99% 허위매물이거나 융자가 많은 위험한 집, 혹은 반지하일 가능성이 높습니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">직방, 다방, 피터팬... 편리하지만 함정도 많습니다. 헛걸음하지 않고 진짜 좋은 방을 구하는 필터링 노하우를 공개합니다.</p>
 
@@ -741,21 +789,21 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'noise-complaint-guide',
-    title: '층간소음, 벽간소음 법적 기준과 현명한 대처법',
-    excerpt: '참을 만큼 참았다면? 쪽지 붙이기부터 이웃사이센터 신고까지 단계별 대응 매뉴얼.',
-    date: '2025-11-28',
-    category: '생활',
-    keywords: ['층간소음 신고', '벽간소음', '이웃사이센터', '소음 기준'],
-    faq: [
-      {
-        question: '직접 찾아가서 항의해도 되나요?',
-        answer: '직접 찾아가 초인종을 누르거나 문을 두드리는 행위는 주거침입 등으로 역고소 당할 수 있으니 관리실을 통하세요.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'noise-complaint-guide',
+        title: '층간소음, 벽간소음 법적 기준과 현명한 대처법',
+        excerpt: '참을 만큼 참았다면? 쪽지 붙이기부터 이웃사이센터 신고까지 단계별 대응 매뉴얼.',
+        date: '2025-11-28',
+        category: '생활',
+        keywords: ['층간소음 신고', '벽간소음', '이웃사이센터', '소음 기준'],
+        faq: [
+            {
+                question: '직접 찾아가서 항의해도 되나요?',
+                answer: '직접 찾아가 초인종을 누르거나 문을 두드리는 행위는 주거침입 등으로 역고소 당할 수 있으니 관리실을 통하세요.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">매일 밤 쿵쿵거리는 발소리, 참다 참다 폭발하기 직전인가요? 감정적인 대응은 오히려 독이 됩니다. 법적으로 현명하게 대처하는 단계별 매뉴얼입니다.</p>
 
@@ -795,21 +843,21 @@ export const guidePosts: GuidePost[] = [
         </ul>
       </article>
     `
-  },
-  {
-    slug: 'deposit-return-delay',
-    title: '집주인이 보증금을 안 돌려줄 때 내용증명 작성법 (양식 포함)',
-    excerpt: '만기가 지났는데 돈이 없다는 집주인. 내용증명 발송으로 심리적 압박하고 법적 증거 남기기.',
-    date: '2025-11-28',
-    category: '법률',
-    keywords: ['내용증명 작성법', '보증금 반환 소송', '임차권등기명령'],
-    faq: [
-      {
-        question: '내용증명은 변호사가 써야 하나요?',
-        answer: '아니요, 육하원칙에 맞춰 사실관계를 명확히 적으면 개인이 작성해도 충분한 효력이 있습니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'deposit-return-delay',
+        title: '집주인이 보증금을 안 돌려줄 때 내용증명 작성법 (양식 포함)',
+        excerpt: '만기가 지났는데 돈이 없다는 집주인. 내용증명 발송으로 심리적 압박하고 법적 증거 남기기.',
+        date: '2025-11-28',
+        category: '법률',
+        keywords: ['내용증명 작성법', '보증금 반환 소송', '임차권등기명령'],
+        faq: [
+            {
+                question: '내용증명은 변호사가 써야 하나요?',
+                answer: '아니요, 육하원칙에 맞춰 사실관계를 명확히 적으면 개인이 작성해도 충분한 효력이 있습니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">계약 만기일이 지났는데 "새 세입자 구해지면 줄게"라며 버티는 집주인. 더 이상 기다리지 마세요. 내용증명은 법적 조치의 시작을 알리는 강력한 경고장입니다.</p>
 
@@ -849,21 +897,21 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  },
-  {
-    slug: 'auction-process-guide',
-    title: '살던 집이 경매로 넘어갔을 때 대처 프로세스 5단계',
-    excerpt: '경매 개시 결정 등기 우편물을 받았다면? 당황하지 말고 이 순서대로만 하세요.',
-    date: '2025-11-28',
-    category: '법률',
-    keywords: ['부동산 경매 절차', '배당요구', '임차인 대항력', '경매 권리분석'],
-    faq: [
-      {
-        question: '배당요구를 안 하면 어떻게 되나요?',
-        answer: '선순위 임차인이라도 배당요구를 안 하면 경매 대금에서 돈을 못 받고, 낙찰자에게 달라고 해야 합니다. 상황에 따라 전략이 다릅니다.'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'auction-process-guide',
+        title: '살던 집이 경매로 넘어갔을 때 대처 프로세스 5단계',
+        excerpt: '경매 개시 결정 등기 우편물을 받았다면? 당황하지 말고 이 순서대로만 하세요.',
+        date: '2025-11-28',
+        category: '법률',
+        keywords: ['부동산 경매 절차', '배당요구', '임차인 대항력', '경매 권리분석'],
+        faq: [
+            {
+                question: '배당요구를 안 하면 어떻게 되나요?',
+                answer: '선순위 임차인이라도 배당요구를 안 하면 경매 대금에서 돈을 못 받고, 낙찰자에게 달라고 해야 합니다. 상황에 따라 전략이 다릅니다.'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">어느 날 법원에서 날아온 '경매 개시 결정' 등기. 하늘이 무너지는 것 같겠지만, 정신만 똑바로 차리면 보증금을 지킬 수 있습니다. 반드시 해야 할 5가지 절차입니다.</p>
 
@@ -916,21 +964,21 @@ export const guidePosts: GuidePost[] = [
         </ul>
       </article>
     `
-  },
-  {
-    slug: 'priority-repayment-amount',
-    title: '최우선변제금: 소액 임차인 보호 범위와 기준',
-    excerpt: '집이 망해도 최소한의 돈은 건진다. 지역별 최우선변제금 범위와 기준 시점 확인법.',
-    date: '2025-11-28',
-    category: '법률',
-    keywords: ['최우선변제금', '소액임차인', '보증금 보호', '서울 최우선변제'],
-    faq: [
-      {
-        question: '기준 시점이 언제인가요?',
-        answer: '내 계약일이 아니라, 내 집의 가장 먼저 설정된 담보물권(근저당권) 설정일 기준입니다. 이게 중요합니다!'
-      }
-    ],
-    content: `
+    },
+    {
+        slug: 'priority-repayment-amount',
+        title: '최우선변제금: 소액 임차인 보호 범위와 기준',
+        excerpt: '집이 망해도 최소한의 돈은 건진다. 지역별 최우선변제금 범위와 기준 시점 확인법.',
+        date: '2025-11-28',
+        category: '법률',
+        keywords: ['최우선변제금', '소액임차인', '보증금 보호', '서울 최우선변제'],
+        faq: [
+            {
+                question: '기준 시점이 언제인가요?',
+                answer: '내 계약일이 아니라, 내 집의 가장 먼저 설정된 담보물권(근저당권) 설정일 기준입니다. 이게 중요합니다!'
+            }
+        ],
+        content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">집이 경매로 넘어가고 내가 후순위라 해도, 국가에서 "이 돈만큼은 무조건 먼저 챙겨줘라"라고 정한 금액이 있습니다. 바로 최우선변제금입니다.</p>
 
@@ -982,5 +1030,5 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
-  }
+    }
 ];
