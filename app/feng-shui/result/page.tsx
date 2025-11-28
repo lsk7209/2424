@@ -168,6 +168,36 @@ function FengShuiResultContent() {
                                 </div>
                             </div>
 
+                            {/* Lucky & Avoid Tips */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-100">
+                                <div className="space-y-4">
+                                    <h3 className="font-bold text-lg flex items-center gap-2 text-emerald-600">
+                                        <span className="text-xl">🍀</span> 행운을 부르는 팁
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {result.result.lucky_tips.map((tip, index) => (
+                                            <li key={index} className="flex items-start gap-3 text-slate-700 bg-emerald-50/50 p-3 rounded-xl border border-emerald-100">
+                                                <span className="text-emerald-500 mt-0.5 font-bold">✓</span>
+                                                <span className="text-sm font-medium">{tip}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="font-bold text-lg flex items-center gap-2 text-rose-600">
+                                        <span className="text-xl">⚠️</span> 이것만은 피하세요
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {result.result.avoid_tips.map((tip, index) => (
+                                            <li key={index} className="flex items-start gap-3 text-slate-700 bg-rose-50/50 p-3 rounded-xl border border-rose-100">
+                                                <span className="text-rose-500 mt-0.5 font-bold">!</span>
+                                                <span className="text-sm font-medium">{tip}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+
                             {/* Recommendations */}
                             {result.result.recommendations.length > 0 && (
                                 <div className="pt-8 border-t border-slate-100 space-y-4">

@@ -20,6 +20,10 @@ export interface NeighborhoodResult {
   description: string;
   tags: string[];
   match_type: 'ideal' | 'real';
+  pros: string[];
+  cons: string[];
+  funFact?: string;
+  famousFor?: string[];
   affiliate_products: {
     name: string;
     link: string; // Coupang Link
@@ -52,6 +56,8 @@ export interface FengShuiResult {
   ideal_features: string[]; // 이상적인 집의 특징
   colors: string[]; // 행운의 색상
   lucky_directions: string[]; // 행운의 방향
+  lucky_tips: string[]; // 행운을 부르는 팁
+  avoid_tips: string[]; // 피해야 할 것
   recommendations: {
     name: string;
     link: string;

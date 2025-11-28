@@ -146,6 +146,65 @@ export default function ResultPage() {
                                         </div>
                                     </div>
                                 )}
+
+                                {/* Rich Content: Pros & Cons */}
+                                <div className="grid grid-cols-1 gap-4 pt-4 border-t border-slate-100">
+                                    <div className="space-y-2">
+                                        <h4 className="font-bold text-sm text-indigo-600 flex items-center gap-1">
+                                            <span className="text-lg">👍</span> 장점
+                                        </h4>
+                                        <ul className="space-y-1">
+                                            {result.idealMatch.pros.map((pro, idx) => (
+                                                <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
+                                                    <span className="text-indigo-400 mt-0.5">•</span>
+                                                    {pro}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h4 className="font-bold text-sm text-rose-500 flex items-center gap-1">
+                                            <span className="text-lg">👎</span> 단점
+                                        </h4>
+                                        <ul className="space-y-1">
+                                            {result.idealMatch.cons.map((con, idx) => (
+                                                <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
+                                                    <span className="text-rose-300 mt-0.5">•</span>
+                                                    {con}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                {/* Rich Content: Fun Fact & Famous For */}
+                                <div className="space-y-4 pt-4 border-t border-slate-100">
+                                    {result.idealMatch.funFact && (
+                                        <div className="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100">
+                                            <h4 className="font-bold text-sm text-indigo-800 mb-1 flex items-center gap-2">
+                                                <span>💡</span> 알고 계셨나요?
+                                            </h4>
+                                            <p className="text-sm text-indigo-700 leading-relaxed">
+                                                {result.idealMatch.funFact}
+                                            </p>
+                                        </div>
+                                    )}
+
+                                    {result.idealMatch.famousFor && (
+                                        <div className="space-y-2">
+                                            <h4 className="font-bold text-sm text-slate-500 flex items-center gap-1">
+                                                <span>📍</span> 핫플레이스
+                                            </h4>
+                                            <div className="flex flex-wrap gap-2">
+                                                {result.idealMatch.famousFor.map((place, idx) => (
+                                                    <span key={idx} className="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-medium">
+                                                        {place}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </CardContent>
                         </Card>
 
@@ -202,6 +261,65 @@ export default function ResultPage() {
                                         </div>
                                     </div>
                                 )}
+
+                                {/* Rich Content: Pros & Cons */}
+                                <div className="grid grid-cols-1 gap-4 pt-4 border-t border-slate-100">
+                                    <div className="space-y-2">
+                                        <h4 className="font-bold text-sm text-emerald-600 flex items-center gap-1">
+                                            <span className="text-lg">👍</span> 장점
+                                        </h4>
+                                        <ul className="space-y-1">
+                                            {result.realMatch.pros.map((pro, idx) => (
+                                                <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
+                                                    <span className="text-emerald-400 mt-0.5">•</span>
+                                                    {pro}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h4 className="font-bold text-sm text-rose-500 flex items-center gap-1">
+                                            <span className="text-lg">👎</span> 단점
+                                        </h4>
+                                        <ul className="space-y-1">
+                                            {result.realMatch.cons.map((con, idx) => (
+                                                <li key={idx} className="text-sm text-slate-600 flex items-start gap-2">
+                                                    <span className="text-rose-300 mt-0.5">•</span>
+                                                    {con}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                {/* Rich Content: Fun Fact & Famous For */}
+                                <div className="space-y-4 pt-4 border-t border-slate-100">
+                                    {result.realMatch.funFact && (
+                                        <div className="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                                            <h4 className="font-bold text-sm text-emerald-800 mb-1 flex items-center gap-2">
+                                                <span>💡</span> 알고 계셨나요?
+                                            </h4>
+                                            <p className="text-sm text-emerald-700 leading-relaxed">
+                                                {result.realMatch.funFact}
+                                            </p>
+                                        </div>
+                                    )}
+
+                                    {result.realMatch.famousFor && (
+                                        <div className="space-y-2">
+                                            <h4 className="font-bold text-sm text-slate-500 flex items-center gap-1">
+                                                <span>📍</span> 주요 명소
+                                            </h4>
+                                            <div className="flex flex-wrap gap-2">
+                                                {result.realMatch.famousFor.map((place, idx) => (
+                                                    <span key={idx} className="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-medium">
+                                                        {place}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
                             </CardContent>
                         </Card>
                     </div>

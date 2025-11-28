@@ -20,6 +20,8 @@ export const fengShuiResults: FengShuiResult[] = [
         ],
         colors: ['연두색', '초록색', '베이지'],
         lucky_directions: ['동쪽', '남동쪽'],
+        lucky_tips: ['현관 입구에 관엽식물을 두면 재물운이 상승합니다.', '거실에는 나무 소재의 가구를 배치하세요.', '침실 커튼은 밝은 녹색 계열이 좋습니다.'],
+        avoid_tips: ['차가운 금속 소재의 인테리어는 피하세요.', '서쪽으로 머리를 두고 자지 마세요.', '집안에 시든 꽃이나 식물을 방치하지 마세요.'],
         recommendations: [
             {
                 name: '공기정화 식물 세트',
@@ -48,6 +50,8 @@ export const fengShuiResults: FengShuiResult[] = [
         ],
         colors: ['빨강', '주황', '분홍'],
         lucky_directions: ['남쪽', '남동쪽'],
+        lucky_tips: ['거실 조명을 밝고 화려하게 유지하세요.', '붉은색 계열의 쿠션이나 액자로 포인트를 주세요.', '주방을 항상 청결하게 유지하면 건강운이 좋아집니다.'],
+        avoid_tips: ['집안을 어둡거나 습하게 두지 마세요.', '북쪽으로 머리를 두고 자면 에너지가 떨어질 수 있습니다.', '수족관이나 어항은 가급적 피하는 것이 좋습니다.'],
         recommendations: [
             {
                 name: 'LED 무드등 세트',
@@ -76,6 +80,8 @@ export const fengShuiResults: FengShuiResult[] = [
         ],
         colors: ['베이지', '갈색', '노란색'],
         lucky_directions: ['남서쪽', '북동쪽'],
+        lucky_tips: ['거실에 도자기나 토기 장식품을 두면 좋습니다.', '가구는 낮고 안정감 있는 디자인을 선택하세요.', '노란색 계열의 러그를 깔면 가정운이 좋아집니다.'],
+        avoid_tips: ['너무 높은 고층 아파트는 기운이 불안정할 수 있습니다.', '푸른색 위주의 차가운 인테리어는 피하세요.', '현관에 거울이 정면으로 보이지 않게 하세요.'],
         recommendations: [
             {
                 name: '수납 정리 용품 세트',
@@ -104,6 +110,8 @@ export const fengShuiResults: FengShuiResult[] = [
         ],
         colors: ['흰색', '회색', '은색'],
         lucky_directions: ['서쪽', '북서쪽'],
+        lucky_tips: ['화이트 톤이나 메탈 소재의 인테리어가 행운을 부릅니다.', '원형 거울이나 시계를 걸어두면 좋습니다.', '침실은 최대한 심플하고 깔끔하게 유지하세요.'],
+        avoid_tips: ['붉은색을 과하게 사용하면 기운이 충돌할 수 있습니다.', '남쪽으로 머리를 두고 자지 마세요.', '오래된 목재 가구는 피하는 것이 좋습니다.'],
         recommendations: [
             {
                 name: '미니멀 가구 세트',
@@ -132,6 +140,8 @@ export const fengShuiResults: FengShuiResult[] = [
         ],
         colors: ['파랑', '검정', '남색'],
         lucky_directions: ['북쪽', '북동쪽'],
+        lucky_tips: ['작은 어항이나 미니 분수를 두면 재물운이 흐릅니다.', '침구는 차분한 블루나 그레이 톤이 좋습니다.', '욕실을 항상 청결하고 건조하게 유지하세요.'],
+        avoid_tips: ['너무 강한 조명이나 화려한 색상은 피하세요.', '흙이 많은 화분을 침실에 두지 마세요.', '현관이 너무 밝으면 기운이 흩어질 수 있습니다.'],
         recommendations: [
             {
                 name: '가습기 및 공기청정기',
