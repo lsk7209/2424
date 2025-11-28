@@ -111,7 +111,7 @@ export default function ResultClient() {
                     {/* Results Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Ideal Match */}
-                        <Card className="border-0 shadow-xl shadow-indigo-100 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300">
+                        <Card className="border-0 shadow-xl shadow-indigo-100 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col">
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-400 to-purple-500" />
                             <CardHeader className="bg-white pb-2">
                                 <div className="text-center space-y-3">
@@ -126,7 +126,7 @@ export default function ResultClient() {
                                     </CardDescription>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-6 space-y-6 bg-white">
+                            <CardContent className="pt-6 space-y-6 bg-white flex-1">
                                 <p className="text-slate-600 leading-relaxed text-center px-4">
                                     {result.idealMatch.description}
                                 </p>
@@ -214,7 +214,7 @@ export default function ResultClient() {
                         </Card>
 
                         {/* Real Match */}
-                        <Card className="border-0 shadow-xl shadow-emerald-100 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300">
+                        <Card className="border-0 shadow-xl shadow-emerald-100 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col">
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-teal-500" />
                             <CardHeader className="bg-white pb-2">
                                 <div className="text-center space-y-3">
@@ -229,7 +229,7 @@ export default function ResultClient() {
                                     </CardDescription>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-6 space-y-6 bg-white">
+                            <CardContent className="pt-6 space-y-6 bg-white flex-1">
                                 <p className="text-slate-600 leading-relaxed text-center px-4">
                                     {result.realMatch.description}
                                 </p>
