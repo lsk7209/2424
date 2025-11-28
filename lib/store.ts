@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { UserAnswers } from '@/types';
+import { neighborhoodQuestions } from '@/data/neighborhood-questions';
 
 interface NeighborhoodTestStore {
     answers: UserAnswers;
@@ -29,7 +30,7 @@ export const useNeighborhoodTest = create<NeighborhoodTestStore>()(
 
             nextQuestion: () => {
                 set((state) => ({
-                    currentQuestion: Math.min(state.currentQuestion + 1, 10),
+                    currentQuestion: Math.min(state.currentQuestion + 1, neighborhoodQuestions.length),
                 }));
             },
 
@@ -48,7 +49,7 @@ export const useNeighborhoodTest = create<NeighborhoodTestStore>()(
 
             isCompleted: () => {
                 const { answers } = get();
-                return Object.keys(answers).length === 10;
+                return Object.keys(answers).length === neighborhoodQuestions.length;
             },
         }),
         {

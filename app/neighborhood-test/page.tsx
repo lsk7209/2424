@@ -20,6 +20,13 @@ export default function NeighborhoodTestPage() {
     const progress = (currentQuestion / neighborhoodQuestions.length) * 100;
 
     useEffect(() => {
+        // 이미 완료된 테스트라면 결과 페이지로 이동
+        if (isCompleted()) {
+            router.replace('/neighborhood-test/result');
+        }
+    }, [isCompleted, router]);
+
+    useEffect(() => {
         // 현재 질문에 대한 기존 답변이 있으면 선택 상태로 설정
         if (answers[currentQuestion] !== undefined) {
             setSelectedOption(answers[currentQuestion]);
