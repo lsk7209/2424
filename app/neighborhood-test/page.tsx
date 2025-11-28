@@ -63,56 +63,49 @@ export default function NeighborhoodTestPage() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
+        <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-primary/20">
             <Header />
 
-            <main className="flex-1 container max-w-2xl mx-auto py-12 px-4">
-                <div className="space-y-8">
+            <main className="flex-1 container max-w-2xl mx-auto py-12 px-4 flex flex-col justify-center min-h-[600px]">
+                <div className="space-y-8 animate-fade-in-up">
                     {/* Progress */}
-                    <div className="space-y-2">
-                        <div className="flex justify-between text-sm text-muted-foreground">
-                            <span>질문 {currentQuestion} / {neighborhoodQuestions.length}</span>
+                    <div className="space-y-3">
+                        <div className="flex justify-between text-sm font-medium text-slate-500">
+                            <span>Question {currentQuestion}</span>
                             <span>{Math.round(progress)}%</span>
                         </div>
-                        <Progress value={progress} className="h-2" />
+                        <Progress value={progress} className="h-3 rounded-full bg-slate-200 [&>div]:bg-gradient-to-r [&>div]:from-primary [&>div]:to-purple-500" />
                     </div>
 
                     {/* Question Card */}
-                    <Card className="border-2">
-                        <CardContent className="pt-8 pb-6">
-                            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+                    <Card className="border-0 shadow-xl shadow-slate-200/50 overflow-hidden bg-white/80 backdrop-blur-sm ring-1 ring-slate-100">
+                        <CardContent className="pt-10 pb-8 px-6 md:px-10">
+                            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 leading-snug text-slate-800">
+                                <span className="text-primary mr-2">Q{currentQuestion}.</span>
                                 {question.text}
                             </h2>
 
-                            <div className="space-y-3">
+                            <div className="space-y-4">
                                 {question.options.map((option, index) => (
                                     <button
                                         key={index}
                                         onClick={() => handleOptionSelect(index)}
-                                        className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-200 ${selectedOption === index
-                                            ? 'border-primary bg-primary/5 shadow-md'
-                                            : 'border-border hover:border-primary/50 hover:bg-muted/50'
+                                        className={`w-full p-5 rounded-2xl border-2 text-left transition-all duration-200 group relative overflow-hidden ${selectedOption === index
+                                            ? 'border-primary bg-primary/5 shadow-md scale-[1.02]'
+                                            : 'border-slate-100 bg-white hover:border-primary/30 hover:bg-slate-50 hover:scale-[1.01]'
                                             }`}
                                     >
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-base md:text-lg font-medium">
+                                        <div className="flex items-center justify-between relative z-10">
+                                            <span className={`text-lg font-medium transition-colors ${selectedOption === index ? 'text-primary' : 'text-slate-700 group-hover:text-slate-900'}`}>
                                                 {option.text}
                                             </span>
-                                            {selectedOption === index && (
-                                                <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                                                    <svg
-                                                        className="w-4 h-4 text-white"
-                                                        fill="none"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth="2"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                    >
-                                                        <path d="M5 13l4 4L19 7"></path>
+                                            <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${selectedOption === index ? 'border-primary bg-primary' : 'border-slate-300 group-hover:border-primary/50'}`}>
+                                                {selectedOption === index && (
+                                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                                     </svg>
-                                                </div>
-                                            )}
+                                                )}
+                                            </div>
                                         </div>
                                     </button>
                                 ))}
@@ -121,39 +114,28 @@ export default function NeighborhoodTestPage() {
                     </Card>
 
                     {/* Navigation */}
-                    <div className="flex justify-between gap-4">
+                    <div className="flex justify-between gap-4 pt-4">
                         <Button
-                            variant="outline"
+                            variant="ghost"
                             size="lg"
                             onClick={handlePrev}
                             disabled={currentQuestion === 1}
-                            className="flex-1 max-w-[200px]"
+                            className="text-slate-400 hover:text-slate-600 hover:bg-transparent px-0"
                         >
-                            <ChevronLeft className="mr-2 h-5 w-5" />
-                            이전
+                            <ChevronLeft className="mr-1 h-5 w-5" />
+                            이전 질문
                         </Button>
 
-                        <Button
-                            size="lg"
-                            onClick={handleNext}
-                            disabled={selectedOption === null}
-                            className="flex-1 max-w-[200px]"
-                        >
-                            {currentQuestion === neighborhoodQuestions.length ? '결과 보기' : '다음'}
-                            <ChevronRight className="ml-2 h-5 w-5" />
-                        </Button>
-                    </div>
-
-                    {/* Reset Button */}
-                    <div className="text-center">
                         <Button
                             variant="ghost"
                             size="sm"
                             onClick={() => {
-                                resetTest();
-                                setSelectedOption(null);
+                                if (confirm('정말 처음부터 다시 하시겠습니까?')) {
+                                    resetTest();
+                                    setSelectedOption(null);
+                                }
                             }}
-                            className="text-muted-foreground"
+                            className="text-slate-300 hover:text-red-400 hover:bg-transparent text-xs"
                         >
                             처음부터 다시하기
                         </Button>

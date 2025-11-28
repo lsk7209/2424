@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://today2424.kr'),
   title: "독립만세 - 이사/독립 종합 가이드",
   description: "이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼. 동네 찾기 테스트, 전세 사기 진단, 이사 체크리스트까지!",
   keywords: ["이사", "독립", "전세", "원룸", "자취", "동네 추천", "이사 체크리스트", "이사 준비", "전세 계약", "풍수지리", "깡통전세"],

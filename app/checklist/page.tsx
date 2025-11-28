@@ -1,7 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -10,13 +9,59 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from '@/components/ui/accordion';
-import { CheckCircle2, Circle, ExternalLink, Download, RotateCcw } from 'lucide-react';
+import { CheckCircle2, Circle, ExternalLink, Download, RotateCcw, PartyPopper, Trophy, ArrowUp } from 'lucide-react';
 import { checklistData } from '@/data/checklist-data';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import confetti from 'canvas-confetti';
 
 export default function ChecklistPage() {
     const [completedTasks, setCompletedTasks] = useState<Set<string>>(new Set());
+    const [showCelebration, setShowCelebration] = useState(false);
+
+    // Load saved progress from localStorage on mount
+    useEffect(() => {
+        const saved = localStorage.getItem('checklist-progress');
+        if (saved) {
+            try {
+                setCompletedTasks(new Set(JSON.parse(saved)));
+            } catch (e) {
+                console.error('Failed to load progress', e);
+            }
+        }
+    }, []);
+
+    // Save progress to localStorage whenever it changes
+    useEffect(() => {
+        localStorage.setItem('checklist-progress', JSON.stringify(Array.from(completedTasks)));
+
+        // Check for 100% completion
+        const totalTasks = checklistData.reduce((sum, section) => sum + section.tasks.length, 0);
+        if (completedTasks.size > 0 && completedTasks.size === totalTasks && !showCelebration) {
+            setShowCelebration(true);
+            triggerConfetti();
+        }
+    }, [completedTasks]);
+
+    const triggerConfetti = () => {
+        const duration = 3 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+
+        const interval: any = setInterval(function () {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+            confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+            confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+        }, 250);
+    };
 
     const toggleTask = (dDay: string, taskIndex: number) => {
         const taskId = `${dDay}-${taskIndex}`;
@@ -44,11 +89,12 @@ export default function ChecklistPage() {
     const handleReset = () => {
         if (confirm('모든 체크를 초기화하시겠습니까?')) {
             setCompletedTasks(new Set());
+            setShowCelebration(false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
     const handleDownload = () => {
-        // 체크리스트를 텍스트로 변환
         let text = '독립만세 - 이사 체크리스트\n\n';
         checklistData.forEach(section => {
             text += `${section.d_day}: ${section.title}\n`;
@@ -59,7 +105,6 @@ export default function ChecklistPage() {
             text += '\n';
         });
 
-        // 다운로드
         const blob = new Blob([text], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -70,128 +115,152 @@ export default function ChecklistPage() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
+        <div className="min-h-screen flex flex-col bg-slate-50">
             <Header />
 
-            <main className="flex-1 container max-w-3xl mx-auto py-12 px-4">
+            <main className="flex-1 container max-w-3xl mx-auto py-8 md:py-12 px-4 pb-32">
                 <div className="space-y-8">
                     {/* Title */}
                     <div className="text-center space-y-4">
-                        <h1 className="text-3xl md:text-4xl font-bold">
+                        <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900">
                             D-30 이사 작전지도
                         </h1>
-                        <p className="text-lg text-muted-foreground">
-                            단계별로 체크하며 완벽한 이사를 준비하세요
+                        <p className="text-lg text-slate-600">
+                            단계별로 체크하며 완벽한 이사를 준비하세요 🚚
                         </p>
                     </div>
 
-                    {/* Progress Card */}
-                    <Card>
-                        <CardHeader>
-                            <div className="flex items-center justify-between">
-                                <div>
-                                    <CardTitle>전체 진행률</CardTitle>
-                                    <CardDescription>
-                                        {completedTasks.size} / {checklistData.reduce((sum, s) => sum + s.tasks.length, 0)} 완료
-                                    </CardDescription>
-                                </div>
-                                <div className="text-3xl font-bold text-primary">
-                                    {getTotalProgress()}%
-                                </div>
+                    {/* Sticky Progress Bar (Mobile Friendly) */}
+                    <div className="sticky top-4 z-40 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-slate-200 p-4 mb-8">
+                        <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-2">
+                                <span className="text-sm font-bold text-slate-700">이사 준비율</span>
+                                <span className="text-xs text-slate-500">
+                                    ({completedTasks.size} / {checklistData.reduce((sum, s) => sum + s.tasks.length, 0)})
+                                </span>
                             </div>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="h-3 bg-muted rounded-full overflow-hidden">
-                                <div
-                                    className="h-full bg-primary transition-all duration-300"
-                                    style={{ width: `${getTotalProgress()}%` }}
-                                />
-                            </div>
-                            <div className="flex gap-2 mt-4">
-                                <Button onClick={handleDownload} variant="outline" size="sm" className="gap-2">
-                                    <Download className="h-4 w-4" />
-                                    체크리스트 다운로드
-                                </Button>
-                                <Button onClick={handleReset} variant="outline" size="sm" className="gap-2">
-                                    <RotateCcw className="h-4 w-4" />
-                                    초기화
-                                </Button>
-                            </div>
-                        </CardContent>
-                    </Card>
+                            <span className="text-xl font-extrabold text-primary">{getTotalProgress()}%</span>
+                        </div>
+                        <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
+                            <div
+                                className="h-full bg-gradient-to-r from-primary to-violet-500 transition-all duration-500 ease-out"
+                                style={{ width: `${getTotalProgress()}%` }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Celebration Card (Shows at 100%) */}
+                    {showCelebration && (
+                        <div className="animate-fade-in-up">
+                            <Card className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white border-0 shadow-xl">
+                                <CardContent className="p-8 text-center space-y-6">
+                                    <div className="flex justify-center">
+                                        <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm animate-bounce">
+                                            <Trophy className="h-12 w-12 text-yellow-300" />
+                                        </div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2 className="text-2xl font-bold">이사 준비 완료! 축하합니다! 🎉</h2>
+                                        <p className="text-indigo-100">
+                                            모든 체크리스트를 완료하셨네요.<br />
+                                            새로운 보금자리에서 행복한 일만 가득하시길 바랍니다.
+                                        </p>
+                                    </div>
+                                    <div className="flex gap-3 justify-center pt-2">
+                                        <Button onClick={handleDownload} variant="secondary" size="lg" className="font-bold shadow-lg">
+                                            <Download className="mr-2 h-4 w-4" /> 체크리스트 저장
+                                        </Button>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    )}
 
                     {/* Checklist Accordion */}
-                    <Accordion type="multiple" defaultValue={['D-30', 'D-14']} className="space-y-4">
+                    <Accordion type="multiple" defaultValue={['D-30']} className="space-y-4">
                         {checklistData.map((section) => {
-                            const sectionCompleted = section.tasks.filter((_, index) =>
+                            const sectionCompletedCount = section.tasks.filter((_, index) =>
                                 isTaskCompleted(section.d_day, index)
                             ).length;
-                            const sectionProgress = Math.round((sectionCompleted / section.tasks.length) * 100);
+                            const isSectionComplete = sectionCompletedCount === section.tasks.length;
+                            const sectionProgress = Math.round((sectionCompletedCount / section.tasks.length) * 100);
 
                             return (
                                 <AccordionItem
                                     key={section.d_day}
                                     value={section.d_day}
-                                    className="border rounded-lg px-6 bg-white"
+                                    className={`border rounded-xl px-2 bg-white transition-all ${isSectionComplete ? 'border-primary/30 bg-primary/5' : 'border-slate-200'
+                                        }`}
                                 >
-                                    <AccordionTrigger className="hover:no-underline">
-                                        <div className="flex items-center justify-between w-full pr-4">
+                                    <AccordionTrigger className="hover:no-underline px-4 py-4">
+                                        <div className="flex items-center justify-between w-full pr-2">
                                             <div className="text-left">
                                                 <div className="flex items-center gap-3">
-                                                    <span className="text-lg font-bold text-primary">
+                                                    <span className={`text-lg font-bold ${isSectionComplete ? 'text-primary' : 'text-slate-800'}`}>
                                                         {section.d_day}
                                                     </span>
-                                                    <span className="text-base font-semibold">
+                                                    <span className="text-base font-semibold text-slate-700">
                                                         {section.title}
                                                     </span>
                                                 </div>
-                                                <p className="text-sm text-muted-foreground mt-1">
-                                                    {sectionCompleted} / {section.tasks.length} 완료 ({sectionProgress}%)
-                                                </p>
+                                                <div className="flex items-center gap-2 mt-1">
+                                                    <div className="h-1.5 w-24 bg-slate-100 rounded-full overflow-hidden">
+                                                        <div
+                                                            className={`h-full rounded-full transition-all ${isSectionComplete ? 'bg-primary' : 'bg-slate-300'}`}
+                                                            style={{ width: `${sectionProgress}%` }}
+                                                        />
+                                                    </div>
+                                                    <span className="text-xs text-slate-400">
+                                                        {sectionProgress}%
+                                                    </span>
+                                                </div>
                                             </div>
+                                            {isSectionComplete && (
+                                                <CheckCircle2 className="h-6 w-6 text-primary animate-in zoom-in duration-300" />
+                                            )}
                                         </div>
                                     </AccordionTrigger>
-                                    <AccordionContent>
-                                        <div className="space-y-3 pt-4">
+                                    <AccordionContent className="px-4 pb-4">
+                                        <div className="space-y-3 pt-2">
                                             {section.tasks.map((task, index) => {
                                                 const completed = isTaskCompleted(section.d_day, index);
 
                                                 return (
                                                     <div
                                                         key={index}
-                                                        className={`p-4 rounded-lg border transition-all ${completed ? 'bg-muted/50 border-primary/30' : 'bg-white'
+                                                        onClick={() => toggleTask(section.d_day, index)}
+                                                        className={`p-4 rounded-xl border cursor-pointer transition-all active:scale-[0.98] ${completed
+                                                                ? 'bg-primary/5 border-primary/20 shadow-none'
+                                                                : 'bg-white border-slate-100 hover:border-primary/50 hover:shadow-sm'
                                                             }`}
                                                     >
                                                         <div className="flex items-start gap-3">
-                                                            <button
-                                                                onClick={() => toggleTask(section.d_day, index)}
-                                                                className="mt-0.5 flex-shrink-0"
-                                                            >
+                                                            <div className={`mt-0.5 transition-colors ${completed ? 'text-primary' : 'text-slate-300'}`}>
                                                                 {completed ? (
-                                                                    <CheckCircle2 className="h-6 w-6 text-primary" />
+                                                                    <CheckCircle2 className="h-6 w-6" />
                                                                 ) : (
-                                                                    <Circle className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                                                                    <Circle className="h-6 w-6" />
                                                                 )}
-                                                            </button>
+                                                            </div>
 
-                                                            <div className="flex-1 space-y-2">
-                                                                <p
-                                                                    className={`font-medium ${completed ? 'line-through text-muted-foreground' : ''
-                                                                        }`}
-                                                                >
+                                                            <div className="flex-1 space-y-1">
+                                                                <p className={`font-medium transition-all ${completed ? 'text-slate-500 line-through decoration-slate-300' : 'text-slate-700'
+                                                                    }`}>
                                                                     {task.text}
                                                                 </p>
 
                                                                 {task.has_affiliate && task.affiliate_info && (
-                                                                    <a
-                                                                        href={task.affiliate_info.url}
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                                                                    >
-                                                                        <ExternalLink className="h-4 w-4" />
-                                                                        {task.affiliate_info.label}
-                                                                    </a>
+                                                                    <div onClick={(e) => e.stopPropagation()}>
+                                                                        <a
+                                                                            href={task.affiliate_info.url}
+                                                                            target="_blank"
+                                                                            rel="noopener noreferrer"
+                                                                            className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline bg-primary/10 px-2 py-1 rounded-full"
+                                                                        >
+                                                                            <ExternalLink className="h-3 w-3" />
+                                                                            {task.affiliate_info.label} 추천
+                                                                        </a>
+                                                                    </div>
                                                                 )}
                                                             </div>
                                                         </div>
@@ -205,45 +274,27 @@ export default function ChecklistPage() {
                         })}
                     </Accordion>
 
-                    {/* Tips Card */}
-                    <Card className="bg-muted/50">
-                        <CardHeader>
-                            <CardTitle className="text-lg">💡 이사 준비 팁</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-3 text-sm">
-                            <div>
-                                <p className="font-medium mb-1">1. 여유있게 준비하세요</p>
-                                <p className="text-muted-foreground">
-                                    최소 한 달 전부터 준비를 시작하면 스트레스를 줄일 수 있습니다.
-                                </p>
-                            </div>
-                            <div>
-                                <p className="font-medium mb-1">2. 박스에 라벨링 필수</p>
-                                <p className="text-muted-foreground">
-                                    어느 방의 물건인지, 깨지기 쉬운 물건인지 표시하면 정리가 쉽습니다.
-                                </p>
-                            </div>
-                            <div>
-                                <p className="font-medium mb-1">3. 귀중품은 직접 운반</p>
-                                <p className="text-muted-foreground">
-                                    중요 서류, 귀금속, 현금 등은 이사 업체에 맡기지 말고 직접 챙기세요.
-                                </p>
-                            </div>
-                            <div>
-                                <p className="font-medium mb-1">4. 전입신고는 14일 이내</p>
-                                <p className="text-muted-foreground">
-                                    이사 후 14일 이내에 전입신고를 하지 않으면 과태료가 부과될 수 있습니다.
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
-
-                    {/* AdSense Placeholder */}
-                    <div className="bg-muted/30 border-2 border-dashed rounded-lg p-8 text-center">
-                        <p className="text-sm text-muted-foreground">광고 영역</p>
+                    {/* Bottom Actions */}
+                    <div className="flex gap-3 justify-center pt-8">
+                        <Button onClick={handleReset} variant="ghost" size="sm" className="text-slate-400 hover:text-red-500 hover:bg-red-50">
+                            <RotateCcw className="mr-2 h-4 w-4" /> 초기화
+                        </Button>
                     </div>
                 </div>
             </main>
+
+            {/* Floating Action Button for Download (Visible when progress > 0) */}
+            {getTotalProgress() > 0 && !showCelebration && (
+                <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-4">
+                    <Button
+                        onClick={handleDownload}
+                        size="lg"
+                        className="rounded-full h-14 w-14 p-0 shadow-xl bg-slate-900 hover:bg-slate-800"
+                    >
+                        <Download className="h-6 w-6 text-white" />
+                    </Button>
+                </div>
+            )}
 
             <Footer />
         </div>

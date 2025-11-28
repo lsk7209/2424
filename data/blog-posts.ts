@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
         </div>
 
         <h2>1. 등기부등본, '3번 확인의 법칙'을 기억하세요</h2>
-        <p>등기부등본은 부동산의 신분증입니다. 계약 전, 잔금 치르기 전, 그리고 전입신고 당일 등 <strong>최소 3번</strong>은 확인해야 합니다. 공인중개사가 보여주는 것만 믿지 말고, 대법원 인터넷등기소에서 직접 열람해보는 습관을 들이세요.</p>
+        <p>등기부등본은 부동산의 신분증입니다. 계약 전, 잔금 치르기 전, 그리고 전입신고 당일 등 <strong>최소 3번</strong>은 확인해야 합니다. 공인중개사가 보여주는 것만 믿지 말고, <a href="http://www.iros.go.kr/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">대법원 인터넷등기소(iros.go.kr)</a>에서 직접 열람해보는 습관을 들이세요.</p>
         
         <h3>갑구(소유권)에서 봐야 할 것</h3>
         <ul>
@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
           <li><strong>도시가스/인터넷 이전 신청:</strong> 철거 및 설치 예약을 미리 해야 당일 인터넷 없이 지내는 불편함을 겪지 않습니다.</li>
           <li><strong>우편물 주소 이전 서비스:</strong> 우체국 주거이전 서비스를 신청(유료/무료 확인)하여 우편물이 새 주소로 오도록 하세요.</li>
           <li><strong>금융 주소 변경:</strong> 카드사, 은행 등 금융기관 주소를 한 번에 변경하는 '금융주소 한번에' 서비스를 이용하세요.</li>
-          <li><strong>폐가전/폐가구 배출 신고:</strong> 버리고 갈 큰 짐들에 스티커를 붙이거나 '폐가전 무상방문수거 서비스(1599-0903)'를 예약하세요.</li>
+          <li><strong>폐가전/폐가구 배출 신고:</strong> 버리고 갈 큰 짐들에 스티커를 붙이거나 <a href="https://www.15990903.or.kr/" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline font-medium">'폐가전 무상방문수거 서비스(1599-0903)'</a>를 예약하세요.</li>
         </ul>
 
         <h2>📅 D-1: 최종 점검 (하루 전)</h2>
@@ -207,6 +207,14 @@ export const blogPosts: BlogPost[] = [
     content: `
       <article>
         <p class="lead">풍수지리는 미신이 아니라 '공간 심리학'입니다. 내가 머무는 공간이 편안하고 안정감 있어야 하는 일도 잘 풀리는 법이죠. 좁은 원룸이나 오피스텔에서도 쉽게 따라 할 수 있는 복을 부르는 인테리어 꿀팁을 소개합니다.</p>
+        
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg not-prose">
+          <h4 class="text-purple-900 font-bold mb-2 text-lg">🔮 내 방의 기운은 어떨까?</h4>
+          <p class="text-purple-800 mb-4">사주 오행을 기반으로 나에게 딱 맞는 집터와 인테리어 방향을 알려드립니다.</p>
+          <a href="/feng-shui" class="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors no-underline shadow-md">
+            ✨ 풍수지리 집터 테스트 하러가기 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </a>
+        </div>
 
         <h2>1. 현관: 운이 들어오는 통로</h2>
         <p>현관은 집의 얼굴이자 기운이 드나드는 곳입니다. 항상 밝고 깨끗하게 유지해야 합니다.</p>

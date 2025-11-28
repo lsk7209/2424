@@ -73,48 +73,52 @@ export default function ResultPage() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-primary/20">
             <Header />
 
-            <main className="flex-1 container py-8 md:py-16">
-                <div className="max-w-6xl mx-auto space-y-8">
+            <main className="flex-1 container py-12 md:py-20 px-4">
+                <div className="max-w-5xl mx-auto space-y-12 animate-fade-in-up">
                     {/* Title */}
                     <div className="text-center space-y-4">
-                        <h1 className="text-3xl md:text-4xl font-bold">
-                            나만의 동네 찾기 결과
+                        <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold mb-2">
+                            🎉 분석 완료!
+                        </div>
+                        <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                            나에게 딱 맞는 동네는?
                         </h1>
-                        <p className="text-lg text-muted-foreground">
-                            이상과 현실의 갭을 확인해보세요!
+                        <p className="text-lg text-slate-600">
+                            이상과 현실, 그 사이 어딘가... 😅
                         </p>
                     </div>
 
                     {/* Results Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Ideal Match */}
-                        <Card className="border-2 border-primary">
-                            <CardHeader className="bg-primary/5">
-                                <div className="text-center space-y-2">
-                                    <div className="inline-block px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-medium mb-2">
-                                        이상형 동네
+                        <Card className="border-0 shadow-xl shadow-indigo-100 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-400 to-purple-500" />
+                            <CardHeader className="bg-white pb-2">
+                                <div className="text-center space-y-3">
+                                    <div className="inline-block px-4 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-bold border border-indigo-100">
+                                        💖 나의 이상형 동네
                                     </div>
-                                    <CardTitle className="text-2xl md:text-3xl">
+                                    <CardTitle className="text-3xl md:text-4xl font-bold text-slate-800">
                                         {result.idealMatch.name}
                                     </CardTitle>
-                                    <CardDescription className="text-base font-medium text-foreground">
+                                    <CardDescription className="text-lg font-medium text-indigo-500">
                                         {result.idealMatch.archetype}
                                     </CardDescription>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-6 space-y-4">
-                                <p className="text-muted-foreground leading-relaxed">
+                            <CardContent className="pt-6 space-y-6 bg-white">
+                                <p className="text-slate-600 leading-relaxed text-center px-4">
                                     {result.idealMatch.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 justify-center">
                                     {result.idealMatch.tags.map((tag, index) => (
                                         <span
                                             key={index}
-                                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                                            className="px-3 py-1.5 bg-slate-50 text-slate-600 rounded-lg text-sm font-medium border border-slate-100"
                                         >
                                             #{tag}
                                         </span>
@@ -122,52 +126,55 @@ export default function ResultPage() {
                                 </div>
 
                                 {result.idealMatch.affiliate_products.length > 0 && (
-                                    <div className="pt-4 border-t space-y-3">
-                                        <h4 className="font-semibold text-sm text-muted-foreground">
-                                            이 동네 필수 아이템
+                                    <div className="pt-6 border-t border-slate-100 space-y-4">
+                                        <h4 className="font-bold text-sm text-slate-400 text-center uppercase tracking-wider">
+                                            이 동네 필수템
                                         </h4>
-                                        {result.idealMatch.affiliate_products.slice(0, 2).map((product, index) => (
-                                            <a
-                                                key={index}
-                                                href={product.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3 rounded-lg border hover:bg-muted/50 transition-colors"
-                                            >
-                                                <span className="text-sm font-medium">{product.name}</span>
-                                                <ExternalLink className="h-4 w-4 text-muted-foreground" />
-                                            </a>
-                                        ))}
+                                        <div className="space-y-2">
+                                            {result.idealMatch.affiliate_products.slice(0, 2).map((product, index) => (
+                                                <a
+                                                    key={index}
+                                                    href={product.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center justify-between p-4 rounded-xl bg-slate-50 hover:bg-indigo-50 border border-slate-100 hover:border-indigo-100 transition-all group/item"
+                                                >
+                                                    <span className="text-sm font-medium text-slate-700 group-hover/item:text-indigo-700">{product.name}</span>
+                                                    <ExternalLink className="h-4 w-4 text-slate-400 group-hover/item:text-indigo-500" />
+                                                </a>
+                                            ))}
+                                        </div>
                                     </div>
                                 )}
                             </CardContent>
                         </Card>
 
                         {/* Real Match */}
-                        <Card className="border-2 border-accent">
-                            <CardHeader className="bg-accent/5">
-                                <div className="text-center space-y-2">
-                                    <div className="inline-block px-4 py-1 bg-accent text-accent-foreground rounded-full text-sm font-medium mb-2">
-                                        현실형 동네
+                        <Card className="border-0 shadow-xl shadow-emerald-100 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 to-teal-500" />
+                            <CardHeader className="bg-white pb-2">
+                                <div className="text-center space-y-3">
+                                    <div className="inline-block px-4 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm font-bold border border-emerald-100">
+                                        💰 현실적인 추천 동네
                                     </div>
-                                    <CardTitle className="text-2xl md:text-3xl">
+                                    <CardTitle className="text-3xl md:text-4xl font-bold text-slate-800">
                                         {result.realMatch.name}
                                     </CardTitle>
-                                    <CardDescription className="text-base font-medium text-foreground">
+                                    <CardDescription className="text-lg font-medium text-emerald-500">
                                         {result.realMatch.archetype}
                                     </CardDescription>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-6 space-y-4">
-                                <p className="text-muted-foreground leading-relaxed">
+                            <CardContent className="pt-6 space-y-6 bg-white">
+                                <p className="text-slate-600 leading-relaxed text-center px-4">
                                     {result.realMatch.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 justify-center">
                                     {result.realMatch.tags.map((tag, index) => (
                                         <span
                                             key={index}
-                                            className="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-sm"
+                                            className="px-3 py-1.5 bg-slate-50 text-slate-600 rounded-lg text-sm font-medium border border-slate-100"
                                         >
                                             #{tag}
                                         </span>
@@ -175,22 +182,24 @@ export default function ResultPage() {
                                 </div>
 
                                 {result.realMatch.affiliate_products.length > 0 && (
-                                    <div className="pt-4 border-t space-y-3">
-                                        <h4 className="font-semibold text-sm text-muted-foreground">
-                                            이 동네 필수 아이템
+                                    <div className="pt-6 border-t border-slate-100 space-y-4">
+                                        <h4 className="font-bold text-sm text-slate-400 text-center uppercase tracking-wider">
+                                            자취 꿀템 추천
                                         </h4>
-                                        {result.realMatch.affiliate_products.slice(0, 2).map((product, index) => (
-                                            <a
-                                                key={index}
-                                                href={product.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3 rounded-lg border hover:bg-muted/50 transition-colors"
-                                            >
-                                                <span className="text-sm font-medium">{product.name}</span>
-                                                <ExternalLink className="h-4 w-4 text-muted-foreground" />
-                                            </a>
-                                        ))}
+                                        <div className="space-y-2">
+                                            {result.realMatch.affiliate_products.slice(0, 2).map((product, index) => (
+                                                <a
+                                                    key={index}
+                                                    href={product.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center justify-between p-4 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-100 hover:border-emerald-100 transition-all group/item"
+                                                >
+                                                    <span className="text-sm font-medium text-slate-700 group-hover/item:text-emerald-700">{product.name}</span>
+                                                    <ExternalLink className="h-4 w-4 text-slate-400 group-hover/item:text-emerald-500" />
+                                                </a>
+                                            ))}
+                                        </div>
                                     </div>
                                 )}
                             </CardContent>
@@ -198,57 +207,57 @@ export default function ResultPage() {
                     </div>
 
                     {/* Score Summary */}
-                    <Card>
+                    <Card className="border-0 shadow-lg bg-white/50 backdrop-blur-sm">
                         <CardHeader>
-                            <CardTitle>나의 성향 분석</CardTitle>
+                            <CardTitle className="text-center text-xl text-slate-800">📊 나의 성향 분석표</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="font-medium">분위기 선호도</span>
-                                        <span className="text-muted-foreground">{result.scores.vibe}/10</span>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-sm font-bold text-slate-700">
+                                        <span>힙한 분위기</span>
+                                        <span className="text-indigo-600">{result.scores.vibe * 10}%</span>
                                     </div>
-                                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-primary transition-all"
+                                            className="h-full bg-indigo-500 rounded-full transition-all duration-1000 ease-out"
                                             style={{ width: `${result.scores.vibe * 10}%` }}
                                         />
                                     </div>
-                                    <p className="text-xs text-muted-foreground">
-                                        {result.scores.vibe >= 7 ? '힙한 동네 선호' : result.scores.vibe >= 4 ? '적당한 분위기 선호' : '조용한 동네 선호'}
+                                    <p className="text-xs text-center text-slate-500">
+                                        {result.scores.vibe >= 7 ? '🔥 핫플레이스 매니아' : result.scores.vibe >= 4 ? '⚖️ 적당한 밸런스' : '🌿 조용한게 최고'}
                                     </p>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="font-medium">편의성 중시도</span>
-                                        <span className="text-muted-foreground">{result.scores.infra}/10</span>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-sm font-bold text-slate-700">
+                                        <span>편의시설</span>
+                                        <span className="text-emerald-600">{result.scores.infra * 10}%</span>
                                     </div>
-                                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-primary transition-all"
+                                            className="h-full bg-emerald-500 rounded-full transition-all duration-1000 ease-out"
                                             style={{ width: `${result.scores.infra * 10}%` }}
                                         />
                                     </div>
-                                    <p className="text-xs text-muted-foreground">
-                                        {result.scores.infra >= 7 ? '편의시설 중요' : result.scores.infra >= 4 ? '적당한 편의성' : '자연 환경 선호'}
+                                    <p className="text-xs text-center text-slate-500">
+                                        {result.scores.infra >= 7 ? '🏪 슬세권 필수' : result.scores.infra >= 4 ? '⚖️ 있으면 좋음' : '🌲 자연인 모드'}
                                     </p>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="font-medium">예산 수준</span>
-                                        <span className="text-muted-foreground">{result.scores.budget}/10</span>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-sm font-bold text-slate-700">
+                                        <span>가성비</span>
+                                        <span className="text-amber-600">{100 - (result.scores.budget * 10)}%</span>
                                     </div>
-                                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-accent transition-all"
-                                            style={{ width: `${result.scores.budget * 10}%` }}
+                                            className="h-full bg-amber-500 rounded-full transition-all duration-1000 ease-out"
+                                            style={{ width: `${100 - (result.scores.budget * 10)}%` }}
                                         />
                                     </div>
-                                    <p className="text-xs text-muted-foreground">
-                                        {result.scores.budget >= 7 ? '프리미엄 선호' : result.scores.budget >= 4 ? '중간 예산' : '가성비 중시'}
+                                    <p className="text-xs text-center text-slate-500">
+                                        {result.scores.budget >= 7 ? '💎 플렉스 가능' : result.scores.budget >= 4 ? '⚖️ 합리적 소비' : '💰 가성비가 최고'}
                                     </p>
                                 </div>
                             </div>
@@ -256,37 +265,34 @@ export default function ResultPage() {
                     </Card>
 
                     {/* Actions */}
-                    <div className="space-y-4">
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" onClick={handleShare} className="gap-2">
+                    <div className="space-y-6 text-center">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <Button size="lg" onClick={handleShare} className="w-full sm:w-auto px-8 h-14 text-lg rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-0.5 transition-all gap-2 font-bold">
                                 <Share2 className="h-5 w-5" />
-                                결과 공유하기
+                                친구에게 결과 자랑하기
                             </Button>
-                            <Button size="lg" variant="outline" onClick={handleReset} className="gap-2">
-                                <RotateCcw className="h-5 w-5" />
-                                다시 테스트하기
-                            </Button>
-                            <Button size="lg" variant="outline" asChild className="gap-2">
-                                <Link href="/">
-                                    <Home className="h-5 w-5" />
-                                    홈으로
-                                </Link>
-                            </Button>
+                            <div className="flex gap-3 w-full sm:w-auto">
+                                <Button size="lg" variant="outline" onClick={handleReset} className="flex-1 sm:flex-none h-14 rounded-full border-2 hover:bg-slate-50 text-slate-600">
+                                    <RotateCcw className="h-5 w-5 mr-2" />
+                                    다시하기
+                                </Button>
+                                <Button size="lg" variant="outline" asChild className="flex-1 sm:flex-none h-14 rounded-full border-2 hover:bg-slate-50 text-slate-600">
+                                    <Link href="/">
+                                        <Home className="h-5 w-5 mr-2" />
+                                        홈으로
+                                    </Link>
+                                </Button>
+                            </div>
                         </div>
 
                         {/* Share Message Toast */}
                         {shareMessage && (
-                            <div className="text-center">
-                                <p className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-lg inline-block">
+                            <div className="animate-fade-in-up">
+                                <p className="text-sm font-bold text-primary bg-primary/10 px-6 py-3 rounded-full inline-block shadow-sm">
                                     {shareMessage}
                                 </p>
                             </div>
                         )}
-                    </div>
-
-                    {/* AdSense Placeholder */}
-                    <div className="bg-muted/30 border-2 border-dashed rounded-lg p-8 text-center">
-                        <p className="text-sm text-muted-foreground">광고 영역</p>
                     </div>
                 </div>
             </main>

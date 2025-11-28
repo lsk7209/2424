@@ -75,100 +75,116 @@ function FengShuiResultContent() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-purple-500/20">
             <Header />
 
-            <main className="flex-1 container py-8 md:py-16">
-                <div className="max-w-4xl mx-auto space-y-8">
+            <main className="flex-1 container py-12 md:py-20 px-4">
+                <div className="max-w-4xl mx-auto space-y-12 animate-fade-in-up">
                     {/* Title */}
                     <div className="text-center space-y-4">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full mb-4">
-                            <Sparkles className="h-5 w-5" />
-                            <span className="font-medium">풍수지리 진단 완료</span>
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full mb-4 shadow-sm border border-purple-200">
+                            <Sparkles className="h-4 w-4" />
+                            <span className="font-bold text-sm">풍수지리 진단 완료</span>
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-bold">
-                            {result.result.type}
+                        <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                            당신의 운명을 바꿀 집터는<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
+                                {result.result.type}
+                            </span>
                         </h1>
-                        <p className="text-lg text-muted-foreground">
-                            당신에게 맞는 집터를 찾았습니다!
+                        <p className="text-lg text-slate-600">
+                            나에게 딱 맞는 기운을 가진 곳을 찾았습니다! 🔮
                         </p>
                     </div>
 
                     {/* Main Result Card */}
-                    <Card className="border-2 border-primary">
-                        <CardHeader className="bg-primary/5">
-                            <div className="text-center space-y-2">
-                                <div className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-full text-2xl font-bold mb-2">
+                    <Card className="border-0 shadow-2xl shadow-purple-200/50 overflow-hidden relative group hover:-translate-y-1 transition-transform duration-300 bg-white">
+                        <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500" />
+                        <CardHeader className="bg-slate-50/50 pb-6 pt-10">
+                            <div className="text-center space-y-4">
+                                <div className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-2xl font-bold shadow-lg shadow-purple-500/30 transform hover:scale-105 transition-transform">
                                     {result.result.element}
                                 </div>
-                                <CardTitle className="text-2xl">
+                                <CardTitle className="text-3xl md:text-4xl font-bold text-slate-800">
                                     {result.result.housing_type}
                                 </CardTitle>
                             </div>
                         </CardHeader>
-                        <CardContent className="pt-6 space-y-6">
-                            <p className="text-lg leading-relaxed text-center">
+                        <CardContent className="pt-8 space-y-8 px-6 md:px-10 pb-10">
+                            <p className="text-lg leading-relaxed text-center text-slate-700 font-medium">
                                 {result.result.description}
                             </p>
 
-                            {/* Ideal Features */}
-                            <div className="space-y-3">
-                                <h3 className="font-semibold text-lg">🏠 이상적인 집의 특징</h3>
-                                <ul className="space-y-2">
-                                    {result.result.ideal_features.map((feature, index) => (
-                                        <li key={index} className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">✓</span>
-                                            <span>{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            {/* Colors */}
-                            <div className="space-y-3">
-                                <h3 className="font-semibold text-lg">🎨 행운의 색상</h3>
-                                <div className="flex gap-3">
-                                    {result.result.colors.map((color, index) => (
-                                        <div
-                                            key={index}
-                                            className="px-4 py-2 bg-muted rounded-lg font-medium"
-                                        >
-                                            {color}
-                                        </div>
-                                    ))}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                {/* Ideal Features */}
+                                <div className="space-y-4 bg-purple-50/50 p-6 rounded-2xl border border-purple-100">
+                                    <h3 className="font-bold text-lg flex items-center gap-2 text-purple-800">
+                                        <span className="text-xl">🏠</span> 이상적인 집의 특징
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        {result.result.ideal_features.map((feature, index) => (
+                                            <li key={index} className="flex items-start gap-3 text-slate-700">
+                                                <span className="text-purple-600 mt-0.5 font-bold">✓</span>
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                            </div>
 
-                            {/* Lucky Directions */}
-                            <div className="space-y-3">
-                                <h3 className="font-semibold text-lg">🧭 행운의 방향</h3>
-                                <div className="flex gap-3">
-                                    {result.result.lucky_directions.map((direction, index) => (
-                                        <div
-                                            key={index}
-                                            className="px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium"
-                                        >
-                                            {direction}
+                                <div className="space-y-6">
+                                    {/* Colors */}
+                                    <div className="space-y-3">
+                                        <h3 className="font-bold text-lg flex items-center gap-2 text-slate-800">
+                                            <span className="text-xl">🎨</span> 행운의 색상
+                                        </h3>
+                                        <div className="flex flex-wrap gap-2">
+                                            {result.result.colors.map((color, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="px-4 py-2 bg-white border border-slate-200 rounded-lg font-medium text-slate-700 shadow-sm"
+                                                >
+                                                    {color}
+                                                </div>
+                                            ))}
                                         </div>
-                                    ))}
+                                    </div>
+
+                                    {/* Lucky Directions */}
+                                    <div className="space-y-3">
+                                        <h3 className="font-bold text-lg flex items-center gap-2 text-slate-800">
+                                            <span className="text-xl">🧭</span> 행운의 방향
+                                        </h3>
+                                        <div className="flex flex-wrap gap-2">
+                                            {result.result.lucky_directions.map((direction, index) => (
+                                                <div
+                                                    key={index}
+                                                    className="px-4 py-2 bg-indigo-50 text-indigo-700 border border-indigo-100 rounded-lg font-medium shadow-sm"
+                                                >
+                                                    {direction}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Recommendations */}
                             {result.result.recommendations.length > 0 && (
-                                <div className="pt-4 border-t space-y-3">
-                                    <h3 className="font-semibold text-lg">💡 추천 아이템</h3>
-                                    <div className="space-y-2">
+                                <div className="pt-8 border-t border-slate-100 space-y-4">
+                                    <h3 className="font-bold text-lg flex items-center gap-2 text-slate-800 justify-center">
+                                        <span className="text-xl">💡</span> 복을 부르는 추천 아이템
+                                    </h3>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                         {result.result.recommendations.map((item, index) => (
                                             <a
                                                 key={index}
                                                 href={item.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3 rounded-lg border hover:bg-muted/50 transition-colors"
+                                                className="flex items-center justify-between p-4 rounded-xl bg-slate-50 hover:bg-purple-50 border border-slate-100 hover:border-purple-100 transition-all group"
                                             >
-                                                <span className="font-medium">{item.name}</span>
-                                                <ExternalLink className="h-4 w-4 text-muted-foreground" />
+                                                <span className="font-medium text-slate-700 group-hover:text-purple-700">{item.name}</span>
+                                                <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-purple-500" />
                                             </a>
                                         ))}
                                     </div>
@@ -178,49 +194,49 @@ function FengShuiResultContent() {
                     </Card>
 
                     {/* Score Summary */}
-                    <Card>
+                    <Card className="border-0 shadow-lg bg-white/50 backdrop-blur-sm">
                         <CardHeader>
-                            <CardTitle>나의 성향 분석</CardTitle>
-                            <CardDescription>
+                            <CardTitle className="text-center text-xl text-slate-800">📊 나의 성향 분석표</CardTitle>
+                            <CardDescription className="text-center">
                                 당신의 답변을 기반으로 분석한 결과입니다
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="font-medium">분위기 선호도</span>
-                                        <span className="text-muted-foreground">{result.scores.vibe}/10</span>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-sm font-bold text-slate-700">
+                                        <span>분위기 선호도</span>
+                                        <span className="text-purple-600">{result.scores.vibe * 10}%</span>
                                     </div>
-                                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-primary transition-all"
+                                            className="h-full bg-purple-500 rounded-full transition-all duration-1000 ease-out"
                                             style={{ width: `${result.scores.vibe * 10}%` }}
                                         />
                                     </div>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="font-medium">편의성 중시도</span>
-                                        <span className="text-muted-foreground">{result.scores.infra}/10</span>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-sm font-bold text-slate-700">
+                                        <span>편의성 중시도</span>
+                                        <span className="text-indigo-600">{result.scores.infra * 10}%</span>
                                     </div>
-                                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-primary transition-all"
+                                            className="h-full bg-indigo-500 rounded-full transition-all duration-1000 ease-out"
                                             style={{ width: `${result.scores.infra * 10}%` }}
                                         />
                                     </div>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <div className="flex justify-between text-sm">
-                                        <span className="font-medium">예산 수준</span>
-                                        <span className="text-muted-foreground">{result.scores.budget}/10</span>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between text-sm font-bold text-slate-700">
+                                        <span>예산 수준</span>
+                                        <span className="text-blue-600">{result.scores.budget * 10}%</span>
                                     </div>
-                                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-accent transition-all"
+                                            className="h-full bg-blue-500 rounded-full transition-all duration-1000 ease-out"
                                             style={{ width: `${result.scores.budget * 10}%` }}
                                         />
                                     </div>
@@ -230,37 +246,34 @@ function FengShuiResultContent() {
                     </Card>
 
                     {/* Actions */}
-                    <div className="space-y-4">
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" onClick={handleShare} className="gap-2">
+                    <div className="space-y-6 text-center">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <Button size="lg" onClick={handleShare} className="w-full sm:w-auto px-8 h-14 text-lg rounded-full shadow-lg shadow-purple-500/20 hover:shadow-xl hover:-translate-y-0.5 transition-all gap-2 font-bold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 border-0">
                                 <Share2 className="h-5 w-5" />
                                 결과 공유하기
                             </Button>
-                            <Button size="lg" variant="outline" onClick={handleReset} className="gap-2">
-                                <RotateCcw className="h-5 w-5" />
-                                다시 테스트하기
-                            </Button>
-                            <Button size="lg" variant="outline" asChild className="gap-2">
-                                <Link href="/">
-                                    <Home className="h-5 w-5" />
-                                    홈으로
-                                </Link>
-                            </Button>
+                            <div className="flex gap-3 w-full sm:w-auto">
+                                <Button size="lg" variant="outline" onClick={handleReset} className="flex-1 sm:flex-none h-14 rounded-full border-2 hover:bg-slate-50 text-slate-600">
+                                    <RotateCcw className="h-5 w-5 mr-2" />
+                                    다시하기
+                                </Button>
+                                <Button size="lg" variant="outline" asChild className="flex-1 sm:flex-none h-14 rounded-full border-2 hover:bg-slate-50 text-slate-600">
+                                    <Link href="/">
+                                        <Home className="h-5 w-5 mr-2" />
+                                        홈으로
+                                    </Link>
+                                </Button>
+                            </div>
                         </div>
 
                         {/* Share Message Toast */}
                         {shareMessage && (
-                            <div className="text-center">
-                                <p className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-lg inline-block">
+                            <div className="animate-fade-in-up">
+                                <p className="text-sm font-bold text-purple-600 bg-purple-50 px-6 py-3 rounded-full inline-block shadow-sm border border-purple-100">
                                     {shareMessage}
                                 </p>
                             </div>
                         )}
-                    </div>
-
-                    {/* AdSense Placeholder */}
-                    <div className="bg-muted/30 border-2 border-dashed rounded-lg p-8 text-center">
-                        <p className="text-sm text-muted-foreground">광고 영역</p>
                     </div>
                 </div>
             </main>
