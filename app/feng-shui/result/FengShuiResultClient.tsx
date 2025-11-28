@@ -130,7 +130,7 @@ export default function FengShuiResultClient() {
                                 </h2>
                             </div>
                         </CardHeader>
-                        <CardContent className="pt-8 space-y-8 px-6 md:px-10 pb-10">
+                        <CardContent className="pt-8 space-y-10 px-6 md:px-10 pb-10">
                             <p className="text-lg leading-relaxed text-center text-slate-700 font-medium">
                                 {result.result.description}
                             </p>

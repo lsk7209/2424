@@ -126,8 +126,8 @@ export default function ResultClient() {
                                     </CardDescription>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-6 space-y-6 bg-white flex-1">
-                                <p className="text-slate-600 leading-relaxed text-center px-4">
+                            <CardContent className="pt-6 space-y-8 bg-white flex-1">
+                                <p className="text-slate-600 leading-relaxed text-center">
                                     {result.idealMatch.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 justify-center">
@@ -229,8 +229,8 @@ export default function ResultClient() {
                                     </CardDescription>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-6 space-y-6 bg-white flex-1">
-                                <p className="text-slate-600 leading-relaxed text-center px-4">
+                            <CardContent className="pt-6 space-y-8 bg-white flex-1">
+                                <p className="text-slate-600 leading-relaxed text-center">
                                     {result.realMatch.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 justify-center">
