@@ -75,7 +75,7 @@ export default function NeighborhoodTestPage() {
         <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-primary/20">
             <Header />
 
-            <main className="flex-1 container max-w-2xl mx-auto py-12 md:py-20 px-4 flex flex-col">
+            <main className="flex-1 container max-w-4xl lg:max-w-5xl mx-auto py-12 md:py-20 px-4 flex flex-col">
                 <div className="space-y-8 animate-fade-in-up">
                     {/* Progress */}
                     <div className="space-y-3">
