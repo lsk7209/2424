@@ -44,6 +44,9 @@ export const metadata: Metadata = {
       'naver-site-verification': 'ddf23ab0bbb03a73fe3a29afa1bc6bc8fe2c8881',
     },
   },
+  alternates: {
+    canonical: './',
+  },
 };
 
 export default function RootLayout({

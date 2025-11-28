@@ -118,9 +118,9 @@ export default function ResultClient() {
                                     <div className="inline-block px-4 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm font-bold border border-indigo-100">
                                         💖 나의 이상형 동네
                                     </div>
-                                    <CardTitle className="text-3xl md:text-4xl font-bold text-slate-800">
+                                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800 leading-none">
                                         {result.idealMatch.name}
-                                    </CardTitle>
+                                    </h2>
                                     <CardDescription className="text-lg font-medium text-indigo-500">
                                         {result.idealMatch.archetype}
                                     </CardDescription>
@@ -221,9 +221,9 @@ export default function ResultClient() {
                                     <div className="inline-block px-4 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm font-bold border border-emerald-100">
                                         💰 현실적인 추천 동네
                                     </div>
-                                    <CardTitle className="text-3xl md:text-4xl font-bold text-slate-800">
+                                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800 leading-none">
                                         {result.realMatch.name}
-                                    </CardTitle>
+                                    </h2>
                                     <CardDescription className="text-lg font-medium text-emerald-500">
                                         {result.realMatch.archetype}
                                     </CardDescription>
