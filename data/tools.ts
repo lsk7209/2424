@@ -50,9 +50,7 @@ export const tools: Tool[] = [
     isReady: true,
   },
 
-  // New Tools (Planned - Hidden for AdSense Review)
-  // TODO: Implement these tools one by one. 
-  // DO NOT expose empty pages to Google Bots.
+  // New Tools (Implemented)
   {
     slug: 'moving-cost-calculator',
     title: '이사 견적 계산기',
@@ -61,7 +59,7 @@ export const tools: Tool[] = [
     href: '/tools/moving-cost-calculator',
     category: '계산기',
     isNew: true,
-    isReady: false,
+    isReady: true,
   },
   {
     slug: 'deposit-interest-calculator',
@@ -71,7 +69,7 @@ export const tools: Tool[] = [
     href: '/tools/deposit-interest-calculator',
     category: '계산기',
     isNew: true,
-    isReady: false,
+    isReady: true,
   },
   {
     slug: 'brokerage-fee-calculator',
@@ -81,7 +79,7 @@ export const tools: Tool[] = [
     href: '/tools/brokerage-fee-calculator',
     category: '계산기',
     isNew: true,
-    isReady: false,
+    isReady: true,
   },
   {
     slug: 'area-converter',
@@ -91,7 +89,7 @@ export const tools: Tool[] = [
     href: '/tools/area-converter',
     category: '계산기',
     isNew: true,
-    isReady: false,
+    isReady: true,
   },
   {
     slug: 'd-day-counter',
@@ -101,7 +99,7 @@ export const tools: Tool[] = [
     href: '/tools/d-day-counter',
     category: '생활편의',
     isNew: true,
-    isReady: false,
+    isReady: true,
   },
   {
     slug: 'noise-measure',
@@ -111,6 +109,6 @@ export const tools: Tool[] = [
     href: '/tools/noise-measure',
     category: '생활편의',
     isNew: true,
-    isReady: false,
+    isReady: false, // Still in development
   },
 ];
