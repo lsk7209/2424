@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* 브랜드 */}
                     <div className="space-y-3">
                         <h3 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                            독립만세
+                            이사독립
                         </h3>
                         <p className="text-sm text-muted-foreground">
                             이사를 준비하는<br />
@@ -34,7 +34,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link href="/tools" className="hover:text-primary transition-colors">
-                                    독립만세 도구함
+                                    이사독립 도구함
                                 </Link>
                             </li>
                         </ul>
@@ -86,7 +86,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-                    <p>© {currentYear} 독립만세. All rights reserved.</p>
+                    <p>© {currentYear} 이사독립. All rights reserved.</p>
                 </div>
             </div>
         </footer>

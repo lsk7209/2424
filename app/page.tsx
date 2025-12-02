@@ -78,7 +78,7 @@ export default function Home() {
 
             <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
               불안한 전세 계약부터 낯선 동네 찾기까지.<br />
-              <span className="font-semibold text-slate-800">독립만세</span>가 당신의 홀로서기를 완벽하게 도와드릴게요.
+              <span className="font-semibold text-slate-800">이사독립</span>가 당신의 홀로서기를 완벽하게 도와드릴게요.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -143,7 +143,7 @@ export default function Home() {
                 <span className="text-primary">설렘</span>만 남기세요.
               </h2>
               <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
-                복잡한 계산과 불안한 마음은 독립만세가 덜어드릴게요.<br />
+                복잡한 계산과 불안한 마음은 이사독립가 덜어드릴게요.<br />
                 지금 바로 당신만의 독립 라이프를 시작해보세요.
               </p>
               <Button asChild size="lg" className="h-14 px-10 text-lg rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:scale-105 transition-all shadow-lg font-bold">

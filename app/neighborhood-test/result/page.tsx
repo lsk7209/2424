@@ -2,7 +2,7 @@
 import ResultClient from './ResultClient';
 
 export const metadata = {
-    title: '나만의 동네 찾기 결과 | 독립만세',
+    title: '나만의 동네 찾기 결과 | 이사독립',
     description: '당신에게 딱 맞는 이상형 동네와 현실적인 추천 동네를 확인하고, 결과를 공유해보세요.',
     openGraph: {
         title: '나만의 동네 찾기 결과',

@@ -3,8 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-    title: '개인정보 처리방침 - 독립만세',
-    description: '독립만세의 개인정보 처리방침입니다.',
+    title: '개인정보 처리방침 - 이사독립',
+    description: '이사독립의 개인정보 처리방침입니다.',
 };
 
 export default function PrivacyPage() {
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                독립만세(이하 "서비스")는 다음의 목적을 위하여 개인정보를 처리합니다.
+                                이사독립(이하 "서비스")는 다음의 목적을 위하여 개인정보를 처리합니다.
                                 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며,
                                 이용 목적이 변경되는 경우에는 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
                             </p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                <strong className="text-foreground">독립만세는 사용자의 개인정보를 서버에 저장하지 않습니다.</strong>
+                                <strong className="text-foreground">이사독립는 사용자의 개인정보를 서버에 저장하지 않습니다.</strong>
                             </p>
                             <p>
                                 모든 사용자 데이터(테스트 결과, 체크리스트 진행 상황 등)는 사용자의 브라우저
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                독립만세는 사용자의 개인정보를 제3자에게 제공하지 않습니다.
+                                이사독립는 사용자의 개인정보를 제3자에게 제공하지 않습니다.
                             </p>
                             <p>
                                 다만, 다음의 경우에는 예외로 합니다:
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                독립만세는 개인정보를 서버에 저장하지 않으므로 별도의 파기 절차가 필요하지 않습니다.
+                                이사독립는 개인정보를 서버에 저장하지 않으므로 별도의 파기 절차가 필요하지 않습니다.
                             </p>
                             <p>
                                 사용자는 언제든지 브라우저 설정에서 로컬 스토리지를 삭제하여
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                독립만세는 서비스 개선 및 사용자 경험 향상을 위해 쿠키를 사용할 수 있습니다.
+                                이사독립는 서비스 개선 및 사용자 경험 향상을 위해 쿠키를 사용할 수 있습니다.
                             </p>
                             <p>
                                 쿠키는 다음의 목적으로 사용됩니다:
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                독립만세는 개인정보 처리에 관한 업무를 총괄해서 책임지고,
+                                이사독립는 개인정보 처리에 관한 업무를 총괄해서 책임지고,
                                 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여
                                 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
                             </p>

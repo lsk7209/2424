@@ -27,7 +27,7 @@ export default function Header() {
             <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
                     <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        독립만세
+                        이사독립
                     </span>
                 </Link>
 

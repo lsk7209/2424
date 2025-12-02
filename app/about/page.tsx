@@ -4,8 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-    title: '소개 - 독립만세',
-    description: '독립만세는 이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼입니다.',
+    title: '소개 - 이사독립',
+    description: '이사독립는 이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼입니다.',
 };
 
 export default function AboutPage() {
@@ -41,7 +41,7 @@ export default function AboutPage() {
                     {/* Hero */}
                     <div className="text-center space-y-4">
                         <h1 className="text-4xl md:text-5xl font-bold">
-                            독립만세 소개
+                            이사독립 소개
                         </h1>
                         <p className="text-xl text-muted-foreground">
                             이사를 준비하는 모든 분들을 위한<br />
@@ -56,7 +56,7 @@ export default function AboutPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                독립만세는 <strong className="text-foreground">이사라는 스트레스 상황을 독립이라는 설렘으로 재해석</strong>하여,
+                                이사독립는 <strong className="text-foreground">이사라는 스트레스 상황을 독립이라는 설렘으로 재해석</strong>하여,
                                 모든 분들이 안전하고 즐겁게 이사를 준비할 수 있도록 돕습니다.
                             </p>
                             <p>

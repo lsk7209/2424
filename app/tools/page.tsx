@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: '독립만세 도구함 - 자취 생활 필수 유틸리티',
+  title: '이사독립 도구함 - 자취 생활 필수 유틸리티',
   description: '이사 견적 계산기, 전월세 전환율 계산기 등 자취 생활에 꼭 필요한 도구들을 모았습니다.',
 };
 
@@ -21,7 +21,7 @@ export default function ToolsIndexPage() {
       <main className="flex-1 container mx-auto py-12">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">독립만세 도구함</h1>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">이사독립 도구함</h1>
             <p className="text-lg text-muted-foreground">
               복잡한 계산과 귀찮은 기록, 도구에게 맡기세요.
             </p>

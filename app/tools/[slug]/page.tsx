@@ -23,7 +23,7 @@ export async function generateMetadata(props: ToolPageProps) {
   }
 
   return {
-    title: `${tool.title} | 독립만세 도구함`,
+    title: `${tool.title} | 이사독립 도구함`,
     description: tool.description,
   };
 }

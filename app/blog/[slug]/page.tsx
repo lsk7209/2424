@@ -34,7 +34,7 @@ export async function generateMetadata(props: BlogPostPageProps) {
   }
 
   return {
-    title: `${post.title} | 독립만세`,
+    title: `${post.title} | 이사독립`,
     description: post.excerpt,
     keywords: post.keywords?.join(', '),
   };

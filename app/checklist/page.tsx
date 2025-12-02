@@ -95,7 +95,7 @@ export default function ChecklistPage() {
     };
 
     const handleDownload = () => {
-        let text = '독립만세 - 이사 체크리스트\n\n';
+        let text = '이사독립 - 이사 체크리스트\n\n';
         checklistData.forEach(section => {
             text += `${section.d_day}: ${section.title}\n`;
             section.tasks.forEach((task, index) => {

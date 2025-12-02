@@ -4,8 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-    title: '문의 - 독립만세',
-    description: '독립만세에 대한 문의사항이나 제안사항을 보내주세요.',
+    title: '문의 - 이사독립',
+    description: '이사독립에 대한 문의사항이나 제안사항을 보내주세요.',
 };
 
 export default function ContactPage() {
@@ -52,7 +52,7 @@ export default function ContactPage() {
                                 <CardTitle className="text-lg">카카오톡</CardTitle>
                             </CardHeader>
                             <CardContent className="text-center">
-                                <p className="text-muted-foreground">@독립만세</p>
+                                <p className="text-muted-foreground">@이사독립</p>
                             </CardContent>
                         </Card>
 
@@ -81,7 +81,7 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="font-semibold mb-2">Q. 서비스 이용은 무료인가요?</h3>
                                 <p className="text-muted-foreground">
-                                    네, 독립만세의 모든 서비스는 무료로 이용하실 수 있습니다.
+                                    네, 이사독립의 모든 서비스는 무료로 이용하실 수 있습니다.
                                 </p>
                             </div>
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="font-semibold mb-2">Q. 개인정보는 안전한가요?</h3>
                                 <p className="text-muted-foreground">
-                                    독립만세는 사용자의 개인정보를 서버에 저장하지 않습니다.
+                                    이사독립는 사용자의 개인정보를 서버에 저장하지 않습니다.
                                     모든 데이터는 사용자의 브라우저에만 저장됩니다.
                                 </p>
                             </div>

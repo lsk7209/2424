@@ -7,7 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: '독립만세 블로그 - 자취 꿀팁과 이사 정보',
+  title: '이사독립 블로그 - 자취 꿀팁과 이사 정보',
   description: '사회초년생을 위한 이사 준비, 자취 꿀팁, 전세 안전 가이드 등 유용한 정보를 제공합니다.',
 };
 
@@ -19,7 +19,7 @@ export default function BlogIndexPage() {
       <main className="flex-1 container mx-auto py-12">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">독립만세 매거진</h1>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">이사독립 매거진</h1>
             <p className="text-lg text-muted-foreground">
               나 혼자 산다! 하지만 정보는 함께 나눕니다.
             </p>

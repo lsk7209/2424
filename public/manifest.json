@@ -1,6 +1,6 @@
 {
-    "name": "독립만세",
-    "short_name": "독립만세",
+    "name": "이사독립",
+    "short_name": "이사독립",
     "description": "이사·독립 종합 가이드와 동네 찾기 테스트",
     "start_url": "/",
     "display": "standalone",

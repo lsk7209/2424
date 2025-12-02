@@ -7,7 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: '독립만세 가이드북 - 이사, 법률, 생활 매뉴얼',
+  title: '이사독립 가이드북 - 이사, 법률, 생활 매뉴얼',
   description: '등기부등본 보는 법, 계약서 작성법 등 꼭 알아야 할 필수 정보를 정리했습니다.',
 };
 
@@ -19,7 +19,7 @@ export default function GuideIndexPage() {
       <main className="flex-1 container mx-auto py-12">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">독립만세 가이드북</h1>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">이사독립 가이드북</h1>
             <p className="text-lg text-muted-foreground">
               모르면 손해 보는 필수 정보, 쉽게 정리해 드립니다.
             </p>

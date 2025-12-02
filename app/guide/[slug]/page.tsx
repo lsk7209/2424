@@ -34,7 +34,7 @@ export async function generateMetadata(props: GuidePostPageProps) {
   }
 
   return {
-    title: `${post.title} | 독립만세 가이드`,
+    title: `${post.title} | 이사독립 가이드`,
     description: post.excerpt,
     keywords: post.keywords?.join(', '),
   };

@@ -33,11 +33,11 @@ export default function ResultClient() {
 
     const handleShare = async () => {
         if (!result) return;
-        const shareText = `나의 이상형 동네는 ${result.idealMatch.name}!\n하지만 현실은... ${result.realMatch.name} 😅\n\n독립만세에서 나만의 동네 찾기 테스트 해보세요!`;
+        const shareText = `나의 이상형 동네는 ${result.idealMatch.name}!\n하지만 현실은... ${result.realMatch.name} 😅\n\n이사독립에서 나만의 동네 찾기 테스트 해보세요!`;
         if (navigator.share) {
             try {
                 await navigator.share({
-                    title: '독립만세 - 나만의 동네 찾기',
+                    title: '이사독립 - 나만의 동네 찾기',
                     text: shareText,
                     url: window.location.origin + '/neighborhood-test',
                 });
@@ -90,7 +90,7 @@ export default function ResultClient() {
     return (
         <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-primary/20">
             <Head>
-                <title>동네 매칭 결과 | 독립만세</title>
+                <title>동네 매칭 결과 | 이사독립</title>
                 <meta name="description" content="내가 선택한 옵션에 기반한 이상형 동네와 현실적인 동네를 확인하고 공유하세요." />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             </Head>

@@ -36,12 +36,12 @@ export default function FengShuiResultClient() {
     const handleShare = async () => {
         if (!result) return;
 
-        const shareText = `나의 풍수지리 유형은 ${result.result.type}!\n\n독립만세에서 풍수지리 집터 테스트 해보세요!`;
+        const shareText = `나의 풍수지리 유형은 ${result.result.type}!\n\n이사독립에서 풍수지리 집터 테스트 해보세요!`;
 
         if (navigator.share) {
             try {
                 await navigator.share({
-                    title: '독립만세 - 풍수지리 집터 테스트',
+                    title: '이사독립 - 풍수지리 집터 테스트',
                     text: shareText,
                     url: window.location.origin + '/feng-shui',
                 });
@@ -92,7 +92,7 @@ export default function FengShuiResultClient() {
     return (
         <div className="min-h-screen flex flex-col bg-slate-50 selection:bg-purple-500/20">
             <Head>
-                <title>풍수지리 테스트 결과 | 독립만세</title>
+                <title>풍수지리 테스트 결과 | 이사독립</title>
                 <meta name="description" content={`나의 풍수지리 유형은 ${result.result.type}! 나에게 딱 맞는 집터와 인테리어 팁을 확인하세요.`} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             </Head>

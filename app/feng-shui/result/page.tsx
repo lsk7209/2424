@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import FengShuiResultClient from './FengShuiResultClient';
 
 export const metadata: Metadata = {
-    title: '풍수지리 테스트 결과 | 독립만세',
+    title: '풍수지리 테스트 결과 | 이사독립',
     description: '나의 풍수지리 유형과 맞춤형 집터 추천 결과를 확인하세요.',
 };
 

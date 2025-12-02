@@ -3,8 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-    title: '이용약관 - 독립만세',
-    description: '독립만세의 이용약관입니다.',
+    title: '이용약관 - 이사독립',
+    description: '이사독립의 이용약관입니다.',
 };
 
 export default function TermsPage() {
@@ -29,7 +29,7 @@ export default function TermsPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>
-                                본 약관은 독립만세(이하 "서비스")가 제공하는 모든 서비스의 이용과 관련하여
+                                본 약관은 이사독립(이하 "서비스")가 제공하는 모든 서비스의 이용과 관련하여
                                 서비스와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
                             </p>
                         </CardContent>
@@ -42,7 +42,7 @@ export default function TermsPage() {
                         <CardContent className="space-y-4 text-muted-foreground">
                             <p>본 약관에서 사용하는 용어의 정의는 다음과 같습니다:</p>
                             <ul className="list-disc list-inside space-y-2 ml-4">
-                                <li><strong className="text-foreground">"서비스"</strong>란 독립만세가 제공하는 모든 온라인 서비스를 의미합니다.</li>
+                                <li><strong className="text-foreground">"서비스"</strong>란 이사독립가 제공하는 모든 온라인 서비스를 의미합니다.</li>
                                 <li><strong className="text-foreground">"이용자"</strong>란 서비스에 접속하여 본 약관에 따라 서비스를 이용하는 모든 사람을 말합니다.</li>
                                 <li><strong className="text-foreground">"콘텐츠"</strong>란 서비스에서 제공하는 모든 정보, 텍스트, 이미지, 동영상 등을 의미합니다.</li>
                             </ul>
