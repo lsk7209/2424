@@ -60,8 +60,91 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   // Find related posts (same category)
   const relatedPosts = blogPosts.filter(p => p.category === post.category);
 
+  // SEO/GEO/AEO 최적화: 구조화된 데이터
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://today2424.kr${post.coverImage || '/icons/icon-512.png'}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Organization',
+      name: '이사독립',
+      url: 'https://today2424.kr',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: '이사독립',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://today2424.kr/icons/icon-512.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://today2424.kr/blog/${post.slug}`,
+    },
+    keywords: post.keywords?.join(', '),
+    articleSection: post.category,
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: '홈',
+        item: 'https://today2424.kr',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: '블로그',
+        item: 'https://today2424.kr/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://today2424.kr/blog/${post.slug}`,
+      },
+    ],
+  };
+
+  const faqSchema = post.faq && post.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen flex flex-col bg-white font-pretendard">
+      {/* SEO/GEO/AEO 최적화: 구조화된 데이터 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <Header />
 
       <main className="flex-1 container max-w-4xl mx-auto py-12 px-4 md:px-6">

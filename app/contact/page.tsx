@@ -9,8 +9,60 @@ export const metadata = {
 };
 
 export default function ContactPage() {
+  // FAQPage 스키마 for AEO
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '서비스 이용은 무료인가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '네, 이사독립의 모든 서비스는 무료로 이용하실 수 있습니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '전세 사기 진단 결과는 법적 효력이 있나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '전세 사기 진단은 참고용 정보이며, 법적 효력은 없습니다. 실제 계약 전에는 반드시 법무사나 전문가와 상담하시기 바랍니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '제휴 문의는 어떻게 하나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '제휴 문의는 contact@indielife.kr로 이메일 주시면 검토 후 회신 드리겠습니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '개인정보는 안전한가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '이사독립는 사용자의 개인정보를 서버에 저장하지 않습니다. 모든 데이터는 사용자의 브라우저에만 저장됩니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '새로운 기능 제안을 하고 싶어요',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '언제든 환영합니다! 이메일이나 카카오톡으로 제안해 주시면 검토 후 서비스에 반영하도록 노력하겠습니다.',
+        },
+      },
+    ],
+  };
     return (
         <div className="min-h-screen flex flex-col">
+            {/* AEO 최적화: FAQPage 스키마 */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <Header />
 
             <main className="flex-1 container py-8 md:py-16">

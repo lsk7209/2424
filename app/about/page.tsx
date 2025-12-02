@@ -9,6 +9,27 @@ export const metadata = {
 };
 
 export default function AboutPage() {
+  // SEO/GEO 최적화: AboutPage 스키마
+  const aboutPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: '이사독립 소개',
+    description: '이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼',
+    url: 'https://today2424.kr/about',
+    mainEntity: {
+      '@type': 'Organization',
+      name: '이사독립',
+      url: 'https://today2424.kr',
+      logo: 'https://today2424.kr/icons/icon-512.png',
+      description: '이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼',
+      foundingDate: '2024',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        email: 'contact@indielife.kr',
+      },
+    },
+  };
     const features = [
         {
             icon: MapPin,
@@ -34,6 +55,11 @@ export default function AboutPage() {
 
     return (
         <div className="min-h-screen flex flex-col">
+            {/* SEO/GEO 최적화: AboutPage 스키마 */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+            />
             <Header />
 
             <main className="flex-1 container py-8 md:py-16">

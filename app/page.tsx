@@ -6,6 +6,77 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function Home() {
+  // SEO/GEO/AEO 최적화를 위한 구조화된 데이터
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: '이사독립',
+    url: 'https://today2424.kr',
+    logo: 'https://today2424.kr/icons/icon-512.png',
+    description: '이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼',
+    sameAs: [],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'contact@indielife.kr',
+      availableLanguage: 'Korean',
+    },
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: '이사독립',
+    url: 'https://today2424.kr',
+    description: '이사 준비부터 전세 계약까지 완벽 가이드',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://today2424.kr/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '이사독립 서비스는 무료인가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '네, 이사독립의 모든 서비스는 무료로 이용하실 수 있습니다. 동네 찾기 테스트, 전세 사기 진단, 풍수지리 테스트, 이사 체크리스트 등 모든 기능을 무료로 제공합니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '전세 사기 진단 결과는 정확한가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '전세 사기 진단은 등기부등본 정보를 기반으로 위험도를 분석하는 참고용 도구입니다. 법적 효력은 없으며, 실제 계약 전에는 반드시 법무사나 전문가와 상담하시기 바랍니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '어떤 서비스를 제공하나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '이사독립은 나만의 동네 찾기 테스트, 전세 사기 위험 진단, 풍수지리 집터 테스트, D-30 이사 체크리스트, 이사 견적 계산기, 전월세 전환율 계산기 등 이사와 독립 생활에 필요한 다양한 도구와 정보를 제공합니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '개인정보는 안전하게 보호되나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '네, 이사독립은 사용자의 개인정보를 서버에 저장하지 않습니다. 모든 데이터는 사용자의 브라우저에만 저장되며, 개인정보 처리방침을 준수합니다.',
+        },
+      },
+    ],
+  };
   const tools = [
     {
       icon: MapPin,
@@ -47,6 +118,19 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-primary/20">
+      {/* SEO/GEO/AEO 최적화: 구조화된 데이터 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
 
       <main className="flex-1">
@@ -78,7 +162,7 @@ export default function Home() {
 
             <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
               불안한 전세 계약부터 낯선 동네 찾기까지.<br />
-              <span className="font-semibold text-slate-800">이사독립</span>가 당신의 홀로서기를 완벽하게 도와드릴게요.
+              <span className="font-semibold text-slate-800">이사독립</span>이 당신의 홀로서기를 완벽하게 도와드릴게요.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -98,6 +182,14 @@ export default function Home() {
 
         {/* Tools Grid */}
         <section className="container mx-auto px-4 pb-24 -mt-20 relative z-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              독립을 위한 필수 도구들
+            </h2>
+            <h3 className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+              이사 준비부터 전세 계약까지, 필요한 모든 것을 한 곳에서
+            </h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {tools.map((tool) => {
               const Icon = tool.icon;
@@ -130,6 +222,60 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ Section for AEO */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              자주 묻는 질문
+            </h2>
+            <h3 className="text-lg md:text-xl text-slate-600 text-center mb-12">
+              이사독립에 대해 궁금하신 점을 확인하세요
+            </h3>
+            <div className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">이사독립 서비스는 무료인가요?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    네, 이사독립의 모든 서비스는 무료로 이용하실 수 있습니다. 동네 찾기 테스트, 전세 사기 진단, 풍수지리 테스트, 이사 체크리스트 등 모든 기능을 무료로 제공합니다.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">전세 사기 진단 결과는 정확한가요?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    전세 사기 진단은 등기부등본 정보를 기반으로 위험도를 분석하는 참고용 도구입니다. 법적 효력은 없으며, 실제 계약 전에는 반드시 법무사나 전문가와 상담하시기 바랍니다.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">어떤 서비스를 제공하나요?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    이사독립은 나만의 동네 찾기 테스트, 전세 사기 위험 진단, 풍수지리 집터 테스트, D-30 이사 체크리스트, 이사 견적 계산기, 전월세 전환율 계산기 등 이사와 독립 생활에 필요한 다양한 도구와 정보를 제공합니다.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">개인정보는 안전하게 보호되나요?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    네, 이사독립은 사용자의 개인정보를 서버에 저장하지 않습니다. 모든 데이터는 사용자의 브라우저에만 저장되며, 개인정보 처리방침을 준수합니다.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="container mx-auto px-4 py-24">
           <div className="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl">
@@ -142,8 +288,11 @@ export default function Home() {
                 첫 독립, <br className="md:hidden" />
                 <span className="text-primary">설렘</span>만 남기세요.
               </h2>
+              <h3 className="text-xl md:text-2xl font-semibold text-slate-200">
+                안전하고 행복한 독립 생활의 시작
+              </h3>
               <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
-                복잡한 계산과 불안한 마음은 이사독립가 덜어드릴게요.<br />
+                복잡한 계산과 불안한 마음은 이사독립이 덜어드릴게요.<br />
                 지금 바로 당신만의 독립 라이프를 시작해보세요.
               </p>
               <Button asChild size="lg" className="h-14 px-10 text-lg rounded-full bg-white text-slate-900 hover:bg-slate-100 hover:scale-105 transition-all shadow-lg font-bold">
