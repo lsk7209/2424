@@ -1030,6 +1030,133 @@ export const guidePosts: GuidePost[] = [
         </div>
       </article>
     `
+    },
+    {
+        slug: 'house-viewing-checklist',
+        title: '원룸·오피스텔 집 보러 갈 때 체크리스트 30개',
+        excerpt: '채광, 곰팡이, 수압, 소음, 보안, 관리비까지. 첫 집 보기 전에 저장해두면 바로 써먹는 현장 체크리스트입니다.',
+        date: '2026-04-23',
+        category: '계약',
+        keywords: ['집 보러 갈 때 체크리스트', '원룸 체크리스트', '오피스텔 점검', '자취방 계약'],
+        faq: [
+            {
+                question: '낮에만 집을 봐도 괜찮나요?',
+                answer: '가능하면 낮과 저녁 중 한 번씩 확인하는 것이 좋습니다. 낮에는 채광과 외부 환경을, 저녁에는 소음과 치안 분위기를 더 정확히 볼 수 있습니다.'
+            },
+            {
+                question: '중개사 앞에서 바로 계약해도 되나요?',
+                answer: '첫 방문에서 바로 계약하기보다, 체크리스트 기준으로 사진과 메모를 남기고 권리관계를 다시 확인한 뒤 결정하는 편이 안전합니다.'
+            }
+        ],
+        content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">좋아 보이는 방과 살기 좋은 방은 다릅니다. 사진으로는 깔끔해 보여도 실제로 가보면 곰팡이, 수압, 소음, 관리비 문제가 숨어 있는 경우가 많습니다. 아래 체크리스트를 저장해두고 현장에서 하나씩 확인해보세요.</p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+            <h3 class="text-blue-900 font-bold text-lg mb-2">🔎 집 보기 전 준비물</h3>
+            <ul class="text-blue-800 text-sm space-y-1">
+                <li>휴대폰 손전등</li>
+                <li>메모 앱 또는 체크리스트 캡처</li>
+                <li>줄자 앱 또는 면적 변환기</li>
+                <li>가능하면 동행 1명</li>
+            </ul>
+        </div>
+
+        <h2>1. 건물 외부에서 확인할 것</h2>
+        <ul>
+            <li><strong>언덕 경사도:</strong> 사진보다 훨씬 가파른 경우가 많습니다.</li>
+            <li><strong>골목 조도:</strong> 밤에 너무 어두우면 귀가가 불안할 수 있습니다.</li>
+            <li><strong>편의시설 거리:</strong> 편의점, 버스 정류장, 약국, 세탁소 거리를 실제로 걸어보세요.</li>
+            <li><strong>분리수거장 상태:</strong> 관리 수준을 보여줍니다.</li>
+            <li><strong>주차장 유무:</strong> 오토바이 소음과 출입 동선을 같이 볼 수 있습니다.</li>
+        </ul>
+
+        <h2>2. 현관과 공용부 점검</h2>
+        <ul>
+            <li><strong>공동현관 비밀번호 관리:</strong> 너무 쉬운 번호로 고정돼 있지 않은지 확인하세요.</li>
+            <li><strong>CCTV 설치 위치:</strong> 현관, 계단, 엘리베이터 주변이 보이는지 확인합니다.</li>
+            <li><strong>복도 냄새:</strong> 하수구 냄새나 담배 냄새가 심하면 환기 문제가 있을 수 있습니다.</li>
+            <li><strong>택배 보관 환경:</strong> 분실 위험이 큰 구조인지 살펴보세요.</li>
+        </ul>
+
+        <h2>3. 방 안에서 꼭 확인할 것</h2>
+        <div class="overflow-x-auto my-6">
+            <table class="w-full text-sm text-left text-slate-600 border-collapse">
+                <thead class="text-xs text-slate-700 uppercase bg-slate-100">
+                    <tr>
+                        <th class="px-4 py-3 border">항목</th>
+                        <th class="px-4 py-3 border">확인 포인트</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-3 border font-bold">채광</td>
+                        <td class="px-4 py-3 border">창문 앞이 막혀 있지 않은지, 낮에도 어둡지 않은지</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 border font-bold">곰팡이</td>
+                        <td class="px-4 py-3 border">창틀, 벽지 모서리, 옷장 뒤, 화장실 천장</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 border font-bold">수압</td>
+                        <td class="px-4 py-3 border">세면대, 샤워기, 싱크대 모두 틀어보기</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 border font-bold">배수</td>
+                        <td class="px-4 py-3 border">화장실 바닥 물빠짐, 세면대 배수 속도</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 border font-bold">수납</td>
+                        <td class="px-4 py-3 border">옷장 문 뒤, 침대 아래, 냉장고 주변 동선</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>4. 생활 소음 체크</h2>
+        <ul>
+            <li><strong>창문 열고 1분 듣기:</strong> 도로, 배달 오토바이, 술집, 학원 소음 확인</li>
+            <li><strong>복도 문 닫아보기:</strong> 현관문 차음 성능이 낮으면 복도 소리가 그대로 들어옵니다.</li>
+            <li><strong>벽 두드려보기:</strong> 너무 울리면 벽간소음이 심할 수 있습니다.</li>
+            <li><strong>윗집 생활음:</strong> 가능한 시간대에 방문해 실제 층간소음을 느껴보세요.</li>
+        </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+            <div>
+                <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
+                <p class="text-sm text-slate-600">층간소음과 벽간소음 대응 기준이 궁금하다면?</p>
+            </div>
+            <a href="/guide/noise-complaint-guide" class="text-blue-600 font-bold hover:underline text-sm">소음 대응 가이드 →</a>
+        </div>
+
+        <h2>5. 계약 전에 추가로 물어볼 질문</h2>
+        <ol>
+            <li>월 고정 관리비와 별도 항목은 무엇인가요?</li>
+            <li>인터넷, 수도, 가스가 각각 포함인가요?</li>
+            <li>이전 세입자 퇴실 이유는 무엇이었나요?</li>
+            <li>보일러와 에어컨 수리 이력은 있나요?</li>
+            <li>계약 후 수리 책임 범위는 어디까지인가요?</li>
+        </ol>
+
+        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
+            <h4 class="text-indigo-900 font-bold mb-2">💡 계약 전 숫자 검증</h4>
+            <p class="text-indigo-800 mb-4 text-sm">마음에 드는 방을 찾았다면, 계약금 보내기 전에 보증금과 근저당 규모부터 점검해 두는 것이 안전합니다.</p>
+            <a href="/safety-check" class="text-indigo-600 font-bold hover:underline flex items-center">
+                전세 위험 진단 바로가기
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+
+        <h2>6. 체크리스트 요약</h2>
+        <ul>
+            <li>외부 환경과 골목 분위기 보기</li>
+            <li>공용부와 보안 상태 확인</li>
+            <li>채광, 곰팡이, 수압, 배수 직접 테스트</li>
+            <li>소음은 창문 열고 직접 듣기</li>
+            <li>관리비와 수리 책임 범위 문서로 확인</li>
+        </ul>
+      </article>
+    `
     }
 ];
 

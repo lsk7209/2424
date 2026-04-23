@@ -375,6 +375,106 @@ export const blogPosts: BlogPost[] = [
         </ul>
       </article>
     `
+  },
+  {
+    slug: 'deposit-transfer-checklist',
+    title: '전세 계약금 송금 전 체크리스트: 계좌번호 하나로 보증금 날리지 않는 법',
+    excerpt: '등기부등본 확인부터 명의 일치, 가계약 주의사항, 송금 메모까지. 계약금 보내기 전에 반드시 확인해야 할 실전 체크리스트를 정리했습니다.',
+    date: '2026-04-23',
+    category: '전세안전',
+    keywords: ['전세 계약금', '가계약 체크리스트', '보증금 사기 예방', '계좌 명의 확인', '전세 계약 주의사항'],
+    faq: [
+      {
+        question: '가계약금도 돌려받을 수 있나요?',
+        answer: '문구와 약정 조건에 따라 다릅니다. 단순히 계좌만 받고 송금했다면 돌려받기 어려운 경우도 있어, 송금 전 반환 조건을 문자나 계약서로 남기는 것이 중요합니다.'
+      },
+      {
+        question: '집주인 본인 계좌가 아니면 무조건 위험한가요?',
+        answer: '대리인 거래나 법인 명의 거래는 가능하지만, 위임장과 신분 확인이 끝나기 전에는 송금하지 않는 것이 안전합니다.'
+      }
+    ],
+    content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">전세 계약에서 가장 위험한 순간은 계약금을 보내는 바로 그 순간입니다. 한 번 잘못 송금하면 되돌리기 어렵고, 사기성 거래라면 이후 절차가 훨씬 복잡해집니다. 아래 체크리스트는 계약금 송금 직전에 반드시 확인해야 할 핵심만 담았습니다.</p>
+
+        <div class="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg not-prose">
+          <h4 class="text-red-900 font-bold mb-2 text-lg">🚨 송금 전 3초 점검</h4>
+          <ul class="text-red-800 space-y-1 text-sm">
+            <li>등기부등본상 소유자와 계약 상대방 이름이 같은가</li>
+            <li>계좌 명의가 집주인 또는 검증된 대리인과 일치하는가</li>
+            <li>반환 조건과 특약 문구가 문자 또는 계약서에 남아 있는가</li>
+          </ul>
+        </div>
+
+        <h2>1. 송금 전에 반드시 받아야 할 자료</h2>
+        <ul>
+          <li><strong>등기부등본 최신본:</strong> 갑구 소유자, 을구 근저당권, 가압류 여부를 다시 확인하세요.</li>
+          <li><strong>신분증 또는 사업자 정보:</strong> 개인 거래인지, 법인·대리인 거래인지 명확히 구분해야 합니다.</li>
+          <li><strong>매물 정보 캡처:</strong> 광고글, 중개사 설명, 보증금·월세·관리비 내용을 화면 캡처로 남겨두세요.</li>
+        </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+          <div>
+            <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
+            <p class="text-sm text-slate-600">등기부등본과 권리관계가 아직 헷갈린다면?</p>
+          </div>
+          <a href="/guide/how-to-read-registry" class="text-blue-600 font-bold hover:underline text-sm">등기부등본 보는 법 →</a>
+        </div>
+
+        <h2>2. 계좌번호보다 먼저 확인할 것: 명의 일치</h2>
+        <p>계약 상대가 "급해서 다른 계좌로 보내달라"고 하는 순간부터 위험도가 올라갑니다.</p>
+        <ul>
+          <li><strong>집주인 본인 계좌:</strong> 가장 안전합니다. 이름 일치만으로 끝내지 말고 주민등록상 이름 철자까지 맞는지 보세요.</li>
+          <li><strong>배우자·가족 계좌:</strong> 편의상 쓰는 경우도 있지만, 위임 근거 없이 송금하면 나중에 분쟁이 생깁니다.</li>
+          <li><strong>법인 명의 계좌:</strong> 사업자등록증, 법인 등기, 담당자 재직 확인이 필요합니다.</li>
+        </ul>
+
+        <h2>3. 가계약일수록 조건을 더 정확히 남겨야 합니다</h2>
+        <p>가계약은 금액이 작아 보여도 법적으로 계약의 일부로 판단될 수 있습니다. 구두 합의만 믿지 마세요.</p>
+
+        <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 my-6">
+          <h4 class="font-bold text-yellow-900 mb-3">✅ 문자나 카톡에 남겨둘 문장 예시</h4>
+          <ul class="space-y-2 text-yellow-800 text-sm">
+            <li>"본 송금액은 전세 계약을 위한 가계약금이며, 등기부등본·보증보험 가입 가능 여부 확인 후 본계약 진행을 전제로 합니다."</li>
+            <li>"확인 결과 문제가 있거나 계약 조건이 달라질 경우 전액 반환하는 것으로 합니다."</li>
+            <li>"입금 계좌 명의자와 계약 당사자의 관계 및 권한을 확인했습니다."</li>
+          </ul>
+        </div>
+
+        <h2>4. 송금 메모와 증거 보관도 중요합니다</h2>
+        <ul>
+          <li><strong>송금 메모:</strong> "OO동 전세 가계약금"처럼 거래 목적이 드러나게 적으세요.</li>
+          <li><strong>계좌이체 확인증 저장:</strong> 은행 앱 화면만 보지 말고 PDF나 이미지로 별도 저장하세요.</li>
+          <li><strong>통화 내용 요약 문자:</strong> 전화로 합의한 내용은 끊고 나서 문자로 다시 정리해 두는 것이 좋습니다.</li>
+        </ul>
+
+        <h2>5. 이런 말이 나오면 송금 보류가 맞습니다</h2>
+        <ul>
+          <li><strong>"오늘 안 보내면 다른 사람한테 넘긴다"</strong></li>
+          <li><strong>"등기부등본은 나중에 보면 된다"</strong></li>
+          <li><strong>"계좌는 제 것이 아니지만 문제 없다"</strong></li>
+          <li><strong>"가계약금은 무조건 못 돌려준다"</strong></li>
+        </ul>
+
+        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
+          <h4 class="text-indigo-900 font-bold mb-2">💡 숫자로 먼저 안전 점검하기</h4>
+          <p class="text-indigo-800 mb-4 text-sm">시세, 보증금, 근저당 정보만 알면 계약 전 위험도를 먼저 점검할 수 있습니다.</p>
+          <a href="/safety-check" class="text-indigo-600 font-bold hover:underline flex items-center">
+            전세 사기 위험 진단 바로가기
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <h2>6. 최종 체크리스트</h2>
+        <ol>
+          <li>등기부등본 최신본 확인</li>
+          <li>소유자 이름과 계좌 명의 일치 확인</li>
+          <li>가계약금 반환 조건 문자 기록</li>
+          <li>송금 목적 메모 남기기</li>
+          <li>이체 확인증과 광고 캡처 저장</li>
+        </ol>
+      </article>
+    `
   }
 ];
 
