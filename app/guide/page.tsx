@@ -1,26 +1,30 @@
-import Link from 'next/link';
-import { BookOpen } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Badge } from '@/components/ui/badge';
+import Link from "next/link";
+import { BookOpen } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { guidePosts } from '@/data/guides';
-import { createPageMetadata } from '@/lib/metadata';
+} from "@/components/ui/card";
+import { createPageMetadata } from "@/lib/metadata";
+import { getPublishedGuidePosts } from "@/lib/content";
+
+export const revalidate = 86400;
 
 export const metadata = createPageMetadata({
-  title: '가이드북',
-  description: '등기부등본, 계약서, 보증보험, 이사 준비 절차를 주제별로 정리한 가이드 모음입니다.',
-  path: '/guide',
-  keywords: ['이사 가이드', '전세 계약 가이드', '등기부등본'],
+  title: "가이드북",
+  description: "등기부등본, 계약서, 보증보험, 이사 준비 절차를 주제별로 정리한 가이드 모음입니다.",
+  path: "/guide",
+  keywords: ["이사 가이드", "전세 계약 가이드", "등기부등본"],
 });
 
 export default function GuideIndexPage() {
+  const posts = getPublishedGuidePosts();
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
@@ -30,12 +34,12 @@ export default function GuideIndexPage() {
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">이사독립 가이드북</h1>
             <p className="text-lg text-muted-foreground">
-              모르면 손해 보는 필수 정보, 쉽게 정리해 드립니다.
+              계약 전후에 필요한 절차와 실무 문서를 주제별로 정리했습니다.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {guidePosts.map((post) => (
+            {posts.map((post) => (
               <Link key={post.slug} href={`/guide/${post.slug}`} className="block group">
                 <Card className="h-full transition-all duration-200 hover:shadow-lg hover:-translate-y-1 border-muted">
                   <CardHeader>

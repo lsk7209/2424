@@ -1,6 +1,5 @@
 ﻿import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { blogPosts } from '@/data/blog-posts';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -9,6 +8,7 @@ import ShareButtons from '@/components/ShareButtons';
 import PostCover from '@/components/PostCover';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
+import { getPublishedBlogPostBySlug, getPublishedBlogPosts } from '@/lib/content';
 import { processContent } from '@/lib/toc';
 import { absoluteUrl } from '@/lib/site';
 import {
@@ -24,9 +24,12 @@ interface BlogPostPageProps {
   }>;
 }
 
+export const revalidate = 86400;
+export const dynamicParams = true;
+
 export async function generateMetadata(props: BlogPostPageProps) {
   const params = await props.params;
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const post = getPublishedBlogPostBySlug(params.slug);
 
   if (!post) {
     return {
@@ -53,14 +56,12 @@ export async function generateMetadata(props: BlogPostPageProps) {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+  return [];
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const params = await props.params;
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const post = getPublishedBlogPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -70,7 +71,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   const { processedContent, toc } = processContent(post.content);
 
   // Find related posts (same category)
-  const relatedPosts = blogPosts.filter(p => p.category === post.category);
+  const relatedPosts = getPublishedBlogPosts().filter((p) => p.category === post.category);
 
   // SEO/GEO/AEO 최적화: 구조화된 데이터
   const articleSchema = {

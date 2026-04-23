@@ -1,16 +1,17 @@
-import { blogPosts } from '@/data/blog-posts';
-import { guidePosts } from '@/data/guides';
+import { getPublishedBlogPosts, getPublishedGuidePosts } from "@/lib/content";
 
-const BASE_URL = 'https://today2424.kr';
-const SITE_TITLE = '이사독립';
+const BASE_URL = "https://today2424.kr";
+const SITE_TITLE = "이사독립";
 const SITE_DESCRIPTION =
-  '이사 준비, 전세 계약 점검, 자취 생활 정보를 정리한 이사독립 콘텐츠 피드입니다.';
+  "이사 준비, 전세 계약 점검, 자취 생활 정보를 정리한 이사독립 콘텐츠 피드입니다.";
+
+export const revalidate = 86400;
 
 export async function GET() {
   const allPosts = [
-    ...blogPosts.map((post) => ({ ...post, type: 'blog' as const })),
-    ...guidePosts.map((post) => ({ ...post, type: 'guide' as const })),
-  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    ...getPublishedBlogPosts().map((post) => ({ ...post, type: "blog" as const })),
+    ...getPublishedGuidePosts().map((post) => ({ ...post, type: "guide" as const })),
+  ].sort((a, b) => b.date.localeCompare(a.date));
 
   const rss = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -33,14 +34,14 @@ export async function GET() {
       <category>${post.category}</category>
     </item>`;
       })
-      .join('')}
+      .join("")}
   </channel>
 </rss>`;
 
   return new Response(rss, {
     headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+      "Content-Type": "application/xml",
+      "Cache-Control": "s-maxage=3600, stale-while-revalidate",
     },
   });
 }

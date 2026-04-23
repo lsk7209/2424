@@ -1,11 +1,11 @@
 import { MetadataRoute } from "next";
-import { blogPosts } from "@/data/blog-posts";
-import { guidePosts } from "@/data/guides";
 import { tools } from "@/data/tools";
+import { getPublishedBlogPosts, getPublishedGuidePosts } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
+export const revalidate = 86400;
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static Pages
   const staticPages = [
     "",
     "/about",
@@ -24,10 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(siteConfig.updatedAt),
     changeFrequency: "daily" as const,
-    priority: route === '' ? 1 : 0.8,
+    priority: route === "" ? 1 : 0.8,
   }));
 
-  // Tools Pages (Only Ready Tools)
   const toolPages = tools
     .filter((tool) => tool.isReady)
     .map((tool) => ({
@@ -37,16 +36,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     }));
 
-  // Blog Posts
-  const blogPages = blogPosts.map((post) => ({
+  const blogPages = getPublishedBlogPosts().map((post) => ({
     url: `${siteConfig.url}/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
-  // Guide Posts
-  const guidePages = guidePosts.map((post) => ({
+  const guidePages = getPublishedGuidePosts().map((post) => ({
     url: `${siteConfig.url}/guide/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,

@@ -1,26 +1,30 @@
-import Link from 'next/link';
-import { CalendarDays } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Badge } from '@/components/ui/badge';
+import Link from "next/link";
+import { CalendarDays } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { blogPosts } from '@/data/blog-posts';
-import { createPageMetadata } from '@/lib/metadata';
+} from "@/components/ui/card";
+import { createPageMetadata } from "@/lib/metadata";
+import { getPublishedBlogPosts } from "@/lib/content";
+
+export const revalidate = 86400;
 
 export const metadata = createPageMetadata({
-  title: '블로그',
-  description: '이사 준비, 자취 꿀팁, 전세 안전, 인테리어 정보를 모은 이사독립 블로그입니다.',
-  path: '/blog',
-  keywords: ['이사 블로그', '자취 꿀팁', '전세 안전 정보'],
+  title: "블로그",
+  description: "이사 준비, 자취 꿀팁, 전세 안전, 인테리어 정보를 모은 이사독립 블로그입니다.",
+  path: "/blog",
+  keywords: ["이사 블로그", "자취 꿀팁", "전세 안전 정보"],
 });
 
 export default function BlogIndexPage() {
+  const posts = getPublishedBlogPosts();
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
@@ -30,12 +34,12 @@ export default function BlogIndexPage() {
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">이사독립 매거진</h1>
             <p className="text-lg text-muted-foreground">
-              나 혼자 산다! 하지만 정보는 함께 나눕니다.
+              이사, 전세, 자취 생활에 필요한 실전 정보를 꾸준히 발행합니다.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
                 <Card className="h-full transition-all duration-200 hover:shadow-lg hover:-translate-y-1 border-muted">
                   <CardHeader>
