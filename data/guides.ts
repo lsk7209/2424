@@ -1157,6 +1157,136 @@ export const guidePosts: GuidePost[] = [
         </ul>
       </article>
     `
+    },
+    {
+        slug: 'maintenance-fee-guide',
+        title: '관리비 확인 가이드: 고정관리비와 별도비용을 구분하는 방법',
+        excerpt: '광고에 적힌 관리비 숫자만 믿지 말아야 하는 이유와, 실제 월 주거비를 계산하는 기준을 정리했습니다.',
+        date: '2026-04-23',
+        category: '금융',
+        keywords: ['관리비 확인법', '오피스텔 관리비', '원룸 관리비 항목', '실질 월세 계산'],
+        faq: [
+            {
+                question: '관리비에 포함 항목을 말로만 들어도 괜찮나요?',
+                answer: '가능하면 문서나 문자로 남겨두는 것이 좋습니다. 계약 후 분쟁이 생기면 구두 설명만으로는 확인이 어렵습니다.'
+            },
+            {
+                question: '전기·가스가 개별 계량이 아니면 위험한가요?',
+                answer: '반드시 위험한 것은 아니지만, 사용량 대비 체감 비용이 높아질 수 있어 평균 청구 금액을 꼭 확인하는 편이 좋습니다.'
+            }
+        ],
+        content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">같은 월세 55만 원짜리 방이라도 실제 체감 비용은 크게 다를 수 있습니다. 이유는 관리비 구조가 다르기 때문입니다. 이 가이드는 계약 전에 관리비를 어떻게 확인해야 하는지 기준을 정리한 문서입니다.</p>
+
+        <h2>1. 관리비는 두 덩어리로 봐야 합니다</h2>
+        <ul>
+            <li><strong>고정관리비:</strong> 청소, 공동전기, 승강기, 경비, 건물 유지관리</li>
+            <li><strong>변동비 또는 별도비용:</strong> 전기, 수도, 가스, 인터넷, 주차비</li>
+        </ul>
+        <p>광고에 적힌 숫자가 보통 고정관리비인지, 실제 총 부담인지 먼저 구분해야 합니다.</p>
+
+        <h2>2. 계약 전에 확인해야 할 핵심 질문</h2>
+        <ol>
+            <li>월 고정관리비는 얼마인가요?</li>
+            <li>전기, 수도, 가스는 각각 개별 계량인가요?</li>
+            <li>인터넷과 TV는 포함인가요, 의무 가입인가요?</li>
+            <li>주차비, 카드키, 시설 이용료가 따로 있나요?</li>
+            <li>최근 2~3개월 실제 납부 금액을 볼 수 있나요?</li>
+        </ol>
+
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 my-6">
+            <h4 class="font-bold text-slate-900 mb-3">예시 계산</h4>
+            <p class="text-sm text-slate-700">월세 55만 원 + 공용관리비 9만 원 + 전기/가스 6만 원 + 인터넷 2만 원 = 실제 월 부담 72만 원</p>
+        </div>
+
+        <h2>3. 이런 설명이면 추가 확인이 필요합니다</h2>
+        <ul>
+            <li>&quot;보통 8~10만 원쯤 나와요&quot;</li>
+            <li>&quot;계절마다 조금씩 달라요&quot;</li>
+            <li>&quot;인터넷은 거의 다 쓰니까 포함이라 보면 돼요&quot;</li>
+        </ul>
+        <p>숫자가 정확하지 않으면 계약서 특약이나 문자로 다시 남겨두는 것이 안전합니다.</p>
+
+        <h2>4. 실전 팁</h2>
+        <ul>
+            <li>계약서에 관리비 포함 항목을 적을 수 있으면 적으세요.</li>
+            <li>공실 기간 비용을 세입자에게 넘기지 않는지 확인하세요.</li>
+            <li>오피스텔은 주차비와 인터넷 비용 때문에 체감 차이가 큽니다.</li>
+        </ul>
+      </article>
+    `
+    },
+    {
+        slug: 'move-out-checklist',
+        title: '퇴실 체크리스트: 원상복구와 보증금 분쟁을 줄이는 순서',
+        excerpt: '이사 나가기 전에 사진, 청소, 수리 범위, 계량기 기록까지 무엇을 남겨야 하는지 순서대로 정리했습니다.',
+        date: '2026-04-23',
+        category: '이사',
+        keywords: ['퇴실 체크리스트', '원상복구', '보증금 분쟁', '이사 퇴거', '퇴실 사진'],
+        faq: [
+            {
+                question: '생활 오염도 원상복구 대상인가요?',
+                answer: '일반적인 사용에 따른 통상 손모는 임차인 책임이 아닌 경우가 많지만, 과실로 인한 파손이나 심한 오염은 분쟁이 될 수 있어 상태 기록이 중요합니다.'
+            },
+            {
+                question: '퇴실할 때 사진은 어디까지 찍어야 하나요?',
+                answer: '현관, 벽, 바닥, 창틀, 화장실, 주방, 옵션 가전 상태, 계량기 숫자까지 시간 정보가 남도록 촬영하는 것이 좋습니다.'
+            }
+        ],
+        content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">보증금 분쟁은 입주할 때보다 퇴실할 때 더 많이 생깁니다. 원상복구 범위가 애매하고, 누가 어떤 상태를 만들었는지 기억이 엇갈리기 때문입니다. 퇴실 준비는 감이 아니라 기록 순서가 중요합니다.</p>
+
+        <h2>1. 퇴실 1주 전: 상태 점검</h2>
+        <ul>
+            <li>벽지 훼손, 못 자국, 바닥 긁힘 확인</li>
+            <li>화장실 곰팡이, 실리콘 오염 확인</li>
+            <li>옵션 가전 정상 작동 여부 확인</li>
+            <li>계약서상 특약의 청소·수리 조항 다시 읽기</li>
+        </ul>
+
+        <h2>2. 퇴실 당일: 꼭 남겨야 할 기록</h2>
+        <ol>
+            <li>방 전체 사진과 동영상 촬영</li>
+            <li>전기, 수도, 가스 계량기 숫자 촬영</li>
+            <li>비밀번호 변경 여부와 열쇠 반납 방식 확인</li>
+            <li>집주인 또는 관리인과 함께 상태 확인</li>
+        </ol>
+
+        <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 my-6">
+            <h4 class="font-bold text-yellow-900 mb-3">📸 사진은 이렇게 찍으세요</h4>
+            <ul class="text-yellow-800 text-sm space-y-1">
+                <li>방 전체가 보이는 컷</li>
+                <li>문제될 수 있는 부분 근접 컷</li>
+                <li>옵션 가전 전원 켜진 상태 컷</li>
+                <li>계량기 숫자와 날짜가 드러나는 컷</li>
+            </ul>
+        </div>
+
+        <h2>3. 원상복구 범위가 애매할 때</h2>
+        <p>대부분의 분쟁은 &quot;통상 손모&quot;인지, 임차인 과실인지에서 갈립니다. 그래서 입주 때 사진과 퇴실 때 사진을 같이 보관하는 것이 중요합니다.</p>
+        <ul>
+            <li><strong>통상 손모 예시:</strong> 햇빛 바램, 일반 사용에 따른 마모</li>
+            <li><strong>과실 가능 예시:</strong> 큰 못 자국, 파손, 심한 오염, 흡연 흔적</li>
+        </ul>
+
+        <h2>4. 보증금 정산 전에 확인할 것</h2>
+        <ul>
+            <li>수리비가 있다면 견적 근거 요청</li>
+            <li>공과금 정산 내역 확인</li>
+            <li>남은 관리비와 계약 종료일 일치 여부 확인</li>
+        </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+            <div>
+                <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
+                <p class="text-sm text-slate-600">보증금 반환이 늦어질 때 대응 방법이 궁금하다면?</p>
+            </div>
+            <a href="/guide/deposit-return-delay" class="text-blue-600 font-bold hover:underline text-sm">보증금 반환 가이드 →</a>
+        </div>
+      </article>
+    `
     }
 ];
 

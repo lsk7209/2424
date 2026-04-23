@@ -475,6 +475,230 @@ export const blogPosts: BlogPost[] = [
         </ol>
       </article>
     `
+  },
+  {
+    slug: 'maintenance-fee-red-flags',
+    title: '오피스텔 관리비 폭탄 피하는 법: 계약 전에 꼭 물어봐야 할 7가지',
+    excerpt: '월세보다 관리비가 더 무서운 집도 있습니다. 공용관리비, 인터넷, 수도, 전기, 주차비까지 계약 전에 반드시 확인해야 할 질문을 정리했습니다.',
+    date: '2026-04-23',
+    category: '금융/절약',
+    keywords: ['오피스텔 관리비', '원룸 관리비', '관리비 폭탄', '월세 절약', '관리비 체크리스트'],
+    faq: [
+      {
+        question: '관리비는 왜 매물마다 차이가 큰가요?',
+        answer: '건물 구조, 엘리베이터·주차장·경비 인력 유무, 개별 계량 여부에 따라 크게 달라집니다. 특히 오피스텔은 공동관리 항목이 많아 차이가 큽니다.'
+      },
+      {
+        question: '관리비에 전기요금이 포함되면 더 좋은 건가요?',
+        answer: '무조건 그렇지는 않습니다. 포함형은 편하지만 사용량이 적어도 고정비가 높을 수 있으니 실제 평균 납부 금액을 확인하는 편이 안전합니다.'
+      }
+    ],
+    content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">보증금과 월세만 보고 계약했다가, 매달 빠져나가는 관리비 때문에 후회하는 경우가 많습니다. 특히 오피스텔은 관리비 구조가 복잡해서 실제 체감 주거비가 크게 달라질 수 있습니다.</p>
+
+        <h2>1. &quot;관리비 10만 원&quot;만 믿으면 안 되는 이유</h2>
+        <p>광고에 적힌 관리비는 보통 공용관리비만 적는 경우가 많습니다. 여기에 전기, 수도, 가스, 인터넷, 주차비가 따로 붙으면 실제 부담은 훨씬 커집니다.</p>
+
+        <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-200 my-6">
+          <h4 class="font-bold text-yellow-900 mb-3">⚠️ 계약 전에 꼭 물어볼 질문</h4>
+          <ul class="space-y-2 text-yellow-800 text-sm">
+            <li>공용관리비에 포함되는 항목은 정확히 무엇인가요?</li>
+            <li>전기, 수도, 가스는 개별 계량인가요?</li>
+            <li>인터넷과 TV는 의무 가입인가요?</li>
+            <li>주차비, 승강기 유지비, 청소비가 별도인가요?</li>
+          </ul>
+        </div>
+
+        <h2>2. 관리비 내역서가 있으면 꼭 받아보세요</h2>
+        <p>말로만 설명 듣지 말고, 최근 2~3개월 관리비 내역서를 요청하세요. 평균 금액을 확인하는 것이 가장 정확합니다.</p>
+        <ul>
+          <li><strong>여름·겨울 차이:</strong> 냉난방이 포함되는 구조인지 확인해야 합니다.</li>
+          <li><strong>세입자 변경 직전 금액:</strong> 빈집 기간이 길면 평균이 낮게 보일 수 있습니다.</li>
+          <li><strong>공실 관리비:</strong> 입주 전 공실 기간 비용을 세입자에게 넘기지 않는지도 확인하세요.</li>
+        </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+          <div>
+            <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
+            <p class="text-sm text-slate-600">관리비 항목 구조를 한 번에 이해하고 싶다면?</p>
+          </div>
+          <a href="/guide/maintenance-fee-guide" class="text-blue-600 font-bold hover:underline text-sm">관리비 확인 가이드 →</a>
+        </div>
+
+        <h2>3. 이런 매물은 특히 주의하세요</h2>
+        <ul>
+          <li><strong>&quot;관리비는 대충 10만 원쯤&quot;</strong>처럼 설명이 모호한 경우</li>
+          <li><strong>인터넷·TV가 묶여 있어 해지 불가</strong>라고 하는 경우</li>
+          <li><strong>전기와 냉난방 사용량을 개별 확인할 수 없는</strong> 경우</li>
+          <li><strong>주차 등록비, 카드키 비용</strong> 같은 초기 비용을 뒤늦게 말하는 경우</li>
+        </ul>
+
+        <h2>4. 실제 체감 월 고정비 계산법</h2>
+        <p>계약 전에는 월세만 보지 말고 아래처럼 합산해서 비교해야 합니다.</p>
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 my-6">
+          <p class="font-semibold text-slate-900 mb-2">실질 월 주거비 = 월세 + 공용관리비 + 평균 개별 공과금 + 인터넷/주차비</p>
+          <p class="text-sm text-slate-600">예: 월세 55만 원 + 관리비 10만 원 + 전기/가스 7만 원 + 인터넷 2만 원 = 실제 74만 원</p>
+        </div>
+
+        <h2>5. 체크리스트 요약</h2>
+        <ol>
+          <li>관리비 포함 항목을 문서로 확인</li>
+          <li>최근 2~3개월 내역서 요청</li>
+          <li>개별 계량 여부 확인</li>
+          <li>인터넷·주차·카드키 추가 비용 확인</li>
+          <li>실질 월 주거비로 다른 매물과 비교</li>
+        </ol>
+      </article>
+    `
+  },
+  {
+    slug: 'lease-end-notice-template',
+    title: '전세·월세 만기 통보 문자 예시: 계약 종료 전에 이렇게 보내면 분쟁이 줄어든다',
+    excerpt: '만기 전에 언제, 어떤 문구로 통보해야 하는지 헷갈린다면 이 글부터 보세요. 전세·월세 종료 통보 예시와 증거 남기는 방법을 정리했습니다.',
+    date: '2026-04-23',
+    category: '전세안전',
+    keywords: ['전세 만기 통보', '월세 만기 문자', '계약 종료 통보', '보증금 반환 준비', '임대차 종료'],
+    faq: [
+      {
+        question: '언제까지 통보해야 안전한가요?',
+        answer: '보통 계약 종료 2~3개월 전에 미리 통보하는 것이 가장 안전합니다. 계약서 특약이나 개별 상황에 따라 다를 수 있어 늦지 않게 남겨두는 편이 좋습니다.'
+      },
+      {
+        question: '전화로 말했으면 충분한가요?',
+        answer: '전화만으로는 나중에 증거가 약할 수 있습니다. 통화 후 문자나 카카오톡으로 동일한 내용을 다시 남겨두는 것이 좋습니다.'
+      }
+    ],
+    content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">계약 만기가 다가오는데 집주인에게 어떻게 말을 꺼내야 할지 막막한 경우가 많습니다. 말 한마디를 애매하게 남기면 보증금 반환 시점과 계약 종료 여부를 두고 분쟁이 커질 수 있습니다.</p>
+
+        <h2>1. 문자로 남겨야 하는 이유</h2>
+        <ul>
+          <li><strong>계약 종료 의사</strong>를 분명하게 남길 수 있습니다.</li>
+          <li><strong>나중에 보증금 반환 요구의 출발점</strong>이 됩니다.</li>
+          <li><strong>통화 내용이 바뀌더라도</strong> 기록이 남습니다.</li>
+        </ul>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+          <h4 class="text-blue-900 font-bold mb-2 text-lg">✉️ 가장 무난한 문자 예시</h4>
+          <p class="text-blue-800 text-sm leading-7">
+            안녕하세요. 임차인 OOO입니다.<br/>
+            현재 거주 중인 OOO호 임대차 계약은 2026년 O월 O일에 만료될 예정입니다.<br/>
+            저는 계약을 연장하지 않고 만기일에 맞춰 퇴거할 예정이므로, 보증금 반환 준비를 부탁드립니다.<br/>
+            확인 부탁드립니다.
+          </p>
+        </div>
+
+        <h2>2. 이렇게 보내면 더 좋습니다</h2>
+        <ul>
+          <li><strong>주소/호수 포함:</strong> 여러 채를 가진 집주인은 헷갈릴 수 있습니다.</li>
+          <li><strong>퇴거 의사 명시:</strong> &quot;연장하지 않겠습니다&quot;를 분명히 적으세요.</li>
+          <li><strong>보증금 반환 언급:</strong> 만기일 반환 준비를 요청하는 문장을 같이 넣으세요.</li>
+        </ul>
+
+        <h2>3. 답장이 없을 때</h2>
+        <p>답장이 없더라도 메시지 발송 기록은 남습니다. 그래도 불안하면 다음 순서로 가면 됩니다.</p>
+        <ol>
+          <li>같은 내용을 한 번 더 문자 또는 카카오톡으로 전송</li>
+          <li>통화 후 통화 요약 문자를 다시 전송</li>
+          <li>만기 직전에도 반응이 없으면 내용증명 검토</li>
+        </ol>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+          <div>
+            <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
+            <p class="text-sm text-slate-600">집주인이 보증금을 늦게 주겠다고 하면?</p>
+          </div>
+          <a href="/guide/deposit-return-delay" class="text-blue-600 font-bold hover:underline text-sm">내용증명 작성 가이드 →</a>
+        </div>
+
+        <h2>4. 피해야 할 표현</h2>
+        <ul>
+          <li><strong>&quot;아마 나갈 것 같아요&quot;</strong>처럼 애매한 표현</li>
+          <li><strong>감정 섞인 비난</strong>이나 협박성 표현</li>
+          <li><strong>보증금 반환 시점이 빠진</strong> 단순 알림</li>
+        </ul>
+
+        <h2>5. 만기 전에 같이 준비할 것</h2>
+        <ul>
+          <li>퇴실일과 이사일 정리</li>
+          <li>계약서, 입금내역, 대화 내역 보관</li>
+          <li>새 집 계약 일정과 보증금 연결 계획 점검</li>
+        </ul>
+      </article>
+    `
+  },
+  {
+    slug: 'first-appliance-budget-plan',
+    title: '첫 자취 가전 우선순위: 한 번에 다 사지 말고 이것부터 사세요',
+    excerpt: '냉장고, 세탁기, 전자레인지, 청소기 중 무엇부터 사야 할지 고민된다면 우선순위부터 정해야 합니다. 예산별 자취 가전 구성을 정리했습니다.',
+    date: '2026-04-23',
+    category: '생활꿀팁',
+    keywords: ['자취 가전 추천', '원룸 가전 우선순위', '첫 자취 예산', '가전 구매 순서', '자취 필수템'],
+    faq: [
+      {
+        question: '첫 자취에 건조기까지 꼭 필요한가요?',
+        answer: '공간과 예산이 넉넉하지 않다면 우선순위는 아닙니다. 세탁기, 냉장고, 전자레인지처럼 생활 필수 장비부터 갖추는 편이 효율적입니다.'
+      },
+      {
+        question: '중고 가전으로 시작해도 괜찮나요?',
+        answer: '냉장고와 세탁기는 상태만 좋다면 중고도 가능합니다. 다만 배송, 설치, 소비전력, 위생 상태를 꼭 확인해야 합니다.'
+      }
+    ],
+    content: `
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">첫 자취를 시작하면 당장 다 사고 싶지만, 예산은 늘 부족합니다. 가전은 한 번 잘못 사면 공간도 차지하고 다시 처분하기도 번거롭기 때문에 우선순위를 정하는 것이 중요합니다.</p>
+
+        <h2>1. 가장 먼저 필요한 가전 3개</h2>
+        <ol>
+          <li><strong>냉장고:</strong> 식비를 줄이고 생활 패턴을 안정시키는 핵심입니다.</li>
+          <li><strong>세탁기:</strong> 빨래방 비용과 시간을 줄여줍니다.</li>
+          <li><strong>전자레인지:</strong> 간편식, 도시락, 냉장 식재료 활용도가 크게 올라갑니다.</li>
+        </ol>
+
+        <h2>2. 예산 50만 원 이하라면</h2>
+        <ul>
+          <li>중고 냉장고</li>
+          <li>중고 또는 소형 세탁기</li>
+          <li>보급형 전자레인지</li>
+          <li>스탠드형 선풍기 또는 소형 난방기 중 계절형 1개</li>
+        </ul>
+
+        <h2>3. 예산 100만 원 전후라면</h2>
+        <ul>
+          <li>에너지 효율이 나은 냉장고</li>
+          <li>통돌이 또는 소형 드럼세탁기</li>
+          <li>전자레인지 + 간단한 전기포트</li>
+          <li>청소기 또는 무선청소기 입문형</li>
+        </ul>
+
+        <div class="bg-green-50 p-6 rounded-xl border border-green-200 my-8">
+          <h4 class="text-green-900 font-bold mb-2">💡 절약 포인트</h4>
+          <ul class="text-green-800 text-sm space-y-1">
+            <li>가전보다 배송비와 설치비가 더 커질 수 있으니 반드시 포함 금액으로 비교하세요.</li>
+            <li>원룸이라면 크기보다 소음과 소비전력이 체감 만족도에 더 큰 영향을 줍니다.</li>
+            <li>멀티탭, 수납장, 작은 조명 같은 주변 품목 예산도 같이 남겨두세요.</li>
+          </ul>
+        </div>
+
+        <h2>4. 나중에 사도 되는 가전</h2>
+        <ul>
+          <li>대형 TV</li>
+          <li>건조기</li>
+          <li>로봇청소기</li>
+          <li>오븐, 에어프라이어 같은 취향형 조리 가전</li>
+        </ul>
+
+        <h2>5. 구매 전 체크리스트</h2>
+        <ul>
+          <li>설치 공간 실측</li>
+          <li>문 열리는 방향 확인</li>
+          <li>소비전력과 월 전기요금 추정</li>
+          <li>엘리베이터/계단 반입 가능 여부 확인</li>
+        </ul>
+      </article>
+    `
   }
 ];
 
