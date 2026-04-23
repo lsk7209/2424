@@ -1,15 +1,24 @@
 import Link from 'next/link';
-import { blogPosts } from '@/data/blog-posts';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { CalendarDays } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Badge } from '@/components/ui/badge';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { blogPosts } from '@/data/blog-posts';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: '이사독립 블로그 - 자취 꿀팁과 이사 정보',
-  description: '사회초년생을 위한 이사 준비, 자취 꿀팁, 전세 안전 가이드 등 유용한 정보를 제공합니다.',
-};
+export const metadata = createPageMetadata({
+  title: '블로그',
+  description: '이사 준비, 자취 꿀팁, 전세 안전, 인테리어 정보를 모은 이사독립 블로그입니다.',
+  path: '/blog',
+  keywords: ['이사 블로그', '자취 꿀팁', '전세 안전 정보'],
+});
 
 export default function BlogIndexPage() {
   return (

@@ -1,4 +1,4 @@
-export interface BlogPost {
+﻿export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
                 <span class="font-bold text-slate-800">📖 심화 학습</span>
                 <p class="text-sm text-slate-600">표제부, 갑구, 을구 보는 법을 아직 모른다면?</p>
             </div>
-            <a href="/guides/how-to-read-registry" class="text-blue-600 font-bold hover:underline text-sm">등기부등본 보는 법 가이드 →</a>
+            <a href="/guide/how-to-read-registry" class="text-blue-600 font-bold hover:underline text-sm">등기부등본 보는 법 가이드 →</a>
         </div>
 
         <h3>갑구(소유권)에서 봐야 할 것</h3>
@@ -82,7 +82,7 @@ export const blogPosts: BlogPost[] = [
                 <span class="font-bold text-slate-800">📖 심화 학습</span>
                 <p class="text-sm text-slate-600">HUG, HF, SGI 차이점과 가입 조건이 궁금하다면?</p>
             </div>
-            <a href="/guides/jeonse-insurance-guide" class="text-blue-600 font-bold hover:underline text-sm">보증보험 가이드 →</a>
+            <a href="/guide/jeonse-insurance-guide" class="text-blue-600 font-bold hover:underline text-sm">보증보험 가이드 →</a>
         </div>
 
         <h2>3. 특약사항으로 나를 지키는 방패 만들기</h2>
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
                 <span class="font-bold text-slate-800">📖 심화 학습</span>
                 <p class="text-sm text-slate-600">표준임대차계약서 작성법과 필수 특약 5가지</p>
             </div>
-            <a href="/guides/standard-rental-contract" class="text-blue-600 font-bold hover:underline text-sm">계약서 작성 가이드 →</a>
+            <a href="/guide/standard-rental-contract" class="text-blue-600 font-bold hover:underline text-sm">계약서 작성 가이드 →</a>
         </div>
 
         <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 my-6">
@@ -165,7 +165,7 @@ export const blogPosts: BlogPost[] = [
                 <span class="font-bold text-slate-800">📖 심화 학습</span>
                 <p class="text-sm text-slate-600">호구 당하지 않는 이사업체 선정 노하우</p>
             </div>
-            <a href="/guides/moving-center-selection" class="text-blue-600 font-bold hover:underline text-sm">업체 선정 가이드 →</a>
+            <a href="/guide/moving-center-selection" class="text-blue-600 font-bold hover:underline text-sm">업체 선정 가이드 →</a>
         </div>
 
         <ul>
@@ -211,7 +211,7 @@ export const blogPosts: BlogPost[] = [
                 <span class="font-bold text-slate-800">📖 심화 학습</span>
                 <p class="text-sm text-slate-600">이사 당일 주민센터에서 꼭 해야 할 일</p>
             </div>
-            <a href="/guides/administrative-welfare-center" class="text-blue-600 font-bold hover:underline text-sm">행정 업무 가이드 →</a>
+            <a href="/guide/administrative-welfare-center" class="text-blue-600 font-bold hover:underline text-sm">행정 업무 가이드 →</a>
         </div>
 
         <ol>
@@ -377,3 +377,5 @@ export const blogPosts: BlogPost[] = [
     `
   }
 ];
+
+

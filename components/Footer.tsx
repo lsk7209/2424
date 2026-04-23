@@ -81,6 +81,11 @@ export default function Footer() {
                                     문의하기
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/disclosure" className="hover:text-primary transition-colors">
+                                    광고 및 제휴 안내
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

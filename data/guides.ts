@@ -1,4 +1,4 @@
-export interface GuidePost {
+﻿export interface GuidePost {
     slug: string;
     title: string;
     excerpt: string;
@@ -1032,3 +1032,4 @@ export const guidePosts: GuidePost[] = [
     `
     }
 ];
+

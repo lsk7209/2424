@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+﻿import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { blogPosts } from '@/data/blog-posts';
 import Header from '@/components/Header';
@@ -10,6 +10,7 @@ import PostCover from '@/components/PostCover';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
 import { processContent } from '@/lib/toc';
+import { absoluteUrl } from '@/lib/site';
 import {
   Accordion,
   AccordionContent,
@@ -37,6 +38,17 @@ export async function generateMetadata(props: BlogPostPageProps) {
     title: `${post.title} | 이사독립`,
     description: post.excerpt,
     keywords: post.keywords?.join(', '),
+    alternates: {
+      canonical: absoluteUrl(`/blog/${post.slug}`),
+    },
+    openGraph: {
+      title: `${post.title} | 이사독립`,
+      description: post.excerpt,
+      url: absoluteUrl(`/blog/${post.slug}`),
+      type: 'article',
+      locale: 'ko_KR',
+      images: [absoluteUrl('/opengraph-image')],
+    },
   };
 }
 
@@ -253,3 +265,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     </div>
   );
 }
+
+
+
+

@@ -1,15 +1,24 @@
 import Link from 'next/link';
-import { guidePosts } from '@/data/guides';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { BookOpen } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Badge } from '@/components/ui/badge';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { guidePosts } from '@/data/guides';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata = {
-  title: '이사독립 가이드북 - 이사, 법률, 생활 매뉴얼',
-  description: '등기부등본 보는 법, 계약서 작성법 등 꼭 알아야 할 필수 정보를 정리했습니다.',
-};
+export const metadata = createPageMetadata({
+  title: '가이드북',
+  description: '등기부등본, 계약서, 보증보험, 이사 준비 절차를 주제별로 정리한 가이드 모음입니다.',
+  path: '/guide',
+  keywords: ['이사 가이드', '전세 계약 가이드', '등기부등본'],
+});
 
 export default function GuideIndexPage() {
   return (

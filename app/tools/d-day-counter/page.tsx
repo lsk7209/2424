@@ -42,6 +42,7 @@ export default function DDayCounterPage() {
 
     return localStorage.getItem(MOVING_DATE_KEY) ?? '';
   });
+
   const [dDay, setDDay] = useState<number | null>(() => {
     if (typeof window === 'undefined') {
       return null;
@@ -77,7 +78,9 @@ export default function DDayCounterPage() {
           <CardContent className="p-8">
             <div className="flex flex-col items-center space-y-6">
               <div className="w-full max-w-xs space-y-2">
-                <Label className="text-center block text-lg font-bold text-gray-700">이사 예정일</Label>
+                <Label className="text-center block text-lg font-bold text-gray-700">
+                  이사 예정일
+                </Label>
                 <div className="relative">
                   <Input
                     type="date"
