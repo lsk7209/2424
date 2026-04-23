@@ -1,168 +1,162 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { MapPin, Shield, CheckSquare, Sparkles } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/metadata";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
-export const metadata = {
-    title: '소개 - 이사독립',
-    description: '이사독립는 이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼입니다.',
-};
+export const metadata = createPageMetadata({
+  title: "서비스 소개",
+  description:
+    "이사독립이 어떤 원칙으로 운영되는지, 어떤 정보를 제공하는지, 어떻게 문의할 수 있는지 확인하세요.",
+  path: "/about",
+  keywords: ["서비스 소개", "이사독립", "운영 원칙"],
+});
+
+const valueItems = [
+  {
+    title: "실제 행동으로 이어지는 정보",
+    body: "이사 준비와 전세 계약에서 바로 써먹을 수 있는 체크리스트와 계산기를 우선 제공합니다.",
+  },
+  {
+    title: "신뢰 가능한 안내 구조",
+    body: "소개, 문의, 개인정보 처리방침, 이용약관을 함께 제공해 서비스 운영 방식과 책임 범위를 명확히 안내합니다.",
+  },
+  {
+    title: "초보자도 이해하기 쉬운 한국어",
+    body: "부동산과 계약 용어를 가능한 한 쉽게 풀어 설명하고, 최종 판단이 필요한 부분은 전문가 상담을 권장합니다.",
+  },
+];
 
 export default function AboutPage() {
-  // SEO/GEO 최적화: AboutPage 스키마
   const aboutPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'AboutPage',
-    name: '이사독립 소개',
-    description: '이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼',
-    url: 'https://today2424.kr/about',
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: `${siteConfig.name} 소개`,
+    description:
+      "이사독립의 서비스 목적, 운영 원칙, 문의 방법을 안내하는 페이지입니다.",
+    url: absoluteUrl("/about"),
     mainEntity: {
-      '@type': 'Organization',
-      name: '이사독립',
-      url: 'https://today2424.kr',
-      logo: 'https://today2424.kr/icons/icon-512.png',
-      description: '이사를 준비하는 모든 분들을 위한 종합 정보 플랫폼',
-      foundingDate: '2024',
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: absoluteUrl("/icons/icon-512.png"),
+      description: siteConfig.description,
+      foundingDate: "2024",
       contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'customer service',
-        email: 'contact@indielife.kr',
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        email: siteConfig.contactEmail,
       },
     },
   };
-    const features = [
-        {
-            icon: MapPin,
-            title: '나만의 동네 찾기',
-            description: '재미있는 테스트로 나에게 맞는 동네를 추천받아보세요.',
-        },
-        {
-            icon: Shield,
-            title: '전세 사기 진단',
-            description: '깡통전세 위험도를 미리 확인하여 안전한 계약을 하세요.',
-        },
-        {
-            icon: CheckSquare,
-            title: '이사 체크리스트',
-            description: '단계별 체크리스트로 빠짐없이 이사를 준비하세요.',
-        },
-        {
-            icon: Sparkles,
-            title: '풍수지리 테스트',
-            description: '재미와 실용성을 겸비한 주거 유형 추천을 받아보세요.',
-        },
-    ];
 
-    return (
-        <div className="min-h-screen flex flex-col">
-            {/* SEO/GEO 최적화: AboutPage 스키마 */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
-            />
-            <Header />
+  return (
+    <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
+      <Header />
 
-            <main className="flex-1 container py-8 md:py-16">
-                <div className="max-w-4xl mx-auto space-y-12">
-                    {/* Hero */}
-                    <div className="text-center space-y-4">
-                        <h1 className="text-4xl md:text-5xl font-bold">
-                            이사독립 소개
-                        </h1>
-                        <p className="text-xl text-muted-foreground">
-                            이사를 준비하는 모든 분들을 위한<br />
-                            종합 정보 플랫폼
-                        </p>
-                    </div>
+      <main className="flex-1 container py-10 md:py-16">
+        <div className="mx-auto max-w-4xl space-y-10">
+          <section className="space-y-4 text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+              이사 준비가 막막할 때
+              <br />
+              먼저 열어볼 수 있는 사이트를 목표로 합니다
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
+              {siteConfig.name}은 이사 준비, 전세 계약 전 점검, 자취 시작 전 확인해야
+              할 정보들을 이해하기 쉬운 한국어 화면으로 정리하는 서비스입니다.
+            </p>
+          </section>
 
-                    {/* Mission */}
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>우리의 미션</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4 text-muted-foreground">
-                            <p>
-                                이사독립는 <strong className="text-foreground">이사라는 스트레스 상황을 독립이라는 설렘으로 재해석</strong>하여,
-                                모든 분들이 안전하고 즐겁게 이사를 준비할 수 있도록 돕습니다.
-                            </p>
-                            <p>
-                                첫 독립을 준비하는 청년부터 새로운 보금자리를 찾는 가족까지,
-                                이사를 준비하는 모든 단계에서 필요한 정보와 도구를 제공합니다.
-                            </p>
-                        </CardContent>
-                    </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>우리가 제공하는 것</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 leading-7 text-muted-foreground">
+              <p>
+                동네 찾기 테스트, 전세 위험 진단, 이사 체크리스트, 실전 계산기,
+                가이드와 블로그 콘텐츠를 통해 사용자가 필요한 정보를 빠르게 찾고
+                실제 행동으로 이어질 수 있게 돕습니다.
+              </p>
+              <p>
+                특히 첫 독립이나 첫 전세 계약처럼 실수가 비용으로 이어질 수 있는
+                상황에서, 복잡한 용어보다 이해 가능한 순서와 체크 포인트를 우선합니다.
+              </p>
+            </CardContent>
+          </Card>
 
-                    {/* Features */}
-                    <div className="space-y-6">
-                        <h2 className="text-2xl font-bold text-center">제공 서비스</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {features.map((feature, index) => {
-                                const Icon = feature.icon;
-                                return (
-                                    <Card key={index}>
-                                        <CardHeader>
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                                                    <Icon className="h-5 w-5 text-primary" />
-                                                </div>
-                                                <CardTitle className="text-lg">{feature.title}</CardTitle>
-                                            </div>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-muted-foreground">{feature.description}</p>
-                                        </CardContent>
-                                    </Card>
-                                );
-                            })}
-                        </div>
-                    </div>
+          <section className="grid gap-6 md:grid-cols-3">
+            {valueItems.map((item) => (
+              <Card key={item.title}>
+                <CardHeader>
+                  <CardTitle className="text-xl">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="leading-7 text-muted-foreground">{item.body}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </section>
 
-                    {/* Values */}
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>핵심 가치</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                            <div>
-                                <h3 className="font-semibold mb-2">🎯 실용성</h3>
-                                <p className="text-muted-foreground">
-                                    실제로 도움이 되는 정보와 도구만을 제공합니다.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="font-semibold mb-2">🛡️ 신뢰성</h3>
-                                <p className="text-muted-foreground">
-                                    전세 사기 진단 등 중요한 정보는 정확한 계산식과 전문가 조언을 기반으로 합니다.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="font-semibold mb-2">😊 재미</h3>
-                                <p className="text-muted-foreground">
-                                    스트레스 받는 이사 준비 과정을 재미있게 만들어 드립니다.
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>운영 원칙</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 leading-7 text-muted-foreground">
+              <p>
+                1. 계약이나 법률 판단이 필요한 정보는 참고용으로 제공하고, 최종
+                결정 전에는 전문가 확인을 권장합니다.
+              </p>
+              <p>
+                2. 과장된 수익성 주장, 불분명한 출처, 의미 없는 자동 생성 문구 대신
+                실제로 도움이 되는 설명과 도구를 우선합니다.
+              </p>
+              <p>
+                3. 광고와 분석 도구를 사용할 수 있으며 관련 내용은{" "}
+                <Link href="/privacy" className="font-medium text-primary underline-offset-4 hover:underline">
+                  개인정보 처리방침
+                </Link>
+                과{" "}
+                <Link href="/terms" className="font-medium text-primary underline-offset-4 hover:underline">
+                  이용약관
+                </Link>
+                에서 확인할 수 있습니다.
+              </p>
+            </CardContent>
+          </Card>
 
-                    {/* Contact CTA */}
-                    <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
-                        <CardContent className="pt-6 text-center space-y-4">
-                            <h3 className="text-xl font-bold">문의하기</h3>
-                            <p className="text-muted-foreground">
-                                서비스 개선 제안이나 문의사항이 있으시면 언제든 연락주세요.
-                            </p>
-                            <a
-                                href="/contact"
-                                className="inline-block px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
-                            >
-                                문의하기
-                            </a>
-                        </CardContent>
-                    </Card>
-                </div>
-            </main>
-
-            <Footer />
+          <Card className="border-primary/20 bg-primary/5">
+            <CardContent className="space-y-4 pt-6 text-center">
+              <h2 className="text-2xl font-bold text-slate-950">문의 및 제안</h2>
+              <p className="text-muted-foreground">
+                서비스 오류 제보, 제휴 제안, 콘텐츠 개선 의견은 아래 경로로 받을 수 있습니다.
+              </p>
+              <p className="font-semibold text-slate-900">{siteConfig.contactEmail}</p>
+              <div className="flex justify-center gap-3">
+                <Link
+                  href="/contact"
+                  className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  문의 페이지 보기
+                </Link>
+                <Link
+                  href="/tools"
+                  className="rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition-colors hover:bg-white"
+                >
+                  도구 바로가기
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-    );
+      </main>
+
+      <Footer />
+    </div>
+  );
 }

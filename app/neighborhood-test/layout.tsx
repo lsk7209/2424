@@ -1,26 +1,18 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-    title: '나만의 동네 찾기 테스트 - 이사독립',
-    description: '이상과 현실의 갭을 확인하는 MBTI 스타일 동네 찾기 테스트. 당신에게 딱 맞는 동네를 추천해드립니다.',
-    keywords: ['동네 찾기', '동네 추천', '자취', '원룸', '동네 테스트', '이사', '독립', '서울 동네'],
-    openGraph: {
-        title: '나만의 동네 찾기 테스트 - 이사독립',
-        description: '이상과 현실의 갭을 확인하는 MBTI 스타일 동네 찾기',
-        type: 'website',
-        url: '/neighborhood-test',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: '나만의 동네 찾기 테스트 - 이사독립',
-        description: '이상과 현실의 갭을 확인하는 MBTI 스타일 동네 찾기',
-    },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "나만의 동네 찾기 테스트",
+  description:
+    "생활 스타일과 취향을 바탕으로 나에게 맞는 동네 후보를 찾아보는 테스트입니다.",
+  path: "/neighborhood-test",
+  keywords: ["동네 찾기", "동네 추천", "이사 지역 선택"],
+});
 
 export default function NeighborhoodTestLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return <>{children}</>;
+  return <>{children}</>;
 }

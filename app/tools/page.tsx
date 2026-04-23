@@ -1,42 +1,55 @@
-import Link from 'next/link';
-import { tools } from '@/data/tools';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { tools } from "@/data/tools";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  title: '이사독립 도구함 - 자취 생활 필수 유틸리티',
-  description: '이사 견적 계산기, 전월세 전환율 계산기 등 자취 생활에 꼭 필요한 도구들을 모았습니다.',
-};
+export const metadata = createPageMetadata({
+  title: "도구 모음",
+  description:
+    "이사 견적 계산기, 전월세 전환율 계산기, 중개수수료 계산기, D-Day 카운터 등 실전 도구를 한 번에 모았습니다.",
+  path: "/tools",
+  keywords: ["이사 계산기", "중개수수료 계산기", "전월세 전환율"],
+});
 
 export default function ToolsIndexPage() {
-  // AdSense Guard: Only show ready tools
-  const readyTools = tools.filter(tool => tool.isReady);
+  const readyTools = tools.filter((tool) => tool.isReady);
+  const upcomingTools = tools.filter((tool) => !tool.isReady);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
 
       <main className="flex-1 container mx-auto py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">이사독립 도구함</h1>
-            <p className="text-lg text-muted-foreground">
-              복잡한 계산과 귀찮은 기록, 도구에게 맡기세요.
+        <div className="mx-auto max-w-5xl space-y-10">
+          <div className="space-y-4 text-center">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              이사독립 도구 모음
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              계산과 비교가 필요한 순간에 바로 쓸 수 있는 실전형 도구만 모았습니다.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {readyTools.map((tool) => {
               const Icon = tool.icon;
+
               return (
                 <Link key={tool.slug} href={tool.href} className="block group">
-                  <Card className="h-full transition-all duration-200 hover:shadow-lg hover:-translate-y-1 border-muted">
+                  <Card className="h-full border-muted transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
                     <CardHeader>
-                      <div className="flex items-center justify-between mb-2">
-                        <div className={`p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors`}>
-                          <Icon className="w-5 h-5" />
+                      <div className="mb-2 flex items-center justify-between">
+                        <div className="rounded-lg bg-primary/10 p-2 text-primary transition-colors group-hover:bg-primary/20">
+                          <Icon className="h-5 w-5" />
                         </div>
                         {tool.isNew && (
                           <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">
@@ -44,7 +57,7 @@ export default function ToolsIndexPage() {
                           </Badge>
                         )}
                       </div>
-                      <CardTitle className="group-hover:text-primary transition-colors">
+                      <CardTitle className="transition-colors group-hover:text-primary">
                         {tool.title}
                       </CardTitle>
                     </CardHeader>
@@ -59,25 +72,30 @@ export default function ToolsIndexPage() {
             })}
           </div>
 
-          {/* Coming Soon Section for AdSense Safety (Instead of broken links) */}
-          <div className="mt-12 pt-8 border-t">
-            <h3 className="text-xl font-semibold mb-6 text-center">준비 중인 도구들</h3>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 opacity-60">
-              {tools.filter(t => !t.isReady).map((tool) => (
-                <Card key={tool.slug} className="bg-gray-100 border-dashed">
+          <section className="space-y-6 border-t pt-8">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-slate-950">준비 중인 도구</h2>
+              <p className="mt-2 text-muted-foreground">
+                완성도가 충분하지 않은 기능은 검수 안정성을 위해 숨기고 있습니다.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 opacity-70">
+              {upcomingTools.map((tool) => (
+                <Card key={tool.slug} className="border-dashed bg-gray-100">
                   <CardHeader className="pb-2">
                     <div className="flex items-center gap-2">
-                      <tool.icon className="w-4 h-4 text-muted-foreground" />
+                      <tool.icon className="h-4 w-4 text-muted-foreground" />
                       <span className="font-medium text-muted-foreground">{tool.title}</span>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-xs text-muted-foreground">{tool.description}</p>
+                    <p className="text-sm text-muted-foreground">{tool.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
-          </div>
+          </section>
         </div>
       </main>
 

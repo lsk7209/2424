@@ -1,26 +1,13 @@
-// This is a server component for the result page
-import ResultClient from './ResultClient';
+import { createPageMetadata } from "@/lib/metadata";
+import ResultClient from "./ResultClient";
 
-export const metadata = {
-    title: '나만의 동네 찾기 결과 | 이사독립',
-    description: '당신에게 딱 맞는 이상형 동네와 현실적인 추천 동네를 확인하고, 결과를 공유해보세요.',
-    openGraph: {
-        title: '나만의 동네 찾기 결과',
-        description: '당신에게 딱 맞는 이상형 동네와 현실적인 추천 동네를 확인하고, 결과를 공유해보세요.',
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/neighborhood-test/result`,
-        images: [
-            {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`,
-                width: 1200,
-                height: 630,
-                alt: '동네 찾기 결과 이미지',
-            },
-        ],
-        locale: 'ko_KR',
-        type: 'website',
-    },
-};
+export const metadata = createPageMetadata({
+  title: "동네 찾기 테스트 결과",
+  description:
+    "테스트 답변을 바탕으로 이상형 동네와 현실적인 추천 동네를 확인하는 결과 페이지입니다.",
+  path: "/neighborhood-test/result",
+});
 
 export default function ResultPage() {
-    return <ResultClient />;
+  return <ResultClient />;
 }

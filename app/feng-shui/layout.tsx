@@ -1,26 +1,18 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-    title: '풍수지리 집터 테스트 - 이사독립',
-    description: '사주 오행 기반 맞춤형 주거 유형을 찾아보세요. 木火土金水 오행 분석으로 당신에게 맞는 집터를 추천해드립니다.',
-    keywords: ['풍수지리', '집터', '사주', '오행', '주거 유형', '집 찾기', '풍수', '인테리어'],
-    openGraph: {
-        title: '풍수지리 집터 테스트 - 이사독립',
-        description: '사주 오행 기반 맞춤형 주거 유형 추천',
-        type: 'website',
-        url: '/feng-shui',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: '풍수지리 집터 테스트 - 이사독립',
-        description: '사주 오행 기반 맞춤형 주거 유형 추천',
-    },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "풍수지리 집터 테스트",
+  description:
+    "주거 취향과 분위기를 바탕으로 어울리는 집터 성향과 인테리어 방향을 확인하는 테스트입니다.",
+  path: "/feng-shui",
+  keywords: ["풍수지리", "집터 테스트", "인테리어 성향"],
+});
 
 export default function FengShuiLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return children;
+  return children;
 }

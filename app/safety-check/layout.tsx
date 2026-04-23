@@ -1,20 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-    title: '전세 사기 위험 진단기 - 이사독립',
-    description: '깡통전세 위험도를 미리 확인하세요. 등기부등본 기반 전세 사기 위험도 진단 및 안전한 계약을 위한 가이드를 제공합니다.',
-    keywords: ['전세 사기', '깡통전세', '전세 진단', '등기부등본', '전세 위험도', '전세 계약', '보증보험'],
-    openGraph: {
-        title: '전세 사기 위험 진단기 - 이사독립',
-        description: '깡통전세 위험도를 미리 확인하세요',
-        type: 'website',
-        url: '/safety-check',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: '전세 사기 위험 진단기 - 이사독립',
-        description: '깡통전세 위험도를 미리 확인하세요',
-    },
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "전세 사기 위험 진단",
+  description:
+    "시세, 보증금, 근저당 정보를 기준으로 전세 계약 전 위험 신호를 빠르게 점검하는 도구입니다.",
+  path: "/safety-check",
+  keywords: ["전세 사기", "전세 위험 진단", "등기부등본 점검"],
+});
 
-export { default } from './page';
+export { default } from "./page";

@@ -1,14 +1,31 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://today2424.kr';
-
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/api/', '/admin/'],
-    },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/admin/"],
+      },
+      {
+        userAgent: [
+          "Yeti",
+          "Daumoa",
+          "GPTBot",
+          "ClaudeBot",
+          "PerplexityBot",
+          "OAI-SearchBot",
+          "Google-Extended",
+        ],
+        allow: "/",
+      },
+      {
+        userAgent: "Bytespider",
+        disallow: "/",
+      },
+    ],
+    sitemap: `${siteConfig.url}/sitemap.xml`,
   };
 }

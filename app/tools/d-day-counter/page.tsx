@@ -1,54 +1,62 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
+import { Calendar as CalendarIcon, CheckCircle2, Clock } from 'lucide-react';
+import { differenceInDays, format } from 'date-fns';
+import { ko } from 'date-fns/locale';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Clock, Calendar as CalendarIcon, CheckCircle2, AlertCircle } from 'lucide-react';
-import { differenceInDays, format, addDays, subDays } from 'date-fns';
-import { ko } from 'date-fns/locale';
+
+const MOVING_DATE_KEY = 'movingDate';
+
+const milestones = [
+  { day: 30, title: '이사업체 예약과 짐 정리 시작', desc: '손없는 날과 예산을 기준으로 업체를 비교하세요.' },
+  { day: 14, title: '입주청소와 가구 배치 확정', desc: '버릴 물건 정리와 새집 동선 점검을 같이 진행하세요.' },
+  { day: 7, title: '주소 이전과 공과금 이전 신청', desc: '도시가스, 인터넷, 우편물 주소를 미리 바꾸세요.' },
+  { day: 1, title: '최종 점검과 귀중품 챙기기', desc: '서류, 열쇠, 현금, 휴대품을 따로 보관하세요.' },
+] as const;
+
+function calculateDDay(dateStr: string) {
+  if (!dateStr) {
+    return null;
+  }
+
+  const targetDate = new Date(dateStr);
+  const today = new Date();
+  targetDate.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0);
+
+  return differenceInDays(targetDate, today);
+}
 
 export default function DDayCounterPage() {
-  const [movingDate, setMovingDate] = useState<string>('');
-  const [dDay, setDDay] = useState<number | null>(null);
-
-  useEffect(() => {
-    // Load from local storage if available
-    const savedDate = localStorage.getItem('movingDate');
-    if (savedDate) {
-      setMovingDate(savedDate);
-      calculateDDay(savedDate);
+  const [movingDate, setMovingDate] = useState(() => {
+    if (typeof window === 'undefined') {
+      return '';
     }
-  }, []);
 
-  const calculateDDay = (dateStr: string) => {
-    if (!dateStr) return;
-    const targetDate = new Date(dateStr);
-    const today = new Date();
-    // Reset time part for accurate day calculation
-    targetDate.setHours(0, 0, 0, 0);
-    today.setHours(0, 0, 0, 0);
+    return localStorage.getItem(MOVING_DATE_KEY) ?? '';
+  });
+  const [dDay, setDDay] = useState<number | null>(() => {
+    if (typeof window === 'undefined') {
+      return null;
+    }
 
-    const diff = differenceInDays(targetDate, today);
-    setDDay(diff);
+    const savedDate = localStorage.getItem(MOVING_DATE_KEY);
+    return savedDate ? calculateDDay(savedDate) : null;
+  });
+
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const nextDate = event.target.value;
+    setMovingDate(nextDate);
+    setDDay(calculateDDay(nextDate));
+    localStorage.setItem(MOVING_DATE_KEY, nextDate);
   };
-
-  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const date = e.target.value;
-    setMovingDate(date);
-    calculateDDay(date);
-    localStorage.setItem('movingDate', date);
-  };
-
-  const milestones = [
-    { day: 30, title: '이사업체 예약 & 짐 정리 시작', desc: '손없는날 확인하고 견적 비교하기' },
-    { day: 14, title: '입주청소 예약 & 가구 배치 구상', desc: '버릴 가구 신고하고 배치도 그리기' },
-    { day: 7, title: '공과금 정산 준비 & 주소 이전', desc: '도시가스, 인터넷 이전 신청하기' },
-    { day: 1, title: '최종 점검 & 귀중품 챙기기', desc: '현금 준비하고 쓰레기 봉투 사두기' },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
@@ -61,7 +69,7 @@ export default function DDayCounterPage() {
             이사 D-Day 카운터
           </h1>
           <p className="text-gray-600">
-            이사 날짜를 설정하고 남은 기간별<br className="md:hidden" /> 필수 체크리스트를 확인하세요.
+            이사 날짜를 설정하고 남은 기간에 맞는 준비 항목을 확인하세요.
           </p>
         </div>
 
@@ -81,7 +89,7 @@ export default function DDayCounterPage() {
                 </div>
               </div>
 
-              {dDay !== null && (
+              {dDay !== null && movingDate && (
                 <div className="text-center animate-in zoom-in-50 duration-500">
                   <p className="text-gray-500 mb-2">이사까지</p>
                   <div className="text-6xl font-black text-blue-600 tracking-tighter">
@@ -111,12 +119,13 @@ export default function DDayCounterPage() {
                 return (
                   <div
                     key={milestone.day}
-                    className={`
-                      relative p-5 rounded-xl border-2 transition-all
-                      ${isPassed ? 'bg-gray-100 border-gray-200 opacity-60' :
-                        isUpcoming ? 'bg-white border-blue-500 shadow-md scale-105 z-10' :
-                          'bg-white border-transparent shadow-sm'}
-                    `}
+                    className={`relative p-5 rounded-xl border-2 transition-all ${
+                      isPassed
+                        ? 'bg-gray-100 border-gray-200 opacity-60'
+                        : isUpcoming
+                          ? 'bg-white border-blue-500 shadow-md scale-105 z-10'
+                          : 'bg-white border-transparent shadow-sm'
+                    }`}
                   >
                     <div className="flex justify-between items-start mb-1">
                       <span className={`font-black text-xl ${isPassed ? 'text-gray-400' : 'text-blue-600'}`}>
@@ -124,7 +133,7 @@ export default function DDayCounterPage() {
                       </span>
                       {isUpcoming && (
                         <span className="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded-full">
-                          지금 챙기세요!
+                          지금 챙기세요
                         </span>
                       )}
                     </div>
@@ -137,11 +146,8 @@ export default function DDayCounterPage() {
               })}
             </div>
 
-            <Button
-              className="w-full h-14 text-lg font-bold bg-gray-900 hover:bg-gray-800"
-              onClick={() => window.location.href = '/checklist'}
-            >
-              전체 체크리스트 보러가기
+            <Button asChild className="w-full h-14 text-lg font-bold bg-gray-900 hover:bg-gray-800">
+              <Link href="/checklist">전체 체크리스트 보러가기</Link>
             </Button>
           </div>
         )}

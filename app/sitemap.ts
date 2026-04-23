@@ -1,28 +1,28 @@
-import { MetadataRoute } from 'next';
-import { tools } from '@/data/tools';
-import { blogPosts } from '@/data/blog-posts';
-import { guidePosts } from '@/data/guides';
+import { MetadataRoute } from "next";
+import { blogPosts } from "@/data/blog-posts";
+import { guidePosts } from "@/data/guides";
+import { tools } from "@/data/tools";
+import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://today2424.kr';
-
   // Static Pages
   const staticPages = [
-    '',
-    '/about',
-    '/contact',
-    '/privacy',
-    '/terms',
-    '/blog',
-    '/guide',
-    '/tools',
-    '/neighborhood-test',
-    '/feng-shui',
-    '/safety-check',
+    "",
+    "/about",
+    "/contact",
+    "/privacy",
+    "/terms",
+    "/blog",
+    "/guide",
+    "/tools",
+    "/neighborhood-test",
+    "/feng-shui",
+    "/safety-check",
+    "/checklist",
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
+    url: `${siteConfig.url}${route}`,
+    lastModified: new Date(siteConfig.updatedAt),
+    changeFrequency: "daily" as const,
     priority: route === '' ? 1 : 0.8,
   }));
 
@@ -30,25 +30,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolPages = tools
     .filter((tool) => tool.isReady)
     .map((tool) => ({
-      url: `${baseUrl}${tool.href}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
+      url: `${siteConfig.url}${tool.href}`,
+      lastModified: new Date(siteConfig.updatedAt),
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     }));
 
   // Blog Posts
   const blogPages = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${siteConfig.url}/blog/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   // Guide Posts
   const guidePages = guidePosts.map((post) => ({
-    url: `${baseUrl}/guide/${post.slug}`,
+    url: `${siteConfig.url}/guide/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 

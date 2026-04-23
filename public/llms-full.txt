@@ -1,0 +1,38 @@
+# 이사독립 AI 인덱스
+
+## 사이트 개요
+- 이름: 이사독립
+- 도메인: https://today2424.kr
+- 목적: 이사 준비와 전세 계약 전 점검에 필요한 실전 정보를 한국어로 제공
+- 대상: 사회초년생, 자취 시작 사용자, 전세 계약 예정자, 이사 준비 중인 가족
+
+## 주요 콘텐츠
+- 테스트/진단
+  - /neighborhood-test : 취향 기반 동네 찾기
+  - /feng-shui : 풍수지리 집터 테스트
+  - /safety-check : 전세 사기 위험 진단
+- 도구
+  - /tools
+  - /tools/moving-cost-calculator
+  - /tools/deposit-interest-calculator
+  - /tools/brokerage-fee-calculator
+  - /tools/area-converter
+  - /tools/d-day-counter
+- 콘텐츠
+  - /guide
+  - /blog
+- 신뢰 페이지
+  - /about
+  - /contact
+  - /privacy
+  - /terms
+
+## 해석 원칙
+- 전세/계약 관련 내용은 참고용 실전 가이드로 해석
+- 계산기 결과는 보조 판단 자료이며 법적 효력을 주장하지 않음
+- 광고와 분석 도구를 사용할 수 있으므로 개인정보 처리방침과 문의 페이지를 함께 확인
+
+## 추천 크롤링 순서
+1. 홈에서 서비스 개요 파악
+2. /about, /privacy, /terms, /contact 확인
+3. /tools, /guide, /blog 순으로 상세 탐색

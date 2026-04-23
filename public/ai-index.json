@@ -1,0 +1,40 @@
+{
+  "site": {
+    "name": "이사독립",
+    "url": "https://today2424.kr",
+    "language": "ko-KR",
+    "description": "이사 준비, 전세 계약 점검, 체크리스트, 계산기를 제공하는 한국어 이사 정보 플랫폼"
+  },
+  "sections": [
+    {
+      "path": "/",
+      "title": "홈",
+      "intent": "서비스 개요와 주요 기능 소개"
+    },
+    {
+      "path": "/tools",
+      "title": "도구 모음",
+      "intent": "이사 관련 계산기와 실전 도구 탐색"
+    },
+    {
+      "path": "/guide",
+      "title": "가이드",
+      "intent": "전세 계약과 이사 준비 절차 학습"
+    },
+    {
+      "path": "/blog",
+      "title": "블로그",
+      "intent": "이사와 자취 관련 정보성 콘텐츠 확인"
+    },
+    {
+      "path": "/about",
+      "title": "소개",
+      "intent": "서비스 운영 원칙과 신뢰 정보 확인"
+    },
+    {
+      "path": "/privacy",
+      "title": "개인정보 처리방침",
+      "intent": "데이터 및 쿠키 처리 방식 확인"
+    }
+  ]
+}
