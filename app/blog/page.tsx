@@ -13,7 +13,7 @@ import {
 import { createPageMetadata } from "@/lib/metadata";
 import { getPublishedBlogPosts } from "@/lib/content";
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export const metadata = createPageMetadata({
   title: "블로그",

@@ -1,3 +1,4 @@
+import { getPublicationDate } from "@/data/publish-schedule";
 import { getPublishedBlogPosts, getPublishedGuidePosts } from "@/lib/content";
 
 const BASE_URL = "https://today2424.kr";
@@ -5,7 +6,7 @@ const SITE_TITLE = "이사독립";
 const SITE_DESCRIPTION =
   "이사 준비, 전세 계약 점검, 자취 생활 정보를 정리한 이사독립 콘텐츠 피드입니다.";
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export async function GET() {
   const allPosts = [
@@ -30,7 +31,7 @@ export async function GET() {
       <link>${BASE_URL}/${post.type}/${post.slug}</link>
       <guid isPermaLink="true">${BASE_URL}/${post.type}/${post.slug}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
-      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <pubDate>${getPublicationDate(post).toUTCString()}</pubDate>
       <category>${post.category}</category>
     </item>`;
       })

@@ -8,6 +8,7 @@ import ShareButtons from '@/components/ShareButtons';
 import PostCover from '@/components/PostCover';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
+import { getPublicationIso } from '@/data/publish-schedule';
 import { getPublishedBlogPostBySlug, getPublishedBlogPosts } from '@/lib/content';
 import { processContent } from '@/lib/toc';
 import { absoluteUrl } from '@/lib/site';
@@ -24,7 +25,7 @@ interface BlogPostPageProps {
   }>;
 }
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 export const dynamicParams = true;
 
 export async function generateMetadata(props: BlogPostPageProps) {
@@ -80,8 +81,8 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     headline: post.title,
     description: post.excerpt,
     image: `https://today2424.kr${post.coverImage || '/icons/icon-512.png'}`,
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: getPublicationIso(post),
+    dateModified: getPublicationIso(post),
     author: {
       '@type': 'Organization',
       name: '이사독립',
@@ -179,7 +180,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           <header className="mb-12 space-y-8">
             <div className="flex items-center gap-3 text-sm md:text-base text-muted-foreground border-b pb-4">
               <CalendarDays className="w-5 h-5" />
-              <time dateTime={post.date}>{post.date}</time>
+              <time dateTime={getPublicationIso(post)}>{post.date}</time>
               <span className="mx-2">|</span>
               <span className="font-medium text-blue-600">{post.category}</span>
             </div>

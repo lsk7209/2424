@@ -4,6 +4,7 @@
     excerpt: string;
     content: string; // HTML content
     date: string;
+    publishAt?: string;
     category: '법률' | '생활' | '안전' | '청소' | '행정' | '계약' | '금융' | '이사';
     coverImage?: string;
     keywords: string[]; // SEO Keywords
@@ -620,7 +621,15 @@ export const guidePosts: GuidePost[] = [
         faq: [
             {
                 question: '비밀번호는 얼마나 자주 바꿔야 하나요?',
-                answer: '최소 3개월에 한 번은 변경하는 것이 좋습니다.'
+                answer: '최소 3개월에 한 번, 혹은 수리기사 방문이나 동거인 변경처럼 출입 가능성이 바뀐 직후에 다시 설정하는 것이 좋습니다.'
+            },
+            {
+                question: '이사 첫날 가장 먼저 해야 할 보안 조치는 무엇인가요?',
+                answer: '기존 비밀번호와 관리자 설정을 초기화하고, 문이 제대로 잠기는지 직접 여러 번 테스트하는 것이 우선입니다. 공동현관 비밀번호와 택배 보관 방식도 함께 확인해두면 좋습니다.'
+            },
+            {
+                question: '비밀번호를 복잡하게만 만들면 충분한가요?',
+                answer: '복잡한 비밀번호도 중요하지만, 허수 입력 기능 사용, 지문 흔적 관리, 창문 보조잠금장치 같은 물리 보안까지 같이 챙겨야 체감 안전성이 올라갑니다.'
             }
         ],
         content: `
@@ -650,6 +659,38 @@ export const guidePosts: GuidePost[] = [
 
         <h2>3. 이중 잠금 설정</h2>
         <p>집 안에 있을 때는 '이중 잠금' 기능을 켜두세요. 밖에서 비밀번호를 알아도 문을 열 수 없습니다. (보통 '열림/닫힘' 버튼을 3~5초간 꾹 누르면 설정됩니다.)</p>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+            <h4 class="font-bold text-slate-900 mb-3">✅ 이사 첫날 보안 체크리스트</h4>
+            <ul class="text-sm text-slate-700 space-y-2">
+                <li>도어락 일반 비밀번호와 관리자 설정 초기화</li>
+                <li>문 닫힘 상태와 자동 잠금 작동 여부 확인</li>
+                <li>공동현관 출입 방식과 CCTV 사각지대 확인</li>
+                <li>저층이면 창문 보조잠금장치 추가 설치 검토</li>
+            </ul>
+        </div>
+
+        <h2>4. 비밀번호를 정할 때 피해야 할 조합</h2>
+        <ul>
+            <li><strong>생일, 전화번호 뒷자리:</strong> 지인이나 택배 정보만으로도 추측될 수 있습니다.</li>
+            <li><strong>반복 숫자:</strong> 1111, 2580 같은 조합은 가장 먼저 시도되는 패턴입니다.</li>
+            <li><strong>메모 부착:</strong> 택배함이나 현관 근처 메모는 바로 위험 요소가 됩니다.</li>
+        </ul>
+
+        <h2>5. 비밀번호 외에 같이 챙겨야 할 것</h2>
+        <ul>
+            <li><strong>문틈과 문틀 상태:</strong> 잠금장치보다 문틀 문제로 취약한 경우도 있습니다.</li>
+            <li><strong>택배 노출 최소화:</strong> 이름과 호수 노출이 큰 포장은 바로 정리하세요.</li>
+            <li><strong>방문자 응대 기준:</strong> 문을 완전히 열기 전 신원을 먼저 확인하는 습관이 중요합니다.</li>
+        </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+            <div>
+                <span class="font-bold text-slate-800">📖 같이 보면 좋은 글</span>
+                <p class="text-sm text-slate-600">집 보러 갈 때 보안 환경까지 같이 점검해보세요.</p>
+            </div>
+            <a href="/guide/house-viewing-checklist" class="text-blue-600 font-bold hover:underline text-sm">집 보기 체크리스트 →</a>
+        </div>
 
         <div class="mt-8">
             <h3 class="font-bold text-slate-800 mb-3">추가 보안 꿀템 추천</h3>
@@ -1046,6 +1087,10 @@ export const guidePosts: GuidePost[] = [
             {
                 question: '중개사 앞에서 바로 계약해도 되나요?',
                 answer: '첫 방문에서 바로 계약하기보다, 체크리스트 기준으로 사진과 메모를 남기고 권리관계를 다시 확인한 뒤 결정하는 편이 안전합니다.'
+            },
+            {
+                question: '휴대폰만 들고 가도 충분한가요?',
+                answer: '메모 앱, 손전등, 카메라만 있어도 기본 점검은 가능합니다. 다만 실측이 필요한 경우 줄자 앱이나 간단한 줄자를 같이 가져가면 더 정확합니다.'
             }
         ],
         content: `
@@ -1113,7 +1158,14 @@ export const guidePosts: GuidePost[] = [
             </table>
         </div>
 
-        <h2>4. 생활 소음 체크</h2>
+        <h2>4. 옵션과 수납도 숫자로 확인하세요</h2>
+        <ul>
+            <li><strong>가전 연식:</strong> 에어컨, 냉장고, 세탁기 제조연도가 너무 오래되지 않았는지 보세요.</li>
+            <li><strong>수납 깊이:</strong> 옷장과 신발장 크기가 실제 생활량을 감당하는지 확인합니다.</li>
+            <li><strong>콘센트 위치:</strong> 침대, 책상, 전자레인지 위치를 고려해 배치 가능한지 계산하세요.</li>
+        </ul>
+
+        <h2>5. 생활 소음 체크</h2>
         <ul>
             <li><strong>창문 열고 1분 듣기:</strong> 도로, 배달 오토바이, 술집, 학원 소음 확인</li>
             <li><strong>복도 문 닫아보기:</strong> 현관문 차음 성능이 낮으면 복도 소리가 그대로 들어옵니다.</li>
@@ -1129,7 +1181,7 @@ export const guidePosts: GuidePost[] = [
             <a href="/guide/noise-complaint-guide" class="text-blue-600 font-bold hover:underline text-sm">소음 대응 가이드 →</a>
         </div>
 
-        <h2>5. 계약 전에 추가로 물어볼 질문</h2>
+        <h2>6. 계약 전에 추가로 물어볼 질문</h2>
         <ol>
             <li>월 고정 관리비와 별도 항목은 무엇인가요?</li>
             <li>인터넷, 수도, 가스가 각각 포함인가요?</li>
@@ -1137,6 +1189,16 @@ export const guidePosts: GuidePost[] = [
             <li>보일러와 에어컨 수리 이력은 있나요?</li>
             <li>계약 후 수리 책임 범위는 어디까지인가요?</li>
         </ol>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+            <h4 class="font-bold text-slate-900 mb-3">현장에서 바로 체크하면 좋은 순서</h4>
+            <ol class="text-sm text-slate-700 space-y-2 list-decimal list-inside">
+                <li>건물 외부와 골목을 먼저 확인</li>
+                <li>공용현관과 계단 냄새, CCTV 확인</li>
+                <li>방 안 채광, 곰팡이, 수압, 배수 테스트</li>
+                <li>소음과 관리비 질문까지 정리</li>
+            </ol>
+        </div>
 
         <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
             <h4 class="text-indigo-900 font-bold mb-2">💡 계약 전 숫자 검증</h4>
@@ -1147,7 +1209,7 @@ export const guidePosts: GuidePost[] = [
             </a>
         </div>
 
-        <h2>6. 체크리스트 요약</h2>
+        <h2>7. 체크리스트 요약</h2>
         <ul>
             <li>외부 환경과 골목 분위기 보기</li>
             <li>공용부와 보안 상태 확인</li>
@@ -1173,6 +1235,10 @@ export const guidePosts: GuidePost[] = [
             {
                 question: '전기·가스가 개별 계량이 아니면 위험한가요?',
                 answer: '반드시 위험한 것은 아니지만, 사용량 대비 체감 비용이 높아질 수 있어 평균 청구 금액을 꼭 확인하는 편이 좋습니다.'
+            },
+            {
+                question: '관리비가 싼 대신 옵션이 부족한 매물은 더 유리한가요?',
+                answer: '반드시 그렇지는 않습니다. 인터넷, 냉난방, 주차 같은 필수 비용이 빠져 있으면 실제 총액은 오히려 더 커질 수 있어 총 주거비 기준으로 비교해야 합니다.'
             }
         ],
         content: `
@@ -1195,12 +1261,19 @@ export const guidePosts: GuidePost[] = [
             <li>최근 2~3개월 실제 납부 금액을 볼 수 있나요?</li>
         </ol>
 
+        <h2>3. 관리비 표를 이렇게 읽으면 헷갈림이 줄어듭니다</h2>
+        <ul>
+            <li><strong>고정관리비:</strong> 입주 여부와 상관없이 거의 매달 비슷하게 나오는 항목</li>
+            <li><strong>변동비:</strong> 사용량과 계절에 따라 달라지는 항목</li>
+            <li><strong>초기비용:</strong> 카드키, 등록비, 주차 등록, 인터넷 설치비처럼 첫 달만 붙는 비용</li>
+        </ul>
+
         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 my-6">
             <h4 class="font-bold text-slate-900 mb-3">예시 계산</h4>
             <p class="text-sm text-slate-700">월세 55만 원 + 공용관리비 9만 원 + 전기/가스 6만 원 + 인터넷 2만 원 = 실제 월 부담 72만 원</p>
         </div>
 
-        <h2>3. 이런 설명이면 추가 확인이 필요합니다</h2>
+        <h2>4. 이런 설명이면 추가 확인이 필요합니다</h2>
         <ul>
             <li>&quot;보통 8~10만 원쯤 나와요&quot;</li>
             <li>&quot;계절마다 조금씩 달라요&quot;</li>
@@ -1208,12 +1281,27 @@ export const guidePosts: GuidePost[] = [
         </ul>
         <p>숫자가 정확하지 않으면 계약서 특약이나 문자로 다시 남겨두는 것이 안전합니다.</p>
 
-        <h2>4. 실전 팁</h2>
+        <h2>5. 계약서 또는 문자에 남겨두면 좋은 문구</h2>
+        <ul>
+            <li>관리비 포함 항목: 공용전기, 청소, 인터넷 등</li>
+            <li>별도 항목: 전기, 수도, 가스, 주차 등</li>
+            <li>개별 계량 여부와 최근 평균 납부액 확인 사실</li>
+        </ul>
+
+        <h2>6. 실전 팁</h2>
         <ul>
             <li>계약서에 관리비 포함 항목을 적을 수 있으면 적으세요.</li>
             <li>공실 기간 비용을 세입자에게 넘기지 않는지 확인하세요.</li>
             <li>오피스텔은 주차비와 인터넷 비용 때문에 체감 차이가 큽니다.</li>
         </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+            <div>
+                <span class="font-bold text-slate-800">📖 같이 보면 좋은 글</span>
+                <p class="text-sm text-slate-600">실전 질문 위주 요약본이 필요하면 블로그 글을 참고하세요.</p>
+            </div>
+            <a href="/blog/maintenance-fee-red-flags" class="text-blue-600 font-bold hover:underline text-sm">관리비 폭탄 피하는 법 →</a>
+        </div>
       </article>
     `
     },
@@ -1232,6 +1320,10 @@ export const guidePosts: GuidePost[] = [
             {
                 question: '퇴실할 때 사진은 어디까지 찍어야 하나요?',
                 answer: '현관, 벽, 바닥, 창틀, 화장실, 주방, 옵션 가전 상태, 계량기 숫자까지 시간 정보가 남도록 촬영하는 것이 좋습니다.'
+            },
+            {
+                question: '집주인과 함께 확인하지 못하면 어떻게 하나요?',
+                answer: '시간 맞추기가 어렵다면 사진, 동영상, 계량기 숫자, 비밀번호 반납 방식까지 기록으로 남기고 메시지로 공유해두는 것이 좋습니다. 이후 정산 기준을 문자로 정리하면 분쟁을 줄이는 데 도움이 됩니다.'
             }
         ],
         content: `
@@ -1264,26 +1356,43 @@ export const guidePosts: GuidePost[] = [
             </ul>
         </div>
 
-        <h2>3. 원상복구 범위가 애매할 때</h2>
+        <h2>3. 퇴실 전에 미리 정리하면 좋은 문서</h2>
+        <ul>
+            <li><strong>계약서 특약:</strong> 청소비, 수리비, 도배비 관련 문구 다시 읽기</li>
+            <li><strong>입주 당시 사진:</strong> 퇴실 사진과 비교할 기준 자료 확보</li>
+            <li><strong>공과금 납부 내역:</strong> 마지막 정산 시 빠진 항목이 없는지 확인</li>
+        </ul>
+
+        <h2>4. 원상복구 범위가 애매할 때</h2>
         <p>대부분의 분쟁은 &quot;통상 손모&quot;인지, 임차인 과실인지에서 갈립니다. 그래서 입주 때 사진과 퇴실 때 사진을 같이 보관하는 것이 중요합니다.</p>
         <ul>
             <li><strong>통상 손모 예시:</strong> 햇빛 바램, 일반 사용에 따른 마모</li>
             <li><strong>과실 가능 예시:</strong> 큰 못 자국, 파손, 심한 오염, 흡연 흔적</li>
         </ul>
 
-        <h2>4. 보증금 정산 전에 확인할 것</h2>
+        <h2>5. 보증금 정산 전에 확인할 것</h2>
         <ul>
             <li>수리비가 있다면 견적 근거 요청</li>
             <li>공과금 정산 내역 확인</li>
             <li>남은 관리비와 계약 종료일 일치 여부 확인</li>
         </ul>
 
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+            <h4 class="font-bold text-slate-900 mb-3">✅ 퇴실 순서 요약</h4>
+            <ol class="text-sm text-slate-700 space-y-2 list-decimal list-inside">
+                <li>일주일 전 상태 점검과 간단한 보수</li>
+                <li>퇴실 당일 전체 사진, 동영상, 계량기 촬영</li>
+                <li>집주인과 정산 항목 확인</li>
+                <li>보증금, 공과금, 관리비 정산 내역 보관</li>
+            </ol>
+        </div>
+
         <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
             <div>
                 <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
-                <p class="text-sm text-slate-600">보증금 반환이 늦어질 때 대응 방법이 궁금하다면?</p>
+                <p class="text-sm text-slate-600">입주 때 상태 기록도 같이 남겨두면 더 안전합니다.</p>
             </div>
-            <a href="/guide/deposit-return-delay" class="text-blue-600 font-bold hover:underline text-sm">보증금 반환 가이드 →</a>
+            <a href="/guide/house-photo-record-guide" class="text-blue-600 font-bold hover:underline text-sm">집 사진 기록 가이드 →</a>
         </div>
       </article>
     `

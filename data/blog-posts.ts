@@ -4,6 +4,7 @@
   excerpt: string;
   content: string; // HTML string
   date: string;
+  publishAt?: string;
   category: '이사준비' | '생활꿀팁' | '전세안전' | '풍수지리' | '인테리어' | '금융/절약';
   coverImage?: string;
   keywords: string[]; // SEO Keywords
@@ -232,16 +233,20 @@ export const blogPosts: BlogPost[] = [
     faq: [
       {
         question: '침대 머리는 어느 방향이 좋은가요?',
-        answer: '방문을 열었을 때 대각선 방향에 위치하여 심리적 안정감을 주는 것이 가장 좋습니다. 머리를 창문 쪽으로 두는 것도 좋습니다.'
+        answer: '방문을 열었을 때 침대 전체가 바로 노출되지 않으면서도 출입문이 시야에 들어오는 위치가 심리적으로 안정적입니다. 창문 바로 아래나 화장실 벽면은 피하는 편이 무난합니다.'
       },
       {
         question: '현관에 거울이 있으면 안 좋나요?',
-        answer: '현관문을 열자마자 정면에 보이는 거울은 들어오는 복을 반사한다고 합니다. 측면에 배치하는 것이 좋습니다.'
+        answer: '현관문 정면 거울을 불편하게 느끼는 사람이 많아 측면 배치가 보통 더 안정적입니다. 풍수 해석보다도 외출 동선과 시야 안정감을 기준으로 두는 것이 실용적입니다.'
+      },
+      {
+        question: '풍수지리를 꼭 믿지 않아도 적용할 가치가 있나요?',
+        answer: '네. 풍수 팁 상당수는 채광, 동선, 시야 안정, 정리 습관처럼 실제 생활 편의와 연결됩니다. 미신처럼 단정하기보다 공간 심리 관점에서 적용해보면 부담이 적습니다.'
       }
     ],
     content: `
-      <article>
-        <p class="lead">풍수지리는 미신이 아니라 '공간 심리학'입니다. 내가 머무는 공간이 편안하고 안정감 있어야 하는 일도 잘 풀리는 법이죠. 좁은 원룸이나 오피스텔에서도 쉽게 따라 할 수 있는 복을 부르는 인테리어 꿀팁을 소개합니다.</p>
+      <article class="prose prose-slate max-w-none">
+        <p class="lead text-xl text-slate-600 font-medium">풍수지리를 꼭 믿지 않더라도, 공간이 주는 심리적 안정감은 분명히 존재합니다. 원룸은 작은 배치 하나가 수면, 집중, 정리 습관까지 바꾸기 때문에 '불편함을 줄이는 배치'라는 관점으로 접근하면 훨씬 실용적입니다.</p>
         
         <div class="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg not-prose">
           <h4 class="text-purple-900 font-bold mb-2 text-lg">🔮 내 방의 기운은 어떨까?</h4>
@@ -251,13 +256,22 @@ export const blogPosts: BlogPost[] = [
           </a>
         </div>
 
-        <h2>1. 현관: 운이 들어오는 통로</h2>
+        <h2>1. 현관: 들어오자마자 답답하지 않게</h2>
         <p>현관은 집의 얼굴이자 기운이 드나드는 곳입니다. 항상 밝고 깨끗하게 유지해야 합니다.</p>
         <ul>
           <li><strong>신발 정리:</strong> 신발은 신발장에 넣고, 나와 있는 신발은 가지런히 정리하세요.</li>
           <li><strong>거울 위치:</strong> 문을 열었을 때 정면에 거울이 있으면 복이 반사되어 나갑니다. 왼쪽(재물운)이나 오른쪽(명예운) 측면에 두세요.</li>
           <li><strong>조명:</strong> 현관 센서등은 항상 밝게 유지하세요. 어두운 현관은 음기를 부릅니다.</li>
         </ul>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+          <h4 class="font-bold text-slate-900 mb-3">✅ 현관 3분 체크리스트</h4>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li>현관문을 열었을 때 바닥에 짐이 쌓여 있지 않은가</li>
+            <li>자주 신는 신발만 밖에 두고 나머지는 수납 가능한가</li>
+            <li>전신거울이 있다면 외출 동선과 부딪히지 않는가</li>
+          </ul>
+        </div>
 
         <h2>2. 침실(침대): 휴식과 재충전의 공간</h2>
         <p>잠을 잘 자야 건강하고 활력이 생깁니다. 침대 위치가 핵심입니다.</p>
@@ -267,6 +281,14 @@ export const blogPosts: BlogPost[] = [
           <li><strong>거울 주의:</strong> 자는 모습이 거울에 비치면 기가 빨린다고 합니다. 침대 맞은편 거울은 피하거나 천으로 덮어두세요.</li>
         </ul>
 
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+          <div>
+            <span class="font-bold text-slate-800">📖 같이 보면 좋은 글</span>
+            <p class="text-sm text-slate-600">거울을 넓어 보이게 쓰는 배치도 함께 확인해보세요.</p>
+          </div>
+          <a href="/blog/small-room-mirror-placement" class="text-blue-600 font-bold hover:underline text-sm">거울 배치법 →</a>
+        </div>
+
         <h2>3. 주방: 건강과 재물의 상징</h2>
         <ul>
           <li><strong>칼과 가위 수납:</strong> 날카로운 도구는 흉한 기운을 내뿜으므로 보이지 않게 수납장에 넣어두세요.</li>
@@ -274,9 +296,30 @@ export const blogPosts: BlogPost[] = [
           <li><strong>설거지 바로 하기:</strong> 쌓여있는 설거지는 나쁜 기운을 만듭니다. 바로바로 치우고 배수구도 청결하게 관리하세요.</li>
         </ul>
 
+        <h2>4. 원룸에서 특히 중요한 배치 금지 조합</h2>
+        <ul>
+          <li><strong>침대 옆 빨래건조대:</strong> 휴식 공간이 항상 어수선해져 수면 만족도가 떨어집니다.</li>
+          <li><strong>책상 뒤 현관 동선:</strong> 집중이 끊기고 화면이 외부 시선에 노출될 수 있습니다.</li>
+          <li><strong>창문 앞 대형 수납장:</strong> 채광을 막아 방이 더 무겁고 답답해 보입니다.</li>
+        </ul>
+
+        <h2>5. 예산 거의 안 들이고 분위기 바꾸는 실전 팁</h2>
+        <ol>
+          <li>현관과 침대 주변부터 눈에 보이는 물건 수를 줄입니다.</li>
+          <li>조명 색을 하나로 통일해 공간의 톤을 정리합니다.</li>
+          <li>관엽식물이나 패브릭처럼 부드러운 소재를 한두 개만 둡니다.</li>
+          <li>매일 밤 5분 정리 루틴을 만들어 '기운'보다 실제 유지력을 확보합니다.</li>
+        </ol>
+
         <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 my-4">
           <h4 class="text-yellow-800 font-bold mb-2">💡 풍수지리 플러스 팁</h4>
           <p class="text-sm text-yellow-700">집안에 죽은 식물(드라이플라워 포함)을 두지 마세요. 생기 있는 관엽식물을 두면 공기 정화는 물론 좋은 기운을 불러옵니다. 특히 현관 입구의 관엽식물은 나쁜 기운을 걸러주는 역할을 합니다.</p>
+        </div>
+
+        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
+          <h4 class="text-indigo-900 font-bold mb-2">정리 기준이 먼저 잡혀야 배치가 살아납니다</h4>
+          <p class="text-indigo-800 mb-4 text-sm">배치만 바꾸고 짐이 많으면 금방 다시 흐트러집니다. 입주 전 수납 계획을 같이 세우면 유지가 훨씬 쉽습니다.</p>
+          <a href="/guide/studio-storage-planning-guide" class="text-indigo-600 font-bold hover:underline">원룸 수납 계획 가이드 보기 →</a>
         </div>
       </article>
     `
@@ -491,6 +534,10 @@ export const blogPosts: BlogPost[] = [
       {
         question: '관리비에 전기요금이 포함되면 더 좋은 건가요?',
         answer: '무조건 그렇지는 않습니다. 포함형은 편하지만 사용량이 적어도 고정비가 높을 수 있으니 실제 평균 납부 금액을 확인하는 편이 안전합니다.'
+      },
+      {
+        question: '계약서에 관리비 내용을 어디까지 적어두면 좋나요?',
+        answer: '포함 항목, 별도 항목, 개별 계량 여부, 의무 가입 서비스 유무 정도는 문자나 특약으로 남겨두는 것이 좋습니다. 숫자가 흐리면 실제 분쟁 때 확인이 어려워집니다.'
       }
     ],
     content: `
@@ -510,7 +557,15 @@ export const blogPosts: BlogPost[] = [
           </ul>
         </div>
 
-        <h2>2. 관리비 내역서가 있으면 꼭 받아보세요</h2>
+        <h2>2. 숫자가 애매하면 바로 위험 신호입니다</h2>
+        <p>중개사나 임대인이 정확한 숫자 대신 &quot;보통 이 정도&quot;라고만 말하면, 실제 납부 시 예상보다 커지는 경우가 적지 않습니다.</p>
+        <ul>
+          <li><strong>&quot;계절 따라 달라요&quot;:</strong> 어느 정도가 평균인지 월별 금액을 물어보세요.</li>
+          <li><strong>&quot;세입자마다 달라요&quot;:</strong> 최근 실제 고지서 예시를 확인하는 편이 안전합니다.</li>
+          <li><strong>&quot;다들 그냥 내요&quot;:</strong> 의무 가입 서비스나 부대비용이 숨어 있을 수 있습니다.</li>
+        </ul>
+
+        <h2>3. 관리비 내역서가 있으면 꼭 받아보세요</h2>
         <p>말로만 설명 듣지 말고, 최근 2~3개월 관리비 내역서를 요청하세요. 평균 금액을 확인하는 것이 가장 정확합니다.</p>
         <ul>
           <li><strong>여름·겨울 차이:</strong> 냉난방이 포함되는 구조인지 확인해야 합니다.</li>
@@ -526,7 +581,7 @@ export const blogPosts: BlogPost[] = [
           <a href="/guide/maintenance-fee-guide" class="text-blue-600 font-bold hover:underline text-sm">관리비 확인 가이드 →</a>
         </div>
 
-        <h2>3. 이런 매물은 특히 주의하세요</h2>
+        <h2>4. 이런 매물은 특히 주의하세요</h2>
         <ul>
           <li><strong>&quot;관리비는 대충 10만 원쯤&quot;</strong>처럼 설명이 모호한 경우</li>
           <li><strong>인터넷·TV가 묶여 있어 해지 불가</strong>라고 하는 경우</li>
@@ -534,14 +589,31 @@ export const blogPosts: BlogPost[] = [
           <li><strong>주차 등록비, 카드키 비용</strong> 같은 초기 비용을 뒤늦게 말하는 경우</li>
         </ul>
 
-        <h2>4. 실제 체감 월 고정비 계산법</h2>
+        <h2>5. 실제 체감 월 고정비 계산법</h2>
         <p>계약 전에는 월세만 보지 말고 아래처럼 합산해서 비교해야 합니다.</p>
         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 my-6">
           <p class="font-semibold text-slate-900 mb-2">실질 월 주거비 = 월세 + 공용관리비 + 평균 개별 공과금 + 인터넷/주차비</p>
           <p class="text-sm text-slate-600">예: 월세 55만 원 + 관리비 10만 원 + 전기/가스 7만 원 + 인터넷 2만 원 = 실제 74만 원</p>
         </div>
 
-        <h2>5. 체크리스트 요약</h2>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+          <h4 class="font-bold text-slate-900 mb-3">✅ 현장 체크리스트</h4>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li>광고의 관리비 숫자가 공용관리비인지 총액인지 구분했는가</li>
+            <li>최근 고지서 또는 문자 증빙을 받았는가</li>
+            <li>주차비, 카드키, 인터넷 비용을 포함해서 비교했는가</li>
+            <li>입주 첫 달 추가 비용이 있는지 확인했는가</li>
+          </ul>
+        </div>
+
+        <h2>6. 관리비 때문에 계약을 보류해도 되는 상황</h2>
+        <ul>
+          <li>최근 실제 내역 공개를 계속 피하는 경우</li>
+          <li>공용관리비와 별도 비용을 끝까지 분리 설명하지 않는 경우</li>
+          <li>주차, 인터넷, 냉난방 구조를 계약 직전까지 바꾸어 말하는 경우</li>
+        </ul>
+
+        <h2>7. 체크리스트 요약</h2>
         <ol>
           <li>관리비 포함 항목을 문서로 확인</li>
           <li>최근 2~3개월 내역서 요청</li>
@@ -567,6 +639,10 @@ export const blogPosts: BlogPost[] = [
       {
         question: '전화로 말했으면 충분한가요?',
         answer: '전화만으로는 나중에 증거가 약할 수 있습니다. 통화 후 문자나 카카오톡으로 동일한 내용을 다시 남겨두는 것이 좋습니다.'
+      },
+      {
+        question: '집주인이 읽고도 답이 없으면 통보가 안 된 건가요?',
+        answer: '반드시 그렇다고 보기는 어렵습니다. 발송 기록과 내용이 남아 있으면 이후 설명 자료로 활용할 수 있어, 같은 내용을 한 번 더 정리해서 보내는 방식이 실무적으로 도움이 됩니다.'
       }
     ],
     content: `
@@ -590,14 +666,30 @@ export const blogPosts: BlogPost[] = [
           </p>
         </div>
 
-        <h2>2. 이렇게 보내면 더 좋습니다</h2>
+        <h2>2. 보내기 전에 먼저 체크할 것</h2>
+        <ul>
+          <li><strong>계약 만기일:</strong> 정확한 날짜를 계약서 원본으로 다시 확인하세요.</li>
+          <li><strong>연장 의사 여부:</strong> 애매한 표현 대신 연장 여부를 분명히 정리해야 합니다.</li>
+          <li><strong>보증금 일정:</strong> 새 집 계약과 연결된다면 반환 희망 시점도 같이 메모해두세요.</li>
+        </ul>
+
+        <h2>3. 이렇게 보내면 더 좋습니다</h2>
         <ul>
           <li><strong>주소/호수 포함:</strong> 여러 채를 가진 집주인은 헷갈릴 수 있습니다.</li>
           <li><strong>퇴거 의사 명시:</strong> &quot;연장하지 않겠습니다&quot;를 분명히 적으세요.</li>
           <li><strong>보증금 반환 언급:</strong> 만기일 반환 준비를 요청하는 문장을 같이 넣으세요.</li>
         </ul>
 
-        <h2>3. 답장이 없을 때</h2>
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+          <h4 class="font-bold text-slate-900 mb-3">✅ 상황별 한 줄 표현</h4>
+          <ul class="text-sm text-slate-700 space-y-2">
+            <li><strong>전세:</strong> &quot;만기일에 퇴거 예정이며 보증금 반환 준비를 부탁드립니다.&quot;</li>
+            <li><strong>월세:</strong> &quot;계약을 연장하지 않고 종료할 예정이니 퇴실 절차를 안내 부탁드립니다.&quot;</li>
+            <li><strong>새 세입자 협의 중:</strong> &quot;일정 협의를 위해 현재 반환 계획을 알려주시면 감사하겠습니다.&quot;</li>
+          </ul>
+        </div>
+
+        <h2>4. 답장이 없을 때</h2>
         <p>답장이 없더라도 메시지 발송 기록은 남습니다. 그래도 불안하면 다음 순서로 가면 됩니다.</p>
         <ol>
           <li>같은 내용을 한 번 더 문자 또는 카카오톡으로 전송</li>
@@ -613,19 +705,28 @@ export const blogPosts: BlogPost[] = [
           <a href="/guide/deposit-return-delay" class="text-blue-600 font-bold hover:underline text-sm">내용증명 작성 가이드 →</a>
         </div>
 
-        <h2>4. 피해야 할 표현</h2>
+        <h2>5. 피해야 할 표현</h2>
         <ul>
           <li><strong>&quot;아마 나갈 것 같아요&quot;</strong>처럼 애매한 표현</li>
           <li><strong>감정 섞인 비난</strong>이나 협박성 표현</li>
           <li><strong>보증금 반환 시점이 빠진</strong> 단순 알림</li>
         </ul>
 
-        <h2>5. 만기 전에 같이 준비할 것</h2>
+        <h2>6. 만기 전에 같이 준비할 것</h2>
         <ul>
           <li>퇴실일과 이사일 정리</li>
           <li>계약서, 입금내역, 대화 내역 보관</li>
           <li>새 집 계약 일정과 보증금 연결 계획 점검</li>
         </ul>
+
+        <h2>7. 실전 체크리스트</h2>
+        <ol>
+          <li>계약서로 만기일 재확인</li>
+          <li>문자 또는 카톡으로 종료 의사 발송</li>
+          <li>전화했다면 요약 문자 재전송</li>
+          <li>읽음, 발송시간, 대화 내역 캡처 보관</li>
+          <li>반응이 느리면 만기 전 추가 안내 발송</li>
+        </ol>
       </article>
     `
   },
@@ -644,6 +745,10 @@ export const blogPosts: BlogPost[] = [
       {
         question: '중고 가전으로 시작해도 괜찮나요?',
         answer: '냉장고와 세탁기는 상태만 좋다면 중고도 가능합니다. 다만 배송, 설치, 소비전력, 위생 상태를 꼭 확인해야 합니다.'
+      },
+      {
+        question: '신제품과 중고를 섞어 사는 기준이 있나요?',
+        answer: '위생과 고장 리스크가 큰 품목은 새 제품, 단순 보관이나 기본 기능 위주 품목은 중고를 검토하는 식으로 나누면 예산 관리가 쉬워집니다.'
       }
     ],
     content: `
@@ -656,6 +761,15 @@ export const blogPosts: BlogPost[] = [
           <li><strong>세탁기:</strong> 빨래방 비용과 시간을 줄여줍니다.</li>
           <li><strong>전자레인지:</strong> 간편식, 도시락, 냉장 식재료 활용도가 크게 올라갑니다.</li>
         </ol>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 my-6">
+          <h4 class="font-bold text-blue-900 mb-3">우선순위를 정하는 기준</h4>
+          <ul class="text-sm text-blue-800 space-y-2">
+            <li><strong>매일 쓰는가:</strong> 사용 빈도가 높을수록 먼저</li>
+            <li><strong>없을 때 대체 비용이 큰가:</strong> 빨래방, 배달비, 외식비가 늘어나는 품목 우선</li>
+            <li><strong>공간을 과도하게 차지하는가:</strong> 작은 방일수록 설치 면적을 같이 계산</li>
+          </ul>
+        </div>
 
         <h2>2. 예산 50만 원 이하라면</h2>
         <ul>
@@ -673,6 +787,36 @@ export const blogPosts: BlogPost[] = [
           <li>청소기 또는 무선청소기 입문형</li>
         </ul>
 
+        <h2>4. 신제품이 유리한 품목 vs 중고로 시작해도 되는 품목</h2>
+        <div class="overflow-x-auto my-6">
+          <table class="w-full text-sm border-collapse">
+            <thead class="bg-slate-100">
+              <tr>
+                <th class="border px-4 py-3 text-left">구분</th>
+                <th class="border px-4 py-3 text-left">추천</th>
+                <th class="border px-4 py-3 text-left">이유</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-3 font-bold">냉장고</td>
+                <td class="border px-4 py-3">상태 좋은 중고 가능</td>
+                <td class="border px-4 py-3">연식, 냄새, 문패킹 상태 확인이 중요</td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-3 font-bold">세탁기</td>
+                <td class="border px-4 py-3">새 제품 또는 검증된 중고</td>
+                <td class="border px-4 py-3">누수, 설치비, 청결 상태 점검 필요</td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-3 font-bold">전자레인지</td>
+                <td class="border px-4 py-3">새 제품 우선</td>
+                <td class="border px-4 py-3">가격 차이가 크지 않아 고장 리스크를 줄이기 쉬움</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="bg-green-50 p-6 rounded-xl border border-green-200 my-8">
           <h4 class="text-green-900 font-bold mb-2">💡 절약 포인트</h4>
           <ul class="text-green-800 text-sm space-y-1">
@@ -682,7 +826,7 @@ export const blogPosts: BlogPost[] = [
           </ul>
         </div>
 
-        <h2>4. 나중에 사도 되는 가전</h2>
+        <h2>5. 나중에 사도 되는 가전</h2>
         <ul>
           <li>대형 TV</li>
           <li>건조기</li>
@@ -690,13 +834,29 @@ export const blogPosts: BlogPost[] = [
           <li>오븐, 에어프라이어 같은 취향형 조리 가전</li>
         </ul>
 
-        <h2>5. 구매 전 체크리스트</h2>
+        <h2>6. 구매 전 체크리스트</h2>
         <ul>
           <li>설치 공간 실측</li>
           <li>문 열리는 방향 확인</li>
           <li>소비전력과 월 전기요금 추정</li>
           <li>엘리베이터/계단 반입 가능 여부 확인</li>
         </ul>
+
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-between">
+          <div>
+            <span class="font-bold text-slate-800">📖 같이 보면 좋은 글</span>
+            <p class="text-sm text-slate-600">가전 배치와 전기요금까지 함께 계산해보세요.</p>
+          </div>
+          <a href="/blog/appliance-electric-bill-planning" class="text-blue-600 font-bold hover:underline text-sm">전기요금 계획 글 →</a>
+        </div>
+
+        <h2>7. 첫 주에 바로 필요한 소형 품목도 따로 잡아두세요</h2>
+        <ol>
+          <li>멀티탭과 연장선</li>
+          <li>빨래건조대 또는 행거</li>
+          <li>청소도구와 쓰레기봉투</li>
+          <li>기본 식기와 전자레인지용 용기</li>
+        </ol>
       </article>
     `
   }

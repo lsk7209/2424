@@ -1,9 +1,10 @@
 import { MetadataRoute } from "next";
+import { getPublicationDate } from "@/data/publish-schedule";
 import { tools } from "@/data/tools";
 import { getPublishedBlogPosts, getPublishedGuidePosts } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -38,14 +39,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = getPublishedBlogPosts().map((post) => ({
     url: `${siteConfig.url}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: getPublicationDate(post),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
   const guidePages = getPublishedGuidePosts().map((post) => ({
     url: `${siteConfig.url}/guide/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: getPublicationDate(post),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
