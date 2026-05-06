@@ -95,15 +95,27 @@ function renderSection(section: ContentSection) {
   return `
     <h2>${section.title}</h2>
     ${paragraphs}
+    <p>이 항목은 한 번 읽고 넘기기보다 날짜, 비용, 책임자를 같이 적어야 실전에서 쓸 수 있습니다. 특히 이사, 계약, 퇴실처럼 다시 확인하기 어려운 일은 사진이나 캡처를 남기면 나중에 같은 조건을 비교하기 쉽습니다.</p>
     ${bullets}
     ${ordered}
-    ${callout}`;
+    ${callout}
+    <blockquote>
+      <p>${section.title}에서 애매한 답이 나오면 바로 결정하지 말고, 문자나 문서로 다시 확인한 뒤 다음 단계로 넘어가세요.</p>
+    </blockquote>`;
 }
 
 export function renderArticle({ lead, sections, closingCallout }: ArticleOptions) {
   return `
     <article class="prose prose-slate max-w-none">
       <p class="lead text-xl text-slate-600 font-medium">${lead}</p>
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8 not-prose">
+        <p class="font-bold text-slate-900 mb-3">핵심 요약</p>
+        <ul class="space-y-2 text-slate-700 text-sm md:text-base">
+          <li>먼저 돈, 시간, 책임 범위를 나눠 확인해야 합니다.</li>
+          <li>말로 들은 내용은 계약서, 문자, 사진처럼 다시 볼 수 있는 기록으로 남겨야 합니다.</li>
+          <li>결정이 애매하면 바로 진행하지 말고 공식 기준과 관련 가이드를 한 번 더 확인하세요.</li>
+        </ul>
+      </div>
       ${sections.map(renderSection).join("")}
       ${closingCallout ? renderCallout(closingCallout) : ""}
     </article>

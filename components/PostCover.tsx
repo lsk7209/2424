@@ -111,7 +111,7 @@ export default function PostCover({ title, category }: PostCoverProps) {
         <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm mb-6 shadow-inner">
           <Icon className="w-12 h-12 md:w-16 md:h-16 text-white drop-shadow-md" />
         </div>
-        <h1 className="text-2xl md:text-4xl font-bold max-w-3xl leading-tight drop-shadow-lg break-keep">
+        <h1 className="text-2xl md:text-4xl font-bold max-w-3xl leading-snug drop-shadow-lg break-keep text-balance [overflow-wrap:anywhere]">
           {title}
         </h1>
         <div className="mt-4 px-4 py-1 bg-black/20 rounded-full text-sm md:text-base backdrop-blur-md border border-white/10">

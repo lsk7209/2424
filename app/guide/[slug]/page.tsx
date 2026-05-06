@@ -12,6 +12,7 @@ import { getPublicationIso } from '@/data/publish-schedule';
 import { getPublishedGuidePostBySlug, getPublishedGuidePosts } from '@/lib/content';
 import { processContent } from '@/lib/toc';
 import { absoluteUrl, siteConfig } from '@/lib/site';
+import { getEnhancedFaq, getOfficialSource } from '@/lib/content-quality';
 import { createSeoDescription, createSeoTitle } from '@/lib/metadata';
 import {
   Accordion,
@@ -55,6 +56,19 @@ export async function generateMetadata(props: GuidePostPageProps) {
       url: absoluteUrl(`/guide/${post.slug}`),
       type: 'article',
       locale: 'ko_KR',
+      images: [
+        {
+          url: absoluteUrl('/opengraph-image'),
+          width: 1200,
+          height: 630,
+          alt: `${post.title} 대표 썸네일`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
       images: [absoluteUrl('/opengraph-image')],
     },
   };
@@ -74,6 +88,8 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
 
   // Process content for TOC
   const { processedContent, toc } = processContent(post.content);
+  const enhancedFaq = getEnhancedFaq(post);
+  const officialSource = getOfficialSource(post.category);
 
   // Find related posts (same category)
   const relatedPosts = getPublishedGuidePosts().filter((p) => p.category === post.category);
@@ -84,7 +100,7 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
-    image: absoluteUrl(post.coverImage || '/icons/icon-512.png'),
+    image: absoluteUrl(post.coverImage || '/opengraph-image'),
     datePublished: getPublicationIso(post),
     dateModified: getPublicationIso(post),
     author: {
@@ -133,10 +149,10 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     ],
   };
 
-  const faqSchema = post.faq && post.faq.length > 0 ? {
+  const faqSchema = enhancedFaq.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: post.faq.map((item) => ({
+    mainEntity: enhancedFaq.map((item) => ({
       '@type': 'Question',
       name: item.question,
       acceptedAnswer: {
@@ -226,8 +242,22 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
             dangerouslySetInnerHTML={{ __html: processedContent }}
           />
 
+          <aside className="mt-14 rounded-xl border border-slate-200 bg-slate-50 p-6">
+            <p className="text-sm font-bold text-green-700">공식 자료 함께 확인</p>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900">{officialSource.label}</h2>
+            <p className="mt-3 text-slate-700 leading-7">{officialSource.description}</p>
+            <a
+              href={officialSource.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex font-bold text-green-600 hover:underline"
+            >
+              공식 사이트에서 확인하기
+            </a>
+          </aside>
+
           {/* FAQ Section (AEO/GEO Optimized) - Enhanced */}
-          {post.faq && post.faq.length > 0 && (
+          {enhancedFaq.length > 0 && (
             <div className="mt-20 pt-12 border-t-2 border-gray-100">
               <div className="flex items-center gap-3 mb-8">
                 <div className="bg-green-100 p-2 rounded-full">
@@ -236,7 +266,7 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
                 <h2 className="text-3xl font-bold text-gray-900">자주 묻는 질문 (FAQ)</h2>
               </div>
               <Accordion type="single" collapsible className="w-full space-y-4">
-                {post.faq.map((item, index) => (
+                {enhancedFaq.map((item, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border rounded-xl px-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-200">
                     <AccordionTrigger className="text-left font-bold text-xl py-6 hover:no-underline hover:text-green-600 transition-colors">
                       <span className="mr-4 text-green-500">Q.</span>
