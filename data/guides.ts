@@ -263,6 +263,23 @@ export const guidePosts: GuidePost[] = [
             </div>
         </div>
 
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+            <h4 class="font-bold text-slate-900 mb-3">3분 안전 판정표</h4>
+            <ul class="text-sm text-slate-700 space-y-2">
+                <li><strong>즉시 진행:</strong> 소유자 일치, 근저당 낮음, 위험 권리 없음, 위반건축물 아님</li>
+                <li><strong>추가 확인:</strong> 신탁 문구, 최근 소유권 변동, 시세 불명확, 선순위 임차인 정보 부족</li>
+                <li><strong>계약 중단:</strong> 가압류·가처분, 경매개시결정, 근저당+보증금 과다, 소유자 불일치</li>
+            </ul>
+        </div>
+
+        <h3 class="text-lg font-bold mt-6 mb-3">📎 등기부와 같이 봐야 하는 서류</h3>
+        <ul class="text-slate-700 space-y-2">
+            <li><strong>건축물대장:</strong> 위반건축물, 용도, 불법 증축 확인</li>
+            <li><strong>중개대상물 확인설명서:</strong> 선순위 권리, 관리비, 옵션, 수리 범위 확인</li>
+            <li><strong>시세 근거 자료:</strong> 실거래가, 주변 호가, 감정가 비교</li>
+            <li><strong>보증보험 가능 여부:</strong> 최종 가입 가능 여부까지 확인</li>
+        </ul>
+
         <h3 class="text-lg font-bold mt-6 mb-3">🎯 말소된 권리 vs 살아있는 권리</h3>
         <p class="text-slate-700 mb-4">등기부등본에는 과거에 있었다가 사라진 권리도 모두 기록됩니다. <strong>빨간 줄(밑줄)</strong>이 그어진 권리는 이미 말소된 것이므로 계산에서 제외합니다.</p>
         
@@ -344,9 +361,17 @@ export const guidePosts: GuidePost[] = [
             <p class="text-sm text-yellow-700 mt-1">계약금, 잔금 등 모든 돈은 반드시 <strong>등기부상 소유자 명의의 계좌</strong>로 입금해야 합니다. 가족이나 대리인 계좌는 절대 금물!</p>
         </div>
 
+        <h2>3. 서명 전 문서 묶음 체크</h2>
+        <ul>
+            <li><strong>등기부등본 최신본:</strong> 임대인 이름과 권리 상태 재확인</li>
+            <li><strong>건축물대장 또는 확인설명서:</strong> 위반건축물, 용도, 옵션 범위 확인</li>
+            <li><strong>중개보수 안내:</strong> 복비, 부가세, 영수증 발급 여부 확인</li>
+            <li><strong>보증보험 가능 여부:</strong> 가입 불가 시 해제 특약 검토</li>
+        </ul>
+
         <hr class="my-8 border-slate-200" />
 
-        <h2>3. 특약사항: 나를 지키는 방패</h2>
+        <h2>4. 특약사항: 나를 지키는 방패</h2>
         <p>구두로 약속한 내용은 법적 효력이 약합니다. 사소한 것이라도 특약에 적으세요.</p>
         
         <div class="space-y-4 my-6">
@@ -369,8 +394,33 @@ export const guidePosts: GuidePost[] = [
             </div>
         </div>
 
+        <h2>5. 절대 비워두면 안 되는 칸</h2>
+        <ul>
+            <li><strong>임대인 정보:</strong> 공동명의면 전원 표기</li>
+            <li><strong>보증금·월세·잔금일:</strong> 숫자 하나라도 모호하면 수정</li>
+            <li><strong>특약사항:</strong> 보증보험, 대출, 수리, 체납 관련 문구 기재</li>
+            <li><strong>인도일과 계약기간:</strong> 입주 일정과 정확히 일치</li>
+        </ul>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+            <h4 class="font-bold text-slate-900 mb-3">서명 직전 최종 체크리스트</h4>
+            <ol class="text-sm text-slate-700 space-y-2 list-decimal list-inside">
+                <li>임대인 신분증과 등기부 이름 대조</li>
+                <li>계좌 명의와 계약 당사자 일치 확인</li>
+                <li>특약에 대출·보증보험·체납 문구 반영</li>
+                <li>수리 약속은 날짜까지 문장으로 기재</li>
+            </ol>
+        </div>
+
         <p>이 외에도 반려동물 키우기, 못 박기, 옵션 수리 비용 부담 등 애매한 부분은 미리 협의하여 적어두는 것이 좋습니다.</p>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/blog/deposit-transfer-checklist" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -459,7 +509,14 @@ export const guidePosts: GuidePost[] = [
                 안전진단 계산기로 확인하기
             </a>
         </div>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/safety-check" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -539,7 +596,14 @@ export const guidePosts: GuidePost[] = [
                 <span>작업 인원 (남자 N명, 여자 N명) 및 외국인 노동자 여부</span>
             </div>
         </div>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/tools/moving-cost-calculator" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -570,6 +634,9 @@ export const guidePosts: GuidePost[] = [
         content: `
       <article class="prose prose-slate max-w-none">
         <p class="lead text-xl text-slate-600 font-medium">이사 당일은 몸이 열 개라도 모자랍니다. 짐 정리는 나중에 해도 되지만, 법적 효력이 있는 행정 업무는 반드시 당일에 끝내야 합니다.</p>
+
+        <h2>1. 전입신고와 확정일자 우선 처리</h2>
+        <p>짐 정리보다 먼저 처리해야 하는 업무는 보증금 보호와 연결된 전입신고, 확정일자, 공과금 정산입니다. 이 세 가지는 당일에 끝낸다는 기준으로 움직이는 편이 안전합니다.</p>
 
         <div class="flex flex-col md:flex-row gap-4 my-8">
             <div class="flex-1 bg-indigo-600 text-white p-6 rounded-2xl shadow-lg">
@@ -608,13 +675,20 @@ export const guidePosts: GuidePost[] = [
             <span class="font-bold text-yellow-800">💡 Tip: 종량제 봉투</span>
             <p class="text-sm text-yellow-700 mt-1">이사 오기 전 동네에서 쓰던 종량제 봉투는 전입신고 시 주민센터에서 '전입 인증 스티커'를 받으면 새 동네에서도 사용할 수 있습니다. 버리지 말고 챙겨오세요!</p>
         </div>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/guide/move-out-checklist" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
         slug: 'safe-door-lock-password',
         title: '자취방 도어락 비밀번호 안전하게 관리하는 법',
-        excerpt: '몰래카메라, 지문 흔적... 도어락 비밀번호 노출을 막는 보안 수칙.',
+        excerpt: '몰래카메라, 지문 흔적... 도어락 비밀번호 노출을 막는 보안 수칙. 실제 적용 기준까지 함께 확인합니다.',
         date: '2025-11-28',
         category: '안전',
         keywords: ['도어락 비밀번호', '자취방 보안', '현관문 안전'],
@@ -715,7 +789,7 @@ export const guidePosts: GuidePost[] = [
     {
         slug: 'mold-removal-tips',
         title: '벽지 곰팡이 제거 및 결로 예방 가이드',
-        excerpt: '지긋지긋한 곰팡이, 락스만 뿌린다고 해결될까? 근본적인 원인 해결과 제거 방법.',
+        excerpt: '지긋지긋한 곰팡이, 락스만 뿌린다고 해결될까? 근본적인 원인 해결과 제거 방법. 실제 적용 기준까지 함께 확인합니다.',
         date: '2025-11-28',
         category: '청소',
         keywords: ['곰팡이 제거', '결로 예방', '벽지 곰팡이', '원룸 습기'],
@@ -777,7 +851,14 @@ export const guidePosts: GuidePost[] = [
                 <p class="text-xs text-slate-500 mt-1">벽에서 5~10cm 띄워서 배치 (공기 순환)</p>
             </li>
         </ul>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/guide/house-viewing-checklist" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -828,13 +909,20 @@ export const guidePosts: GuidePost[] = [
             <span class="font-bold text-indigo-800">💡 Tip: 중개사에게 전화할 때</span>
             <p class="text-sm text-indigo-700 mt-1">"이 방 있나요?"라고 묻지 말고, <strong>"광고 번호 1234번 매물, 보증금 5000에 40만 원 맞나요? 지금 바로 볼 수 있나요?"</strong>라고 구체적으로 물어보세요. 말이 바뀌면 바로 끊으시면 됩니다.</p>
         </div>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/guide/house-viewing-checklist" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
         slug: 'noise-complaint-guide',
         title: '층간소음, 벽간소음 법적 기준과 현명한 대처법',
-        excerpt: '참을 만큼 참았다면? 쪽지 붙이기부터 이웃사이센터 신고까지 단계별 대응 매뉴얼.',
+        excerpt: '참을 만큼 참았다면? 쪽지 붙이기부터 이웃사이센터 신고까지 단계별 대응 매뉴얼. 실제 적용 기준까지 함께 확인합니다.',
         date: '2025-11-28',
         category: '생활',
         keywords: ['층간소음 신고', '벽간소음', '이웃사이센터', '소음 기준'],
@@ -882,7 +970,14 @@ export const guidePosts: GuidePost[] = [
             <li><strong>야간 (22:00 ~ 06:00):</strong> 1분 등가소음도 34dB 이상</li>
             <li>(최고소음도는 주간 57dB, 야간 52dB)</li>
         </ul>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/blog/noise-map-home-arrival-check" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -918,7 +1013,25 @@ export const guidePosts: GuidePost[] = [
             </li>
         </ul>
 
-        <h2>2. 내용증명 작성 필수 요소 (양식)</h2>
+        <h2>2. 보내기 전에 먼저 정리할 것</h2>
+        <ul>
+            <li><strong>계약 종료 근거:</strong> 만기 종료인지, 해지 통보 종료인지 구분</li>
+            <li><strong>반환 요구 금액:</strong> 공제 논란 없는 순보증금인지 확인</li>
+            <li><strong>상대 주소:</strong> 송달 가능한 실제 주소 확보</li>
+            <li><strong>증거 묶음:</strong> 계약서, 대화 내역, 입금 내역, 종료 통보 자료 준비</li>
+        </ul>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5 my-6">
+            <h4 class="font-bold text-yellow-900 mb-3">보내기 전 체크리스트</h4>
+            <ol class="text-sm text-yellow-800 space-y-2 list-decimal list-inside">
+                <li>계약 종료일과 통보일을 계약서 기준으로 재확인</li>
+                <li>보증금 액수와 반환 요구 기한 확정</li>
+                <li>집주인 수령 주소 확인</li>
+                <li>문자·카톡·통화 요약 캡처 저장</li>
+            </ol>
+        </div>
+
+        <h2>3. 내용증명 작성 필수 요소 (양식)</h2>
         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 font-mono text-sm">
             <p class="mb-2"><strong>수신인:</strong> 임대인 이름 (주소)</p>
             <p class="mb-4"><strong>발신인:</strong> 임차인 이름 (주소)</p>
@@ -932,9 +1045,34 @@ export const guidePosts: GuidePost[] = [
             </ol>
         </div>
 
+        <h2>4. 내용증명을 보낸 뒤 다음 순서</h2>
+        <ol>
+            <li>우체국 접수증, 등기번호, 발송 사본 보관</li>
+            <li>도달 여부 확인 후 문자·통화 요약 정리</li>
+            <li>반응이 없으면 임차권등기명령, 지급명령, 보증보험 청구 검토</li>
+            <li>새 집 일정이 있으면 퇴거일과 보증금 수령일을 따로 관리</li>
+        </ol>
+
+        <h2>5. 이런 표현은 피하세요</h2>
+        <ul>
+            <li>형사처벌을 단정하는 문장</li>
+            <li>감정 섞인 비난과 모욕 표현</li>
+            <li>근거 없이 큰 손해액을 바로 적는 표현</li>
+            <li>계약 종료일과 반환 요구 기한이 빠진 문장</li>
+        </ul>
+
         <div class="mt-6">
             <h3 class="font-bold text-slate-800 mb-2">💡 발송 방법</h3>
             <p class="text-slate-600">똑같은 문서 3통을 작성하여 우체국 창구에 가서 "내용증명 보내주세요"라고 하면 됩니다. (1통은 집주인에게, 1통은 우체국 보관, 1통은 내가 보관)</p>
+        </div>
+
+        <div class="my-6 p-4 bg-slate-100 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-800">📖 같이 보면 좋은 가이드</span>
+            <p class="text-sm text-slate-600 mt-2">내용증명만으로 끝나지 않으면 임차권등기명령과 지급명령 단계까지 바로 이어집니다.</p>
+            <div class="mt-3 flex flex-wrap gap-4 text-sm">
+                <a href="/guide/tenant-registration-order-guide" class="text-blue-600 font-bold hover:underline">임차권등기명령 가이드 →</a>
+                <a href="/guide/payment-order-for-deposit-guide" class="text-blue-600 font-bold hover:underline">지급명령 가이드 →</a>
+            </div>
         </div>
       </article>
     `
@@ -942,7 +1080,7 @@ export const guidePosts: GuidePost[] = [
     {
         slug: 'auction-process-guide',
         title: '살던 집이 경매로 넘어갔을 때 대처 프로세스 5단계',
-        excerpt: '경매 개시 결정 등기 우편물을 받았다면? 당황하지 말고 이 순서대로만 하세요.',
+        excerpt: '경매 개시 결정 등기 우편물을 받았다면? 당황하지 말고 이 순서대로만 하세요. 실제 적용 기준까지 함께 확인합니다.',
         date: '2025-11-28',
         category: '법률',
         keywords: ['부동산 경매 절차', '배당요구', '임차인 대항력', '경매 권리분석'],
@@ -1003,7 +1141,14 @@ export const guidePosts: GuidePost[] = [
             <li><strong>선순위 임차인:</strong> 보증금을 전액 돌려받을 때까지 집을 비워주지 않아도 됩니다. (낙찰자가 물어줘야 함)</li>
             <li><strong>후순위 임차인:</strong> 낙찰금에서 배당받고, 모자란 돈은 받기 어렵습니다. 최우선변제금 대상인지 확인해야 합니다.</li>
         </ul>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/guide/priority-repayment-amount" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -1069,7 +1214,14 @@ export const guidePosts: GuidePost[] = [
                 </tbody>
             </table>
         </div>
-      </article>
+
+        <h2>다음에 같이 확인할 자료</h2>
+        <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/safety-check" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        </div></article>
     `
     },
     {
@@ -1200,16 +1352,57 @@ export const guidePosts: GuidePost[] = [
             </ol>
         </div>
 
-        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
-            <h4 class="text-indigo-900 font-bold mb-2">💡 계약 전 숫자 검증</h4>
-            <p class="text-indigo-800 mb-4 text-sm">마음에 드는 방을 찾았다면, 계약금 보내기 전에 보증금과 근저당 규모부터 점검해 두는 것이 안전합니다.</p>
-            <a href="/safety-check" class="text-indigo-600 font-bold hover:underline flex items-center">
-                전세 위험 진단 바로가기
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+        <h2>7. 점수로 보면 결정이 빨라집니다</h2>
+        <div class="overflow-x-auto my-6">
+            <table class="w-full text-sm border-collapse">
+                <thead class="bg-slate-100">
+                    <tr>
+                        <th class="border px-4 py-3 text-left">항목</th>
+                        <th class="border px-4 py-3 text-left">좋음</th>
+                        <th class="border px-4 py-3 text-left">보류</th>
+                        <th class="border px-4 py-3 text-left">위험</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">채광/환기</td>
+                        <td class="border px-4 py-3">낮에도 밝고 환기 잘 됨</td>
+                        <td class="border px-4 py-3">조금 어둡거나 습함</td>
+                        <td class="border px-4 py-3">곰팡이 흔적·결로 심함</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">소음/보안</td>
+                        <td class="border px-4 py-3">골목 밝고 CCTV 확인</td>
+                        <td class="border px-4 py-3">시간대 따라 다름</td>
+                        <td class="border px-4 py-3">복도/외부 소음 크고 보안 약함</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-3 font-bold">관리비/수리</td>
+                        <td class="border px-4 py-3">숫자와 문서가 명확</td>
+                        <td class="border px-4 py-3">설명은 있으나 증빙 부족</td>
+                        <td class="border px-4 py-3">설명이 계속 바뀌거나 모호함</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <h2>7. 체크리스트 요약</h2>
+        <h2>8. 이런 경우는 바로 계약하지 마세요</h2>
+        <ul>
+            <li>곰팡이와 배수 문제를 현장에서 바로 확인했는데도 &quot;원래 다 그렇다&quot;고 넘기는 경우</li>
+            <li>관리비 포함 항목과 수리 책임 범위를 문서로 남기지 않으려는 경우</li>
+            <li>저녁 시간 재방문을 강하게 막거나, 보안 질문에 답을 피하는 경우</li>
+        </ul>
+
+        <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8">
+          <h4 class="text-indigo-900 font-bold mb-2">💡 계약 전 숫자 검증</h4>
+          <p class="text-indigo-800 mb-4 text-sm">마음에 드는 방을 찾았다면, 계약금 보내기 전에 보증금과 근저당 규모부터 점검해 두는 것이 안전합니다.</p>
+          <a href="/safety-check" class="text-indigo-600 font-bold hover:underline flex items-center">
+                전세 위험 진단 바로가기
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <h2>9. 체크리스트 요약</h2>
         <ul>
             <li>외부 환경과 골목 분위기 보기</li>
             <li>공용부와 보안 상태 확인</li>

@@ -1,4 +1,4 @@
-import { HelpCircle, Mail, MessageSquare } from 'lucide-react';
+import { HelpCircle, Mail, ShieldCheck } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import {
@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { createPageMetadata } from '@/lib/metadata';
+import { siteConfig } from '@/lib/site';
 
 export const metadata = createPageMetadata({
   title: '문의하기',
@@ -91,8 +92,8 @@ export default function ContactPage() {
                 <CardTitle className="text-lg">이메일</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <a href="mailto:contact@indielife.kr" className="text-primary hover:underline">
-                  contact@indielife.kr
+                <a href={`mailto:${siteConfig.contactEmail}`} className="text-primary hover:underline">
+                  {siteConfig.contactEmail}
                 </a>
               </CardContent>
             </Card>
@@ -100,12 +101,12 @@ export default function ContactPage() {
             <Card>
               <CardHeader className="text-center">
                 <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                  <MessageSquare className="h-6 w-6 text-primary" />
+                  <ShieldCheck className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-lg">카카오톡</CardTitle>
+                <CardTitle className="text-lg">처리 기준</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">@이사독립</p>
+                <p className="text-muted-foreground">영업일 기준 1~2일 내 확인</p>
               </CardContent>
             </Card>
 
@@ -117,7 +118,7 @@ export default function ContactPage() {
                 <CardTitle className="text-lg">FAQ</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">준비 중입니다</p>
+                <p className="text-muted-foreground">아래 자주 묻는 질문에서 확인</p>
               </CardContent>
             </Card>
           </div>

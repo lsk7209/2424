@@ -251,7 +251,7 @@ export default function MovingCostCalculatorPage() {
                   </Button>
                   <Button
                     className="flex-1 h-12 text-lg bg-green-600 hover:bg-green-700"
-                    onClick={() => window.open('https://search.naver.com/search.naver?query=포장이사견적비교', '_blank')}
+                    onClick={() => window.open('https://search.naver.com/search.naver?query=포장이사견적비교', '_blank', 'noopener,noreferrer')}
                   >
                     실제 견적 비교하기
                   </Button>

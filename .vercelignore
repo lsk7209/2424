@@ -1,0 +1,5 @@
+.dev_out.log
+.dev_err.log
+.omx/
+node_modules/
+.next/

@@ -22,7 +22,6 @@ export const metadata = createPageMetadata({
 
 export default function ToolsIndexPage() {
   const readyTools = tools.filter((tool) => tool.isReady);
-  const upcomingTools = tools.filter((tool) => !tool.isReady);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -71,31 +70,6 @@ export default function ToolsIndexPage() {
               );
             })}
           </div>
-
-          <section className="space-y-6 border-t pt-8">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold text-slate-950">준비 중인 도구</h2>
-              <p className="mt-2 text-muted-foreground">
-                완성도가 충분하지 않은 기능은 검수 안정성을 위해 숨기고 있습니다.
-              </p>
-            </div>
-
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 opacity-70">
-              {upcomingTools.map((tool) => (
-                <Card key={tool.slug} className="border-dashed bg-gray-100">
-                  <CardHeader className="pb-2">
-                    <div className="flex items-center gap-2">
-                      <tool.icon className="h-4 w-4 text-muted-foreground" />
-                      <span className="font-medium text-muted-foreground">{tool.title}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{tool.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </section>
         </div>
       </main>
 

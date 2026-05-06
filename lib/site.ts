@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "이사독립",
   shortName: "이사독립",
-  url: "https://today2424.kr",
+  url: "https://www.today2424.kr",
   title: "이사 준비부터 전세 계약까지 한 번에 정리하는 실전 가이드",
   description:
     "이사독립은 이사 준비, 전세 계약 점검, 체크리스트, 계산기, 자취 생활 정보를 한 곳에서 제공하는 한국어 이사 정보 플랫폼입니다.",
@@ -22,9 +22,12 @@ export const siteConfig = {
   contactEmail: "contact@indielife.kr",
   adsensePublisherId: "ca-pub-3050601904412736",
   gaMeasurementId: "G-N2V7ZZP184",
-  googleSiteVerification: "uNiRiMcBHgmWHzDMwY8XGV42sXJZ9SSaaz3IhPLvHSA",
+  googleSiteVerification: [
+    "uNiRiMcBHgmWHzDMwY8XGV42sXJZ9SSaaz3IhPLvHSA",
+    "pF0tbNpwRxDbYPYV9M-5ayLeLcgbmY98ntc489E4toU",
+  ],
   naverSiteVerification: "ddf23ab0bbb03a73fe3a29afa1bc6bc8fe2c8881",
-  updatedAt: "2026-04-23",
+  updatedAt: "2026-05-04",
   timeZone: "Asia/Seoul",
 } as const;
 

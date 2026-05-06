@@ -11,7 +11,8 @@ import RelatedPosts from '@/components/RelatedPosts';
 import { getPublicationIso } from '@/data/publish-schedule';
 import { getPublishedGuidePostBySlug, getPublishedGuidePosts } from '@/lib/content';
 import { processContent } from '@/lib/toc';
-import { absoluteUrl } from '@/lib/site';
+import { absoluteUrl, siteConfig } from '@/lib/site';
+import { createSeoDescription, createSeoTitle } from '@/lib/metadata';
 import {
   Accordion,
   AccordionContent,
@@ -38,16 +39,19 @@ export async function generateMetadata(props: GuidePostPageProps) {
     };
   }
 
+  const title = createSeoTitle(post.title, '이사독립 가이드');
+  const description = createSeoDescription(post.excerpt);
+
   return {
-    title: `${post.title} | 이사독립 가이드`,
-    description: post.excerpt,
+    title,
+    description,
     keywords: post.keywords?.join(', '),
     alternates: {
       canonical: absoluteUrl(`/guide/${post.slug}`),
     },
     openGraph: {
-      title: `${post.title} | 이사독립 가이드`,
-      description: post.excerpt,
+      title,
+      description,
       url: absoluteUrl(`/guide/${post.slug}`),
       type: 'article',
       locale: 'ko_KR',
@@ -80,25 +84,25 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
-    image: `https://today2424.kr${post.coverImage || '/icons/icon-512.png'}`,
+    image: absoluteUrl(post.coverImage || '/icons/icon-512.png'),
     datePublished: getPublicationIso(post),
     dateModified: getPublicationIso(post),
     author: {
       '@type': 'Organization',
       name: '이사독립',
-      url: 'https://today2424.kr',
+      url: siteConfig.url,
     },
     publisher: {
       '@type': 'Organization',
       name: '이사독립',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://today2424.kr/icons/icon-512.png',
+        url: absoluteUrl('/icons/icon-512.png'),
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://today2424.kr/guide/${post.slug}`,
+      '@id': absoluteUrl(`/guide/${post.slug}`),
     },
     keywords: post.keywords?.join(', '),
     articleSection: post.category,
@@ -112,19 +116,19 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
         '@type': 'ListItem',
         position: 1,
         name: '홈',
-        item: 'https://today2424.kr',
+        item: siteConfig.url,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: '가이드',
-        item: 'https://today2424.kr/guide',
+        item: absoluteUrl('/guide'),
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://today2424.kr/guide/${post.slug}`,
+        item: absoluteUrl(`/guide/${post.slug}`),
       },
     ],
   };

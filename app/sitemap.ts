@@ -6,6 +6,12 @@ import { siteConfig } from "@/lib/site";
 
 export const revalidate = 3600;
 
+type SitemapEntry = MetadataRoute.Sitemap[number];
+
+function uniqueByUrl(entries: SitemapEntry[]) {
+  return Array.from(new Map(entries.map((entry) => [entry.url, entry])).values());
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
@@ -51,5 +57,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...toolPages, ...blogPages, ...guidePages];
+  return uniqueByUrl([...staticPages, ...toolPages, ...blogPages, ...guidePages]);
 }

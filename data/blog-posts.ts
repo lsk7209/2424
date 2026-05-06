@@ -86,6 +86,15 @@ export const blogPosts: BlogPost[] = [
             <a href="/guide/jeonse-insurance-guide" class="text-blue-600 font-bold hover:underline text-sm">보증보험 가이드 →</a>
         </div>
 
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5 my-6">
+          <h4 class="font-bold text-yellow-900 mb-3">계약 직전 1분 판정표</h4>
+          <ul class="text-sm text-yellow-800 space-y-2">
+            <li><strong>진행:</strong> 등기부 최신본 확인 완료, 소유자 일치, 시세 대비 보증금 안전, 보증보험 가능</li>
+            <li><strong>보류:</strong> 계좌 명의 불일치, 체납 서류 미확인, 시세 확인 애매, 특약 문구 협의 중</li>
+            <li><strong>중단:</strong> 신탁 등기, 가압류·가처분, 선순위 채권 과다, 보증보험 불가 확정</li>
+          </ul>
+        </div>
+
         <h2>3. 특약사항으로 나를 지키는 방패 만들기</h2>
         <p>계약서 특약사항 한 줄이 법적 효력을 발휘하여 나를 지켜줍니다. 공인중개사에게 아래 특약들을 넣어달라고 당당하게 요구하세요.</p>
         
@@ -107,12 +116,30 @@ export const blogPosts: BlogPost[] = [
           </ol>
         </div>
 
-        <h2>4. 전입신고와 확정일자는 '이사 당일' 즉시!</h2>
+        <h2>4. 계약 당일 서류 묶음은 이렇게 챙기세요</h2>
+        <ul>
+          <li><strong>등기부등본 최신본:</strong> 갑구·을구 변동 확인용</li>
+          <li><strong>건축물대장 또는 중개대상물 확인설명서:</strong> 위반건축물, 용도 확인용</li>
+          <li><strong>임대인 신분증과 계좌 명의 확인 화면:</strong> 송금 전 필수</li>
+          <li><strong>시세 근거 캡처:</strong> 실거래가, 주변 매물 비교 자료</li>
+        </ul>
+
+        <h2>5. 전입신고와 확정일자는 '이사 당일' 즉시!</h2>
         <p>이사 당일은 정신이 없겠지만, 무엇보다 먼저 해야 할 일은 <strong>전입신고</strong>와 <strong>확정일자</strong> 받기입니다.</p>
         <ul>
           <li><strong>대항력 확보:</strong> 전입신고 + 점유(이사)를 하면 다음 날 0시부터 제3자에게 내 권리를 주장할 수 있는 힘이 생깁니다.</li>
           <li><strong>우선변제권 확보:</strong> 여기에 확정일자까지 받으면, 집이 경매로 넘어갔을 때 후순위 권리자보다 먼저 배당받을 수 있습니다.</li>
         </ul>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 my-6">
+          <h4 class="font-bold text-slate-900 mb-3">최종 체크리스트</h4>
+          <ol class="text-sm text-slate-700 space-y-2 list-decimal list-inside">
+            <li>등기부 최신본과 임대인 신분증 대조</li>
+            <li>보증보험 가능 여부와 특약 문구 확인</li>
+            <li>계좌 명의 확인 후 계약금·잔금 이체</li>
+            <li>전입신고·확정일자 일정 바로 예약</li>
+          </ol>
+        </div>
 
         <div class="mt-12 p-6 bg-indigo-50 rounded-xl text-center">
           <h3 class="text-xl font-bold text-indigo-900 mb-2">아직도 불안하신가요?</h3>
@@ -372,7 +399,15 @@ export const blogPosts: BlogPost[] = [
           <li>거울 뒤쪽에 행거가 있거나 선반이 있는 제품을 사용하면, 전신 거울의 기능과 수납 해결을 동시에 할 수 있습니다.</li>
           <li>회전형 거울을 사용하면 필요할 때만 거울을 쓰고 평소에는 옷걸이로 활용할 수 있어 공간 효율적입니다.</li>
         </ul>
-      </article>
+      
+
+        <h2>5. 거울 배치 후 같이 정리할 것</h2>
+        <p>거울은 공간을 넓어 보이게 만들지만 바닥과 벽면 물건이 많으면 효과가 줄어듭니다. 전신거울을 놓은 뒤에는 자주 쓰는 물건과 숨길 물건을 나눠 수납 계획까지 함께 잡는 편이 좋습니다.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/guide/studio-storage-planning-guide" class="text-blue-600 font-bold hover:underline text-sm">원룸 수납 계획 가이드 보기 →</a>
+        </div></article>
     `
   },
   {
@@ -416,7 +451,15 @@ export const blogPosts: BlogPost[] = [
         <ul>
           <li>좋아하는 패턴의 손수건이나 얇은 천을 조명 갓 위에 살짝 덮어주세요. 빛이 은은하게 퍼지며 방 분위기가 확 바뀝니다. (단, LED 전구 사용 필수! 발열이 심한 전구는 화재 위험이 있습니다.)</li>
         </ul>
-      </article>
+      
+
+        <h2>4. 조명과 같이 보면 좋은 배치</h2>
+        <p>무드등은 거울, 커튼, 침대 위치와 함께 봐야 빛 번짐이 자연스럽습니다. 조명을 산 뒤에는 반사되는 위치와 취침 동선까지 같이 점검하세요.</p>
+        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
+          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
+          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
+          <a href="/blog/small-room-mirror-placement" class="text-blue-600 font-bold hover:underline text-sm">좁은 방 거울 배치법 보기 →</a>
+        </div></article>
     `
   },
   {
