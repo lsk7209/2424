@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { CalendarDays, ChevronLeft, HelpCircle, Quote } from 'lucide-react';
 import ShareButtons from '@/components/ShareButtons';
+import ContentReadTracker from '@/components/ContentReadTracker';
 import PostCover from '@/components/PostCover';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
@@ -183,6 +184,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
 
       <main className="flex-1 container max-w-4xl mx-auto py-12 px-4 md:px-6">
         <article className="mx-auto">
+          <ContentReadTracker contentType="blog" slug={post.slug} title={post.title} category={post.category} />
           {/* Back Link */}
           <div className="mb-8">
             <Link href="/blog">

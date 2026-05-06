@@ -10,6 +10,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Slider } from '@/components/ui/slider';
+import { trackEvent } from '@/lib/analytics';
 import { Truck, Package, Home, ArrowRight, RefreshCcw, Calculator } from 'lucide-react';
 
 export default function MovingCostCalculatorPage() {
@@ -58,6 +59,13 @@ export default function MovingCostCalculatorPage() {
 
     setResult(baseCost);
     setStep(2);
+    trackEvent('tool_used', {
+      tool_name: 'moving_cost_calculator',
+      move_type: moveType,
+      room_size: roomSize,
+      distance_km: distance,
+      estimated_cost: baseCost,
+    });
   };
 
   const resetCalculator = () => {
@@ -251,7 +259,13 @@ export default function MovingCostCalculatorPage() {
                   </Button>
                   <Button
                     className="flex-1 h-12 text-lg bg-green-600 hover:bg-green-700"
-                    onClick={() => window.open('https://search.naver.com/search.naver?query=포장이사견적비교', '_blank', 'noopener,noreferrer')}
+                    onClick={() => {
+                      trackEvent('cta_clicked', {
+                        cta_name: 'moving_quote_compare',
+                        tool_name: 'moving_cost_calculator',
+                      });
+                      window.open('https://search.naver.com/search.naver?query=포장이사견적비교', '_blank', 'noopener,noreferrer');
+                    }}
                   >
                     실제 견적 비교하기
                   </Button>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Check, Link as LinkIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { trackEvent } from '@/lib/analytics';
 
 interface ShareButtonsProps {
   title: string;
@@ -19,6 +20,10 @@ export default function ShareButtons({ title, description, url }: ShareButtonsPr
       const textToCopy = [title, description, currentUrl].filter(Boolean).join('\n');
       await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
+      trackEvent('cta_clicked', {
+        cta_name: 'share_link_copy',
+        content_title: title,
+      });
       window.setTimeout(() => setCopied(false), 2000);
     } catch {
       return;

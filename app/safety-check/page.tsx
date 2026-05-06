@@ -21,6 +21,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { trackEvent } from '@/lib/analytics';
 import { calculateSafetyRisk, formatAmount } from '@/lib/safety-calculator';
 
 type Step = 'intro' | 'marketValue' | 'deposit' | 'mortgage' | 'result';
@@ -95,6 +96,10 @@ export default function SafetyCheckPage() {
     const calculated = calculateSafetyRisk(Number(marketValue), Number(deposit), Number(mortgage));
     setResult(calculated);
     setStep('result');
+    trackEvent('tool_used', {
+      tool_name: 'jeonse_safety_check',
+      result_level: calculated.level,
+    });
   };
 
   const handleBack = () => {

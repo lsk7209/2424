@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Calculator, ArrowRight, RefreshCcw, Info } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { trackEvent } from '@/lib/analytics';
 
 export default function DepositInterestCalculatorPage() {
   const [deposit, setDeposit] = useState<string>(''); // 보증금 (만원)
@@ -49,6 +50,11 @@ export default function DepositInterestCalculatorPage() {
     setResult({
       newMonthlyRent: Math.round(newRent / 10000), // 만원 단위 반올림
       diffMonthlyRent: Math.round(rentChange / 10000)
+    });
+    trackEvent('tool_used', {
+      tool_name: 'deposit_interest_calculator',
+      conversion_rate: Number(conversionRate),
+      diff_monthly_rent: Math.round(rentChange / 10000),
     });
   };
 
