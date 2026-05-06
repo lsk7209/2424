@@ -27,7 +27,7 @@ export const siteConfig = {
     "pF0tbNpwRxDbYPYV9M-5ayLeLcgbmY98ntc489E4toU",
   ],
   naverSiteVerification: "ddf23ab0bbb03a73fe3a29afa1bc6bc8fe2c8881",
-  updatedAt: "2026-05-04",
+  updatedAt: "2026-05-06",
   timeZone: "Asia/Seoul",
 } as const;
 
