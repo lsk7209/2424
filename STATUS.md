@@ -10,7 +10,6 @@ AdSense/SEO/콘텐츠/색인 자동화 최적화 배포 완료
 - 05-06: Vercel 프로덕션 배포, IndexNow 키 파일, 일일 색인 Cron 등록
 ## TODO
 - [ ] AdSense 콘솔의 payment-hold 알림 직접 처리
-- [ ] 변경분 커밋 및 원격 push
 ## 결정사항
 - 광고: 애드센스 검수 전 수동 슬롯 제거, 자동광고만 유지
 - 기준 도메인: `https://www.today2424.kr`
