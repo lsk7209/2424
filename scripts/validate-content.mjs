@@ -11,6 +11,9 @@ const ALLOWED_CATEGORIES = new Set([
   "인테리어",
   "금융/절약",
 ]);
+const NEW_EXPANSION_BATCH_PATTERN = /blog-expansion\/batch-([1-5][1-9]|[2-5]0|60)\.ts$/;
+const EXPECTED_NEW_EXPANSION_COUNT = 300;
+const ALLOWED_CONTENT_TYPES = new Set(["checklist", "cost-saving", "mistake-proof", "comparison", "faq"]);
 
 function getTsFiles(dir) {
   return readdirSync(dir).flatMap((name) => {
@@ -27,9 +30,9 @@ function findAll(text, pattern) {
 
 function normalizeTitle(value) {
   return value
-    .replace(/[0-9０-９]/g, "")
+    .replace(/[0-9~!@#$%^&*()[\]{}:;'"“”‘’.,?·ㆍ|/\\+-]/g, "")
     .replace(/[^\p{Letter}\p{Number}가-힣]/gu, "")
-    .replace(/체크리스트|가이드|기준|방법|순서|루틴|정리|비교/g, "")
+    .replace(/체크리스트|가이드|기준|방법|순서|정리|비교|FAQ|faq/g, "")
     .toLowerCase();
 }
 
@@ -48,7 +51,7 @@ let newExpansionCount = 0;
 for (const file of files) {
   const text = readFileSync(file, "utf8");
   const rel = file.replace(`${ROOT}\\`, "").replaceAll("\\", "/");
-  const isNewExpansionBatch = /blog-expansion\/batch-(1[1-9]|20)\.ts$/.test(rel);
+  const isNewExpansionBatch = NEW_EXPANSION_BATCH_PATTERN.test(rel);
 
   for (const slug of findAll(text, /slug:\s*["']([^"']+)["']/g)) {
     if (slugs.has(slug)) errors.push(`duplicate slug: ${slug} in ${rel} and ${slugs.get(slug)}`);
@@ -95,16 +98,27 @@ for (const file of files) {
   }
 
   if (isNewExpansionBatch) {
+    const articleCount = findAll(text, /slug:\s*["']([^"']+)["']/g).length;
+    const contentTypes = findAll(text, /contentType:\s*["']([^"']+)["']/g);
+    if (contentTypes.length > 0 && contentTypes.length !== articleCount) {
+      errors.push(`new article contentType count mismatch in ${rel}: found ${contentTypes.length}, expected ${articleCount}`);
+    }
+    for (const contentType of contentTypes) {
+      if (!ALLOWED_CONTENT_TYPES.has(contentType)) errors.push(`invalid contentType: ${contentType} in ${rel}`);
+    }
+
     const keywordBlocks = Array.from(text.matchAll(/keywords:\s*\[([^\]]+)\]/g));
     for (const block of keywordBlocks) {
-      const count = findAll(block[1], /["']([^"']+)["']/g).length;
-      if (count !== 5) errors.push(`new article keywords must be 5 in ${rel}: found ${count}`);
+      const keywords = findAll(block[1], /["']([^"']+)["']/g);
+      const uniqueKeywords = new Set(keywords);
+      if (keywords.length !== 5) errors.push(`new article keywords must be 5 in ${rel}: found ${keywords.length}`);
+      if (uniqueKeywords.size !== 5) errors.push(`new article keywords must be unique in ${rel}: ${keywords.join(", ")}`);
     }
   }
 }
 
-if (newExpansionCount !== 100) {
-  errors.push(`new expansion article count must be 100, found ${newExpansionCount}`);
+if (newExpansionCount !== EXPECTED_NEW_EXPANSION_COUNT) {
+  errors.push(`new expansion article count must be ${EXPECTED_NEW_EXPANSION_COUNT}, found ${newExpansionCount}`);
 }
 
 if (warnings.length > 0) {
