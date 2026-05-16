@@ -65,8 +65,20 @@ export default function DepositInterestCalculatorPage() {
     setResult(null);
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "전월세 전환율 계산기",
+    url: "https://www.today2424.kr/tools/deposit-interest-calculator",
+    description: "보증금과 월세 변경 시 전월세 전환율에 따른 금액을 즉시 계산합니다.",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">

@@ -81,8 +81,20 @@ export default function BrokerageFeeCalculatorPage() {
     });
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "부동산 중개수수료 계산기",
+    url: "https://www.today2424.kr/tools/brokerage-fee-calculator",
+    description: "매매·전세·월세 거래 금액에 따른 법정 중개보수 상한 요율을 즉시 계산합니다.",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { createPageMetadata } from "@/lib/metadata";
 import { getPublishedBlogPosts } from "@/lib/content";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export const revalidate = 3600;
 
@@ -25,8 +26,27 @@ export const metadata = createPageMetadata({
 export default function BlogIndexPage() {
   const posts = getPublishedBlogPosts();
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "이사독립 블로그 최신 글",
+    description: "이사, 자취, 전세 계약에 관한 실전 정보 블로그",
+    url: absoluteUrl("/blog"),
+    numberOfItems: posts.length,
+    itemListElement: posts.slice(0, 10).map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: absoluteUrl(`/blog/${post.slug}`),
+      name: post.title,
+    })),
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <Header />
 
       <main className="flex-1 container mx-auto py-12">

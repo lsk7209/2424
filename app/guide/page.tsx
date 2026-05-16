@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { createPageMetadata } from "@/lib/metadata";
 import { getPublishedGuidePosts } from "@/lib/content";
+import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
 
@@ -25,8 +26,27 @@ export const metadata = createPageMetadata({
 export default function GuideIndexPage() {
   const posts = getPublishedGuidePosts();
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "이사독립 가이드북",
+    description: "전세 계약, 이사 절차, 등기부등본 등 주거 실무 가이드 모음",
+    url: absoluteUrl("/guide"),
+    numberOfItems: posts.length,
+    itemListElement: posts.slice(0, 10).map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: absoluteUrl(`/guide/${post.slug}`),
+      name: post.title,
+    })),
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
       <Header />
 
       <main className="flex-1 container mx-auto py-12">

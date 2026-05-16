@@ -15,12 +15,7 @@ import { processContent } from '@/lib/toc';
 import { absoluteUrl, siteConfig } from '@/lib/site';
 import { getEnhancedFaq, getOfficialSource } from '@/lib/content-quality';
 import { createSeoDescription, createSeoTitle } from '@/lib/metadata';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import TrackedFaqAccordion from '@/components/TrackedFaqAccordion';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -267,20 +262,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900">자주 묻는 질문 (FAQ)</h2>
               </div>
-              <Accordion type="single" collapsible className="w-full space-y-4">
-                {enhancedFaq.map((item, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border rounded-xl px-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-200">
-                    <AccordionTrigger className="text-left font-bold text-xl py-6 hover:no-underline hover:text-blue-600 transition-colors">
-                      <span className="mr-4 text-blue-500">Q.</span>
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 leading-relaxed text-lg pb-6 pl-8 border-t pt-4">
-                      <span className="font-bold text-gray-400 mr-2">A.</span>
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+              <TrackedFaqAccordion items={enhancedFaq} slug={post.slug} contentType="blog" />
             </div>
           )}
 

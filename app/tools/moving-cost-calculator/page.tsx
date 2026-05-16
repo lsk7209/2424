@@ -78,8 +78,20 @@ export default function MovingCostCalculatorPage() {
     setHasElevator('yes');
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "이사 견적 계산기",
+    url: "https://www.today2424.kr/tools/moving-cost-calculator",
+    description: "이사 종류, 집 크기, 이동 거리, 층수를 입력하면 예상 이사 비용을 즉시 계산합니다.",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container mx-auto max-w-2xl py-8 md:py-16 px-4">

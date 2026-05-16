@@ -44,8 +44,20 @@ export default function AreaConverterPage() {
     }
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "평수 ↔ 제곱미터 변환기",
+    url: "https://www.today2424.kr/tools/area-converter",
+    description: "평과 제곱미터를 실시간으로 양방향 변환하는 부동산 면적 계산기입니다.",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">

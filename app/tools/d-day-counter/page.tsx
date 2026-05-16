@@ -67,8 +67,20 @@ export default function DDayCounterPage() {
     }
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "이사 D-Day 카운터",
+    url: "https://www.today2424.kr/tools/d-day-counter",
+    description: "이사 날짜를 설정하면 남은 일수를 카운트하고 시점별 준비 항목을 안내합니다.",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-pretendard">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container mx-auto max-w-2xl py-12 px-4">
