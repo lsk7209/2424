@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Calendar as CalendarIcon, CheckCircle2, Clock } from 'lucide-react';
 import { differenceInDays, format } from 'date-fns';
 import { ko } from 'date-fns/locale';
@@ -162,6 +162,27 @@ export default function DDayCounterPage() {
             </Button>
           </div>
         )}
+        <section className="mt-8 space-y-5 text-sm text-gray-600 leading-7 border-t pt-8">
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">이사 준비는 왜 미리 시작해야 할까요?</h2>
+            <p>
+              이사업체는 성수기(3월, 9~10월)에 2~3주 전에 마감되는 경우가 많습니다.
+              D-30을 기준으로 업체 예약과 큰 짐 정리를 시작하면 이사 당일 여유 있게 대처할 수 있습니다.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">놓치기 쉬운 행정 절차</h2>
+            <p>
+              전입신고는 새 주소로 이사한 날로부터 14일 이내에 해야 과태료가 없습니다.
+              확정일자 신청도 주민센터 또는 대법원 인터넷등기소에서 바로 처리하면 보증금 보호에 유리합니다.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Link href="/checklist" className="text-blue-600 hover:underline font-medium">D-30 체크리스트 전체 보기</Link>
+            <Link href="/tools/moving-cost-calculator" className="text-blue-600 hover:underline font-medium">이사 견적 계산기</Link>
+            <Link href="/guide" className="text-blue-600 hover:underline font-medium">이사 가이드북</Link>
+          </div>
+        </section>
       </main>
 
       <Footer />
