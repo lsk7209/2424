@@ -212,7 +212,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "mold-repair-request-template",
-    title: "곰팡이·누수 하자보수 요청 문자 템플릿: 감정 섞지 않고 남기는 법",
+    title: "곰팡이·누수 하자보수 요청 문자 작성법",
     excerpt:
       "하자보수 요청은 기록이 중요합니다. 곰팡이와 누수 문제를 집주인에게 전달할 때 바로 쓸 수 있는 문장 구조를 정리했습니다.",
     date: "2026-05-09",
@@ -262,7 +262,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "officetel-contract-checklist",
-    title: "오피스텔 계약 체크리스트: 관리규약과 실거주 조건까지 같이 봐야 하는 이유",
+    title: "오피스텔 계약 체크리스트: 관리규약과 실거주 조건 확인",
     excerpt:
       "오피스텔은 아파트와 달리 관리규약과 비용 구조를 더 자세히 봐야 합니다. 계약 전에 꼭 확인해야 할 항목을 정리했습니다.",
     date: "2026-05-11",
@@ -312,7 +312,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "part-time-worker-rent-docs",
-    title: "아르바이트·단기근로자 임대차 서류 준비법: 계약 전에 챙길 자료",
+    title: "단기근로자 임대차 서류 준비법: 계약 전 챙길 자료",
     excerpt:
       "고정 재직 증빙이 약한 경우에도 준비할 수 있는 자료는 있습니다. 계약 전 신용과 소득을 설명할 수 있는 서류를 정리했습니다.",
     date: "2026-05-13",
@@ -363,7 +363,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "move-in-day-document-pack",
-    title: "입주 당일 서류 묶음 체크리스트: 계약서, 영수증, 계량기 사진까지",
+    title: "입주 당일 서류 체크리스트: 계약서·영수증·계량기 사진",
     excerpt:
       "이사 당일엔 정신이 없어서 서류를 빼먹기 쉽습니다. 입주 당일 꼭 모아둬야 할 문서와 기록을 체크리스트로 정리했습니다.",
     date: "2026-05-15",
@@ -416,7 +416,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "house-photo-record-guide",
-    title: "집 상태 사진 기록 가이드: 입주 전·후 분쟁을 줄이는 촬영 순서",
+    title: "집 상태 사진 기록 가이드: 분쟁을 줄이는 촬영 순서",
     excerpt:
       "사진은 많이 찍는 것보다 빠짐없이 찍는 게 중요합니다. 입주 전후 분쟁을 줄이기 위한 촬영 순서를 정리했습니다.",
     date: "2026-05-17",
