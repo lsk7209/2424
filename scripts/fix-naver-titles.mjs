@@ -71,8 +71,8 @@ for (const file of files) {
   let content = readFileSync(file, 'utf8');
   let modified = false;
 
-  // Match title: "..." (double-quoted only, titles won't span lines)
-  const re = /title:\s*"([^"]+)"/g;
+  // Match title: "..." or title: '...'
+  const re = /title:\s*["']([^"']+)["']/g;
   let m;
   while ((m = re.exec(content)) !== null) {
     const old = m[1];

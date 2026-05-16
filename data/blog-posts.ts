@@ -14,7 +14,7 @@
 export const blogPosts: BlogPost[] = [
   {
     slug: 'jeonse-fraud-prevention-guide',
-    title: '사회초년생을 위한 전세사기 예방 가이드 2025: 깡통전세 피하는 법',
+    title: '사회초년생 전세사기 예방 가이드: 깡통전세 피하는 법',
     excerpt: '등기부등본 보는 법부터 특약사항, 전세보증보험까지. 내 소중한 보증금을 지키기 위해 계약 전 반드시 확인해야 할 체크리스트를 완벽하게 정리했습니다.',
     date: '2025-11-28',
     category: '전세안전',
@@ -464,7 +464,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'deposit-transfer-checklist',
-    title: '전세 계약금 송금 전 체크리스트: 계좌번호 하나로 보증금 날리지 않는 법',
+    title: '전세 계약금 송금 체크리스트: 보증금 날리지 않는 법',
     excerpt: '등기부등본 확인부터 명의 일치, 가계약 주의사항, 송금 메모까지. 계약금 보내기 전에 반드시 확인해야 할 실전 체크리스트를 정리했습니다.',
     date: '2026-04-23',
     category: '전세안전',
@@ -669,7 +669,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'lease-end-notice-template',
-    title: '전세·월세 만기 통보 문자 예시: 계약 종료 전에 이렇게 보내면 분쟁이 줄어든다',
+    title: '전세·월세 만기 통보 문자 예시: 계약 종료 전에 이렇게',
     excerpt: '만기 전에 언제, 어떤 문구로 통보해야 하는지 헷갈린다면 이 글부터 보세요. 전세·월세 종료 통보 예시와 증거 남기는 방법을 정리했습니다.',
     date: '2026-04-23',
     category: '전세안전',
