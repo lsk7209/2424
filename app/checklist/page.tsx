@@ -123,8 +123,20 @@ export default function ChecklistPage() {
     URL.revokeObjectURL(url);
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "D-30 이사 체크리스트",
+    url: "https://www.today2424.kr/checklist",
+    description: "이사 한 달 전부터 당일까지 단계별로 해야 할 일을 체크하는 이사 작전지도입니다.",
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container max-w-3xl mx-auto py-8 md:py-12 px-4 pb-32">

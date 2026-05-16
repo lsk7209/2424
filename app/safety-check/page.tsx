@@ -169,8 +169,20 @@ export default function SafetyCheckPage() {
     return 'from-red-50 to-rose-50 border-red-200';
   };
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "전세 사기 위험 진단기",
+    url: "https://www.today2424.kr/safety-check",
+    description: "시세, 보증금, 근저당 정보를 기준으로 전세 사기 위험 신호를 빠르게 점검하는 무료 진단 도구입니다.",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
       <Header />
 
       <main className="flex-1 container mx-auto py-8 md:py-16 px-4">
