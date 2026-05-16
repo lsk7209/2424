@@ -7,6 +7,7 @@ export const maxDuration = 30;
 const INDEXNOW_KEY = "4f8c2e1b9a6d4c37b2e1f9a8c6d5e3b0";
 const INDEXING_LIMIT = 20;
 const INDEXNOW_ENDPOINTS = [
+  "https://api.indexnow.org/indexnow",
   "https://www.bing.com/indexnow",
   "https://searchadvisor.naver.com/indexnow",
 ] as const;
@@ -37,12 +38,16 @@ export async function GET(request: Request) {
     .slice(0, INDEXING_LIMIT)
     .map((item) => item.loc);
 
-  const results = await Promise.all(INDEXNOW_ENDPOINTS.map((endpoint) => submitIndexNow(endpoint, urls)));
+  const [indexNowResults, googlePingResult] = await Promise.all([
+    Promise.all(INDEXNOW_ENDPOINTS.map((endpoint) => submitIndexNow(endpoint, urls))),
+    pingGoogleSitemap(),
+  ]);
 
   return Response.json({
     ok: true,
     submitted: urls.length,
-    endpoints: results,
+    endpoints: indexNowResults,
+    googleSitemapPing: googlePingResult,
   });
 }
 
@@ -72,6 +77,15 @@ async function submitIndexNow(endpoint: string, urls: string[]) {
     status: response.status,
     ok: response.ok,
   };
+}
+
+async function pingGoogleSitemap() {
+  const sitemapUrl = encodeURIComponent(`${siteConfig.url}/sitemap.xml`);
+  const response = await fetch(`https://www.google.com/ping?sitemap=${sitemapUrl}`, {
+    method: "GET",
+    headers: { "user-agent": "today2424-indexing-cron/1.0" },
+  });
+  return { status: response.status, ok: response.ok };
 }
 
 function decodeXml(value: string) {

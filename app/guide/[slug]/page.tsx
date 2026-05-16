@@ -103,7 +103,7 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     description: post.excerpt,
     image: absoluteUrl(post.coverImage || '/opengraph-image'),
     datePublished: getPublicationIso(post),
-    dateModified: getPublicationIso(post),
+    dateModified: new Date(siteConfig.updatedAt).toISOString(),
     author: {
       '@type': 'Organization',
       name: '이사독립',

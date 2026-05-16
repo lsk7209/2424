@@ -1,23 +1,32 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Ruler, ArrowRightLeft, Grid } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 export default function AreaConverterPage() {
   const [pyeong, setPyeong] = useState<string>('');
   const [sqm, setSqm] = useState<string>('');
+  const hasTrackedRef = useRef(false);
+
+  const maybeTrackUse = () => {
+    if (!hasTrackedRef.current) {
+      hasTrackedRef.current = true;
+      trackEvent('tool_used', { tool_name: 'area_converter' });
+    }
+  };
 
   const handlePyeongChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
     setPyeong(val);
     if (val) {
-      // 1평 = 3.305785 m2
       setSqm((parseFloat(val) * 3.305785).toFixed(2));
+      maybeTrackUse();
     } else {
       setSqm('');
     }
@@ -27,8 +36,8 @@ export default function AreaConverterPage() {
     const val = e.target.value;
     setSqm(val);
     if (val) {
-      // 1 m2 = 0.3025 평
       setPyeong((parseFloat(val) * 0.3025).toFixed(2));
+      maybeTrackUse();
     } else {
       setPyeong('');
     }

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
-const SEO_TITLE_LIMIT = 40;
-const SEO_DESCRIPTION_LIMIT = 80;
+const SEO_TITLE_LIMIT = 50;
+const SEO_DESCRIPTION_LIMIT = 130;
 const TITLE_SEPARATOR = " | ";
 
 interface PageMetadataOptions {

@@ -27,8 +27,33 @@ export const siteConfig = {
     "pF0tbNpwRxDbYPYV9M-5ayLeLcgbmY98ntc489E4toU",
   ],
   naverSiteVerification: "ddf23ab0bbb03a73fe3a29afa1bc6bc8fe2c8881",
-  updatedAt: "2026-05-06",
+  updatedAt: "2026-05-16",
   timeZone: "Asia/Seoul",
+} as const;
+
+export const sitePersona = {
+  voice: "practical-guide",
+  tone: "친근하고 실용적 (해요체)",
+  description: "이사와 전세 계약을 여러 번 경험한 선배처럼, 복잡한 부동산·계약 절차를 이해하기 쉽게 안내하는 정보 제공자",
+  target: [
+    "첫 자취·독립을 준비하는 20~30대",
+    "전세 계약이 처음인 사회초년생",
+    "이사 비용과 일정을 빠르게 확인해야 하는 직장인",
+  ],
+  disclaimer: "법률·금융 판단은 참고용이며, 최종 결정 전 전문가 상담을 권장합니다.",
+  contentGuidelines: {
+    minLength: 1500,
+    targetLength: 2500,
+    internalLinksMin: 3,
+    externalLinksMin: 2,
+    faqRequired: true,
+    structuredHeadings: true,
+  },
+  prohibitions: [
+    "전문 자격 사칭 금지 (공인중개사, 변호사, 세무사 등)",
+    "과장된 수익성·안전성 주장 금지",
+    "불분명한 출처 인용 금지",
+  ],
 } as const;
 
 export function absoluteUrl(path: string) {

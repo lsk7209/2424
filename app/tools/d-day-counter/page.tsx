@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { trackEvent } from '@/lib/analytics';
 
 const MOVING_DATE_KEY = 'movingDate';
 
@@ -55,8 +56,15 @@ export default function DDayCounterPage() {
   const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const nextDate = event.target.value;
     setMovingDate(nextDate);
-    setDDay(calculateDDay(nextDate));
+    const days = calculateDDay(nextDate);
+    setDDay(days);
     localStorage.setItem(MOVING_DATE_KEY, nextDate);
+    if (nextDate) {
+      trackEvent('tool_used', {
+        tool_name: 'd_day_counter',
+        days_remaining: days ?? 0,
+      });
+    }
   };
 
   return (

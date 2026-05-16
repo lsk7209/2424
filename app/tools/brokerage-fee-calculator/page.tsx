@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { trackEvent } from '@/lib/analytics';
 
 export default function BrokerageFeeCalculatorPage() {
   const [type, setType] = useState<'rent' | 'sale'>('rent');
@@ -71,6 +72,11 @@ export default function BrokerageFeeCalculatorPage() {
       maxFee: calculatedFee,
       rate,
       limit,
+    });
+    trackEvent('tool_used', {
+      tool_name: 'brokerage_fee_calculator',
+      transaction_type: type,
+      amount_manwon: Number(amount),
     });
   };
 

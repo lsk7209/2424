@@ -17,9 +17,9 @@ export const revalidate = 3600;
 
 export const metadata = createPageMetadata({
   title: "가이드북",
-  description: "등기부등본, 계약서, 보증보험, 이사 준비 절차를 주제별로 정리한 가이드 모음입니다.",
+  description: "등기부등본 보는 법, 계약서 작성, 전세보증보험, 이사 절차를 단계별로 정리한 실전 가이드 모음입니다. 계약 전 필수 확인.",
   path: "/guide",
-  keywords: ["이사 가이드", "전세 계약 가이드", "등기부등본"],
+  keywords: ["이사 가이드", "전세 계약 가이드", "등기부등본", "전세보증보험", "이사 준비 순서"],
 });
 
 export default function GuideIndexPage() {

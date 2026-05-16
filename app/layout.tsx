@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import GoogleAnalyticsTracker from "@/components/analytics/GoogleAnalyticsTracker";
 import { createSeoDescription, createSeoTitle } from "@/lib/metadata";
@@ -8,8 +8,15 @@ import "./globals.css";
 const rootTitle = createSeoTitle(siteConfig.title);
 const rootDescription = createSeoDescription(siteConfig.description);
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   title: rootTitle,
   description: rootDescription,
   keywords: [...siteConfig.keywords],
@@ -73,6 +80,17 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* Resource hints */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
+        {/* Pretendard variable font (dynamic subset) */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
         <meta name="google-adsense-account" content={siteConfig.adsensePublisherId} />
         <script
           async
@@ -80,9 +98,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ffffff" />
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="이사독립 RSS 피드"
+          href={`${siteConfig.url}/rss.xml`}
+        />
       </head>
       <body className="antialiased">
         <Suspense fallback={null}>

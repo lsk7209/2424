@@ -17,9 +17,9 @@ export const revalidate = 3600;
 
 export const metadata = createPageMetadata({
   title: "블로그",
-  description: "이사 준비, 자취 꿀팁, 전세 안전, 인테리어 정보를 모은 이사독립 블로그입니다.",
+  description: "첫 자취·이사 준비부터 전세 안전, 자취 꿀팁, 인테리어 절약법까지 실전 정보를 꾸준히 발행하는 이사독립 블로그입니다.",
   path: "/blog",
-  keywords: ["이사 블로그", "자취 꿀팁", "전세 안전 정보"],
+  keywords: ["이사 블로그", "자취 꿀팁", "전세 안전 정보", "이사 준비", "자취 정보"],
 });
 
 export default function BlogIndexPage() {
