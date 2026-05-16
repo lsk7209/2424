@@ -1,17 +1,17 @@
-# Status | 마지막: 2026-05-16
+# Status | 마지막: 2026-05-17
 ## 현재 작업
-종합 최적화 완료: 페르소나 정의, SEO, 속도, 색인 자동화, GA4 이벤트
+종합 최적화 완료: 페르소나, SEO, 속도, 색인, GA4 이벤트, 구조화 데이터
 ## 최근 변경 (최근 5개만)
-- 05-16: IndexNow에 api.indexnow.org(Google 포함) 추가, Google 사이트맵 핑 추가, 크론 하루 2회로 변경
-- 05-16: RSS 자동발견 링크(<link rel="alternate">) layout.tsx에 추가
-- 05-16: Pretendard 폰트 CDN 로딩 추가(Windows 한국어 폰트 정상화), GA4/AdSense preconnect 힌트 추가
-- 05-16: SEO title 한도 40→50자, description 80→130자 (검색결과 표시 범위 충족)
-- 05-16: 중개수수료/평수변환/D-day 계산기 tool_used 이벤트 추가, 도구 메타 설명 전면 확장
+- 05-17: Naver 타이틀 경고 10건 수정(blog 2개, guide 8개) → 153페이지 모두 44자 이하
+- 05-17: blog/guide 목록 ItemList 스키마, 도구 7개 WebApplication 스키마 추가(GSC 리치 스니펫)
+- 05-17: TrackedFaqAccordion 컴포넌트 - FAQ 클릭 시 faq_opened 이벤트 발송(GA4)
+- 05-17: ContentReadTracker 스크롤 마일스톤(25/50/75%) scroll_depth 이벤트 추가(GA4)
+- 05-17: Header 네비게이션 클릭 추적 nav_clicked 이벤트 추가(GA4)
 ## TODO
 - [ ] AdSense 콘솔에서 payment-hold 결제 계정 확인 항목 직접 처리 (수동 필요)
 - [ ] AdSense 사이트 상태가 READY로 바뀌는지 재확인
 - [ ] GSC에서 사이트맵(/sitemap.xml) 수동 재제출 → 95개→최신 글 수로 색인 확대
-- [ ] GA4 실제 트래픽 지표 공유 후 취약 페이지 추가 최적화
+- [ ] GA4/GSC API 인증 공유 후 실제 데이터 기반 추가 최적화
 ## 결정사항
 - IndexNow: api.indexnow.org(글로벌) + Bing + Naver 3개 엔드포인트, 하루 2회(UTC 03:00, 15:00)
 - 광고: AdSense 자동광고 방식 유지, 수동 광고 블록 추가 없음
