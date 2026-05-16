@@ -46,9 +46,8 @@ export async function GET(request: Request) {
     .slice(0, INDEXING_LIMIT)
     .map((item) => item.loc);
 
-  const [indexNowResults, googlePingResult, googleIndexingResult] = await Promise.all([
+  const [indexNowResults, googleIndexingResult] = await Promise.all([
     Promise.all(INDEXNOW_ENDPOINTS.map((endpoint) => submitIndexNow(endpoint, urls))),
-    pingGoogleSitemap(),
     submitGoogleIndexingApi(urls.slice(0, GSC_INDEXING_LIMIT)),
   ]);
 
@@ -56,7 +55,6 @@ export async function GET(request: Request) {
     ok: true,
     submitted: urls.length,
     endpoints: indexNowResults,
-    googleSitemapPing: googlePingResult,
     googleIndexingApi: googleIndexingResult,
   });
 }
@@ -89,14 +87,6 @@ async function submitIndexNow(endpoint: string, urls: string[]) {
   };
 }
 
-async function pingGoogleSitemap() {
-  const sitemapUrl = encodeURIComponent(`${siteConfig.url}/sitemap.xml`);
-  const response = await fetch(`https://www.google.com/ping?sitemap=${sitemapUrl}`, {
-    method: "GET",
-    headers: { "user-agent": "today2424-indexing-cron/1.0" },
-  });
-  return { status: response.status, ok: response.ok };
-}
 
 function createJwt(credentials: ServiceAccountCredentials): string {
   const header = Buffer.from(JSON.stringify({ alg: "RS256", typ: "JWT" })).toString("base64url");
