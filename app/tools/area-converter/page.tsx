@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -122,6 +123,32 @@ export default function AreaConverterPage() {
             </div>
           </CardContent>
         </Card>
+
+        <section className="mt-8 space-y-5 text-sm text-gray-600 leading-7">
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">평과 제곱미터, 왜 헷갈릴까요?</h2>
+            <p>
+              한국 부동산 시장에서 면적은 여전히 <strong>평(坪)</strong>으로 표기되는 경우가 많지만,
+              공식 문서와 등기부등본에는 <strong>㎡(제곱미터)</strong>로만 표기됩니다.
+              1평은 약 3.306㎡이며, 반대로 1㎡는 약 0.3025평입니다.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">전용면적과 공급면적의 차이</h2>
+            <p>
+              매물 광고에서 말하는 평수는 대부분 <strong>공급면적(전용+공용)</strong> 기준입니다.
+              실제로 생활하는 공간인 전용면적은 이보다 작으므로,
+              계약 전 반드시 등기부등본의 전용면적을 확인하세요.
+            </p>
+          </div>
+          <div className="pt-2 border-t border-gray-100">
+            <p className="text-gray-500">관련 도구</p>
+            <div className="mt-2 flex flex-wrap gap-3">
+              <Link href="/tools/brokerage-fee-calculator" className="text-blue-600 hover:underline font-medium">중개수수료 계산기</Link>
+              <Link href="/tools/moving-cost-calculator" className="text-blue-600 hover:underline font-medium">이사 견적 계산기</Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

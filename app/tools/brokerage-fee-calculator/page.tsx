@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { ArrowRight, DollarSign, RefreshCcw } from 'lucide-react';
 import Header from '@/components/Header';
@@ -177,6 +178,38 @@ export default function BrokerageFeeCalculatorPage() {
             )}
           </CardContent>
         </Card>
+
+        <section className="mt-10 space-y-6 text-sm text-gray-600 leading-7">
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">중개보수 상한 요율이란?</h2>
+            <p>
+              부동산 중개수수료(중개보수)는 매매·전세·월세 거래 금액에 따라 법으로 상한 요율이 정해져 있습니다.
+              중개업소가 이 상한을 초과해 받는 것은 불법이며, 사전에 금액을 확인하고 협의하는 것이 좋습니다.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">월세 거래 금액 입력 방법</h2>
+            <p>
+              월세는 <strong>보증금 + (월세 × 100)</strong> 공식으로 환산한 금액을 입력하세요.
+              예를 들어 보증금 1,000만원에 월세 50만원이라면 1,000 + (50 × 100) = 6,000만원을 입력합니다.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">부가세는 별도입니다</h2>
+            <p>
+              계산된 금액은 중개보수 상한액이며, 실제 청구 시 부가가치세(10%)가 추가될 수 있습니다.
+              최종 금액은 중개업소와 사전에 서면으로 확인하세요.
+            </p>
+          </div>
+          <div className="pt-2 border-t border-gray-100">
+            <p className="text-gray-500">관련 도구 · 가이드</p>
+            <div className="mt-2 flex flex-wrap gap-3">
+              <Link href="/tools/moving-cost-calculator" className="text-blue-600 hover:underline font-medium">이사 견적 계산기</Link>
+              <Link href="/tools/deposit-interest-calculator" className="text-blue-600 hover:underline font-medium">전월세 전환율 계산기</Link>
+              <Link href="/safety-check" className="text-blue-600 hover:underline font-medium">전세 위험 진단</Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
