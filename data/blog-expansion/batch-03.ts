@@ -4,7 +4,7 @@ import { renderArticle } from "../content-templates";
 export const blogExpansionBatch03: Omit<BlogPost, "date" | "publishAt">[] = [
   {
     slug: "move-in-security-reset-checklist",
-    title: "입주 첫날 보안 초기화 체크리스트: 도어락 비밀번호만 바꾸면 끝이 아니다",
+    title: "입주 첫날 보안 초기화 체크리스트: 도어락 비밀번호만 바꾸면 끝이",
     excerpt:
       "새 집에 들어가면 가장 먼저 해야 할 일은 정리보다 보안 초기화입니다. 공동현관, 택배 노출, 비상키 보관까지 첫날 순서를 정리했습니다.",
     category: "생활꿀팁",

@@ -144,7 +144,7 @@ export const blogExpansionBatch04: Omit<BlogPost, "date" | "publishAt">[] = [
   },
   {
     slug: "mail-forwarding-move-checklist",
-    title: "우편물 누락 방지 체크리스트: 이사 후에도 전 집으로 가는 고지서 막는 법",
+    title: "우편물 누락 방지 체크리스트: 이사 후에도 전 집으로 가는 고지서",
     excerpt:
       "전입신고만 하면 끝이라고 생각하면 우편물 누락이 생길 수 있습니다. 카드, 보험, 통신, 쇼핑몰 주소 변경을 체계적으로 정리하는 방법입니다.",
     category: "생활꿀팁",
@@ -215,7 +215,7 @@ export const blogExpansionBatch04: Omit<BlogPost, "date" | "publishAt">[] = [
   },
   {
     slug: "parking-registration-change-guide",
-    title: "주차 등록 변경 체크: 새 집 주차 가능 여부를 계약 전에 봐야 하는 이유",
+    title: "주차 등록 변경 체크: 새 집 주차 가능 여부를 계약 전에 봐야",
     excerpt:
       "차를 쓰는 사람에게 주차 등록은 옵션이 아니라 생활비 문제입니다. 월 주차비, 방문 차량 규정, 등록 절차를 실무적으로 정리했습니다.",
     category: "생활꿀팁",

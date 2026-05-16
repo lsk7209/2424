@@ -468,7 +468,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "internet-install-booking-guide",
-    title: "인터넷 설치 예약 가이드: 이사 당일 끊기지 않게 준비하는 법",
+    title: "인터넷 설치 예약 가이드: 이사 당일 끊기지 않게 준비하는",
     excerpt:
       "이사 당일 인터넷이 안 되면 생활이 바로 불편해집니다. 해지, 이전, 신규 설치를 어떤 순서로 예약해야 하는지 정리했습니다.",
     date: "2026-05-19",
@@ -520,7 +520,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "studio-storage-planning-guide",
-    title: "원룸 수납 계획 가이드: 짐이 많을수록 입주 전에 배치를 정해야 하는 이유",
+    title: "원룸 수납 계획 가이드: 짐이 많을수록 입주 전에 배치를",
     excerpt:
       "좁은 방은 예쁜 수납보다 동선이 먼저입니다. 입주 전에 짐 종류를 기준으로 수납 구역을 나누는 방법을 정리했습니다.",
     date: "2026-05-21",
@@ -571,7 +571,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "rent-budget-sheet-guide",
-    title: "월세 예산표 만드는 법: 월세만 보지 말고 고정지출까지 같이 계산하기",
+    title: "월세 예산표 만드는 법: 월세만 보지 말고 고정지출까지",
     excerpt:
       "월세 5만 원 차이가 실제 생활비 전체에는 더 크게 느껴질 수 있습니다. 자취 시작 전에 월세 예산표를 만드는 기준을 정리했습니다.",
     date: "2026-05-23",

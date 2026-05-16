@@ -302,7 +302,7 @@ export const blogExpansionBatch01: Omit<BlogPost, "date" | "publishAt">[] = [
   },
   {
     slug: "registry-timing-gap-before-closing",
-    title: "등기부 발급 시점 차이 체크: 계약서와 잔금일 사이에 놓치기 쉬운 변화",
+    title: "등기부 발급 시점 차이 체크: 계약서와 잔금일 사이에 놓치기 쉬운",
     excerpt:
       "처음 본 등기부만 믿고 있다가 잔금 직전에 당황하는 경우가 있습니다. 발급 시점 차이가 왜 중요한지, 언제 다시 확인해야 하는지 정리했습니다.",
     category: "전세안전",

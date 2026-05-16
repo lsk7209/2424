@@ -4,7 +4,7 @@ import { renderArticle } from "../content-templates";
 export const blogExpansionBatch02: Omit<BlogPost, "date" | "publishAt">[] = [
   {
     slug: "vacant-house-smell-check",
-    title: "빈집 냄새 체크법: 집 보러 갔을 때 방향제보다 먼저 맡아야 할 신호",
+    title: "빈집 냄새 체크법: 집 보러 갔을 때 방향제보다 먼저 맡아야 할",
     excerpt:
       "집보기에서 사진보다 빠른 정보는 냄새입니다. 공실 집 특유의 냄새에서 곰팡이, 배수, 환기 문제를 읽는 실전 체크법을 정리했습니다.",
     category: "이사준비",

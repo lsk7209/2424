@@ -4,7 +4,7 @@ import { renderArticle } from "./content-templates";
 export const extraScheduledGuidePosts: GuidePost[] = [
   {
     slug: "monthly-rent-receipt-guide",
-    title: "월세 영수증과 계좌이체 기록 정리 가이드: 나중에 가장 먼저 찾는 자료",
+    title: "월세 영수증과 계좌이체 기록 정리 가이드: 나중에 가장",
     excerpt:
       "월세는 매달 나가지만 기록은 자주 놓칩니다. 계좌이체 내역, 영수증, 관리비 정산 자료를 어떻게 보관하면 좋은지 정리했습니다.",
     date: "2026-04-25",
@@ -55,7 +55,7 @@ export const extraScheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "entry-inspection-form-guide",
-    title: "입주 점검표 작성 가이드: 하자 메모를 구두로만 남기면 안 되는 이유",
+    title: "입주 점검표 작성 가이드: 하자 메모를 구두로만 남기면 안",
     excerpt:
       "입주 직후 하자를 구두로만 말하면 나중에 증거가 약해집니다. 체크리스트와 사진을 어떻게 같이 남겨야 하는지 정리했습니다.",
     date: "2026-04-27",

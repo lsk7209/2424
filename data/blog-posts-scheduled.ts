@@ -4,7 +4,7 @@ import { renderArticle } from "./content-templates";
 export const scheduledBlogPosts: BlogPost[] = [
   {
     slug: "rainy-day-house-viewing",
-    title: "비 오는 날 집 보러 가면 보이는 것들: 맑은 날엔 안 보이는 하자 체크법",
+    title: "비 오는 날 집 보러 가면 보이는 것들: 맑은 날엔 안 보이는",
     excerpt:
       "누수, 곰팡이, 배수, 골목 물 고임은 비 오는 날 더 잘 보입니다. 집 보기 타이밍을 바꾸면 놓치던 하자를 잡을 수 있습니다.",
     date: "2026-04-30",
@@ -58,7 +58,7 @@ export const scheduledBlogPosts: BlogPost[] = [
   },
   {
     slug: "utility-transfer-move-day",
-    title: "이사 당일 공과금 명의 변경 순서: 도시가스·전기·수도 이렇게 정리하세요",
+    title: "이사 당일 공과금 명의 변경 순서: 도시가스·전기·수도 이렇게",
     excerpt:
       "이사 당일 정신없을 때 가장 자주 놓치는 게 공과금입니다. 도시가스, 전기, 수도를 어떤 순서로 정리해야 하는지 정리했습니다.",
     date: "2026-05-02",
@@ -366,7 +366,7 @@ export const scheduledBlogPosts: BlogPost[] = [
   },
   {
     slug: "room-measurement-mistakes",
-    title: "방 실측에서 가장 많이 하는 실수 6가지: 냉장고가 안 들어오는 이유",
+    title: "방 실측에서 가장 많이 하는 실수 6가지: 냉장고가 안 들어오는",
     excerpt:
       "평수만 보고 가구를 사면 실제 배치에서 막히는 경우가 많습니다. 자취방 실측에서 자주 틀리는 포인트를 정리했습니다.",
     date: "2026-05-14",
