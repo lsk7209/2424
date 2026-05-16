@@ -4,7 +4,7 @@ import { renderArticle } from "./content-templates";
 export const scheduledGuidePosts: GuidePost[] = [
   {
     slug: "online-transfer-address-guide",
-    title: "전입신고 온라인 신청 가이드: 주민센터 안 가고 처리하는 순서",
+    title: "전입신고 온라인 신청: 주민센터 안 가고 처리하는 순서",
     excerpt:
       "이사 후 꼭 해야 하는 전입신고를 정부24에서 처리하는 순서를 정리했습니다. 준비물과 자주 막히는 부분도 같이 설명합니다.",
     date: "2026-05-01",
@@ -57,7 +57,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "gas-electric-water-change-guide",
-    title: "도시가스·전기·수도 이전 신청 가이드: 이사 전에 예약해야 하는 것들",
+    title: "도시가스·전기·수도 이전 신청: 이사 전 예약 순서",
     excerpt:
       "공과금 이전 신청을 늦게 하면 이사 당일 불편이 커집니다. 도시가스, 전기, 수도를 어떤 순서로 예약해야 하는지 정리했습니다.",
     date: "2026-05-03",
@@ -109,7 +109,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "landlord-tax-arrears-check",
-    title: "집주인 세금 체납 확인이 왜 중요한가: 국세·지방세 위험 신호 읽는 법",
+    title: "집주인 세금 체납 확인: 국세·지방세 위험 신호 읽는 법",
     excerpt:
       "등기부등본만 보고 끝내면 부족할 때가 있습니다. 집주인 세금 체납 여부가 왜 중요한지, 계약 전에 어떻게 확인해야 하는지 정리했습니다.",
     date: "2026-05-05",
@@ -160,7 +160,7 @@ export const scheduledGuidePosts: GuidePost[] = [
   },
   {
     slug: "jeonse-loan-documents-guide",
-    title: "전세대출 서류 가이드: 계약서 외에 은행이 자주 요구하는 자료",
+    title: "전세대출 서류 가이드: 은행이 자주 요구하는 추가 자료",
     excerpt:
       "전세대출은 계약서만 제출한다고 끝나지 않습니다. 은행마다 추가로 자주 요구하는 서류를 미리 정리해두면 일정이 덜 꼬입니다.",
     date: "2026-05-07",

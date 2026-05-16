@@ -14,7 +14,7 @@
 export const guidePosts: GuidePost[] = [
     {
         slug: 'how-to-read-registry',
-        title: '등기부등본 보는 법 A to Z: 전세 사기 피하는 필수 생존 지식',
+        title: '등기부등본 보는 법: 전세 계약 전 필수 체크 포인트',
         excerpt: '집 계약 전 필수! 표제부, 갑구, 을구의 의미와 반드시 확인해야 할 위험 신호를 완벽하게 분석해드립니다.',
         date: '2025-11-28',
         category: '법률',
@@ -318,7 +318,7 @@ export const guidePosts: GuidePost[] = [
     },
     {
         slug: 'standard-rental-contract',
-        title: '표준임대차계약서 작성 가이드: 특약사항 한 줄이 내 돈을 지킨다',
+        title: '표준임대차계약서 작성 가이드: 특약사항으로 돈을 지키는 법',
         excerpt: '법무부가 권장하는 표준임대차계약서, 빈칸 없이 꼼꼼하게 채우는 방법과 필수 특약사항 5가지.',
         date: '2025-11-28',
         category: '법률',
@@ -425,7 +425,7 @@ export const guidePosts: GuidePost[] = [
     },
     {
         slug: 'jeonse-insurance-guide',
-        title: '전세보증보험 가입 조건 및 반려 사유 총정리 (HUG, HF, SGI)',
+        title: '전세보증보험: 가입 조건과 반려 사유 총정리',
         excerpt: '내 보증금을 지키는 최후의 보루. 보증보험 가입 조건부터 거절되는 이유까지 상세하게 알려드립니다.',
         date: '2025-11-28',
         category: '금융',
@@ -982,7 +982,7 @@ export const guidePosts: GuidePost[] = [
     },
     {
         slug: 'deposit-return-delay',
-        title: '집주인이 보증금을 안 돌려줄 때 내용증명 작성법 (양식 포함)',
+        title: '집주인이 보증금을 안 돌려줄 때 내용증명 작성법',
         excerpt: '만기가 지났는데 돈이 없다는 집주인. 내용증명 발송으로 심리적 압박하고 법적 증거 남기기.',
         date: '2025-11-28',
         category: '법률',
