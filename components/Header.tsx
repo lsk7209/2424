@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { BookOpen, Home, MapPin, Menu, PenTool, Shield, Wrench, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import { trackEvent } from '@/lib/analytics';
 
 const navItems = [
   { href: '/', label: '홈', icon: Home },
@@ -21,6 +22,11 @@ export default function Header() {
 
   const closeMenu = () => setIsMenuOpen(false);
   const toggleMenu = () => setIsMenuOpen((value) => !value);
+
+  const handleNavClick = (label: string, href: string) => {
+    trackEvent('nav_clicked', { nav_label: label, nav_href: href, from_path: pathname });
+    closeMenu();
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -41,6 +47,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => handleNavClick(item.label, item.href)}
                 className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary ${
                   isActive ? 'text-primary' : 'text-muted-foreground'
                 }`}
@@ -71,7 +78,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={closeMenu}
+                  onClick={() => handleNavClick(item.label, item.href)}
                   className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                     isActive
                       ? 'bg-primary/10 text-primary'
