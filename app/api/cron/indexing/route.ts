@@ -6,8 +6,11 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 30;
 
 const INDEXNOW_KEY = "4f8c2e1b9a6d4c37b2e1f9a8c6d5e3b0";
-const INDEXING_LIMIT = 20;
 const GSC_INDEXING_LIMIT = 10;
+// Slightly wider than the 5h cron interval to catch any timing drift
+const PUBLISH_WINDOW_MS = 6 * 60 * 60 * 1000;
+const FALLBACK_LIMIT = 5;
+
 const INDEXNOW_ENDPOINTS = [
   "https://api.indexnow.org/indexnow",
   "https://www.bing.com/indexnow",
@@ -41,10 +44,24 @@ export async function GET(request: Request) {
     return Response.json({ ok: false, error: `sitemap ${sitemap.status}` }, { status: 502 });
   }
 
-  const urls = extractSitemapUrls(await sitemap.text())
-    .sort((a, b) => new Date(b.lastmod || 0).getTime() - new Date(a.lastmod || 0).getTime())
-    .slice(0, INDEXING_LIMIT)
-    .map((item) => item.loc);
+  const allUrls = extractSitemapUrls(await sitemap.text());
+  const now = Date.now();
+
+  // Pick URLs published/updated within the last 6h (newly published content)
+  const newUrls = allUrls
+    .filter((u) => u.lastmod && now - new Date(u.lastmod).getTime() < PUBLISH_WINDOW_MS)
+    .map((u) => u.loc);
+
+  // If nothing new, send top recent as heartbeat so the endpoint stays active
+  const urls =
+    newUrls.length > 0
+      ? newUrls
+      : allUrls
+          .sort((a, b) => new Date(b.lastmod || 0).getTime() - new Date(a.lastmod || 0).getTime())
+          .slice(0, FALLBACK_LIMIT)
+          .map((u) => u.loc);
+
+  const isNewContent = newUrls.length > 0;
 
   const [indexNowResults, googleIndexingResult] = await Promise.all([
     Promise.all(INDEXNOW_ENDPOINTS.map((endpoint) => submitIndexNow(endpoint, urls))),
@@ -53,19 +70,21 @@ export async function GET(request: Request) {
 
   return Response.json({
     ok: true,
+    newContent: isNewContent,
     submitted: urls.length,
+    urls,
     endpoints: indexNowResults,
     googleIndexingApi: googleIndexingResult,
   });
 }
 
 function extractSitemapUrls(xml: string): SitemapUrl[] {
-  return Array.from(xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>(?:[\s\S]*?<lastmod>([^<]+)<\/lastmod>)?/g)).map(
-    (match) => ({
-      loc: decodeXml(match[1]),
-      lastmod: match[2] ? decodeXml(match[2]) : "",
-    }),
-  );
+  return Array.from(
+    xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>(?:[\s\S]*?<lastmod>([^<]+)<\/lastmod>)?/g),
+  ).map((match) => ({
+    loc: decodeXml(match[1]),
+    lastmod: match[2] ? decodeXml(match[2]) : "",
+  }));
 }
 
 async function submitIndexNow(endpoint: string, urls: string[]) {
@@ -79,14 +98,8 @@ async function submitIndexNow(endpoint: string, urls: string[]) {
       urlList: urls,
     }),
   });
-
-  return {
-    endpoint,
-    status: response.status,
-    ok: response.ok,
-  };
+  return { endpoint, status: response.status, ok: response.ok };
 }
-
 
 function createJwt(credentials: ServiceAccountCredentials): string {
   const header = Buffer.from(JSON.stringify({ alg: "RS256", typ: "JWT" })).toString("base64url");
