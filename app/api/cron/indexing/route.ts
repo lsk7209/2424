@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import { siteConfig } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -6,6 +7,7 @@ export const maxDuration = 30;
 
 const INDEXNOW_KEY = "4f8c2e1b9a6d4c37b2e1f9a8c6d5e3b0";
 const INDEXING_LIMIT = 20;
+const GSC_INDEXING_LIMIT = 10;
 const INDEXNOW_ENDPOINTS = [
   "https://api.indexnow.org/indexnow",
   "https://www.bing.com/indexnow",
@@ -15,6 +17,12 @@ const INDEXNOW_ENDPOINTS = [
 type SitemapUrl = {
   loc: string;
   lastmod: string;
+};
+
+type ServiceAccountCredentials = {
+  client_email: string;
+  private_key: string;
+  token_uri: string;
 };
 
 export async function GET(request: Request) {
@@ -38,9 +46,10 @@ export async function GET(request: Request) {
     .slice(0, INDEXING_LIMIT)
     .map((item) => item.loc);
 
-  const [indexNowResults, googlePingResult] = await Promise.all([
+  const [indexNowResults, googlePingResult, googleIndexingResult] = await Promise.all([
     Promise.all(INDEXNOW_ENDPOINTS.map((endpoint) => submitIndexNow(endpoint, urls))),
     pingGoogleSitemap(),
+    submitGoogleIndexingApi(urls.slice(0, GSC_INDEXING_LIMIT)),
   ]);
 
   return Response.json({
@@ -48,6 +57,7 @@ export async function GET(request: Request) {
     submitted: urls.length,
     endpoints: indexNowResults,
     googleSitemapPing: googlePingResult,
+    googleIndexingApi: googleIndexingResult,
   });
 }
 
@@ -86,6 +96,81 @@ async function pingGoogleSitemap() {
     headers: { "user-agent": "today2424-indexing-cron/1.0" },
   });
   return { status: response.status, ok: response.ok };
+}
+
+function createJwt(credentials: ServiceAccountCredentials): string {
+  const header = Buffer.from(JSON.stringify({ alg: "RS256", typ: "JWT" })).toString("base64url");
+  const now = Math.floor(Date.now() / 1000);
+  const payload = Buffer.from(
+    JSON.stringify({
+      iss: credentials.client_email,
+      scope: "https://www.googleapis.com/auth/indexing",
+      aud: credentials.token_uri,
+      exp: now + 3600,
+      iat: now,
+    }),
+  ).toString("base64url");
+
+  const signingInput = `${header}.${payload}`;
+  const sign = crypto.createSign("RSA-SHA256");
+  sign.update(signingInput);
+  const signature = sign.sign(credentials.private_key, "base64url");
+
+  return `${signingInput}.${signature}`;
+}
+
+async function getGoogleAccessToken(credentials: ServiceAccountCredentials): Promise<string> {
+  const jwt = createJwt(credentials);
+  const response = await fetch(credentials.token_uri, {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`,
+  });
+  const data = (await response.json()) as { access_token?: string; error?: string };
+  if (!data.access_token) {
+    throw new Error(`token error: ${data.error ?? "unknown"}`);
+  }
+  return data.access_token;
+}
+
+async function submitGoogleIndexingApi(urls: string[]) {
+  const rawKey = process.env.GOOGLE_INDEXING_SA_KEY;
+  if (!rawKey) {
+    return { skipped: true, reason: "GOOGLE_INDEXING_SA_KEY not set" };
+  }
+
+  let credentials: ServiceAccountCredentials;
+  try {
+    credentials = JSON.parse(rawKey) as ServiceAccountCredentials;
+  } catch {
+    return { skipped: true, reason: "invalid JSON in GOOGLE_INDEXING_SA_KEY" };
+  }
+
+  let accessToken: string;
+  try {
+    accessToken = await getGoogleAccessToken(credentials);
+  } catch (err) {
+    return { skipped: true, reason: String(err) };
+  }
+
+  const results = await Promise.allSettled(
+    urls.map(async (url) => {
+      const response = await fetch("https://indexing.googleapis.com/v3/urlNotifications:publish", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ url, type: "URL_UPDATED" }),
+      });
+      return { url, status: response.status, ok: response.ok };
+    }),
+  );
+
+  return {
+    submitted: urls.length,
+    results: results.map((r) => (r.status === "fulfilled" ? r.value : { error: String(r.reason) })),
+  };
 }
 
 function decodeXml(value: string) {
