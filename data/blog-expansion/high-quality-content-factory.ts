@@ -11,6 +11,7 @@ export interface QualityArticleSeed {
   contentType: ArticleType;
   keywords: [string, string, string, string, string];
   sections: [string, string, string, string, string];
+  sectionContents?: [string, string, string, string, string];
   primaryLink: {
     href: string;
     label: string;
@@ -226,11 +227,23 @@ function renderChecklist(seed: QualityArticleSeed) {
 }
 
 function renderSection(seed: QualityArticleSeed, title: string, index: number) {
-  const [mainKeyword, secondKeyword, thirdKeyword, fourthKeyword] = seed.keywords;
-  const context = CATEGORY_CONTEXT[seed.category];
-  const opener = SECTION_OPENERS[index % SECTION_OPENERS.length];
+  const [mainKeyword] = seed.keywords;
   const showComparison = index === 1 || seed.contentType === "comparison";
   const showChecklist = index === 3 || seed.contentType === "checklist";
+
+  const bodyContent = seed.sectionContents?.[index];
+
+  if (bodyContent) {
+    return `
+    <h2>${title}</h2>
+    <p>${bodyContent}</p>
+    ${showComparison ? renderComparison(seed) : ""}
+    ${showChecklist ? renderChecklist(seed) : ""}`;
+  }
+
+  const [, secondKeyword, thirdKeyword, fourthKeyword] = seed.keywords;
+  const context = CATEGORY_CONTEXT[seed.category];
+  const opener = SECTION_OPENERS[index % SECTION_OPENERS.length];
 
   return `
     <h2>${title}</h2>
