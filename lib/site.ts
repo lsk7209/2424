@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "이사독립",
   shortName: "이사독립",
-  url: "https://www.today2424.kr",
+  url: "https://today2424.kr",
   title: "이사 준비부터 전세 계약까지 한 번에 정리하는 실전 가이드",
   description:
     "이사독립은 이사 준비, 전세 계약 점검, 체크리스트, 계산기, 자취 생활 정보를 한 곳에서 제공하는 한국어 이사 정보 플랫폼입니다.",
@@ -20,8 +20,30 @@ export const siteConfig = {
     "독립",
   ],
   contactEmail: "contact@indielife.kr",
+  persona: {
+    type: "주거 생활 정보 편집팀",
+    audience: "처음 독립하거나 이사를 준비하는 1인 가구와 전세·월세 계약 전 위험 신호를 직접 점검하려는 임차인",
+    promise: "이사 준비, 전세 계약, 자취 생활을 체크리스트와 공식 출처 중심으로 정리합니다.",
+    tone: "짧고 실무적인 한국어로, 불안을 과장하지 않고 확인 순서를 먼저 제시합니다.",
+    disclaimer: "전세·계약·금융 정보는 참고용이며 최종 판단은 공식 안내와 전문가 상담을 함께 확인해야 합니다.",
+    knowsAbout: [
+      "이사 준비",
+      "전세 계약 전 점검",
+      "자취 생활 비용",
+      "생활 행정",
+      "주거 안전 체크리스트",
+    ],
+    avoidExpressions: ["100% 보장", "무조건 안전", "수익 보장", "전문 자격 사칭"],
+  },
+  organization: {
+    name: "이사독립",
+    legalName: "이사독립",
+    logoPath: "/icons/icon-512.png",
+    sameAs: ["https://today2424.kr/about", "https://today2424.kr/disclosure"],
+  },
   adsensePublisherId: "ca-pub-3050601904412736",
   gaMeasurementId: "G-N2V7ZZP184",
+  gaPropertyId: "534327620",
   googleSiteVerification: [
     "uNiRiMcBHgmWHzDMwY8XGV42sXJZ9SSaaz3IhPLvHSA",
     "pF0tbNpwRxDbYPYV9M-5ayLeLcgbmY98ntc489E4toU",

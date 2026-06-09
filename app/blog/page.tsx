@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { createPageMetadata } from "@/lib/metadata";
 import { getPublishedBlogPosts } from "@/lib/content";
-import { absoluteUrl, siteConfig } from "@/lib/site";
+import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 3600;
 

@@ -1,180 +1,1247 @@
 {
   "site": {
     "name": "이사독립",
-    "url": "https://www.today2424.kr",
+    "url": "https://today2424.kr",
     "language": "ko-KR",
     "description": "이사독립은 이사 준비, 전세 계약 점검, 체크리스트, 계산기, 자취 생활 정보를 한 곳에서 제공하는 한국어 이사 정보 플랫폼입니다.",
-    "updatedAt": "2026-05-06"
+    "persona": {
+      "audience": "처음 독립하거나 이사를 준비하는 1인 가구와 전세·월세 계약 전 위험 신호를 직접 점검하려는 임차인",
+      "promise": "이사 준비, 전세 계약, 자취 생활을 체크리스트와 공식 출처 중심으로 정리합니다.",
+      "tone": "짧고 실무적인 한국어로, 불안을 과장하지 않고 확인 순서를 먼저 제시합니다.",
+      "disclaimer": "전세·계약·금융 정보는 참고용이며 최종 판단은 공식 안내와 전문가 상담을 함께 확인해야 합니다.",
+      "knowsAbout": [
+        "이사 준비",
+        "전세 계약 전 점검",
+        "자취 생활 비용",
+        "생활 행정",
+        "주거 안전 체크리스트"
+      ],
+      "avoidExpressions": [
+        "100% 보장",
+        "무조건 안전",
+        "수익 보장",
+        "전문 자격 사칭"
+      ]
+    },
+    "updatedAt": "2026-06-09"
   },
   "summary": {
-    "totalPages": 102,
-    "blogPages": 39,
-    "guidePages": 45,
+    "totalPages": 268,
+    "blogPages": 170,
+    "guidePages": 80,
     "toolPages": 5
   },
   "pages": [
     {
-      "url": "https://www.today2424.kr/",
+      "url": "https://today2424.kr/",
       "path": "/",
       "type": "home",
       "title": "이사 준비부터 전세 계약까지 한 번에 정리하는 실전 가이드 | 이사독립",
       "description": "이사독립은 이사 준비, 전세 계약 점검, 체크리스트, 계산기, 자취 생활 정보를 한 곳에서 제공하는 한국어 이사 정보 플랫폼입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/about",
+      "url": "https://today2424.kr/about",
       "path": "/about",
       "type": "page",
       "title": "서비스 소개 | 이사독립",
       "description": "이사독립이 어떤 원칙으로 운영되는지, 어떤 정보를 제공하는지, 어떻게 문의할 수 있는지 확인하세요.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/contact",
+      "url": "https://today2424.kr/contact",
       "path": "/contact",
       "type": "page",
       "title": "문의하기 | 이사독립",
       "description": "이사독립 서비스 문의, 제휴 제안, 기능 개선 요청을 보낼 수 있는 페이지입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/disclosure",
+      "url": "https://today2424.kr/disclosure",
       "path": "/disclosure",
       "type": "page",
       "title": "광고 및 제휴 안내 | 이사독립",
       "description": "이사독립의 광고, 제휴 링크, 추천 콘텐츠 운영 원칙을 안내합니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/privacy",
+      "url": "https://today2424.kr/privacy",
       "path": "/privacy",
       "type": "page",
       "title": "개인정보 처리방침 | 이사독립",
       "description": "이사독립의 개인정보 처리 원칙과 쿠키, 분석 도구, 광고 관련 정책을 안내합니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/terms",
+      "url": "https://today2424.kr/terms",
       "path": "/terms",
       "type": "page",
       "title": "이용약관 | 이사독립",
       "description": "이사독립 서비스 이용 시 적용되는 기본 약관과 책임 범위를 안내합니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog",
+      "url": "https://today2424.kr/blog",
       "path": "/blog",
       "type": "index",
       "title": "블로그 | 이사독립",
       "description": "이사 준비, 자취 꿀팁, 전세 안전, 인테리어 정보를 모은 이사독립 블로그입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide",
+      "url": "https://today2424.kr/guide",
       "path": "/guide",
       "type": "index",
       "title": "가이드북 | 이사독립",
       "description": "등기부등본, 계약서, 보증보험, 이사 준비 절차를 주제별로 정리한 가이드 모음입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/tools",
+      "url": "https://today2424.kr/tools",
       "path": "/tools",
       "type": "index",
       "title": "도구 모음 | 이사독립",
       "description": "이사 견적 계산기, 전월세 전환율 계산기, 중개수수료 계산기, D-Day 카운터 등 실전 도구를 한 번에 모았습니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/neighborhood-test",
+      "url": "https://today2424.kr/neighborhood-test",
       "path": "/neighborhood-test",
       "type": "page",
       "title": "나만의 동네 찾기 테스트 | 이사독립",
       "description": "생활 스타일과 취향을 바탕으로 나에게 맞는 동네 후보를 찾아보는 테스트입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/feng-shui",
+      "url": "https://today2424.kr/feng-shui",
       "path": "/feng-shui",
       "type": "page",
       "title": "풍수지리 집터 테스트 | 이사독립",
       "description": "주거 취향과 분위기를 바탕으로 어울리는 집터 성향과 인테리어 방향을 확인하는 테스트입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/safety-check",
+      "url": "https://today2424.kr/safety-check",
       "path": "/safety-check",
       "type": "page",
       "title": "전세 사기 위험 진단 | 이사독립",
       "description": "시세, 보증금, 근저당 정보를 기준으로 전세 계약 전 위험 신호를 빠르게 점검하는 도구입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/checklist",
+      "url": "https://today2424.kr/checklist",
       "path": "/checklist",
       "type": "page",
       "title": "D-30 이사 체크리스트 | 이사독립",
       "description": "이사 한 달 전부터 당일까지 순서대로 확인할 수 있는 실전형 체크리스트입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/tools/moving-cost-calculator",
+      "url": "https://today2424.kr/tools/moving-cost-calculator",
       "path": "/tools/moving-cost-calculator",
       "type": "tool",
       "title": "이사 견적 계산기 | 이사독립",
       "description": "이사 종류, 집 크기, 거리, 층수 기준으로 예상 이사 비용을 계산하는 도구입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/tools/deposit-interest-calculator",
+      "url": "https://today2424.kr/tools/deposit-interest-calculator",
       "path": "/tools/deposit-interest-calculator",
       "type": "tool",
       "title": "전월세 전환율 계산기 | 이사독립",
       "description": "보증금 변경 시 월세가 얼마나 달라지는지 전월세 전환율 기준으로 계산합니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/tools/brokerage-fee-calculator",
+      "url": "https://today2424.kr/tools/brokerage-fee-calculator",
       "path": "/tools/brokerage-fee-calculator",
       "type": "tool",
       "title": "중개수수료 계산기 | 이사독립",
       "description": "주택 거래 금액과 거래 유형에 따른 중개보수 상한 요율을 계산합니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/tools/area-converter",
+      "url": "https://today2424.kr/tools/area-converter",
       "path": "/tools/area-converter",
       "type": "tool",
       "title": "평수 제곱미터 변환기 | 이사독립",
       "description": "평과 제곱미터를 실시간으로 변환하고 방 크기 감각을 빠르게 확인합니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/tools/d-day-counter",
+      "url": "https://today2424.kr/tools/d-day-counter",
       "path": "/tools/d-day-counter",
       "type": "tool",
       "title": "이사 D-Day 카운터 | 이사독립",
       "description": "이사 날짜까지 남은 기간과 시점별 준비 항목을 확인하는 도구입니다.",
-      "lastModified": "2026-05-04T00:00:00.000Z"
+      "lastModified": "2026-05-06T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/emergency-evacuation-house-viewing",
+      "url": "https://today2424.kr/blog/housing-choice-shared-kitchen-check",
+      "path": "/blog/housing-choice-shared-kitchen-check",
+      "type": "blog",
+      "title": "공용주방 있는 집 계약 전 확인할 것 | 이사독립",
+      "description": "공용주방은 비용을 줄일 수 있지만 청소, 냄새, 냉장고 사용 규칙이 생활 만족도를 좌우합니다.",
+      "lastModified": "2026-06-09T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/housing-choice-first-floor-security",
+      "path": "/blog/housing-choice-first-floor-security",
+      "type": "blog",
+      "title": "1층 자취방 계약 전 보안 체크 기준 | 이사독립",
+      "description": "1층은 편하지만 창문, 골목 시야, 방범창, 소음과 사생활을 꼼꼼히 확인해야 합니다.",
+      "lastModified": "2026-06-09T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/housing-choice-top-floor-heat",
+      "path": "/blog/housing-choice-top-floor-heat",
+      "type": "blog",
+      "title": "꼭대기층 원룸 여름·겨울 체감 체크 | 이사독립",
+      "description": "탑층은 위층 소음은 적지만 더위, 추위, 누수, 엘리베이터 변수를 함께 봐야 합니다.",
+      "lastModified": "2026-06-09T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/housing-choice-semi-basement-check",
+      "path": "/blog/housing-choice-semi-basement-check",
+      "type": "blog",
+      "title": "반지하 방 볼 때 냄새보다 먼저 볼 것 | 이사독립",
+      "description": "반지하는 가격보다 환기, 배수, 창문 높이, 침수 흔적을 먼저 확인해야 하는 주거 유형입니다.",
+      "lastModified": "2026-06-08T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/housing-choice-officetel-vs-villa",
+      "path": "/blog/housing-choice-officetel-vs-villa",
+      "type": "blog",
+      "title": "오피스텔과 빌라 자취 생활비 비교 | 이사독립",
+      "description": "월세만 보면 빌라가 싸 보여도 관리비, 난방, 주차, 보안 비용까지 합쳐 봐야 합니다.",
+      "lastModified": "2026-06-08T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/neighborhood-campus-rent-traps",
+      "path": "/blog/neighborhood-campus-rent-traps",
+      "type": "blog",
+      "title": "대학가 원룸 고를 때 피해야 할 조건 | 이사독립",
+      "description": "대학가 원룸은 공급이 많지만 방학 공실, 술집 소음, 관리 상태 차이를 세밀하게 봐야 합니다.",
+      "lastModified": "2026-06-08T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/neighborhood-station-distance-real-walk",
+      "path": "/blog/neighborhood-station-distance-real-walk",
+      "type": "blog",
+      "title": "역세권 도보 10분의 실제 확인법 | 이사독립",
+      "description": "광고의 도보 10분은 실제 생활 동선과 다를 수 있습니다. 신호, 경사, 골목 밝기까지 재야 합니다.",
+      "lastModified": "2026-06-08T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/neighborhood-hill-house-check",
+      "path": "/blog/neighborhood-hill-house-check",
+      "type": "blog",
+      "title": "언덕 위 집 계약 전 확인할 생활 변수 | 이사독립",
+      "description": "언덕 위 집은 채광과 가격이 좋아도 이사, 겨울길, 배달, 귀가 피로를 같이 봐야 합니다.",
+      "lastModified": "2026-06-08T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/neighborhood-night-market-noise",
+      "path": "/blog/neighborhood-night-market-noise",
+      "type": "blog",
+      "title": "시장 근처 자취방의 장단점 체크법 | 이사독립",
+      "description": "시장 근처는 장보기 편하지만 새벽 배송, 쓰레기, 주차 소음이 생길 수 있어 시간대별 확인이 필요합니다.",
+      "lastModified": "2026-06-07T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/neighborhood-commute-transfer-check",
+      "path": "/blog/neighborhood-commute-transfer-check",
+      "type": "blog",
+      "title": "출퇴근 환승 많은 동네 고르는 기준 | 이사독립",
+      "description": "지도상 시간보다 환승 피로가 생활 만족도를 좌우합니다. 출퇴근형 동네 선택 기준을 정리합니다.",
+      "lastModified": "2026-06-07T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-out-deposit-deduction-talk",
+      "path": "/blog/move-out-deposit-deduction-talk",
+      "type": "blog",
+      "title": "보증금에서 수리비 뺀다 할 때 대응 순서 | 이사독립",
+      "description": "임대인이 수리비를 공제하겠다고 할 때 견적, 사진, 책임 범위를 차분히 확인하는 절차입니다.",
+      "lastModified": "2026-06-07T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-out-cleaning-photo-order",
+      "path": "/blog/move-out-cleaning-photo-order",
+      "type": "blog",
+      "title": "퇴실 청소 후 사진 남기는 순서 | 이사독립",
+      "description": "청소를 했다는 말보다 공간별 사진 기록이 보증금 정산 대화에서 더 실용적인 증거입니다.",
+      "lastModified": "2026-06-07T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-out-utility-final-meter",
+      "path": "/blog/move-out-utility-final-meter",
+      "type": "blog",
+      "title": "퇴실일 전기·가스 계량기 찍는 법 | 이사독립",
+      "description": "퇴실일 계량기 사진은 공과금 분쟁을 줄이는 핵심 자료입니다. 찍는 위치와 공유 순서를 정리합니다.",
+      "lastModified": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-out-key-return-record",
+      "path": "/blog/move-out-key-return-record",
+      "type": "blog",
+      "title": "퇴실 열쇠 반납 기록 남기는 방법 | 이사독립",
+      "description": "열쇠와 카드키 반납은 작아 보여도 보증금 정산 완료 시점을 판단하는 자료가 될 수 있습니다.",
+      "lastModified": "2026-06-06T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-out-wall-damage-photos",
+      "path": "/blog/move-out-wall-damage-photos",
+      "type": "blog",
+      "title": "퇴실 전 벽지 흠집 사진 찍는 기준 | 이사독립",
+      "description": "벽지 얼룩과 생활흔적은 퇴실 정산에서 자주 다투는 항목이라 사진 각도와 날짜 기록이 중요합니다.",
+      "lastModified": "2026-06-06T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/moving-fragile-items-packing",
+      "path": "/blog/moving-fragile-items-packing",
+      "type": "blog",
+      "title": "깨지기 쉬운 짐 포장할 때 적는 표시법 | 이사독립",
+      "description": "깨짐주의만 써서는 부족합니다. 어느 면이 위인지, 어디에 둘지까지 표시해야 파손을 줄일 수 있습니다.",
+      "lastModified": "2026-06-06T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/moving-fridge-food-disposal",
+      "path": "/blog/moving-fridge-food-disposal",
+      "type": "blog",
+      "title": "이사 전 냉장고 음식 비우는 현실 순서 | 이사독립",
+      "description": "냉장고는 마지막에 치우면 음식물 쓰레기와 누수 문제가 생기기 쉬워 일주일 전부터 줄여야 합니다.",
+      "lastModified": "2026-06-06T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/moving-day-parking-permit",
+      "path": "/blog/moving-day-parking-permit",
+      "type": "blog",
+      "title": "이사 당일 주차 자리 확보하는 법 | 이사독립",
+      "description": "이삿짐차가 못 서면 이사비와 시간이 늘어납니다. 건물 앞 주차 가능 여부를 미리 확인하는 방법입니다.",
+      "lastModified": "2026-06-05T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/moving-elevator-reservation",
+      "path": "/blog/moving-elevator-reservation",
+      "type": "blog",
+      "title": "아파트 이사 엘리베이터 예약 체크리스트 | 이사독립",
+      "description": "엘리베이터 예약을 놓치면 이삿날 비용과 시간이 커질 수 있어 관리사무소 확인이 먼저입니다.",
+      "lastModified": "2026-06-05T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-prep-internet-transfer",
+      "path": "/blog/move-prep-internet-transfer",
+      "type": "blog",
+      "title": "이사 전 인터넷 이전 설치 예약 순서 | 이사독립",
+      "description": "인터넷 이전은 이삿날 당일 신청하면 늦습니다. 주소 확인부터 설치 가능 여부까지 미리 봐야 합니다.",
+      "lastModified": "2026-06-05T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/jeonse-moving-out-notice-proof",
+      "path": "/blog/jeonse-moving-out-notice-proof",
+      "type": "blog",
+      "title": "전세 퇴실 통보 증거 남기는 방법 | 이사독립",
+      "description": "퇴실 의사를 보냈다는 사실이 나중에 분쟁 포인트가 되지 않도록 문자, 통화, 내용증명 기준을 정리합니다.",
+      "lastModified": "2026-06-05T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/jeonse-insurance-rejection-plan",
+      "path": "/blog/jeonse-insurance-rejection-plan",
+      "type": "blog",
+      "title": "전세보증보험 거절됐을 때 대안 순서 | 이사독립",
+      "description": "보증보험 가입이 막혔을 때 계약을 진행할지, 조건을 바꿀지 판단하는 현실적인 체크리스트입니다.",
+      "lastModified": "2026-06-05T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/jeonse-landlord-account-mismatch",
+      "path": "/blog/jeonse-landlord-account-mismatch",
+      "type": "blog",
+      "title": "전세 보증금 계좌명이 다를 때 확인 순서 | 이사독립",
+      "description": "집주인 이름과 입금 계좌명이 다르면 송금 전 멈추고 위임, 소유자, 특약을 확인해야 합니다.",
+      "lastModified": "2026-06-04T22:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/jeonse-balance-day-documents",
+      "path": "/blog/jeonse-balance-day-documents",
+      "type": "blog",
+      "title": "전세 잔금일 아침에 챙길 서류 목록 | 이사독립",
+      "description": "잔금일에는 송금보다 먼저 최신 서류와 확인 순서를 맞춰야 보증금 위험을 줄일 수 있습니다.",
+      "lastModified": "2026-06-04T17:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/jeonse-renewal-price-talk",
+      "path": "/blog/jeonse-renewal-price-talk",
+      "type": "blog",
+      "title": "전세 갱신 때 보증금 인상 말하는 법 | 이사독립",
+      "description": "전세 만기 전 보증금 인상 요구를 받았을 때 시세 확인, 대화 순서, 기록 방식을 정리합니다.",
+      "lastModified": "2026-06-04T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rent-roommate-cost-split",
+      "path": "/blog/rent-roommate-cost-split",
+      "type": "blog",
+      "title": "동거 월세 분담 전에 정해야 할 기준 | 이사독립",
+      "description": "친구와 같이 살 때 월세보다 더 자주 다투는 공과금, 보증금, 퇴실 책임 기준을 정리합니다.",
+      "lastModified": "2026-06-04T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rent-included-utilities-check",
+      "path": "/blog/rent-included-utilities-check",
+      "type": "blog",
+      "title": "관리비 포함 월세에서 꼭 따질 항목 | 이사독립",
+      "description": "관리비 포함이라는 말만 믿지 말고 전기, 수도, 인터넷, 청소비가 어디까지 포함인지 확인해야 합니다.",
+      "lastModified": "2026-06-04T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rent-arrears-one-month-response",
+      "path": "/blog/rent-arrears-one-month-response",
+      "type": "blog",
+      "title": "월세 한 달 밀렸을 때 바로 해야 할 일 | 이사독립",
+      "description": "월세가 한 번 밀렸을 때 감정적으로 숨지 않고 연락, 일정, 기록을 정리하는 실무 순서입니다.",
+      "lastModified": "2026-06-03T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/monthly-rent-auto-transfer-mistakes",
+      "path": "/blog/monthly-rent-auto-transfer-mistakes",
+      "type": "blog",
+      "title": "월세 자동이체 설정할 때 흔한 실수 | 이사독립",
+      "description": "자동이체를 걸어도 계좌명, 메모, 이체일을 잘못 두면 나중에 증빙이 애매해질 수 있습니다.",
+      "lastModified": "2026-06-03T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/monthly-rent-payment-date-change",
+      "path": "/blog/monthly-rent-payment-date-change",
+      "type": "blog",
+      "title": "월세 납부일 바꾸고 싶을 때 말하는 순서 | 이사독립",
+      "description": "월세 날짜가 월급일과 맞지 않을 때 임대인에게 어떻게 요청하고 기록을 남길지 정리합니다.",
+      "lastModified": "2026-06-03T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/renter-disaster-go-bag-small",
+      "path": "/blog/renter-disaster-go-bag-small",
+      "type": "blog",
+      "title": "자취방 재난 가방, 작게 꾸리는 기준 | 이사독립",
+      "description": "큰 생존가방이 아니라 원룸에서 보관 가능한 최소 재난 가방 구성 기준과 교체 주기입니다.",
+      "lastModified": "2026-06-03T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rainy-night-return-route-check",
+      "path": "/blog/rainy-night-return-route-check",
+      "type": "blog",
+      "title": "비 오는 밤 귀가 동선 안전 점검 | 이사독립",
+      "description": "비 오는 밤에는 시야, 조명, 차량 소리 때문에 평소와 다른 위험이 생기므로 귀가 동선을 따로 점검합니다.",
+      "lastModified": "2026-06-03T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/smoke-alarm-renter-check",
+      "path": "/blog/smoke-alarm-renter-check",
+      "type": "blog",
+      "title": "화재감지기 작동 여부 확인하는 법 | 이사독립",
+      "description": "천장 감지기가 장식처럼 방치되지 않도록 세입자가 확인할 수 있는 기본 점검 기준입니다.",
+      "lastModified": "2026-06-02T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/safe-key-storage-renter-rule",
+      "path": "/blog/safe-key-storage-renter-rule",
+      "type": "blog",
+      "title": "예비키 보관, 세입자가 피해야 할 방식 | 이사독립",
+      "description": "화분 밑, 우편함, 신발장처럼 위험한 예비키 보관 방식을 피하고 대안을 정리합니다.",
+      "lastModified": "2026-06-02T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/building-notice-disaster-signal",
+      "path": "/blog/building-notice-disaster-signal",
+      "type": "blog",
+      "title": "건물 공지에서 보는 재난 위험 신호 | 이사독립",
+      "description": "단수, 정전, 소방점검, 배관공사 같은 건물 공지를 생활 리스크 관점에서 읽는 법입니다.",
+      "lastModified": "2026-06-02T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/home-alone-sick-day-plan",
+      "path": "/blog/home-alone-sick-day-plan",
+      "type": "blog",
+      "title": "혼자 아플 때 필요한 집 안 준비 | 이사독립",
+      "description": "몸이 아플 때 밖에 나가지 못하는 상황을 대비해 약, 식사, 연락망을 준비하는 기준입니다.",
+      "lastModified": "2026-06-02T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/delivery-worker-door-boundary",
+      "path": "/blog/delivery-worker-door-boundary",
+      "type": "blog",
+      "title": "배달 받을 때 현관 안전 경계선 | 이사독립",
+      "description": "배달 주문 시 호수 노출, 문 앞 대면, 늦은 밤 수령을 줄이는 현관 안전 기준입니다.",
+      "lastModified": "2026-06-02T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/emergency-contact-card-home",
+      "path": "/blog/emergency-contact-card-home",
+      "type": "blog",
+      "title": "혼자 살 때 비상연락 카드 만드는 법 | 이사독립",
+      "description": "휴대폰이 잠기거나 연락이 어려운 상황에 대비해 집 안에 둘 비상연락 카드를 만드는 방법입니다.",
+      "lastModified": "2026-06-01T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/winter-pipe-freeze-prep-renter",
+      "path": "/blog/winter-pipe-freeze-prep-renter",
+      "type": "blog",
+      "title": "동파 전 세입자가 확인할 수도 점검 | 이사독립",
+      "description": "겨울 한파 전에 수도, 보일러, 외부 배관을 세입자 입장에서 확인하는 기준입니다.",
+      "lastModified": "2026-06-01T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/bathroom-slip-prevention-routine",
+      "path": "/blog/bathroom-slip-prevention-routine",
+      "type": "blog",
+      "title": "욕실 미끄럼 사고 막는 생활 루틴 | 이사독립",
+      "description": "혼자 사는 집에서 욕실 미끄럼 사고를 줄이기 위한 바닥, 매트, 조명 점검법입니다.",
+      "lastModified": "2026-06-01T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/multi-tap-fire-risk-audit",
+      "path": "/blog/multi-tap-fire-risk-audit",
+      "type": "blog",
+      "title": "멀티탭 화재 위험 줄이는 점검표 | 이사독립",
+      "description": "문어발 배선, 먼지, 고전력 가전 연결을 확인해 전기 화재 위험을 줄이는 점검표입니다.",
+      "lastModified": "2026-06-01T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/earthquake-furniture-fix-renter",
+      "path": "/blog/earthquake-furniture-fix-renter",
+      "type": "blog",
+      "title": "지진 대비 가구 고정, 세입자 기준 | 이사독립",
+      "description": "벽을 크게 손상하지 않고 넘어질 수 있는 가구를 줄이는 세입자용 안전 기준입니다.",
+      "lastModified": "2026-05-31T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/heavy-rain-balcony-drain-check",
+      "path": "/blog/heavy-rain-balcony-drain-check",
+      "type": "blog",
+      "title": "폭우 전 베란다 배수구 점검법 | 이사독립",
+      "description": "비가 오기 전 베란다와 창틀 배수구를 확인해 물고임과 역류를 줄이는 점검 방법입니다.",
+      "lastModified": "2026-05-31T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/blackout-kit-for-studio",
+      "path": "/blog/blackout-kit-for-studio",
+      "type": "blog",
+      "title": "정전 대비 원룸 비상 키트 구성법 | 이사독립",
+      "description": "갑작스러운 정전 때 조명, 통신, 냉장고, 출입 문제를 줄이는 최소 키트 구성입니다.",
+      "lastModified": "2026-05-31T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/gas-smell-response-renter-guide",
+      "path": "/blog/gas-smell-response-renter-guide",
+      "type": "blog",
+      "title": "가스 냄새 날 때 자취방 대처 순서 | 이사독립",
+      "description": "가스 냄새가 날 때 전기 스위치부터 만지지 않고 환기와 신고 순서를 지키는 안내입니다.",
+      "lastModified": "2026-05-31T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/fire-extinguisher-home-placement",
+      "path": "/blog/fire-extinguisher-home-placement",
+      "type": "blog",
+      "title": "자취방 소화기 위치 정하는 법 | 이사독립",
+      "description": "소화기를 샀지만 어디에 둬야 할지 모르는 1인 가구를 위한 배치 기준과 점검법입니다.",
+      "lastModified": "2026-05-31T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/personal-info-trash-security",
+      "path": "/blog/personal-info-trash-security",
+      "type": "blog",
+      "title": "쓰레기 속 개인정보 노출 막는 습관 | 이사독립",
+      "description": "택배 송장, 고지서, 약봉투처럼 버릴 때 주소와 이름이 노출되는 물건을 처리하는 기준입니다.",
+      "lastModified": "2026-05-30T22:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/solo-return-home-safety-routine",
+      "path": "/blog/solo-return-home-safety-routine",
+      "type": "blog",
+      "title": "혼자 귀가할 때 집 앞 1분 보안 루틴 | 이사독립",
+      "description": "집 앞에 도착한 순간부터 문을 닫기까지 확인할 짧은 귀가 보안 루틴입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-30T17:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/window-lock-night-security-routine",
+      "path": "/blog/window-lock-night-security-routine",
+      "type": "blog",
+      "title": "밤마다 창문 잠금 확인하는 3분 루틴 | 이사독립",
+      "description": "저층, 반지하, 복도형 집에서 밤마다 확인할 창문과 환기 루틴을 안전 기준으로 정리합니다.",
+      "lastModified": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/doorlock-battery-emergency-plan",
+      "path": "/blog/doorlock-battery-emergency-plan",
+      "type": "blog",
+      "title": "도어락 배터리 방전 대비 체크법 | 이사독립",
+      "description": "갑자기 문이 안 열리는 상황을 막기 위해 도어락 배터리와 비상 전원 위치를 확인하는 글입니다.",
+      "lastModified": "2026-05-30T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/late-night-convenience-spending-cut",
+      "path": "/blog/late-night-convenience-spending-cut",
+      "type": "blog",
+      "title": "편의점 야식비 줄이는 밤 지출 차단법 | 이사독립",
+      "description": "밤마다 편의점에서 새는 돈을 줄이기 위해 집 안 대체품과 결제 한도를 설계합니다.",
+      "lastModified": "2026-05-30T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/salary-day-split-budget-system",
+      "path": "/blog/salary-day-split-budget-system",
+      "type": "blog",
+      "title": "월급날 생활비 쪼개는 5통장 기준 | 이사독립",
+      "description": "월급이 들어오자마자 월세, 공과금, 식비, 비상금, 자유비를 분리하는 방법입니다.",
+      "lastModified": "2026-05-29T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/minimum-living-kit-budget",
+      "path": "/blog/minimum-living-kit-budget",
+      "type": "blog",
+      "title": "생활비 줄이는 최소 생필품 목록 | 이사독립",
+      "description": "처음부터 많이 사지 않고 한 달 생활에 필요한 최소 생필품만 고르는 현실 기준입니다.",
+      "lastModified": "2026-05-29T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/monthly-rent-receipt-money-proof",
+      "path": "/blog/monthly-rent-receipt-money-proof",
+      "type": "blog",
+      "title": "월세 납부 증빙, 돈 지키는 보관법 | 이사독립",
+      "description": "월세 이체내역과 영수증을 나중에 바로 찾을 수 있게 보관하는 폴더 기준과 순서입니다.",
+      "lastModified": "2026-05-29T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/no-spend-day-renter-version",
+      "path": "/blog/no-spend-day-renter-version",
+      "type": "blog",
+      "title": "무지출데이 실패 줄이는 자취 버전 | 이사독립",
+      "description": "자취생이 무지출데이를 현실적으로 운영하기 위해 준비해야 할 집 안 조건을 정리합니다.",
+      "lastModified": "2026-05-29T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-season-price-defense-calendar",
+      "path": "/blog/move-season-price-defense-calendar",
+      "type": "blog",
+      "title": "이사철 지출 방어 달력 만드는 법 | 이사독립",
+      "description": "이사 전후로 몰리는 계약금, 청소비, 배송비를 달력에 배치해 현금 부족을 막는 글입니다.",
+      "lastModified": "2026-05-29T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/shared-house-expense-boundary-rule",
+      "path": "/blog/shared-house-expense-boundary-rule",
+      "type": "blog",
+      "title": "룸메이트 생활비 경계선 정하는 법 | 이사독립",
+      "description": "함께 사는 집에서 공용비와 개인비를 헷갈리지 않게 나누는 기준과 기록법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-28T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/one-person-emergency-fund-ladder",
+      "path": "/blog/one-person-emergency-fund-ladder",
+      "type": "blog",
+      "title": "1인 가구 비상금 사다리 쌓는 순서 | 이사독립",
+      "description": "갑작스러운 병원비, 수리비, 이사비에 대비해 비상금을 단계별로 쌓는 현실 방법입니다.",
+      "lastModified": "2026-05-28T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/small-repair-self-vs-call-budget",
+      "path": "/blog/small-repair-self-vs-call-budget",
+      "type": "blog",
+      "title": "소액 수리비, 직접 할 것과 부를 것 구분법 | 이사독립",
+      "description": "전구, 샤워기, 문틈 같은 소액 수리에서 직접 처리와 요청 대상을 나누는 기준입니다.",
+      "lastModified": "2026-05-28T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/delivery-fee-cut-weekly-meal-plan",
+      "path": "/blog/delivery-fee-cut-weekly-meal-plan",
+      "type": "blog",
+      "title": "배달비 줄이는 주간 식사 계획표 | 이사독립",
+      "description": "배달을 완전히 끊지 않고 횟수와 타이밍을 정해 식비를 줄이는 주간 계획표입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-28T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rent-increase-buffer-saving-plan",
+      "path": "/blog/rent-increase-buffer-saving-plan",
+      "type": "blog",
+      "title": "월세 인상 대비 완충 저축 만드는 법 | 이사독립",
+      "description": "재계약 때 월세가 오를 가능성에 대비해 매달 작은 완충금을 쌓는 현실적인 계획입니다.",
+      "lastModified": "2026-05-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/cash-only-weekend-saving-rule",
+      "path": "/blog/cash-only-weekend-saving-rule",
+      "type": "blog",
+      "title": "주말 생활비 새는 사람을 위한 현금 규칙 | 이사독립",
+      "description": "주말마다 예산이 무너지는 사람을 위해 카드 대신 한도 현금으로 지출을 통제하는 방식입니다.",
+      "lastModified": "2026-05-27T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/utility-spike-early-warning-check",
+      "path": "/blog/utility-spike-early-warning-check",
+      "type": "blog",
+      "title": "공과금 급등 막는 월초 확인 습관 | 이사독립",
+      "description": "요금이 나온 뒤 놀라지 않도록 월초에 계량기와 사용 패턴을 확인하는 실전 방법입니다.",
+      "lastModified": "2026-05-27T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/grocery-budget-fridge-first-rule",
+      "path": "/blog/grocery-budget-fridge-first-rule",
+      "type": "blog",
+      "title": "장보기 예산 방어: 냉장고 먼저 보는 법 | 이사독립",
+      "description": "마트에 가기 전 냉장고 재고를 기준으로 장보기 목록을 만드는 실전 절약법과 체크 순서입니다.",
+      "lastModified": "2026-05-27T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/subscription-bill-audit-for-renters",
+      "path": "/blog/subscription-bill-audit-for-renters",
+      "type": "blog",
+      "title": "자취 구독비 줄이는 월간 점검표 | 이사독립",
+      "description": "OTT, 앱, 멤버십처럼 작게 새는 자동결제를 한 달에 한 번 정리하는 기준입니다.",
+      "lastModified": "2026-05-27T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/four-week-rent-cashflow-plan",
+      "path": "/blog/four-week-rent-cashflow-plan",
+      "type": "blog",
+      "title": "월세 밀리지 않는 4주 현금흐름표 | 이사독립",
+      "description": "월세일 전후로 돈이 비는 상황을 막기 위해 4주 단위로 수입과 지출을 나누는 예산표입니다.",
+      "lastModified": "2026-05-26T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/weekend-room-reset-system",
+      "path": "/blog/weekend-room-reset-system",
+      "type": "blog",
+      "title": "주말 방 리셋 시스템: 몰아서 청소해도 금방 어지러운 이유 | 이사독립",
+      "description": "주말 청소가 반복해서 실패한다면 청소량보다 구역 순서가 문제일 수 있습니다. 작은 루틴으로 나눠야 합니다.",
+      "lastModified": "2026-05-26T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/morning-exit-check-routine",
+      "path": "/blog/morning-exit-check-routine",
+      "type": "blog",
+      "title": "아침 외출 전 2분 점검: 전기와 문단속을 자동화하는 순서 | 이사독립",
+      "description": "바쁜 아침일수록 전기, 가스, 문단속을 놓치기 쉽습니다. 순서를 고정하면 불안이 줄어듭니다.",
+      "lastModified": "2026-05-26T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/monthly-consumable-restock-list",
+      "path": "/blog/monthly-consumable-restock-list",
+      "type": "blog",
+      "title": "생활 소모품 재구매표: 휴지와 세제를 급하게 사지 않는 법 | 이사독립",
+      "description": "소모품은 떨어진 뒤 사면 비싸게 사기 쉽습니다. 재구매 주기와 보관량을 작게 정해야 합니다.",
+      "lastModified": "2026-05-26T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/home-visitor-boundary-rule",
+      "path": "/blog/home-visitor-boundary-rule",
+      "type": "blog",
+      "title": "혼자 사는 집 방문자 기준: 편하지만 불편해지지 않는 선 긋기 | 이사독립",
+      "description": "자취방은 개인 공간이 좁아 방문자가 오면 생활 리듬이 쉽게 흔들립니다. 기준을 미리 정해야 합니다.",
+      "lastModified": "2026-05-26T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/daily-sink-reset-rule",
+      "path": "/blog/daily-sink-reset-rule",
+      "type": "blog",
+      "title": "싱크대 하루 리셋 기준: 설거지를 미루면 방 냄새가 커지는 이유 | 이사독립",
+      "description": "싱크대는 작은 집 냄새의 시작점이 되기 쉽습니다. 매일 끝내야 할 기준을 낮게 잡아야 유지됩니다.",
+      "lastModified": "2026-05-25T22:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/bug-prevention-entry-routine",
+      "path": "/blog/bug-prevention-entry-routine",
+      "type": "blog",
+      "title": "벌레 유입 줄이는 현관 루틴: 방역보다 먼저 막아야 할 틈 | 이사독립",
+      "description": "벌레 문제는 보이는 순간보다 들어오는 길을 줄이는 것이 중요합니다. 현관과 배수구를 같이 봐야 합니다.",
+      "lastModified": "2026-05-25T17:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/trash-day-calendar-studio",
+      "path": "/blog/trash-day-calendar-studio",
+      "type": "blog",
+      "title": "분리수거 요일표 만들기: 자취방에 쓰레기가 쌓이지 않는 법 | 이사독립",
+      "description": "분리수거는 기억에 맡기면 쉽게 밀립니다. 요일표와 보관 위치를 같이 정해야 합니다.",
+      "lastModified": "2026-05-25T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/fridge-smell-reset-routine",
+      "path": "/blog/fridge-smell-reset-routine",
+      "type": "blog",
+      "title": "냉장고 냄새 리셋 루틴: 작은 집에서 음식 냄새가 오래가는 이유 | 이사독립",
+      "description": "냉장고 냄새는 방 냄새와 연결됩니다. 버리는 날과 닦는 날을 나누면 관리가 쉬워집니다.",
+      "lastModified": "2026-05-25T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/weekly-grocery-leftover-map",
+      "path": "/blog/weekly-grocery-leftover-map",
+      "type": "blog",
+      "title": "자취 장보기 남는 재료 줄이기: 냉장고 지도부터 만드는 법 | 이사독립",
+      "description": "장보기 실패는 많이 사서가 아니라 남은 재료를 못 봐서 생깁니다. 냉장고 지도를 만들면 낭비가 줄어듭니다.",
+      "lastModified": "2026-05-25T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/laundry-basket-sort-routine",
+      "path": "/blog/laundry-basket-sort-routine",
+      "type": "blog",
+      "title": "빨래 바구니 분류 루틴: 세탁 전부터 냄새가 줄어드는 구조 | 이사독립",
+      "description": "빨래는 세탁기 앞에서 나누면 늦습니다. 바구니 단계에서 분류하면 냄새와 시간 낭비가 줄어듭니다.",
+      "lastModified": "2026-05-24T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rental-floor-protection-plan",
+      "path": "/blog/rental-floor-protection-plan",
+      "type": "blog",
+      "title": "월세집 바닥 보호 기준: 의자 자국과 찍힘을 미리 줄이는 법 | 이사독립",
+      "description": "바닥 찍힘은 퇴실 때 분쟁이 되기 쉽습니다. 의자, 침대, 수납장 밑 보호 기준을 미리 정해야 합니다.",
+      "lastModified": "2026-05-24T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/one-room-color-limit-rule",
+      "path": "/blog/one-room-color-limit-rule",
+      "type": "blog",
+      "title": "원룸 색 조합 기준: 물건을 안 사도 방이 정돈돼 보이는 법 | 이사독립",
+      "description": "작은 방은 색이 많을수록 물건도 많아 보입니다. 가구보다 색 기준을 먼저 정하면 정리감이 생깁니다.",
+      "lastModified": "2026-05-24T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/bedside-no-storage-zone",
+      "path": "/blog/bedside-no-storage-zone",
+      "type": "blog",
+      "title": "침대 옆 물건 줄이는 법: 잠들기 전 손 닿는 곳을 비워야 하는 이유 | 이사독립",
+      "description": "침대 옆은 편해서 물건이 쌓이기 쉽습니다. 수면과 안전을 위해 꼭 둘 것만 남기는 기준이 필요합니다.",
+      "lastModified": "2026-05-24T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/moveable-furniture-layout",
+      "path": "/blog/moveable-furniture-layout",
+      "type": "blog",
+      "title": "이동식 가구 배치 기준: 자주 바꾸는 방이 더 어지러운 이유 | 이사독립",
+      "description": "바퀴 달린 가구는 편하지만 기준 없이 움직이면 생활 동선이 계속 흔들립니다. 고정 구역이 필요합니다.",
+      "lastModified": "2026-05-24T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/studio-lighting-layer-plan",
+      "path": "/blog/studio-lighting-layer-plan",
+      "type": "blog",
+      "title": "원룸 조명 레이어 만들기: 천장등 하나로 버티면 피곤한 이유 | 이사독립",
+      "description": "원룸 조명은 밝기보다 쓰는 시간과 위치가 중요합니다. 천장등, 스탠드, 간접등 역할을 나눠야 합니다.",
+      "lastModified": "2026-05-23T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/tiny-bathroom-shelf-rule",
+      "path": "/blog/tiny-bathroom-shelf-rule",
+      "type": "blog",
+      "title": "작은 화장실 선반 기준: 물건을 올릴수록 청소가 어려운 이유 | 이사독립",
+      "description": "작은 화장실은 수납을 늘릴수록 물때와 곰팡이 관리가 어려워질 수 있습니다. 줄이는 기준이 필요합니다.",
+      "lastModified": "2026-05-23T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/window-side-desk-glare",
+      "path": "/blog/window-side-desk-glare",
+      "type": "blog",
+      "title": "창가 책상 눈부심 줄이는 법: 채광 좋은 방의 의외의 불편 | 이사독립",
+      "description": "채광이 좋은 방도 책상 방향을 잘못 잡으면 눈부심과 화면 반사가 생깁니다. 창과 모니터 각도를 같이 봐야 합니다.",
+      "lastModified": "2026-05-23T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/open-shelf-visual-noise-control",
+      "path": "/blog/open-shelf-visual-noise-control",
+      "type": "blog",
+      "title": "오픈 선반 정리법: 물건은 적은데 방이 지저분해 보이는 이유 | 이사독립",
+      "description": "오픈 선반은 편하지만 색과 높이가 섞이면 쉽게 지저분해 보입니다. 보이는 규칙이 필요합니다.",
+      "lastModified": "2026-05-23T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/studio-rug-size-choice",
+      "path": "/blog/studio-rug-size-choice",
+      "type": "blog",
+      "title": "원룸 러그 크기 고르는 법: 예쁜 사진보다 청소 동선 기준 | 이사독립",
+      "description": "러그는 분위기를 바꾸지만 작은 방에서는 먼지와 이동 동선을 함께 봐야 실패가 줄어듭니다.",
+      "lastModified": "2026-05-23T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/low-bed-storage-dust-control",
+      "path": "/blog/low-bed-storage-dust-control",
+      "type": "blog",
+      "title": "낮은 침대 수납 먼지 관리: 꺼내기 쉬운 박스 기준 | 이사독립",
+      "description": "침대 밑 수납은 편하지만 먼지가 쉽게 쌓입니다. 박스 크기와 꺼내는 방향을 먼저 정해야 합니다.",
+      "lastModified": "2026-05-22T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/vertical-storage-without-clutter",
+      "path": "/blog/vertical-storage-without-clutter",
+      "type": "blog",
+      "title": "세로 수납 늘리는 법: 선반을 추가해도 방이 좁아 보이는 이유 | 이사독립",
+      "description": "세로 수납은 공간을 늘려주지만 물건이 그대로 보이면 더 좁아 보일 수 있습니다. 높이와 색을 같이 봐야 합니다.",
+      "lastModified": "2026-05-22T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/multiuse-table-storage-rule",
+      "path": "/blog/multiuse-table-storage-rule",
+      "type": "blog",
+      "title": "식탁 겸 책상 정리 기준: 밥 먹는 자리와 일하는 자리 분리법 | 이사독립",
+      "description": "하나의 테이블을 여러 용도로 쓰면 금방 어지러워집니다. 끝나는 기준을 정해야 유지됩니다.",
+      "lastModified": "2026-05-22T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/balconyless-laundry-drying-layout",
+      "path": "/blog/balconyless-laundry-drying-layout",
+      "type": "blog",
+      "title": "베란다 없는 집 빨래 건조 배치: 습기와 동선을 같이 줄이는 법 | 이사독립",
+      "description": "베란다가 없으면 빨래 건조대가 방 전체를 차지하기 쉽습니다. 건조 위치와 환기 순서가 중요합니다.",
+      "lastModified": "2026-05-22T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/single-closet-zone-map",
+      "path": "/blog/single-closet-zone-map",
+      "type": "blog",
+      "title": "옷장 한 칸으로 버티는 법: 출근복과 집옷을 섞지 않는 구조 | 이사독립",
+      "description": "옷장이 작을수록 옷의 양보다 구역 구분이 중요합니다. 입는 빈도와 세탁 주기를 같이 봐야 합니다.",
+      "lastModified": "2026-05-21T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/entryway-shoe-rack-overflow",
+      "path": "/blog/entryway-shoe-rack-overflow",
+      "type": "blog",
+      "title": "현관 신발장 부족할 때 정리법: 바닥을 비워야 냄새가 줄어든다 | 이사독립",
+      "description": "현관 바닥이 신발로 막히면 청소와 환기가 어려워집니다. 신발장보다 회전 기준이 먼저입니다.",
+      "lastModified": "2026-05-21T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/curtain-blind-choice-studio",
+      "path": "/blog/curtain-blind-choice-studio",
+      "type": "blog",
+      "title": "원룸 커튼과 블라인드 선택 기준: 햇빛보다 생활패턴 먼저 | 이사독립",
+      "description": "커튼과 블라인드는 분위기보다 수면, 채광, 사생활 보호를 기준으로 고르는 편이 실패가 적습니다.",
+      "lastModified": "2026-05-21T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/desk-bed-distance-layout",
+      "path": "/blog/desk-bed-distance-layout",
+      "type": "blog",
+      "title": "책상과 침대 거리 기준: 쉬는 공간과 일하는 공간 나누기 | 이사독립",
+      "description": "원룸에서 책상과 침대가 너무 가까우면 휴식과 작업이 쉽게 섞입니다. 거리보다 시선 분리가 중요합니다.",
+      "lastModified": "2026-05-21T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/small-kitchen-counter-zoning",
+      "path": "/blog/small-kitchen-counter-zoning",
+      "type": "blog",
+      "title": "작은 주방 조리대 구역 나누기: 설거지와 조리를 덜 섞는 법 | 이사독립",
+      "description": "작은 주방은 조리, 설거지, 보관이 한 칸에 겹치기 쉽습니다. 구역을 나누면 어지러움이 줄어듭니다.",
+      "lastModified": "2026-05-21T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rental-wall-no-drill-options",
+      "path": "/blog/rental-wall-no-drill-options",
+      "type": "blog",
+      "title": "못 박기 어려운 월세집 벽 활용법: 손상 없이 거는 기준 | 이사독립",
+      "description": "월세집 벽은 꾸미고 싶어도 원상복구가 걱정됩니다. 접착식과 기대는 수납을 구분해야 합니다.",
+      "lastModified": "2026-05-20T22:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/seasonal-clothes-underbed-storage",
+      "path": "/blog/seasonal-clothes-underbed-storage",
+      "type": "blog",
+      "title": "계절 옷 보관 기준: 침대 밑 수납을 망치지 않는 순서 | 이사독립",
+      "description": "좁은 방에서 계절 옷을 넣어두는 위치를 잘못 잡으면 먼지와 습기, 동선 문제가 함께 생깁니다.",
+      "lastModified": "2026-05-20T17:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/night-shift-safe-return-setup",
+      "path": "/blog/night-shift-safe-return-setup",
+      "type": "blog",
+      "title": "야근 많은 자취인을 위한 귀가 준비: 집 들어오기 전 3분 안전 루틴 | 이사독립",
+      "description": "늦은 귀가가 잦다면 집 안 보안만으로는 부족합니다. 현관 앞 확인, 비상 연락, 손에 드는 물건 정리까지 짧은 루틴을 정해 두는 편이 좋습니다.",
+      "lastModified": "2026-05-20T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/storm-day-balconyless-shoe-care",
+      "path": "/blog/storm-day-balconyless-shoe-care",
+      "type": "blog",
+      "title": "장마철 신발 관리법: 베란다 없는 자취방에서 냄새와 습기 줄이는 순서 | 이사독립",
+      "description": "비 오는 날 신발을 아무 데나 두면 현관 냄새와 곰팡이 위험이 커집니다. 건조 위치와 순서를 정해 두면 관리가 훨씬 쉬워집니다.",
+      "lastModified": "2026-05-19T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/package-theft-prevention-routine",
+      "path": "/blog/package-theft-prevention-routine",
+      "type": "blog",
+      "title": "택배 분실 줄이는 생활 습관: 문 앞 보관이 불안한 원룸의 기본 대응 | 이사독립",
+      "description": "택배가 자주 오면 분실보다도 노출 시간이 길어지는 것이 문제입니다. 수령 습관과 보관 지점을 함께 관리해야 합니다.",
+      "lastModified": "2026-05-19T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/late-night-walk-neighborhood-adaptation",
+      "path": "/blog/late-night-walk-neighborhood-adaptation",
+      "type": "blog",
+      "title": "처음 사는 동네에 적응하는 법: 야간 귀가 루트부터 익혀야 덜 불안하다 | 이사독립",
+      "description": "동네 적응은 맛집 찾기보다 안전한 귀가 루트를 먼저 익히는 일에 가깝습니다. 특히 혼자 사는 초반에는 익숙함을 빠르게 만드는 루틴이 필요합니다.",
+      "lastModified": "2026-05-19T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/fire-safety-in-studio-kitchen",
+      "path": "/blog/fire-safety-in-studio-kitchen",
+      "type": "blog",
+      "title": "원룸 주방 화재 예방 습관: 멀티탭보다 더 자주 놓치는 불씨 포인트 | 이사독립",
+      "description": "좁은 원룸 주방은 조리 공간과 수납이 가까워 작은 실수도 위험해질 수 있습니다. 전기와 불 사용 습관을 함께 관리해야 합니다.",
+      "lastModified": "2026-05-18T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/vet-emergency-kit-for-renters",
+      "path": "/blog/vet-emergency-kit-for-renters",
+      "type": "blog",
+      "title": "자취방 반려동물 응급 준비물: 밤에 병원 갈 때 허둥대지 않는 최소 키트 | 이사독립",
+      "description": "혼자 사는 보호자는 응급 상황에서 도와줄 사람이 없을 때가 많습니다. 병원 가방과 기록을 미리 준비해 두면 대응 속도가 달라집니다.",
+      "lastModified": "2026-05-18T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/pet-odor-litter-zone-layout",
+      "path": "/blog/pet-odor-litter-zone-layout",
+      "type": "blog",
+      "title": "반려동물 냄새 줄이는 배치법: 화장실·사료·잠자리 구역을 섞으면 생기는 문제 | 이사독립",
+      "description": "냄새는 청소 횟수보다 배치가 더 큰 원인일 때가 많습니다. 자취방에서는 구역이 겹칠수록 냄새가 빠르게 퍼집니다.",
+      "lastModified": "2026-05-17T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/rainy-walk-entry-cleanup",
+      "path": "/blog/rainy-walk-entry-cleanup",
+      "type": "blog",
+      "title": "비 오는 날 반려동물 산책 후 정리법: 현관에서 끝내야 집 냄새가 덜 남는다 | 이사독립",
+      "description": "젖은 발, 리드줄, 우비를 바로 정리하지 않으면 원룸은 금방 눅눅해집니다. 산책 후 5분 루틴만 고정해도 집 상태가 달라집니다.",
+      "lastModified": "2026-05-17T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/pet-safe-room-plants-check",
+      "path": "/blog/pet-safe-room-plants-check",
+      "type": "blog",
+      "title": "반려동물 식물 배치 체크: 화분보다 안전 기준 | 이사독립",
+      "description": "원룸에서 식물은 분위기를 바꾸지만 반려동물과 함께 살면 독성, 흙, 넘어짐 위험까지 같이 봐야 합니다. 배치 기준이 중요합니다.",
+      "lastModified": "2026-05-16T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/pet-hair-cleaning-routine",
+      "path": "/blog/pet-hair-cleaning-routine",
+      "type": "blog",
+      "title": "반려동물 털 청소 루틴: 매일 돌돌이만 쓰면 집이 더 답답해지는 이유 | 이사독립",
+      "description": "털은 보이는 것만 치워서는 금방 다시 쌓입니다. 자취방에서는 바닥, 침구, 공기 관리 루틴을 같이 묶어야 유지가 됩니다.",
+      "lastModified": "2026-05-16T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/noise-map-home-arrival-check",
+      "path": "/blog/noise-map-home-arrival-check",
+      "type": "blog",
+      "title": "귀가 시간대 소음 지도 만들기: 낮엔 멀쩡한데 밤에 시끄러운 동네 체크법 | 이사독립",
+      "description": "집 안 소음만 볼 게 아니라 내가 실제로 귀가하는 시간대의 골목 분위기를 봐야 합니다. 소음은 시간에 따라 완전히 다른 집처럼 느껴질 수 있습니다.",
+      "lastModified": "2026-05-16T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/winter-humidity-boiler-balance",
+      "path": "/blog/winter-humidity-boiler-balance",
+      "type": "blog",
+      "title": "겨울철 보일러와 습도 균형 맞추기: 춥다고 환기 끊으면 생기는 문제 | 이사독립",
+      "description": "겨울엔 난방비를 아끼려고 창문을 거의 닫게 되지만, 그럴수록 실내 습기와 결로가 쌓이기 쉽습니다. 보일러와 환기를 함께 봐야 합니다.",
+      "lastModified": "2026-05-15T17:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/cross-ventilation-window-timing",
+      "path": "/blog/cross-ventilation-window-timing",
+      "type": "blog",
+      "title": "맞통풍 잘 되는 시간 찾기: 창문 두 개를 열어도 방이 답답한 원룸의 공기 루틴 | 이사독립",
+      "description": "원룸은 창문을 오래 열어도 공기가 제대로 바뀌지 않는 경우가 많습니다. 열어 두는 시간보다 어느 창을 언제 여는지가 더 중요합니다.",
+      "lastModified": "2026-05-15T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/closet-mold-summer-prevention",
+      "path": "/blog/closet-mold-summer-prevention",
+      "type": "blog",
+      "title": "여름철 옷장 곰팡이 예방법: 제습제만 넣고 끝내면 안 되는 이유 | 이사독립",
+      "description": "옷장 안 곰팡이는 습한 계절에 한 번 생기면 냄새와 세탁 비용까지 커집니다. 옷장 구조와 환기 습관을 함께 봐야 예방이 됩니다.",
+      "lastModified": "2026-05-14T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/bathroom-fan-ventilation-routine",
+      "path": "/blog/bathroom-fan-ventilation-routine",
+      "type": "blog",
+      "title": "화장실 환풍기 사용 루틴: 샤워 직후 30분이 냄새와 곰팡이를 가르는 이유 | 이사독립",
+      "description": "원룸 화장실은 창이 없거나 작아 습기가 오래 남기 쉽습니다. 환풍기와 문 여는 순서만 바꿔도 곰팡이와 냄새가 덜 남습니다.",
+      "lastModified": "2026-05-14T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/subscription-audit-for-one-person",
+      "path": "/blog/subscription-audit-for-one-person",
+      "type": "blog",
+      "title": "1인 가구 구독 정리법: 매달 새는 소액 결제를 끊는 점검 순서 | 이사독립",
+      "description": "영상, 음악, 배달, 클라우드 구독은 하나하나 작아 보여도 월세와 같은 날 빠져나가면 압박이 큽니다. 분기별 점검 루틴이 필요합니다.",
+      "lastModified": "2026-05-14T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/payday-zero-based-budget",
+      "path": "/blog/payday-zero-based-budget",
+      "type": "blog",
+      "title": "월급날 예산 나누는 법: 월세 먼저 떼는 제로베이스 생활비 루틴 | 이사독립",
+      "description": "월급이 들어온 뒤 남는 돈을 저축하려고 하면 자취 생활에서는 잘 안 남습니다. 들어온 날 바로 목적별로 나눠야 흐름이 안정됩니다.",
+      "lastModified": "2026-05-13T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/emergency-fund-for-renters",
+      "path": "/blog/emergency-fund-for-renters",
+      "type": "blog",
+      "title": "자취 비상금 만드는 법: 갑작스러운 병원비·이사비에 덜 흔들리는 최소 기준 | 이사독립",
+      "description": "자취의 비상금은 투자보다 생존 자금에 가깝습니다. 갑자기 나가는 병원비나 수리비를 버틸 바닥 자금이 있어야 생활이 덜 무너집니다.",
+      "lastModified": "2026-05-13T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/monthly-bill-calendar-routine",
+      "path": "/blog/monthly-bill-calendar-routine",
+      "type": "blog",
+      "title": "공과금·구독 결제일 관리법: 월초마다 잔액이 비는 사람의 달력 세팅 | 이사독립",
+      "description": "전기, 통신, 카드, 정기구독이 제각각 빠져나가면 체감보다 더 빨리 잔액이 줄어듭니다. 결제일을 한눈에 보여주는 달력 루틴이 필요합니다.",
+      "lastModified": "2026-05-12T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/solo-grocery-budget-system",
+      "path": "/blog/solo-grocery-budget-system",
+      "type": "blog",
+      "title": "1인 가구 식비 관리법: 장보기 예산이 배달비보다 먼저 새는 이유 | 이사독립",
+      "description": "식비는 배달앱만 줄인다고 해결되지 않습니다. 냉장고 안에서 버리는 비용을 줄여야 실제 지출이 내려갑니다.",
+      "lastModified": "2026-05-12T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/balcony-free-laundry-rack-plan",
+      "path": "/blog/balcony-free-laundry-rack-plan",
+      "type": "blog",
+      "title": "베란다 없는 원룸 빨래 건조대 위치: 방이 덜 눅눅해지는 배치 기준 | 이사독립",
+      "description": "베란다가 없으면 빨래 건조대가 방 한가운데를 차지하기 쉽습니다. 위치만 바꿔도 습기, 동선, 냄새 문제가 훨씬 줄어듭니다.",
+      "lastModified": "2026-05-11T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/fridge-microwave-cart-layout",
+      "path": "/blog/fridge-microwave-cart-layout",
+      "type": "blog",
+      "title": "냉장고 옆 전자레인지장 배치법: 좁은 주방에서 상판 하나가 중요한 이유 | 이사독립",
+      "description": "원룸 주방은 조리대가 부족해 전자레인지장 하나가 수납과 동선을 모두 좌우합니다. 냉장고 옆 공간을 잘못 쓰면 열기와 소음이 더 심해집니다.",
+      "lastModified": "2026-05-11T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/mattress-frame-first-buy-guide",
+      "path": "/blog/mattress-frame-first-buy-guide",
+      "type": "blog",
+      "title": "자취 침대 첫 구매 순서: 매트리스와 프레임 중 무엇에 먼저 돈을 써야 할까 | 이사독립",
+      "description": "침대는 큰돈이 들어가지만 자취 초반에 가장 오래 쓰는 가구이기도 합니다. 예산이 한정돼 있다면 어디에 우선 투자할지 기준이 필요합니다.",
+      "lastModified": "2026-05-11T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/one-room-folding-furniture-rules",
+      "path": "/blog/one-room-folding-furniture-rules",
+      "type": "blog",
+      "title": "원룸 접이식 가구 고르는 기준: 싸다고 샀다가 매일 접지도 펴지도 않는 이유 | 이사독립",
+      "description": "접이식 테이블과 의자는 공간을 아끼는 것 같지만 실제로는 잘 안 쓰이는 경우가 많습니다. 매일 쓰는 물건인지부터 판단해야 후회가 줄어듭니다.",
+      "lastModified": "2026-05-10T17:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/studio-entryway-storage-zones",
+      "path": "/blog/studio-entryway-storage-zones",
+      "type": "blog",
+      "title": "현관이 좁은 원룸 수납법: 신발장 없어도 입구가 덜 어수선해지는 구역 나누기 | 이사독립",
+      "description": "현관이 좁으면 택배, 우산, 신발이 한곳에 몰려 집 전체가 지저분해 보입니다. 입구 1평만 다시 짜도 동선과 청결이 훨씬 좋아집니다.",
+      "lastModified": "2026-05-10T07:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/brokerage-fee-receipt-checklist",
+      "path": "/blog/brokerage-fee-receipt-checklist",
+      "type": "blog",
+      "title": "중개수수료 영수증 체크리스트: 금액보다 먼저 확인할 기록 | 이사독립",
+      "description": "중개수수료는 계산만 맞으면 끝이라고 생각하기 쉽지만, 영수 방식과 기록도 중요합니다. 지급 전후로 확인할 실무 항목을 정리했습니다.",
+      "lastModified": "2026-05-09T21:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/registry-address-unit-match-check",
+      "path": "/blog/registry-address-unit-match-check",
+      "type": "blog",
+      "title": "주소·동호수 일치 확인: 계약서와 등기부가 미묘하게 다를 때 볼 것 | 이사독립",
+      "description": "같은 집처럼 보여도 표기 방식이 다르면 확인을 더 해야 할 수 있습니다. 주소와 동호수 일치 여부를 실무적으로 점검하는 기준입니다.",
+      "lastModified": "2026-05-09T11:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/pre-contract-special-clause-priority",
+      "path": "/blog/pre-contract-special-clause-priority",
+      "type": "blog",
+      "title": "특약 먼저 합의하는 법: 계약서 쓰기 전에 말해야 덜 꼬이는 항목 | 이사독립",
+      "description": "특약은 마지막에 끼워 넣는 문장이 아니라, 계약 가능 여부를 가르는 핵심 조건일 수 있습니다. 먼저 합의해야 할 특약 주제를 정리했습니다.",
+      "lastModified": "2026-05-09T01:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/agent-authority-proxy-contract-check",
+      "path": "/blog/agent-authority-proxy-contract-check",
+      "type": "blog",
+      "title": "대리 계약 확인법: 집주인이 안 나올 때 꼭 챙길 실무 체크 | 이사독립",
+      "description": "집주인이 직접 나오지 않는 계약은 흔하지만, 위임 관계를 흐리게 넘기면 해석이 복잡해집니다. 대리 계약에서 먼저 확인할 요소를 정리했습니다.",
+      "lastModified": "2026-05-08T15:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/broker-confirmation-note-check",
+      "path": "/blog/broker-confirmation-note-check",
+      "type": "blog",
+      "title": "중개대상물 확인설명서 체크법: 계약서보다 먼저 읽어야 하는 칸 | 이사독립",
+      "description": "계약서만 보고 사인하면 설명서에 적힌 핵심을 놓치기 쉽습니다. 중개대상물 확인설명서에서 실제로 먼저 봐야 할 항목을 정리했습니다.",
+      "lastModified": "2026-05-08T05:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/move-out-meter-photo-checklist",
+      "path": "/blog/move-out-meter-photo-checklist",
+      "type": "blog",
+      "title": "퇴실 계량기 사진 체크리스트: 정산 분쟁 줄이는 촬영 순서 | 이사독립",
+      "description": "공과금 정산은 숫자 한 장으로 끝나지 않습니다. 퇴실 당일 계량기 사진을 어떤 순서로 남겨야 나중에 설명이 쉬운지 정리했습니다.",
+      "lastModified": "2026-05-07T19:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/parking-registration-change-guide",
+      "path": "/blog/parking-registration-change-guide",
+      "type": "blog",
+      "title": "주차 등록 변경 체크: 새 집 주차 가능 여부를 계약 전에 봐야 하는 이유 | 이사독립",
+      "description": "차를 쓰는 사람에게 주차 등록은 옵션이 아니라 생활비 문제입니다. 월 주차비, 방문 차량 규정, 등록 절차를 실무적으로 정리했습니다.",
+      "lastModified": "2026-05-07T09:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/mail-forwarding-move-checklist",
+      "path": "/blog/mail-forwarding-move-checklist",
+      "type": "blog",
+      "title": "우편물 누락 방지 체크리스트: 이사 후에도 전 집으로 가는 고지서 막는 법 | 이사독립",
+      "description": "전입신고만 하면 끝이라고 생각하면 우편물 누락이 생길 수 있습니다. 카드, 보험, 통신, 쇼핑몰 주소 변경을 체계적으로 정리하는 방법입니다.",
+      "lastModified": "2026-05-06T23:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/large-waste-disposal-before-move",
+      "path": "/blog/large-waste-disposal-before-move",
+      "type": "blog",
+      "title": "이사 전 대형폐기물 버리기: 당일에 몰리면 생기는 문제 | 이사독립",
+      "description": "버릴 짐 정리를 늦추면 이사비와 폐기비가 같이 늘어납니다. 대형폐기물은 언제, 어떤 기준으로 분리해야 효율적인지 정리했습니다.",
+      "lastModified": "2026-05-06T13:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/moving-day-elevator-booking",
+      "path": "/blog/moving-day-elevator-booking",
+      "type": "blog",
+      "title": "이사 엘리베이터 예약 체크: 관리실에 언제 말해야 안 꼬이는가 | 이사독립",
+      "description": "오피스텔과 아파트형 건물은 엘리베이터 예약을 놓치면 이사 당일 전체 일정이 밀릴 수 있습니다. 실무 순서를 간단히 정리했습니다.",
+      "lastModified": "2026-05-06T03:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/blog/emergency-evacuation-house-viewing",
       "path": "/blog/emergency-evacuation-house-viewing",
       "type": "blog",
-      "title": "비상 대피 동선 체크: 집 보기에서 계단 위치를 꼭 봐야… | 이사독립",
+      "title": "비상 대피 동선 체크: 집 보기에서 계단 위치를 꼭 봐야 하는 이유 | 이사독립",
       "description": "화재나 정전 같은 비상 상황에서는 평소 안 보이던 불편이 크게 드러납니다. 집 보기 단계에서 대피 동선을 어떻게 볼지 정리했습니다.",
       "lastModified": "2026-05-05T17:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/semi-basement-safety-check",
+      "url": "https://today2424.kr/blog/semi-basement-safety-check",
       "path": "/blog/semi-basement-safety-check",
       "type": "blog",
-      "title": "반지하·지층 안전 체크: 가격만 보고 들어가면 놓치는 생활… | 이사독립",
+      "title": "반지하·지층 안전 체크: 가격만 보고 들어가면 놓치는 생활 리스크 | 이사독립",
       "description": "반지하와 지층은 월세 메리트가 있어도 안전과 생활 편의 기준이 달라집니다. 현장 점검에서 꼭 볼 항목을 실무형으로 정리했습니다.",
       "lastModified": "2026-05-05T07:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/parcel-theft-prevention-rental",
+      "url": "https://today2424.kr/blog/parcel-theft-prevention-rental",
       "path": "/blog/parcel-theft-prevention-rental",
       "type": "blog",
       "title": "문 앞 택배 도난 줄이는 법: 자취방 구조별 보관 팁 | 이사독립",
@@ -182,79 +1249,79 @@
       "lastModified": "2026-05-04T21:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/cctv-blind-spot-check",
+      "url": "https://today2424.kr/blog/cctv-blind-spot-check",
       "path": "/blog/cctv-blind-spot-check",
       "type": "blog",
-      "title": "CCTV 사각지대 체크법: 여성 1인 가구가 현관 앞에서… | 이사독립",
+      "title": "CCTV 사각지대 체크법: 여성 1인 가구가 현관 앞에서 꼭 볼 것 | 이사독립",
       "description": "CCTV가 있다는 말만으로 안심하면 안 됩니다. 실제로 찍히는 위치와 사각지대를 현장에서 어떻게 확인할지 실전 기준으로 정리했습니다.",
       "lastModified": "2026-05-04T11:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/move-in-security-reset-checklist",
+      "url": "https://today2424.kr/blog/move-in-security-reset-checklist",
       "path": "/blog/move-in-security-reset-checklist",
       "type": "blog",
-      "title": "입주 첫날 보안 초기화 체크리스트: 도어락 비밀번호만 바꾸… | 이사독립",
+      "title": "입주 첫날 보안 초기화 체크리스트: 도어락 비밀번호만 바꾸면 끝이 아니다 | 이사독립",
       "description": "새 집에 들어가면 가장 먼저 해야 할 일은 정리보다 보안 초기화입니다. 공동현관, 택배 노출, 비상키 보관까지 첫날 순서를 정리했습니다.",
       "lastModified": "2026-05-04T01:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/sunlight-window-direction-check",
+      "url": "https://today2424.kr/blog/sunlight-window-direction-check",
       "path": "/blog/sunlight-window-direction-check",
       "type": "blog",
-      "title": "채광 확인 실전법: 방향만 보지 말고 창밖 가림까지 봐야… | 이사독립",
+      "title": "채광 확인 실전법: 방향만 보지 말고 창밖 가림까지 봐야 하는 이유 | 이사독립",
       "description": "남향이라는 말만 믿고 계약했다가 낮에도 어두운 집이 있습니다. 집보기에서 채광을 현실적으로 판단하는 기준을 정리했습니다.",
       "lastModified": "2026-05-03T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/bathroom-slope-water-test",
+      "url": "https://today2424.kr/blog/bathroom-slope-water-test",
       "path": "/blog/bathroom-slope-water-test",
       "type": "blog",
-      "title": "화장실 물빠짐 체크법: 집 보기 1분 테스트로 거를 수 있… | 이사독립",
+      "title": "화장실 물빠짐 체크법: 집 보기 1분 테스트로 거를 수 있는 불편 | 이사독립",
       "description": "화장실 배수 경사는 사진으로 보이지 않습니다. 물 한 컵 테스트와 바닥 기울기 관찰만으로도 입주 후 스트레스를 줄일 수 있습니다.",
       "lastModified": "2026-05-03T05:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/boiler-age-viewing-check",
+      "url": "https://today2424.kr/blog/boiler-age-viewing-check",
       "path": "/blog/boiler-age-viewing-check",
       "type": "blog",
-      "title": "보일러 연식 확인 체크: 집 보기에서 스위치만 눌러보면 놓… | 이사독립",
+      "title": "보일러 연식 확인 체크: 집 보기에서 스위치만 눌러보면 놓치는 것 | 이사독립",
       "description": "집보기에서 보일러는 켜지기만 하면 된다고 생각하기 쉽습니다. 연식, 소음, 배관 흔적까지 봐야 겨울철 비용과 고장 리스크를 줄일 수 있습니다.",
       "lastModified": "2026-05-02T19:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/cell-signal-house-viewing",
+      "url": "https://today2424.kr/blog/cell-signal-house-viewing",
       "path": "/blog/cell-signal-house-viewing",
       "type": "blog",
-      "title": "집 보기 전에 통신 신호 확인하는 법: 와이파이보다 먼저… | 이사독립",
+      "title": "집 보기 전에 통신 신호 확인하는 법: 와이파이보다 먼저 볼 것 | 이사독립",
       "description": "방 구조가 마음에 들어도 통신 품질이 낮으면 생활 만족도가 크게 떨어집니다. 현장에서 3분 안에 확인할 수 있는 통신 체크법을 정리했습니다.",
       "lastModified": "2026-05-02T09:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/vacant-house-smell-check",
+      "url": "https://today2424.kr/blog/vacant-house-smell-check",
       "path": "/blog/vacant-house-smell-check",
       "type": "blog",
-      "title": "빈집 냄새 체크법: 집 보러 갔을 때 방향제보다 먼저 맡아… | 이사독립",
+      "title": "빈집 냄새 체크법: 집 보러 갔을 때 방향제보다 먼저 맡아야 할 신호 | 이사독립",
       "description": "집보기에서 사진보다 빠른 정보는 냄새입니다. 공실 집 특유의 냄새에서 곰팡이, 배수, 환기 문제를 읽는 실전 체크법을 정리했습니다.",
       "lastModified": "2026-05-01T23:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/registry-timing-gap-before-closing",
+      "url": "https://today2424.kr/blog/registry-timing-gap-before-closing",
       "path": "/blog/registry-timing-gap-before-closing",
       "type": "blog",
-      "title": "등기부 발급 시점 차이 체크: 계약서와 잔금일 사이에 놓치… | 이사독립",
+      "title": "등기부 발급 시점 차이 체크: 계약서와 잔금일 사이에 놓치기 쉬운 변화 | 이사독립",
       "description": "처음 본 등기부만 믿고 있다가 잔금 직전에 당황하는 경우가 있습니다. 발급 시점 차이가 왜 중요한지, 언제 다시 확인해야 하는지 정리했습니다.",
       "lastModified": "2026-05-01T13:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/co-owner-consent-rent-contract",
+      "url": "https://today2424.kr/blog/co-owner-consent-rent-contract",
       "path": "/blog/co-owner-consent-rent-contract",
       "type": "blog",
-      "title": "공동명의 집 계약할 때 확인할 것: 한 명과만 계약하면 생… | 이사독립",
+      "title": "공동명의 집 계약할 때 확인할 것: 한 명과만 계약하면 생기는 혼선 | 이사독립",
       "description": "등기부에 소유자가 두 명 이상이면 계약 상대방과 서명 방식도 달라집니다. 공동명의 임대차에서 실무적으로 체크할 항목을 정리했습니다.",
       "lastModified": "2026-05-01T03:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/contract-deposit-receipt-rules",
+      "url": "https://today2424.kr/blog/contract-deposit-receipt-rules",
       "path": "/blog/contract-deposit-receipt-rules",
       "type": "blog",
       "title": "계약금 영수 문구 체크법: 입금만 하고 끝내면 위험한 이유 | 이사독립",
@@ -262,7 +1329,7 @@
       "lastModified": "2026-04-30T17:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/monthly-rent-renewal-risk-check",
+      "url": "https://today2424.kr/blog/monthly-rent-renewal-risk-check",
       "path": "/blog/monthly-rent-renewal-risk-check",
       "type": "blog",
       "title": "월세 재계약 전 리스크 점검: 인상폭보다 먼저 확인할 5가지 | 이사독립",
@@ -270,7 +1337,7 @@
       "lastModified": "2026-04-30T07:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/jeonse-contract-day-checkpoints",
+      "url": "https://today2424.kr/blog/jeonse-contract-day-checkpoints",
       "path": "/blog/jeonse-contract-day-checkpoints",
       "type": "blog",
       "title": "전세 계약 당일 체크포인트: 서명 직전 30분에 꼭 볼 것 | 이사독립",
@@ -278,7 +1345,7 @@
       "lastModified": "2026-04-29T21:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/moving-box-label-system",
+      "url": "https://today2424.kr/blog/moving-box-label-system",
       "path": "/blog/moving-box-label-system",
       "type": "blog",
       "title": "이삿짐 박스 라벨링 방법: 박스에 숫자만 쓰면 안 되는 이유 | 이사독립",
@@ -286,7 +1353,7 @@
       "lastModified": "2026-04-29T11:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/pet-friendly-rent-check",
+      "url": "https://today2424.kr/blog/pet-friendly-rent-check",
       "path": "/blog/pet-friendly-rent-check",
       "type": "blog",
       "title": "반려동물과 자취할 때 계약 전에 꼭 확인할 것 7가지 | 이사독립",
@@ -294,79 +1361,79 @@
       "lastModified": "2026-04-29T01:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/winter-window-condensation-hacks",
+      "url": "https://today2424.kr/blog/winter-window-condensation-hacks",
       "path": "/blog/winter-window-condensation-hacks",
       "type": "blog",
-      "title": "겨울 결로 줄이는 창문 관리법: 난방비 아끼면서 습기 잡는… | 이사독립",
+      "title": "겨울 결로 줄이는 창문 관리법: 난방비 아끼면서 습기 잡는 습관 | 이사독립",
       "description": "창문에 물이 맺히기 시작하면 곰팡이와 난방비 문제가 같이 옵니다. 원룸에서 바로 실천할 수 있는 결로 관리 습관을 정리했습니다.",
       "lastModified": "2026-04-28T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/appliance-electric-bill-planning",
+      "url": "https://today2424.kr/blog/appliance-electric-bill-planning",
       "path": "/blog/appliance-electric-bill-planning",
       "type": "blog",
-      "title": "원룸 전기요금 아끼는 가전 배치법: 멀티탭 하나도 계산이… | 이사독립",
+      "title": "원룸 전기요금 아끼는 가전 배치법: 멀티탭 하나도 계산이 필요하다 | 이사독립",
       "description": "냉장고, 전자레인지, 에어컨을 아무렇게나 꽂으면 전기요금도 올라가고 안전도 떨어집니다. 작은 방에서 효율적으로 배치하는 법을 정리했습니다.",
       "lastModified": "2026-04-28T05:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/deposit-loan-timeline",
+      "url": "https://today2424.kr/blog/deposit-loan-timeline",
       "path": "/blog/deposit-loan-timeline",
       "type": "blog",
-      "title": "전세대출 실행 타임라인: 계약부터 잔금일까지 날짜 계산 실… | 이사독립",
+      "title": "전세대출 실행 타임라인: 계약부터 잔금일까지 날짜 계산 실수 줄이기 | 이사독립",
       "description": "전세대출은 승인만 받으면 끝이 아닙니다. 계약일, 서류 제출일, 잔금일, 실행일이 꼬이면 입주 전체 일정이 흔들릴 수 있습니다.",
       "lastModified": "2026-04-27T19:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/parking-and-delivery-noise-check",
+      "url": "https://today2424.kr/blog/parking-and-delivery-noise-check",
       "path": "/blog/parking-and-delivery-noise-check",
       "type": "blog",
-      "title": "주차장·배달동선 소음 체크: 밤에 시끄러운 집은 낮에 안… | 이사독립",
+      "title": "주차장·배달동선 소음 체크: 밤에 시끄러운 집은 낮에 안 보인다 | 이사독립",
       "description": "밤이 되면 오토바이, 차량 출입, 문닫는 소리가 크게 느껴지는 집이 있습니다. 주차장과 배달동선을 기준으로 소음을 보는 법을 정리했습니다.",
       "lastModified": "2026-04-27T09:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/broker-fee-negotiation-myths",
+      "url": "https://today2424.kr/blog/broker-fee-negotiation-myths",
       "path": "/blog/broker-fee-negotiation-myths",
       "type": "blog",
-      "title": "중개수수료 협상 오해 5가지: 무조건 깎아달라고 하면 안… | 이사독립",
+      "title": "중개수수료 협상 오해 5가지: 무조건 깎아달라고 하면 안 되는 이유 | 이사독립",
       "description": "중개수수료는 무조건 정가가 아닙니다. 다만 아무 근거 없이 깎아달라고 하기보다 상한요율과 협의 포인트를 알고 말하는 게 중요합니다.",
       "lastModified": "2026-04-26T23:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/room-measurement-mistakes",
+      "url": "https://today2424.kr/blog/room-measurement-mistakes",
       "path": "/blog/room-measurement-mistakes",
       "type": "blog",
-      "title": "방 실측에서 가장 많이 하는 실수 6가지: 냉장고가 안 들… | 이사독립",
+      "title": "방 실측에서 가장 많이 하는 실수 6가지: 냉장고가 안 들어오는 이유 | 이사독립",
       "description": "평수만 보고 가구를 사면 실제 배치에서 막히는 경우가 많습니다. 자취방 실측에서 자주 틀리는 포인트를 정리했습니다.",
       "lastModified": "2026-04-26T13:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/move-out-cleaning-budget",
+      "url": "https://today2424.kr/blog/move-out-cleaning-budget",
       "path": "/blog/move-out-cleaning-budget",
       "type": "blog",
-      "title": "퇴실 청소비 아끼는 법: 직접 청소와 업체 청소, 어디서… | 이사독립",
+      "title": "퇴실 청소비 아끼는 법: 직접 청소와 업체 청소, 어디서 갈리나 | 이사독립",
       "description": "퇴실 직전에 청소비를 얼마나 써야 할지 고민된다면, 꼭 맡겨야 할 부분과 직접 해도 되는 부분부터 구분해야 합니다.",
       "lastModified": "2026-04-26T03:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/secondhand-furniture-checklist",
+      "url": "https://today2424.kr/blog/secondhand-furniture-checklist",
       "path": "/blog/secondhand-furniture-checklist",
       "type": "blog",
-      "title": "중고 가구·가전 거래 체크리스트: 싸게 샀다가 다시 버리지… | 이사독립",
+      "title": "중고 가구·가전 거래 체크리스트: 싸게 샀다가 다시 버리지 않으려면 | 이사독립",
       "description": "첫 자취에서 중고 가구는 예산 절약에 좋지만, 크기·상태·운반을 잘못 보면 오히려 손해입니다. 거래 전에 확인해야 할 기준을 정리했습니다.",
       "lastModified": "2026-04-25T17:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/one-room-security-check",
+      "url": "https://today2424.kr/blog/one-room-security-check",
       "path": "/blog/one-room-security-check",
       "type": "blog",
-      "title": "여성 1인 가구 자취방 보안 체크: 문 앞 5분만 보면 걸… | 이사독립",
+      "title": "여성 1인 가구 자취방 보안 체크: 문 앞 5분만 보면 걸러지는 집 | 이사독립",
       "description": "채광과 월세만 보고 계약하면 안 됩니다. 현관 구조, CCTV, 공동현관, 골목 조도까지 보안 관점에서 꼭 확인해야 할 기준을 정리했습니다.",
       "lastModified": "2026-04-25T07:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/freelance-tenant-income-proof",
+      "url": "https://today2424.kr/blog/freelance-tenant-income-proof",
       "path": "/blog/freelance-tenant-income-proof",
       "type": "blog",
       "title": "프리랜서·비정규직도 전세대출 가능할까? 소득 증빙 준비 순서 | 이사독립",
@@ -374,7 +1441,7 @@
       "lastModified": "2026-04-24T21:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/studio-mold-signs",
+      "url": "https://today2424.kr/blog/studio-mold-signs",
       "path": "/blog/studio-mold-signs",
       "type": "blog",
       "title": "곰팡이 냄새 나는 원룸, 계약 전에 확인해야 할 흔적 8가지 | 이사독립",
@@ -382,63 +1449,63 @@
       "lastModified": "2026-04-24T11:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/utility-transfer-move-day",
+      "url": "https://today2424.kr/blog/utility-transfer-move-day",
       "path": "/blog/utility-transfer-move-day",
       "type": "blog",
-      "title": "이사 당일 공과금 명의 변경 순서: 도시가스·전기·수도 이… | 이사독립",
+      "title": "이사 당일 공과금 명의 변경 순서: 도시가스·전기·수도 이렇게 정리하세요 | 이사독립",
       "description": "이사 당일 정신없을 때 가장 자주 놓치는 게 공과금입니다. 도시가스, 전기, 수도를 어떤 순서로 정리해야 하는지 정리했습니다.",
       "lastModified": "2026-04-24T01:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/rainy-day-house-viewing",
+      "url": "https://today2424.kr/blog/rainy-day-house-viewing",
       "path": "/blog/rainy-day-house-viewing",
       "type": "blog",
-      "title": "비 오는 날 집 보러 가면 보이는 것들: 맑은 날엔 안 보… | 이사독립",
+      "title": "비 오는 날 집 보러 가면 보이는 것들: 맑은 날엔 안 보이는 하자 체크법 | 이사독립",
       "description": "누수, 곰팡이, 배수, 골목 물 고임은 비 오는 날 더 잘 보입니다. 집 보기 타이밍을 바꾸면 놓치던 하자를 잡을 수 있습니다.",
       "lastModified": "2026-04-23T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/deposit-transfer-checklist",
+      "url": "https://today2424.kr/blog/deposit-transfer-checklist",
       "path": "/blog/deposit-transfer-checklist",
       "type": "blog",
-      "title": "전세 계약금 송금 전 체크리스트: 계좌번호 하나로 보증금… | 이사독립",
+      "title": "전세 계약금 송금 전 체크리스트: 계좌번호 하나로 보증금 날리지 않는 법 | 이사독립",
       "description": "등기부등본 확인부터 명의 일치, 가계약 주의사항, 송금 메모까지. 계약금 보내기 전에 반드시 확인해야 할 실전 체크리스트를 정리했습니다.",
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/maintenance-fee-red-flags",
+      "url": "https://today2424.kr/blog/maintenance-fee-red-flags",
       "path": "/blog/maintenance-fee-red-flags",
       "type": "blog",
-      "title": "오피스텔 관리비 폭탄 피하는 법: 계약 전에 꼭 물어봐야… | 이사독립",
+      "title": "오피스텔 관리비 폭탄 피하는 법: 계약 전에 꼭 물어봐야 할 7가지 | 이사독립",
       "description": "월세보다 관리비가 더 무서운 집도 있습니다. 공용관리비, 인터넷, 수도, 전기, 주차비까지 계약 전에 반드시 확인해야 할 질문을 정리했습니다.",
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/lease-end-notice-template",
+      "url": "https://today2424.kr/blog/lease-end-notice-template",
       "path": "/blog/lease-end-notice-template",
       "type": "blog",
-      "title": "전세·월세 만기 통보 문자 예시: 계약 종료 전에 이렇게… | 이사독립",
+      "title": "전세·월세 만기 통보 문자 예시: 계약 종료 전에 이렇게 보내면 분쟁이 줄어든다 | 이사독립",
       "description": "만기 전에 언제, 어떤 문구로 통보해야 하는지 헷갈린다면 이 글부터 보세요. 전세·월세 종료 통보 예시와 증거 남기는 방법을 정리했습니다.",
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/first-appliance-budget-plan",
+      "url": "https://today2424.kr/blog/first-appliance-budget-plan",
       "path": "/blog/first-appliance-budget-plan",
       "type": "blog",
-      "title": "첫 자취 가전 우선순위: 한 번에 다 사지 말고 이것부터… | 이사독립",
+      "title": "첫 자취 가전 우선순위: 한 번에 다 사지 말고 이것부터 사세요 | 이사독립",
       "description": "냉장고, 세탁기, 전자레인지, 청소기 중 무엇부터 사야 할지 고민된다면 우선순위부터 정해야 합니다. 예산별 자취 가전 구성을 정리했습니다.",
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/jeonse-fraud-prevention-guide",
+      "url": "https://today2424.kr/blog/jeonse-fraud-prevention-guide",
       "path": "/blog/jeonse-fraud-prevention-guide",
       "type": "blog",
-      "title": "사회초년생을 위한 전세사기 예방 가이드 2025: 깡통전세… | 이사독립",
-      "description": "등기부등본 보는 법부터 특약사항, 전세보증보험까지. 내 소중한 보증금을 지키기 위해 계약 전 반드시 확인해야 할 체크리스트를 완벽하게 정리했습…",
+      "title": "사회초년생을 위한 전세사기 예방 가이드 2025: 깡통전세 피하는 법 | 이사독립",
+      "description": "등기부등본 보는 법부터 특약사항, 전세보증보험까지. 내 소중한 보증금을 지키기 위해 계약 전 반드시 확인해야 할 체크리스트를 완벽하게 정리했습니다.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/small-room-mirror-placement",
+      "url": "https://today2424.kr/blog/small-room-mirror-placement",
       "path": "/blog/small-room-mirror-placement",
       "type": "blog",
       "title": "좁은 방이 2배 넓어 보이는 거울 배치법 | 이사독립",
@@ -446,7 +1513,7 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/daiso-lighting-tips",
+      "url": "https://today2424.kr/blog/daiso-lighting-tips",
       "path": "/blog/daiso-lighting-tips",
       "type": "blog",
       "title": "다이소 5천원으로 끝내는 자취방 감성 조명 세팅 | 이사독립",
@@ -454,15 +1521,15 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/moving-checklist-d30",
+      "url": "https://today2424.kr/blog/moving-checklist-d30",
       "path": "/blog/moving-checklist-d30",
       "type": "blog",
-      "title": "이사 D-30, 완벽한 이사를 위한 타임라인 (체크리스트… | 이사독립",
+      "title": "이사 D-30, 완벽한 이사를 위한 타임라인 (체크리스트 포함) | 이사독립",
       "description": "이사는 하루 만에 끝나는 것이 아닙니다. D-30부터 D-Day까지, 한 달 전부터 준비해야 할 일들을 주차별로 상세하게 정리해드립니다.",
       "lastModified": "2025-11-26T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/blog/feng-shui-interior-tips",
+      "url": "https://today2424.kr/blog/feng-shui-interior-tips",
       "path": "/blog/feng-shui-interior-tips",
       "type": "blog",
       "title": "복을 부르는 원룸 풍수지리 인테리어 꿀팁 | 이사독립",
@@ -470,247 +1537,527 @@
       "lastModified": "2025-11-25T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/restoration-scope-dispute-guide",
+      "url": "https://today2424.kr/guide/dispute-evidence-package-guide",
+      "path": "/guide/dispute-evidence-package-guide",
+      "type": "guide",
+      "title": "분쟁 대비 증빙 패키지 가이드: 사진·문자·영수증을 한 번에 묶는 순서 | 이사독립 가이드",
+      "description": "퇴실 정산이나 하자 분쟁 때 바로 제출할 수 있는 증빙 묶음 구성법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-20T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/move-out-restoration-priority-guide",
+      "path": "/guide/move-out-restoration-priority-guide",
+      "type": "guide",
+      "title": "퇴실 복구 예산 우선순위 가이드: 바로 수리할 것과 협의 후 볼 항목을 나누는 법 | 이사독립 가이드",
+      "description": "퇴실 직전 가장 흔한 실수는 급한 마음에 바로 돈부터 쓰는 것입니다. 이 글은 원상복구 체크리스트가 아니라 복구 예산의 우선순위를 세우는 방법에 집중합니다.",
+      "lastModified": "2026-05-20T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/landlord-repair-deadline-record-guide",
+      "path": "/guide/landlord-repair-deadline-record-guide",
+      "type": "guide",
+      "title": "집주인 수리 약속 기한 기록 가이드: &#x27;곧 해준다&#x27;를 일정으로 바꾸는 메모법 | 이사독립 가이드",
+      "description": "집주인이나 관리실의 수리 약속을 날짜 중심으로 정리하는 기록 방식입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-19T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/defect-followup-log-guide",
+      "path": "/guide/defect-followup-log-guide",
+      "type": "guide",
+      "title": "하자 후속조치 기록 가이드: 한 번 보낸 요청을 끝까지 추적하는 로그 작성법 | 이사독립 가이드",
+      "description": "하자 통보 이후 방문 일정, 답변, 미해결 상태를 로그로 관리하는 방법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-19T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/original-condition-comparison-guide",
+      "path": "/guide/original-condition-comparison-guide",
+      "type": "guide",
+      "title": "입주·퇴실 대조표 가이드: 사진이 아니라 차이표로 원상복구 협의하는 법 | 이사독립 가이드",
+      "description": "입주 사진과 퇴실 사진이 이미 있다면, 다음 단계는 차이를 표로 정리하는 일입니다. 이 글은 원상복구 협의를 위한 대조표 작성에 초점을 맞춥니다.",
+      "lastModified": "2026-05-18T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/cleaning-supplies-budget-guide",
+      "path": "/guide/cleaning-supplies-budget-guide",
+      "type": "guide",
+      "title": "청소용품 예산표 가이드: 입주·퇴실 시즌에 돈 새는 소모품 관리법 | 이사독립 가이드",
+      "description": "청소도구와 세제 예산을 항목화해 불필요한 중복 구매를 줄이는 방법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-18T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/repair-purchase-receipt-guide",
+      "path": "/guide/repair-purchase-receipt-guide",
+      "type": "guide",
+      "title": "수리·교체 비용 영수증 가이드: 먼저 산 물건이 비용 협의 자료가 되게 정리하는 법 | 이사독립 가이드",
+      "description": "전구, 실리콘, 소모 부품처럼 직접 구매한 수리 관련 영수증을 정리하는 기준입니다.",
+      "lastModified": "2026-05-18T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/utility-receipt-archive-guide",
+      "path": "/guide/utility-receipt-archive-guide",
+      "type": "guide",
+      "title": "공과금 영수증 보관 가이드: 고지서와 납부내역을 한 번에 찾는 폴더 구조 | 이사독립 가이드",
+      "description": "전기·가스·수도 영수증과 고지서를 월별로 보관하는 실용적인 기준입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-17T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/recurring-home-ops-checklist-guide",
+      "path": "/guide/recurring-home-ops-checklist-guide",
+      "type": "guide",
+      "title": "생활 운영 정기 점검표 가이드: 한 달에 한 번 돌리면 좋은 집 관리 항목 | 이사독립 가이드",
+      "description": "자취방을 운영하듯 관리하기 위한 월간 점검표 항목을 정리했습니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-17T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/first-month-living-budget-sheet",
+      "path": "/guide/first-month-living-budget-sheet",
+      "type": "guide",
+      "title": "입주 첫 달 생활운영 예산표 가이드: 숨은 초기비용까지 적는 항목표 | 이사독립 가이드",
+      "description": "입주 첫 달에만 몰리는 소모품과 고정비를 따로 잡는 예산표 구성법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-16T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/balcony-window-check-form-guide",
+      "path": "/guide/balcony-window-check-form-guide",
+      "type": "guide",
+      "title": "베란다·창호 점검 폼 가이드: 결로와 틈새 문제를 항목으로 남기는 법 | 이사독립 가이드",
+      "description": "창문, 방충망, 실리콘, 배수 상태를 점검 폼으로 정리하는 방법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-16T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/scratch-map-record-guide",
+      "path": "/guide/scratch-map-record-guide",
+      "type": "guide",
+      "title": "벽·바닥 흠집 지도 기록 가이드: 원상복구 분쟁 줄이는 위치 표시법 | 이사독립 가이드",
+      "description": "흠집을 사진만이 아니라 위치 지도 형태로 함께 정리하는 방법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-15T22:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/bathroom-drain-check-form-guide",
+      "path": "/guide/bathroom-drain-check-form-guide",
+      "type": "guide",
+      "title": "욕실 배수 점검 폼 가이드: 냄새·역류 문제를 처음부터 기록하는 체크 방식 | 이사독립 가이드",
+      "description": "욕실 배수와 환기 상태를 항목별로 확인하는 간단한 폼 구성법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-15T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/appliance-inspection-form-guide",
+      "path": "/guide/appliance-inspection-form-guide",
+      "type": "guide",
+      "title": "옵션 가전 점검 폼 가이드: 작동 확인을 메모가 아니라 표로 남기는 법 | 이사독립 가이드",
+      "description": "에어컨, 세탁기, 냉장고 같은 옵션 가전을 표 형태로 점검하는 방법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-15T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/room-photo-shot-list-guide",
+      "path": "/guide/room-photo-shot-list-guide",
+      "type": "guide",
+      "title": "입주·퇴실 사진 촬영 순서표 가이드: 기록 누락을 줄이는 샷리스트 운영법 | 이사독립 가이드",
+      "description": "무엇을 찍을지는 알아도 어떤 순서로 찍을지 정하지 않으면 누락이 생깁니다. 이 글은 사진 기록 자체보다 촬영 순서표 운영에 초점을 맞춥니다.",
+      "lastModified": "2026-05-14T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/shared-bills-proof-guide",
+      "path": "/guide/shared-bills-proof-guide",
+      "type": "guide",
+      "title": "공동 거주 공과금 분담 증빙 가이드: 같이 살 때 정산 기준을 남기는 법 | 이사독립 가이드",
+      "description": "룸메이트나 동거 상황에서 공과금 분담 내역을 깔끔하게 정리하는 기준입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-14T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/wifi-install-check-record-guide",
+      "path": "/guide/wifi-install-check-record-guide",
+      "type": "guide",
+      "title": "와이파이 설치 확인 기록 가이드: 기사 방문 후 바로 점검해야 할 항목 | 이사독립 가이드",
+      "description": "인터넷 설치 기사 방문 직후 체크하면 좋은 속도, 위치, 배선 기록 정리법입니다.",
+      "lastModified": "2026-05-13T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/internet-transfer-cancel-guide",
+      "path": "/guide/internet-transfer-cancel-guide",
+      "type": "guide",
+      "title": "인터넷 이전·해지 확인 가이드: 설치 예약만 보고 끝내면 안 되는 체크포인트 | 이사독립 가이드",
+      "description": "인터넷 이전과 해지 과정에서 놓치기 쉬운 위약금, 장비 반납, 공백일 확인법입니다.",
+      "lastModified": "2026-05-13T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/utility-settlement-note-guide",
+      "path": "/guide/utility-settlement-note-guide",
+      "type": "guide",
+      "title": "공과금 정산 메모 가이드: 마지막 달 요금 계산을 구두로 끝내지 않는 법 | 이사독립 가이드",
+      "description": "퇴실 직전 마지막 공과금을 간단한 정산 메모로 남기는 방법입니다. 실제 적용 기준까지 함께 확인합니다.",
+      "lastModified": "2026-05-13T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/utility-meter-photo-log-guide",
+      "path": "/guide/utility-meter-photo-log-guide",
+      "type": "guide",
+      "title": "공과금 계량기 사진 기록 가이드: 입주·퇴실 숫자를 헷갈리지 않게 남기는 법 | 이사독립 가이드",
+      "description": "전기·가스·수도 계량기 사진을 언제 어떻게 찍어야 정산 근거가 되는지 정리했습니다.",
+      "lastModified": "2026-05-12T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/address-change-proof-bundle-guide",
+      "path": "/guide/address-change-proof-bundle-guide",
+      "type": "guide",
+      "title": "주소 변경 증빙 묶음 가이드: 전입 이후 꼭 남겨둘 확인 자료 | 이사독립 가이드",
+      "description": "주소 변경을 마친 뒤 놓치기 쉬운 확인 자료를 한 폴더로 정리하는 실무 방법입니다.",
+      "lastModified": "2026-05-12T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/restoration-estimate-document-guide",
+      "path": "/guide/restoration-estimate-document-guide",
+      "type": "guide",
+      "title": "원상복구 견적서 정리 가이드: 견적 비교 전에 먼저 볼 문서 포인트 | 이사독립 가이드",
+      "description": "원상복구 비용을 비교할 때 견적서에서 놓치기 쉬운 항목과 확인 순서를 정리했습니다.",
+      "lastModified": "2026-05-11T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/move-out-key-return-record-guide",
+      "path": "/guide/move-out-key-return-record-guide",
+      "type": "guide",
+      "title": "퇴실 열쇠 반납 기록 가이드: 문 앞에서 끝내지 말고 반납 증빙 남기기 | 이사독립 가이드",
+      "description": "열쇠를 돌려준 사실과 시점을 남기는 퇴실용 기록 정리법과 보증금 정산 기준입니다.",
+      "lastModified": "2026-05-11T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/key-receipt-confirmation-guide",
+      "path": "/guide/key-receipt-confirmation-guide",
+      "type": "guide",
+      "title": "열쇠·카드키 수령 확인서 가이드: 퇴실 때 분실 분쟁 줄이는 기록법 | 이사독립 가이드",
+      "description": "입주 시 받은 출입 수단을 정확히 적어두면 퇴실 정산과 분실 분쟁 대응이 쉬워집니다.",
+      "lastModified": "2026-05-10T22:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/move-in-handover-check-docs",
+      "path": "/guide/move-in-handover-check-docs",
+      "type": "guide",
+      "title": "입주 운영 인수인계 문서 가이드: 하자 점검표와 별도로 받아야 할 생활 정보 정리법 | 이사독립 가이드",
+      "description": "하자 사진과 별개로 관리실 연락처, 쓰레기 규칙, 옵션 사용법처럼 실제 생활 운영 정보를 문서로 넘겨받는 정리법입니다.",
+      "lastModified": "2026-05-10T12:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/vacate-and-refund-timing-guide",
+      "path": "/guide/vacate-and-refund-timing-guide",
+      "type": "guide",
+      "title": "명도와 보증금 반환 타이밍 가이드: 열쇠를 먼저 넘겨도 되는지 판단하는 법 | 이사독립 가이드",
+      "description": "퇴거와 보증금 반환의 순서를 잘못 잡으면 협상력이 급격히 떨어집니다. 열쇠 인도, 짐 반출, 잔금 수령의 안전한 순서를 정리했습니다.",
+      "lastModified": "2026-05-10T02:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/payment-order-for-deposit-guide",
+      "path": "/guide/payment-order-for-deposit-guide",
+      "type": "guide",
+      "title": "보증금 지급명령 가이드: 소송 전 빠르게 시도해볼 수 있는 절차 | 이사독립 가이드",
+      "description": "집주인이 다투지 않을 가능성이 있다면 지급명령이 시간을 줄일 수 있습니다. 어떤 경우에 적합하고 무엇을 준비해야 하는지 정리했습니다.",
+      "lastModified": "2026-05-09T16:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/deposit-demand-letter-guide",
+      "path": "/guide/deposit-demand-letter-guide",
+      "type": "guide",
+      "title": "보증금 반환 내용증명 가이드: 감정 빼고 요구사항만 남기는 문장 구조 | 이사독립 가이드",
+      "description": "내용증명은 세게 쓰는 문서가 아니라 사실관계를 분명히 남기는 문서입니다. 보증금 반환 요구서에 들어가야 할 핵심 문장을 정리했습니다.",
+      "lastModified": "2026-05-09T06:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/deposit-return-prelitigation-guide",
+      "path": "/guide/deposit-return-prelitigation-guide",
+      "type": "guide",
+      "title": "보증금 반환소송 전 체크 가이드: 소장 쓰기 전에 먼저 정리할 것들 | 이사독립 가이드",
+      "description": "바로 소송으로 가기 전에 사실관계와 증거를 정리해야 합니다. 소송 전 단계에서 빠지기 쉬운 항목을 정리했습니다.",
+      "lastModified": "2026-05-08T20:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/jeonse-insurance-claim-guide",
+      "path": "/guide/jeonse-insurance-claim-guide",
+      "type": "guide",
+      "title": "전세보증보험 청구 가이드: 만기 후 실제 청구까지 필요한 준비 | 이사독립 가이드",
+      "description": "보험 가입까지만 알고 청구 단계는 놓치는 경우가 많습니다. 만기 도래 후 어떤 자료를 모으고 어떤 순서로 진행하는지 정리했습니다.",
+      "lastModified": "2026-05-08T10:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/corporate-landlord-document-guide",
+      "path": "/guide/corporate-landlord-document-guide",
+      "type": "guide",
+      "title": "법인 임대인 확인 가이드: 회사 소유 건물 계약 전 꼭 보는 서류 | 이사독립 가이드",
+      "description": "법인 명의 건물은 대표자 말만 듣고 계약하면 위험합니다. 법인등기와 권한 증빙을 어떻게 봐야 하는지 정리했습니다.",
+      "lastModified": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/landlord-change-notice-guide",
+      "path": "/guide/landlord-change-notice-guide",
+      "type": "guide",
+      "title": "집주인 변경 통지 가이드: 소유권 이전 뒤 누구에게 월세와 보증금을 맡겨야 하나 | 이사독립 가이드",
+      "description": "계약 중 소유자가 바뀌면 월세 송금처와 보증금 반환 책임이 흔들리기 쉽습니다. 새 집주인 확인 절차를 정리했습니다.",
+      "lastModified": "2026-05-07T14:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/management-fee-arrears-transfer-guide",
+      "path": "/guide/management-fee-arrears-transfer-guide",
+      "type": "guide",
+      "title": "관리비 체납 승계 오해 가이드: 이전 세입자 미납분을 왜 내가 내면 안 되나 | 이사독립 가이드",
+      "description": "입주 직후 이전 체납분이 청구되는 일이 있습니다. 임차인이 어디까지 부담하는지, 어떤 증빙을 요구해야 하는지 정리했습니다.",
+      "lastModified": "2026-05-07T04:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/special-clause-safety-guide",
+      "path": "/guide/special-clause-safety-guide",
+      "type": "guide",
+      "title": "임대차 특약 안전문구 가이드: 꼭 넣어야 할 문장과 피해야 할 문장 | 이사독립 가이드",
+      "description": "특약은 많다고 좋은 것이 아니라 분쟁 지점을 정확히 막아야 합니다. 보증금, 권리변동, 하자수리 중심으로 실무 문구를 정리했습니다.",
+      "lastModified": "2026-05-06T18:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/brokerage-fee-dispute-guide",
+      "path": "/guide/brokerage-fee-dispute-guide",
+      "type": "guide",
+      "title": "중개보수 분쟁 가이드: 법정 상한과 추가 청구를 구분하는 법 | 이사독립 가이드",
+      "description": "복비는 보통 계약 막판에 급하게 정해집니다. 상한 요율, 부가세, 별도 청구 항목을 어떻게 봐야 하는지 정리했습니다.",
+      "lastModified": "2026-05-06T08:00:00.000Z"
+    },
+    {
+      "url": "https://today2424.kr/guide/restoration-scope-dispute-guide",
       "path": "/guide/restoration-scope-dispute-guide",
       "type": "guide",
-      "title": "원상복구 범위 분쟁 가이드: 생활마모와 수리비 청구… | 이사독립 가이드",
+      "title": "원상복구 범위 분쟁 가이드: 생활마모와 수리비 청구를 구분하는 기준 | 이사독립 가이드",
       "description": "퇴거 직전 가장 많이 다투는 것이 원상복구 범위입니다. 생활 마모와 임차인 과실을 어떻게 나눠 봐야 하는지 실무 기준을 정리했습니다.",
       "lastModified": "2026-05-05T22:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/termination-notice-timing-guide",
+      "url": "https://today2424.kr/guide/termination-notice-timing-guide",
       "path": "/guide/termination-notice-timing-guide",
       "type": "guide",
-      "title": "해지 통보 시점 가이드: 늦게 말해서 보증금이 묶이… | 이사독립 가이드",
+      "title": "해지 통보 시점 가이드: 늦게 말해서 보증금이 묶이는 상황 피하는 법 | 이사독립 가이드",
       "description": "종료 의사가 있어도 통보가 늦으면 일정과 반환금이 꼬입니다. 전세·월세 해지 통보를 언제 어떤 방식으로 해야 하는지 정리했습니다.",
       "lastModified": "2026-05-05T12:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/lease-early-termination-settlement-guide",
+      "url": "https://today2424.kr/guide/lease-early-termination-settlement-guide",
       "path": "/guide/lease-early-termination-settlement-guide",
       "type": "guide",
-      "title": "임대차 중도해지 합의서 가이드: 퇴거일·복비·관리비… | 이사독립 가이드",
+      "title": "임대차 중도해지 합의서 가이드: 퇴거일·복비·관리비를 문서로 끊어내는 법 | 이사독립 가이드",
       "description": "중도해지 분쟁은 보통 말로 합의했다가 다시 틀어질 때 커집니다. 이 글은 정산 자체보다 합의서 문구와 기록 구조에 초점을 맞춥니다.",
       "lastModified": "2026-05-05T02:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/implicit-renewal-risk-guide",
+      "url": "https://today2424.kr/guide/implicit-renewal-risk-guide",
       "path": "/guide/implicit-renewal-risk-guide",
       "type": "guide",
-      "title": "묵시적 갱신 리스크 가이드: 조용히 연장됐을 때 달… | 이사독립 가이드",
+      "title": "묵시적 갱신 리스크 가이드: 조용히 연장됐을 때 달라지는 권리 | 이사독립 가이드",
       "description": "별말 없이 계약이 이어졌다고 모두 같은 조건은 아닙니다. 묵시적 갱신에서 해지와 중도퇴거가 어떻게 달라지는지 정리했습니다.",
       "lastModified": "2026-05-04T16:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/renewal-request-proof-guide",
+      "url": "https://today2424.kr/guide/renewal-request-proof-guide",
       "path": "/guide/renewal-request-proof-guide",
       "type": "guide",
-      "title": "계약갱신요구권 발송 기록 가이드: 행사 사실을 증명… | 이사독립 가이드",
+      "title": "계약갱신요구권 발송 기록 가이드: 행사 사실을 증명하는 캡처 묶음 만드는 법 | 이사독립 가이드",
       "description": "갱신청구 내용 자체보다 나중에 어떻게 입증할지가 더 중요할 때가 많습니다. 발송 화면, 도달 기록, 답변 보관 흐름을 중심으로 정리했습니다.",
       "lastModified": "2026-05-04T06:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/senior-rights-analysis-guide",
+      "url": "https://today2424.kr/guide/senior-rights-analysis-guide",
       "path": "/guide/senior-rights-analysis-guide",
       "type": "guide",
-      "title": "선순위 권리 분석 가이드: 보증금보다 먼저 가져가는… | 이사독립 가이드",
+      "title": "선순위 권리 분석 가이드: 보증금보다 먼저 가져가는 사람 찾는 법 | 이사독립 가이드",
       "description": "전세 사고는 대부분 선순위 권리 계산을 대충 해서 발생합니다. 등기부, 체납, 임차인 순서를 합쳐 보는 실무 기준을 정리했습니다.",
       "lastModified": "2026-05-03T20:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/tenant-registration-order-guide",
+      "url": "https://today2424.kr/guide/tenant-registration-order-guide",
       "path": "/guide/tenant-registration-order-guide",
       "type": "guide",
-      "title": "임차권등기명령 가이드: 이사 먼저 해야 할 때 권리… | 이사독립 가이드",
+      "title": "임차권등기명령 가이드: 이사 먼저 해야 할 때 권리 지키는 순서 | 이사독립 가이드",
       "description": "보증금을 못 받았는데 이사를 나가야 한다면 임차권등기명령을 검토해야 합니다. 신청 전후 실수하기 쉬운 포인트를 정리했습니다.",
       "lastModified": "2026-05-03T10:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/fixed-date-priority-guide",
+      "url": "https://today2424.kr/guide/fixed-date-priority-guide",
       "path": "/guide/fixed-date-priority-guide",
       "type": "guide",
-      "title": "확정일자 우선순위 가이드: 전입신고·점유와 함께 봐… | 이사독립 가이드",
+      "title": "확정일자 우선순위 가이드: 전입신고·점유와 함께 봐야 하는 이유 | 이사독립 가이드",
       "description": "확정일자만 받으면 끝이라고 생각하기 쉽습니다. 실제 우선순위는 전입, 점유, 선순위 권리와 함께 봐야 합니다.",
       "lastModified": "2026-05-03T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/jeonse-right-registration-guide",
+      "url": "https://today2424.kr/guide/jeonse-right-registration-guide",
       "path": "/guide/jeonse-right-registration-guide",
       "type": "guide",
-      "title": "전세권 설정 가이드: 확정일자와 무엇이 다르고 언제… | 이사독립 가이드",
+      "title": "전세권 설정 가이드: 확정일자와 무엇이 다르고 언제 유리한가 | 이사독립 가이드",
       "description": "전세권은 이름만 들어보고 실제로는 거의 모르는 경우가 많습니다. 전세권 설정이 필요한 상황과 비용, 한계를 실무 기준으로 정리했습니다.",
       "lastModified": "2026-05-02T14:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/national-tax-arrears-document-guide",
+      "url": "https://today2424.kr/guide/national-tax-arrears-document-guide",
       "path": "/guide/national-tax-arrears-document-guide",
       "type": "guide",
-      "title": "국세·지방세 체납 확인 가이드: 집주인 체납 리스크… | 이사독립 가이드",
+      "title": "국세·지방세 체납 확인 가이드: 집주인 체납 리스크를 서류로 보는 법 | 이사독립 가이드",
       "description": "체납이 의심될 때 무엇을 요청하고 어디까지 확인해야 하는지 정리했습니다. 문제없다는 말보다 증빙 서류가 먼저입니다.",
       "lastModified": "2026-05-02T04:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/registry-serial-check-guide",
+      "url": "https://today2424.kr/guide/registry-serial-check-guide",
       "path": "/guide/registry-serial-check-guide",
       "type": "guide",
-      "title": "등기부 접수번호 연속 확인 가이드: 계약 당일 권리… | 이사독립 가이드",
+      "title": "등기부 접수번호 연속 확인 가이드: 계약 당일 권리변동 놓치지 않는 법 | 이사독립 가이드",
       "description": "등기부를 한 번 봤다고 끝이 아닙니다. 접수번호와 접수일자를 읽으면 계약 직전 급하게 들어온 권리를 더 빨리 발견할 수 있습니다.",
       "lastModified": "2026-05-01T18:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/co-ownership-lease-consent-guide",
+      "url": "https://today2424.kr/guide/co-ownership-lease-consent-guide",
       "path": "/guide/co-ownership-lease-consent-guide",
       "type": "guide",
-      "title": "공동명의 집 계약 가이드: 공동소유자 전원 동의가… | 이사독립 가이드",
+      "title": "공동명의 집 계약 가이드: 공동소유자 전원 동의가 필요한 이유 | 이사독립 가이드",
       "description": "공동명의 주택은 한 사람 설명만 듣고 계약하면 위험합니다. 지분 비율보다 중요한 것은 누가 임대차에 동의했는지입니다.",
       "lastModified": "2026-05-01T08:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/trust-property-lease-guide",
+      "url": "https://today2424.kr/guide/trust-property-lease-guide",
       "path": "/guide/trust-property-lease-guide",
       "type": "guide",
-      "title": "신탁부동산 임대차 가이드: 신탁등기 집은 누구와 계… | 이사독립 가이드",
+      "title": "신탁부동산 임대차 가이드: 신탁등기 집은 누구와 계약해야 안전한가 | 이사독립 가이드",
       "description": "신탁등기가 찍힌 집은 일반 임대차와 확인 포인트가 다릅니다. 위탁자·수탁자·임대차 동의서 구조를 모르면 보증금 회수가 꼬일 수 있습니다.",
       "lastModified": "2026-04-30T22:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/building-register-mismatch-guide",
+      "url": "https://today2424.kr/guide/building-register-mismatch-guide",
       "path": "/guide/building-register-mismatch-guide",
       "type": "guide",
-      "title": "건축물대장 확인 가이드: 불법 증축·위반건축물 계약… | 이사독립 가이드",
+      "title": "건축물대장 확인 가이드: 불법 증축·위반건축물 계약 전에 걸러내는 법 | 이사독립 가이드",
       "description": "등기부만 멀쩡해도 건축물대장에서 문제가 드러나는 경우가 많습니다. 위반건축물, 용도, 면적 불일치를 계약 전에 확인하는 절차를 정리했습니다.",
       "lastModified": "2026-04-30T12:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/registry-seizure-check-guide",
+      "url": "https://today2424.kr/guide/registry-seizure-check-guide",
       "path": "/guide/registry-seizure-check-guide",
       "type": "guide",
-      "title": "등기부 압류·가압류 체크 가이드: 계약 직전 반드시… | 이사독립 가이드",
+      "title": "등기부 압류·가압류 체크 가이드: 계약 직전 반드시 보는 위험 신호 | 이사독립 가이드",
       "description": "근저당만 보고 끝내면 놓치는 권리가 있습니다. 압류·가압류·가처분이 보일 때 임차인이 무엇을 멈추고 무엇을 확인해야 하는지 정리했습니다.",
       "lastModified": "2026-04-30T02:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/rental-contract-special-clauses-guide",
+      "url": "https://today2424.kr/guide/rental-contract-special-clauses-guide",
       "path": "/guide/rental-contract-special-clauses-guide",
       "type": "guide",
-      "title": "임대차 특약 작성 가이드: 짧아도 효과 있는 문장… | 이사독립 가이드",
+      "title": "임대차 특약 작성 가이드: 짧아도 효과 있는 문장 구조 | 이사독립 가이드",
       "description": "특약은 길게 쓰는 것보다 핵심을 분명히 적는 것이 중요합니다. 자주 쓰는 특약과 문장 구조를 정리했습니다.",
       "lastModified": "2026-04-29T16:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/entry-inspection-form-guide",
+      "url": "https://today2424.kr/guide/entry-inspection-form-guide",
       "path": "/guide/entry-inspection-form-guide",
       "type": "guide",
-      "title": "입주 점검표 작성 가이드: 하자 메모를 구두로만 남… | 이사독립 가이드",
+      "title": "입주 점검표 작성 가이드: 하자 메모를 구두로만 남기면 안 되는 이유 | 이사독립 가이드",
       "description": "입주 직후 하자를 구두로만 말하면 나중에 증거가 약해집니다. 체크리스트와 사진을 어떻게 같이 남겨야 하는지 정리했습니다.",
       "lastModified": "2026-04-29T06:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/monthly-rent-receipt-guide",
+      "url": "https://today2424.kr/guide/monthly-rent-receipt-guide",
       "path": "/guide/monthly-rent-receipt-guide",
       "type": "guide",
-      "title": "월세 영수증과 계좌이체 기록 정리 가이드: 나중에… | 이사독립 가이드",
+      "title": "월세 영수증과 계좌이체 기록 정리 가이드: 나중에 가장 먼저 찾는 자료 | 이사독립 가이드",
       "description": "월세는 매달 나가지만 기록은 자주 놓칩니다. 계좌이체 내역, 영수증, 관리비 정산 자료를 어떻게 보관하면 좋은지 정리했습니다.",
       "lastModified": "2026-04-28T20:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/rent-budget-sheet-guide",
+      "url": "https://today2424.kr/guide/rent-budget-sheet-guide",
       "path": "/guide/rent-budget-sheet-guide",
       "type": "guide",
-      "title": "월세 예산표 만드는 법: 월세만 보지 말고 고정지출… | 이사독립 가이드",
+      "title": "월세 예산표 만드는 법: 월세만 보지 말고 고정지출까지 같이 계산하기 | 이사독립 가이드",
       "description": "월세 5만 원 차이가 실제 생활비 전체에는 더 크게 느껴질 수 있습니다. 자취 시작 전에 월세 예산표를 만드는 기준을 정리했습니다.",
       "lastModified": "2026-04-28T10:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/studio-storage-planning-guide",
+      "url": "https://today2424.kr/guide/studio-storage-planning-guide",
       "path": "/guide/studio-storage-planning-guide",
       "type": "guide",
-      "title": "원룸 수납 계획 가이드: 짐이 많을수록 입주 전에… | 이사독립 가이드",
+      "title": "원룸 수납 계획 가이드: 짐이 많을수록 입주 전에 배치를 정해야 하는 이유 | 이사독립 가이드",
       "description": "좁은 방은 예쁜 수납보다 동선이 먼저입니다. 입주 전에 짐 종류를 기준으로 수납 구역을 나누는 방법을 정리했습니다.",
       "lastModified": "2026-04-28T00:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/internet-install-booking-guide",
+      "url": "https://today2424.kr/guide/internet-install-booking-guide",
       "path": "/guide/internet-install-booking-guide",
       "type": "guide",
-      "title": "인터넷 설치 예약 가이드: 이사 당일 끊기지 않게… | 이사독립 가이드",
+      "title": "인터넷 설치 예약 가이드: 이사 당일 끊기지 않게 준비하는 법 | 이사독립 가이드",
       "description": "이사 당일 인터넷이 안 되면 생활이 바로 불편해집니다. 해지, 이전, 신규 설치를 어떤 순서로 예약해야 하는지 정리했습니다.",
       "lastModified": "2026-04-27T14:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/house-photo-record-guide",
+      "url": "https://today2424.kr/guide/house-photo-record-guide",
       "path": "/guide/house-photo-record-guide",
       "type": "guide",
-      "title": "집 상태 사진 기록 가이드: 입주 전·후 분쟁을 줄… | 이사독립 가이드",
+      "title": "집 상태 사진 기록 가이드: 입주 전·후 분쟁을 줄이는 촬영 순서 | 이사독립 가이드",
       "description": "사진은 많이 찍는 것보다 빠짐없이 찍는 게 중요합니다. 입주 전후 분쟁을 줄이기 위한 촬영 순서를 정리했습니다.",
       "lastModified": "2026-04-27T04:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/move-in-day-document-pack",
+      "url": "https://today2424.kr/guide/move-in-day-document-pack",
       "path": "/guide/move-in-day-document-pack",
       "type": "guide",
-      "title": "입주 당일 서류 묶음 체크리스트: 계약서, 영수증,… | 이사독립 가이드",
+      "title": "입주 당일 서류 묶음 체크리스트: 계약서, 영수증, 계량기 사진까지 | 이사독립 가이드",
       "description": "이사 당일엔 정신이 없어서 서류를 빼먹기 쉽습니다. 입주 당일 꼭 모아둬야 할 문서와 기록을 체크리스트로 정리했습니다.",
       "lastModified": "2026-04-26T18:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/part-time-worker-rent-docs",
+      "url": "https://today2424.kr/guide/part-time-worker-rent-docs",
       "path": "/guide/part-time-worker-rent-docs",
       "type": "guide",
-      "title": "아르바이트·단기근로자 임대차 서류 준비법: 계약 전… | 이사독립 가이드",
+      "title": "아르바이트·단기근로자 임대차 서류 준비법: 계약 전에 챙길 자료 | 이사독립 가이드",
       "description": "고정 재직 증빙이 약한 경우에도 준비할 수 있는 자료는 있습니다. 계약 전 신용과 소득을 설명할 수 있는 서류를 정리했습니다.",
       "lastModified": "2026-04-26T08:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/officetel-contract-checklist",
+      "url": "https://today2424.kr/guide/officetel-contract-checklist",
       "path": "/guide/officetel-contract-checklist",
       "type": "guide",
-      "title": "오피스텔 계약 체크리스트: 관리규약과 실거주 조건까… | 이사독립 가이드",
+      "title": "오피스텔 계약 체크리스트: 관리규약과 실거주 조건까지 같이 봐야 하는 이유 | 이사독립 가이드",
       "description": "오피스텔은 아파트와 달리 관리규약과 비용 구조를 더 자세히 봐야 합니다. 계약 전에 꼭 확인해야 할 항목을 정리했습니다.",
       "lastModified": "2026-04-25T22:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/mold-repair-request-template",
+      "url": "https://today2424.kr/guide/mold-repair-request-template",
       "path": "/guide/mold-repair-request-template",
       "type": "guide",
-      "title": "곰팡이·누수 하자보수 요청 문자 템플릿: 감정 섞지… | 이사독립 가이드",
+      "title": "곰팡이·누수 하자보수 요청 문자 템플릿: 감정 섞지 않고 남기는 법 | 이사독립 가이드",
       "description": "하자보수 요청은 기록이 중요합니다. 곰팡이와 누수 문제를 집주인에게 전달할 때 바로 쓸 수 있는 문장 구조를 정리했습니다.",
       "lastModified": "2026-04-25T12:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/jeonse-loan-documents-guide",
+      "url": "https://today2424.kr/guide/jeonse-loan-documents-guide",
       "path": "/guide/jeonse-loan-documents-guide",
       "type": "guide",
-      "title": "전세대출 서류 가이드: 계약서 외에 은행이 자주 요… | 이사독립 가이드",
+      "title": "전세대출 서류 가이드: 계약서 외에 은행이 자주 요구하는 자료 | 이사독립 가이드",
       "description": "전세대출은 계약서만 제출한다고 끝나지 않습니다. 은행마다 추가로 자주 요구하는 서류를 미리 정리해두면 일정이 덜 꼬입니다.",
       "lastModified": "2026-04-25T02:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/landlord-tax-arrears-check",
+      "url": "https://today2424.kr/guide/landlord-tax-arrears-check",
       "path": "/guide/landlord-tax-arrears-check",
       "type": "guide",
-      "title": "집주인 세금 체납 확인이 왜 중요한가: 국세·지방세… | 이사독립 가이드",
+      "title": "집주인 세금 체납 확인이 왜 중요한가: 국세·지방세 위험 신호 읽는 법 | 이사독립 가이드",
       "description": "등기부등본만 보고 끝내면 부족할 때가 있습니다. 집주인 세금 체납 여부가 왜 중요한지, 계약 전에 어떻게 확인해야 하는지 정리했습니다.",
       "lastModified": "2026-04-24T16:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/gas-electric-water-change-guide",
+      "url": "https://today2424.kr/guide/gas-electric-water-change-guide",
       "path": "/guide/gas-electric-water-change-guide",
       "type": "guide",
-      "title": "도시가스·전기·수도 이전 신청 가이드: 이사 전에… | 이사독립 가이드",
+      "title": "도시가스·전기·수도 이전 신청 가이드: 이사 전에 예약해야 하는 것들 | 이사독립 가이드",
       "description": "공과금 이전 신청을 늦게 하면 이사 당일 불편이 커집니다. 도시가스, 전기, 수도를 어떤 순서로 예약해야 하는지 정리했습니다.",
       "lastModified": "2026-04-24T06:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/online-transfer-address-guide",
+      "url": "https://today2424.kr/guide/online-transfer-address-guide",
       "path": "/guide/online-transfer-address-guide",
       "type": "guide",
-      "title": "전입신고 온라인 신청 가이드: 주민센터 안 가고 처… | 이사독립 가이드",
+      "title": "전입신고 온라인 신청 가이드: 주민센터 안 가고 처리하는 순서 | 이사독립 가이드",
       "description": "이사 후 꼭 해야 하는 전입신고를 정부24에서 처리하는 순서를 정리했습니다. 준비물과 자주 막히는 부분도 같이 설명합니다.",
       "lastModified": "2026-04-23T20:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/house-viewing-checklist",
+      "url": "https://today2424.kr/guide/house-viewing-checklist",
       "path": "/guide/house-viewing-checklist",
       "type": "guide",
       "title": "원룸·오피스텔 집 보러 갈 때 체크리스트 30개 | 이사독립 가이드",
@@ -718,47 +2065,47 @@
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/maintenance-fee-guide",
+      "url": "https://today2424.kr/guide/maintenance-fee-guide",
       "path": "/guide/maintenance-fee-guide",
       "type": "guide",
-      "title": "관리비 확인 가이드: 고정관리비와 별도비용을 구분하… | 이사독립 가이드",
+      "title": "관리비 확인 가이드: 고정관리비와 별도비용을 구분하는 방법 | 이사독립 가이드",
       "description": "광고에 적힌 관리비 숫자만 믿지 말아야 하는 이유와, 실제 월 주거비를 계산하는 기준을 정리했습니다.",
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/move-out-checklist",
+      "url": "https://today2424.kr/guide/move-out-checklist",
       "path": "/guide/move-out-checklist",
       "type": "guide",
-      "title": "퇴실 체크리스트: 원상복구와 보증금 분쟁을 줄이는… | 이사독립 가이드",
+      "title": "퇴실 체크리스트: 원상복구와 보증금 분쟁을 줄이는 순서 | 이사독립 가이드",
       "description": "이사 나가기 전에 사진, 청소, 수리 범위, 계량기 기록까지 무엇을 남겨야 하는지 순서대로 정리했습니다.",
       "lastModified": "2026-04-22T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/how-to-read-registry",
+      "url": "https://today2424.kr/guide/how-to-read-registry",
       "path": "/guide/how-to-read-registry",
       "type": "guide",
-      "title": "등기부등본 보는 법 A to Z: 전세 사기 피하는… | 이사독립 가이드",
+      "title": "등기부등본 보는 법 A to Z: 전세 사기 피하는 필수 생존 지식 | 이사독립 가이드",
       "description": "집 계약 전 필수! 표제부, 갑구, 을구의 의미와 반드시 확인해야 할 위험 신호를 완벽하게 분석해드립니다.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/standard-rental-contract",
+      "url": "https://today2424.kr/guide/standard-rental-contract",
       "path": "/guide/standard-rental-contract",
       "type": "guide",
-      "title": "표준임대차계약서 작성 가이드: 특약사항 한 줄이 내… | 이사독립 가이드",
+      "title": "표준임대차계약서 작성 가이드: 특약사항 한 줄이 내 돈을 지킨다 | 이사독립 가이드",
       "description": "법무부가 권장하는 표준임대차계약서, 빈칸 없이 꼼꼼하게 채우는 방법과 필수 특약사항 5가지.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/jeonse-insurance-guide",
+      "url": "https://today2424.kr/guide/jeonse-insurance-guide",
       "path": "/guide/jeonse-insurance-guide",
       "type": "guide",
-      "title": "전세보증보험 가입 조건 및 반려 사유 총정리 (HU… | 이사독립 가이드",
+      "title": "전세보증보험 가입 조건 및 반려 사유 총정리 (HUG, HF, SGI) | 이사독립 가이드",
       "description": "내 보증금을 지키는 최후의 보루. 보증보험 가입 조건부터 거절되는 이유까지 상세하게 알려드립니다.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/moving-center-selection",
+      "url": "https://today2424.kr/guide/moving-center-selection",
       "path": "/guide/moving-center-selection",
       "type": "guide",
       "title": "호구 당하지 않는 포장이사 업체 선정 체크리스트 | 이사독립 가이드",
@@ -766,15 +2113,15 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/administrative-welfare-center",
+      "url": "https://today2424.kr/guide/administrative-welfare-center",
       "path": "/guide/administrative-welfare-center",
       "type": "guide",
-      "title": "이사 당일 주민센터 업무: 전입신고, 확정일자, 대… | 이사독립 가이드",
+      "title": "이사 당일 주민센터 업무: 전입신고, 확정일자, 대형폐기물 | 이사독립 가이드",
       "description": "이사 날 정신없는데 주민센터 가서 뭐 해야 하지? 한 번에 끝내는 행정 업무 가이드.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/safe-door-lock-password",
+      "url": "https://today2424.kr/guide/safe-door-lock-password",
       "path": "/guide/safe-door-lock-password",
       "type": "guide",
       "title": "자취방 도어락 비밀번호 안전하게 관리하는 법 | 이사독립 가이드",
@@ -782,7 +2129,7 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/mold-removal-tips",
+      "url": "https://today2424.kr/guide/mold-removal-tips",
       "path": "/guide/mold-removal-tips",
       "type": "guide",
       "title": "벽지 곰팡이 제거 및 결로 예방 가이드 | 이사독립 가이드",
@@ -790,15 +2137,15 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/real-estate-app-tips",
+      "url": "https://today2424.kr/guide/real-estate-app-tips",
       "path": "/guide/real-estate-app-tips",
       "type": "guide",
-      "title": "직방, 다방, 피터팬... 부동산 앱 허위매물 거르… | 이사독립 가이드",
+      "title": "직방, 다방, 피터팬... 부동산 앱 허위매물 거르는 법 | 이사독립 가이드",
       "description": "사진에 속지 마세요. 부동산 앱으로 방 구할 때 호구 잡히지 않는 필터링 노하우.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/noise-complaint-guide",
+      "url": "https://today2424.kr/guide/noise-complaint-guide",
       "path": "/guide/noise-complaint-guide",
       "type": "guide",
       "title": "층간소음, 벽간소음 법적 기준과 현명한 대처법 | 이사독립 가이드",
@@ -806,15 +2153,15 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/deposit-return-delay",
+      "url": "https://today2424.kr/guide/deposit-return-delay",
       "path": "/guide/deposit-return-delay",
       "type": "guide",
-      "title": "집주인이 보증금을 안 돌려줄 때 내용증명 작성법 (… | 이사독립 가이드",
+      "title": "집주인이 보증금을 안 돌려줄 때 내용증명 작성법 (양식 포함) | 이사독립 가이드",
       "description": "만기가 지났는데 돈이 없다는 집주인. 내용증명 발송으로 심리적 압박하고 법적 증거 남기기.",
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/auction-process-guide",
+      "url": "https://today2424.kr/guide/auction-process-guide",
       "path": "/guide/auction-process-guide",
       "type": "guide",
       "title": "살던 집이 경매로 넘어갔을 때 대처 프로세스 5단계 | 이사독립 가이드",
@@ -822,7 +2169,7 @@
       "lastModified": "2025-11-27T15:00:00.000Z"
     },
     {
-      "url": "https://www.today2424.kr/guide/priority-repayment-amount",
+      "url": "https://today2424.kr/guide/priority-repayment-amount",
       "path": "/guide/priority-repayment-amount",
       "type": "guide",
       "title": "최우선변제금: 소액 임차인 보호 범위와 기준 | 이사독립 가이드",

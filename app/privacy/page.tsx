@@ -63,14 +63,56 @@ export default function PrivacyPage() {
                 <li>Google AdSense: 광고 노출과 관련 측정</li>
               </ul>
               <p>
-                각 도구의 쿠키 및 식별자 처리 방식은 해당 제공사의 정책에 따를 수 있습니다.
+                Google을 포함한 제3자 사업자는 쿠키, 웹 비콘, IP 주소, 브라우저 식별자와 같은 기술을 사용해 광고 노출, 광고 품질 측정, 부정 이용 방지, 서비스 분석을 수행할 수 있습니다.
+              </p>
+              <p>
+                Google의 광고 쿠키 사용은 사용자가 이 사이트 또는 다른 사이트를 방문한 기록을 바탕으로 관련성 높은 광고를 제공하는 데 활용될 수 있습니다.
+              </p>
+              <p>
+                사용자는 Google 광고 설정에서 개인 맞춤 광고를 관리하거나 사용 중지할 수 있습니다.
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  <a
+                    href="https://adssettings.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary underline-offset-4 hover:underline"
+                  >
+                    Google 광고 설정
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://policies.google.com/technologies/partner-sites"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary underline-offset-4 hover:underline"
+                  >
+                    Google 파트너 사이트의 데이터 사용 안내
+                  </a>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>4. 쿠키 관리</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground leading-7">
+              <p>
+                사용자는 브라우저 설정을 통해 쿠키 저장을 차단하거나 기존 쿠키를 삭제할 수 있습니다. 단, 쿠키를 제한하면 일부 기능, 분석, 광고 품질 측정이 정상적으로 동작하지 않을 수 있습니다.
+              </p>
+              <p>
+                이 사이트는 사용자가 직접 입력한 민감한 개인정보를 공개 페이지에 게시하는 구조를 운영하지 않으며, 댓글이나 공개 회원 프로필 기능을 제공하지 않습니다.
               </p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>4. 이용자의 권리</CardTitle>
+              <CardTitle>5. 이용자의 권리</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground leading-7">
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -83,7 +125,7 @@ export default function PrivacyPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>5. 문의</CardTitle>
+              <CardTitle>6. 문의</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground leading-7">
               <p>개인정보 처리와 관련한 문의는 아래 이메일로 접수할 수 있습니다.</p>

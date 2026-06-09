@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
-const SEO_TITLE_LIMIT = 50;
-const SEO_DESCRIPTION_LIMIT = 130;
+const SEO_TITLE_LIMIT = 60;
+const SEO_DESCRIPTION_LIMIT = 150;
 const TITLE_SEPARATOR = " | ";
 
 interface PageMetadataOptions {
@@ -17,7 +17,7 @@ function trimToLimit(value: string, limit: number) {
     return value;
   }
 
-  return `${value.slice(0, limit - 1).trimEnd()}…`;
+  return `${value.slice(0, limit - 3).trimEnd()}...`;
 }
 
 export function createSeoTitle(title: string, suffix: string = siteConfig.name) {

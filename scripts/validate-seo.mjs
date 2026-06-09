@@ -50,13 +50,13 @@ const urlsToCheck = limit > 0 ? sitemapUrls.slice(0, limit) : sitemapUrls;
 let checked = 0;
 
 for (const item of urlsToCheck) {
-  const response = await fetchText(item.loc);
+  const pathname = new URL(item.loc).pathname;
+  const response = await fetchText(toAbsoluteUrl(siteUrl, pathname));
   check(response.ok, `page fetch failed: ${response.status} ${item.loc}`);
   if (!response.ok) continue;
 
   checked += 1;
   const meta = extractHtmlMeta(response.text);
-  const pathname = new URL(item.loc).pathname;
   const isHtmlPage = !["/sitemap.xml", "/robots.txt", "/rss.xml"].includes(pathname);
 
   if (isHtmlPage) {

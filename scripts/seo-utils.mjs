@@ -11,14 +11,32 @@ export function getSiteConfig() {
 
   return {
     name: getString("name", "이사독립"),
-    url: getString("url", "https://www.today2424.kr"),
+    url: getString("url", "https://today2424.kr"),
     description: getString(
       "description",
       "이사 준비, 전세 계약 점검, 체크리스트, 계산기를 제공하는 한국어 주거 정보 사이트",
     ),
     adsensePublisherId: getString("adsensePublisherId", "ca-pub-3050601904412736"),
     gaMeasurementId: getString("gaMeasurementId", "G-N2V7ZZP184"),
+    gaPropertyId: getString("gaPropertyId", "534327620"),
+    persona: {
+      audience: getString("audience", "처음 독립하거나 이사를 준비하는 사용자"),
+      promise: getString("promise", "체크리스트와 공식 출처 중심의 주거 생활 정보를 제공합니다."),
+      tone: getString("tone", "짧고 실무적인 한국어"),
+      disclaimer: getString(
+        "disclaimer",
+        "전세·계약·금융 정보는 참고용이며 최종 판단은 공식 안내와 전문가 상담을 함께 확인해야 합니다.",
+      ),
+      knowsAbout: extractStringArray(source, "knowsAbout"),
+      avoidExpressions: extractStringArray(source, "avoidExpressions"),
+    },
   };
+}
+
+function extractStringArray(source, key) {
+  const match = source.match(new RegExp(`${key}:\\s*\\[([\\s\\S]*?)\\]`));
+  if (!match) return [];
+  return Array.from(match[1].matchAll(/"([^"]+)"/g), (item) => item[1]);
 }
 
 export function getArgValue(name, fallback = "") {

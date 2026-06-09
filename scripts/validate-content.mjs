@@ -11,9 +11,10 @@ const ALLOWED_CATEGORIES = new Set([
   "인테리어",
   "금융/절약",
 ]);
-const NEW_EXPANSION_BATCH_PATTERN = /blog-expansion\/batch-([1-5][1-9]|[2-5]0|60)\.ts$/;
-const EXPECTED_NEW_EXPANSION_COUNT = 300;
+const NEW_EXPANSION_BATCH_PATTERN = /blog-expansion\/batch-\d+\.ts$/;
+const EXPECTED_NEW_EXPANSION_COUNT = 800;
 const ALLOWED_CONTENT_TYPES = new Set(["checklist", "cost-saving", "mistake-proof", "comparison", "faq"]);
+const FORBIDDEN_PERSONA_EXPRESSIONS = ["100% 보장", "무조건 안전", "수익 보장", "완벽 보장", "의사입니다", "변호사입니다", "세무사입니다"];
 
 function getTsFiles(dir) {
   return readdirSync(dir).flatMap((name) => {
@@ -52,6 +53,12 @@ for (const file of files) {
   const text = readFileSync(file, "utf8");
   const rel = file.replace(`${ROOT}\\`, "").replaceAll("\\", "/");
   const isNewExpansionBatch = NEW_EXPANSION_BATCH_PATTERN.test(rel);
+
+  for (const expression of FORBIDDEN_PERSONA_EXPRESSIONS) {
+    if (text.includes(expression)) {
+      errors.push(`forbidden persona expression: ${expression} in ${rel}`);
+    }
+  }
 
   for (const slug of findAll(text, /slug:\s*["']([^"']+)["']/g)) {
     if (slugs.has(slug)) errors.push(`duplicate slug: ${slug} in ${rel} and ${slugs.get(slug)}`);

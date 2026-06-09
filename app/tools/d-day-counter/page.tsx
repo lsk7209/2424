@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Calendar as CalendarIcon, CheckCircle2, Clock } from 'lucide-react';
 import { differenceInDays, format } from 'date-fns';
 import { ko } from 'date-fns/locale';

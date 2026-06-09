@@ -43,7 +43,7 @@ export default function RelatedPosts({ posts, currentSlug, type }: RelatedPostsP
                   <Badge variant="secondary" className="bg-gray-100 text-gray-600 hover:bg-gray-200">
                     {post.category}
                   </Badge>
-                  <span className="text-xs text-gray-400">{post.date}</span>
+                  <span className="text-xs text-gray-600">{post.date}</span>
                 </div>
                 <CardTitle className="text-lg leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
                   {post.title}

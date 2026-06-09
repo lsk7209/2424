@@ -16,6 +16,7 @@ const INDEXNOW_ENDPOINTS = [
   "https://www.bing.com/indexnow",
   "https://searchadvisor.naver.com/indexnow",
 ] as const;
+const GSC_SCOPE = "https://www.googleapis.com/auth/webmasters";
 
 type SitemapUrl = {
   loc: string;
@@ -63,9 +64,10 @@ export async function GET(request: Request) {
 
   const isNewContent = newUrls.length > 0;
 
-  const [indexNowResults, googleIndexingResult] = await Promise.all([
+  const [indexNowResults, googleIndexingResult, gscSitemap] = await Promise.all([
     Promise.all(INDEXNOW_ENDPOINTS.map((endpoint) => submitIndexNow(endpoint, urls))),
     submitGoogleIndexingApi(urls.slice(0, GSC_INDEXING_LIMIT)),
+    submitGscSitemap(),
   ]);
 
   return Response.json({
@@ -75,6 +77,7 @@ export async function GET(request: Request) {
     urls,
     endpoints: indexNowResults,
     googleIndexingApi: googleIndexingResult,
+    gscSitemap,
   });
 }
 
@@ -101,13 +104,16 @@ async function submitIndexNow(endpoint: string, urls: string[]) {
   return { endpoint, status: response.status, ok: response.ok };
 }
 
-function createJwt(credentials: ServiceAccountCredentials): string {
+function createJwt(
+  credentials: ServiceAccountCredentials,
+  scope = "https://www.googleapis.com/auth/indexing",
+): string {
   const header = Buffer.from(JSON.stringify({ alg: "RS256", typ: "JWT" })).toString("base64url");
   const now = Math.floor(Date.now() / 1000);
   const payload = Buffer.from(
     JSON.stringify({
       iss: credentials.client_email,
-      scope: "https://www.googleapis.com/auth/indexing",
+      scope,
       aud: credentials.token_uri,
       exp: now + 3600,
       iat: now,
@@ -122,8 +128,11 @@ function createJwt(credentials: ServiceAccountCredentials): string {
   return `${signingInput}.${signature}`;
 }
 
-async function getGoogleAccessToken(credentials: ServiceAccountCredentials): Promise<string> {
-  const jwt = createJwt(credentials);
+async function getGoogleAccessToken(
+  credentials: ServiceAccountCredentials,
+  scope = "https://www.googleapis.com/auth/indexing",
+): Promise<string> {
+  const jwt = createJwt(credentials, scope);
   const response = await fetch(credentials.token_uri, {
     method: "POST",
     headers: { "content-type": "application/x-www-form-urlencoded" },
@@ -174,6 +183,110 @@ async function submitGoogleIndexingApi(urls: string[]) {
     submitted: urls.length,
     results: results.map((r) => (r.status === "fulfilled" ? r.value : { error: String(r.reason) })),
   };
+}
+
+async function submitGscSitemap() {
+  const key = getGoogleServiceAccountKey();
+  if (!key) {
+    return {
+      ok: false,
+      skipped: "missing_google_service_account_json",
+    };
+  }
+
+  try {
+    const sitemapUrl = `${siteConfig.url}/sitemap.xml`;
+    const accessToken = await getGoogleAccessToken(key, GSC_SCOPE);
+    const sites = await googleJson<{ siteEntry?: Array<{ siteUrl: string }> }>(
+      accessToken,
+      "https://www.googleapis.com/webmasters/v3/sites",
+    );
+    const propertyUrl = selectGscProperty(sites.siteEntry ?? []);
+
+    await googleRequest(
+      accessToken,
+      `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(propertyUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`,
+      { method: "PUT" },
+    );
+
+    const sitemapStatus = await googleJson<Record<string, unknown>>(
+      accessToken,
+      `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(propertyUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`,
+    );
+
+    return {
+      ok: true,
+      propertyUrl,
+      sitemapUrl,
+      errors: Number(sitemapStatus.errors ?? 0),
+      warnings: Number(sitemapStatus.warnings ?? 0),
+      isPending: Boolean(sitemapStatus.isPending),
+      lastSubmitted: sitemapStatus.lastSubmitted ?? null,
+      lastDownloaded: sitemapStatus.lastDownloaded ?? null,
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
+function getGoogleServiceAccountKey() {
+  const raw = process.env.GSC_SERVICE_ACCOUNT_JSON || process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  if (!raw) return null;
+
+  const json = raw.trim().startsWith("{")
+    ? raw
+    : Buffer.from(raw, "base64").toString("utf8");
+  const credentials = JSON.parse(json) as Partial<ServiceAccountCredentials>;
+  if (!credentials.client_email || !credentials.private_key) {
+    throw new Error("invalid_gsc_service_account_json");
+  }
+
+  return {
+    client_email: credentials.client_email,
+    private_key: credentials.private_key,
+    token_uri: credentials.token_uri ?? "https://oauth2.googleapis.com/token",
+  };
+}
+
+function selectGscProperty(sites: Array<{ siteUrl: string }>) {
+  const host = new URL(siteConfig.url).hostname.replace(/^www\./, "");
+  const candidates = [
+    `sc-domain:${host}`,
+    `${siteConfig.url}/`,
+    siteConfig.url,
+    `https://www.${host}/`,
+    `https://www.${host}`,
+  ];
+
+  const found = candidates.find((candidate) => sites.some((site) => site.siteUrl === candidate));
+  if (!found) {
+    throw new Error("matching_gsc_property_not_found");
+  }
+  return found;
+}
+
+async function googleJson<T>(accessToken: string, url: string) {
+  const response = await googleRequest(accessToken, url);
+  return response.json() as Promise<T>;
+}
+
+async function googleRequest(accessToken: string, url: string, init: RequestInit = {}) {
+  const response = await fetch(url, {
+    ...init,
+    headers: {
+      authorization: `Bearer ${accessToken}`,
+      ...(init.headers ?? {}),
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`gsc_api_${response.status}`);
+  }
+
+  return response;
 }
 
 function decodeXml(value: string) {

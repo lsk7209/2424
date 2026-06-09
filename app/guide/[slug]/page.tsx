@@ -101,15 +101,21 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     dateModified: new Date(siteConfig.updatedAt).toISOString(),
     author: {
       '@type': 'Organization',
-      name: '이사독립',
+      name: siteConfig.organization.name,
+      url: siteConfig.url,
+      knowsAbout: siteConfig.persona.knowsAbout,
+    },
+    reviewedBy: {
+      '@type': 'Organization',
+      name: siteConfig.organization.name,
       url: siteConfig.url,
     },
     publisher: {
       '@type': 'Organization',
-      name: '이사독립',
+      name: siteConfig.organization.name,
       logo: {
         '@type': 'ImageObject',
-        url: absoluteUrl('/icons/icon-512.png'),
+        url: absoluteUrl(siteConfig.organization.logoPath),
       },
     },
     mainEntityOfPage: {
@@ -118,6 +124,12 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     },
     keywords: post.keywords?.join(', '),
     articleSection: post.category,
+    about: post.keywords?.map((keyword) => ({
+      '@type': 'Thing',
+      name: keyword,
+    })),
+    citation: officialSource.href,
+    isAccessibleForFree: true,
   };
 
   const breadcrumbSchema = {
@@ -222,6 +234,25 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
 
           {/* Table of Contents */}
           <TableOfContents toc={toc} />
+
+          <aside className="mb-10 rounded-xl border border-green-200 bg-green-50 p-6">
+            <p className="text-sm font-bold text-green-700">콘텐츠 검토 기준</p>
+            <div className="mt-3 grid gap-3 text-sm leading-7 text-slate-700 sm:grid-cols-3">
+              <div>
+                <span className="font-bold text-slate-900">작성</span>
+                <p>{siteConfig.persona.type}</p>
+              </div>
+              <div>
+                <span className="font-bold text-slate-900">검토 기준</span>
+                <p>공식 안내, 비용, 일정, 책임 범위</p>
+              </div>
+              <div>
+                <span className="font-bold text-slate-900">최종 기준일</span>
+                <p>{post.date}</p>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-7 text-slate-600">{siteConfig.persona.disclaimer}</p>
+          </aside>
 
           {/* Content - Expert Typography */}
           <div

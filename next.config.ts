@@ -18,21 +18,6 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "today2424.kr",
-          },
-        ],
-        destination: "https://www.today2424.kr/:path*",
-        permanent: true,
-      },
-    ];
-  },
   async headers() {
     return [
       {

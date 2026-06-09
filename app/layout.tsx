@@ -7,6 +7,35 @@ import "./globals.css";
 
 const rootTitle = createSeoTitle(siteConfig.title);
 const rootDescription = createSeoDescription(siteConfig.description);
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.organization.name,
+  legalName: siteConfig.organization.legalName,
+  url: siteConfig.url,
+  logo: absoluteUrl(siteConfig.organization.logoPath),
+  email: siteConfig.contactEmail,
+  sameAs: siteConfig.organization.sameAs,
+  knowsAbout: siteConfig.persona.knowsAbout,
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  inLanguage: "ko-KR",
+  publisher: {
+    "@type": "Organization",
+    name: siteConfig.organization.name,
+    url: siteConfig.url,
+  },
+  audience: {
+    "@type": "Audience",
+    audienceType: siteConfig.persona.audience,
+  },
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -96,6 +125,14 @@ export default function RootLayout({
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsensePublisherId}`}
           crossOrigin="anonymous"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />

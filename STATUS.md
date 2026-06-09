@@ -1,23 +1,30 @@
-# Status | 마지막: 2026-05-17
+# Status | 마지막: 2026-06-09
+
 ## 현재 작업
-종합 최적화 완료: 페르소나, SEO, 속도, 색인, GA4 이벤트, 구조화 데이터
+AdSense 검수, GSC sitemap 자동 제출, canonical host, SEO/AEO/GEO, 콘텐츠 품질 게이트 최적화 완료
+
 ## 최근 변경 (최근 5개만)
-- 05-17: Naver 타이틀 경고 10건 수정(blog 2개, guide 8개) → 153페이지 모두 44자 이하
-- 05-17: blog/guide 목록 ItemList 스키마, 도구 7개 WebApplication 스키마 추가(GSC 리치 스니펫)
-- 05-17: TrackedFaqAccordion 컴포넌트 - FAQ 클릭 시 faq_opened 이벤트 발송(GA4)
-- 05-17: ContentReadTracker 스크롤 마일스톤(25/50/75%) scroll_depth 이벤트 추가(GA4)
-- 05-17: Header 네비게이션 클릭 추적 nav_clicked 이벤트 추가(GA4)
+- 06-09: today2424.kr canonical 통일, Vercel 도메인 리다이렉트 루프 원인 제거
+- 06-09: GSC Sitemaps API 제출 스크립트와 cron 제출 결과 추가
+- 06-09: AdSense 자동광고 전용 정책 고지, 개인정보 광고 쿠키 고지, 검증 스크립트 추가
+- 06-09: 블로그/가이드 상세 신뢰 박스, reviewedBy/citation JSON-LD, CTA/내부링크/H3 템플릿 보강
+- 05-17: GA4 이벤트, ItemList/WebApplication 스키마, 제목 경고 개선 반영
+
 ## TODO
-- [ ] AdSense 콘솔에서 payment-hold 결제 계정 확인 항목 직접 처리 (수동 필요)
+- [ ] GitHub/Vercel 배포 완료 후 `https://today2424.kr` 리다이렉트 루프 해소 확인
+- [ ] 배포 후 GSC sitemap 재제출 및 errors 0 / warnings 0 / 성공 상태 재확인
 - [ ] AdSense 사이트 상태가 READY로 바뀌는지 재확인
-- [ ] GSC에서 사이트맵(/sitemap.xml) 수동 재제출 → 95개→최신 글 수로 색인 확대
-- [ ] GA4/GSC API 인증 공유 후 실제 데이터 기반 추가 최적화
+- [ ] AdSense 콘솔 payment-hold 결제 계정 확인 항목은 수동 처리
+
 ## 결정사항
-- IndexNow: api.indexnow.org(글로벌) + Bing + Naver 3개 엔드포인트, 하루 2회(UTC 03:00, 15:00)
-- 광고: AdSense 자동광고 방식 유지, 수동 광고 블록 추가 없음
-- 성능: AdSense 제3자 쿠키 경고는 광고 유지 조건에서 허용
-- 페르소나: sitePersona 객체로 lib/site.ts에 공식 정의
+- 광고: AdSense 자동광고 방식 유지, 수동 광고 슬롯 추가 없음
+- GSC: Search Console Sitemaps API로 `/sitemap.xml` 제출 및 상태 확인
+- IndexNow: api.indexnow.org + Bing + Naver 엔드포인트 유지
+- SEO: canonical URL은 `https://today2424.kr` 기준
+- 콘텐츠: 공식 출처, 검토 기준, FAQ, 내부링크, CTA 신호를 템플릿과 상세 페이지에서 보강
+
 ## 주의
-- AdSense 결제 보류 해제는 API 처리 불가, 로그인된 콘솔에서 본인/주소/PIN/세금/결제수단 확인 필요
-- GSC 사이트맵은 ISR 1시간 자동갱신되나, GSC 재크롤은 수동 제출하거나 크론 핑으로 유도 필요
-- GA4 스트림: today2424.kr / G-N2V7ZZP184 / ID:14420832086 (코드 설정 일치 확인됨)
+- Vercel CLI/API 직접 배포 금지. 배포는 GitHub push 후 Vercel 연동으로만 진행
+- GSC 사이트맵 오류 1건은 현재 production redirect loop 영향이며, 이번 배포 후 재제출 필요
+- GA4 스트림: today2424.kr / G-N2V7ZZP184 / property 534327620
+- `GSC_SERVICE_ACCOUNT_JSON` 또는 `GOOGLE_SERVICE_ACCOUNT_JSON`이 운영 환경에 없으면 cron의 GSC sitemap 제출은 skip됨

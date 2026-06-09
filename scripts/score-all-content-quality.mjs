@@ -4,6 +4,7 @@ import { join, relative } from "node:path";
 const ROOT = process.cwd();
 const DATA_DIR = join(ROOT, "data");
 const BANNED_WORDS = ["무조건", "100%", "수익 보장", "완벽 보장", "충격", "대박", "인생역전"];
+const PERSONA_RISK_WORDS = ["의사입니다", "변호사입니다", "세무사입니다", "공인중개사입니다"];
 const SENSITIVE_CATEGORIES = new Set(["전세안전", "법률", "계약", "금융", "금융/절약", "안전"]);
 const MIN_SCORE = 90;
 
@@ -190,6 +191,7 @@ function scoreEntry(entry, seenTitles, seenNormalizedTitles) {
 
   let adsenseScore = 0;
   if (!BANNED_WORDS.some((word) => `${entry.title} ${entry.excerpt} ${entry.content}`.includes(word))) adsenseScore += 3;
+  if (!PERSONA_RISK_WORDS.some((word) => `${entry.title} ${entry.excerpt} ${entry.content}`.includes(word))) adsenseScore += 2;
   if (!hasJsonLdLeak(entry.content)) adsenseScore += 3;
   if (!SENSITIVE_CATEGORIES.has(entry.category) || hasOfficialSource(entry)) adsenseScore += 2;
   if (!/출처 없는|가짜 인터뷰|수익 보장/.test(entry.content)) adsenseScore += 2;
