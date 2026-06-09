@@ -106,6 +106,20 @@ export function extractHtmlMeta(html) {
   };
 }
 
+export function extractJsonLd(html) {
+  return Array.from(
+    html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi),
+  )
+    .map((match) => {
+      try {
+        return JSON.parse(decodeHtml(match[1].trim()));
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
+}
+
 export function classifyPath(pathname) {
   if (pathname === "/") return "home";
   if (pathname.startsWith("/blog/")) return "blog";

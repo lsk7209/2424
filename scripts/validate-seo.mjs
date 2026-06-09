@@ -1,5 +1,6 @@
 import {
   extractHtmlMeta,
+  extractJsonLd,
   extractSitemapUrls,
   fetchText,
   getArgValue,
@@ -92,6 +93,9 @@ for (const item of urlsToCheck) {
     const expectedCanonical = new URL(pathname, canonicalSiteUrl).toString();
     check(normalizeUrl(meta.canonical) === normalizeUrl(expectedCanonical), `canonical mismatch: ${item.loc} -> ${meta.canonical}`);
     check(meta.h1Count === 1, `expected exactly one h1: ${item.loc} (${meta.h1Count})`);
+    if (pathname.startsWith("/blog/") || pathname.startsWith("/guide/")) {
+      validateArticleJsonLd(response.text, expectedCanonical, item.loc);
+    }
     warn(meta.title.length <= 44, `title may be long for Naver: ${meta.title.length} chars ${item.loc}`);
     warn(meta.description.length <= 90, `description may be long for Naver: ${meta.description.length} chars ${item.loc}`);
   }
@@ -122,4 +126,30 @@ function normalizeUrl(value) {
 
 function hasMojibake(value) {
   return /(?:�|Ã|Â|ì|í|ê|ë|ð|þ|Ð|吏|濡|蹂|\?댁|\?꾩|\?먯)/.test(value);
+}
+
+function validateArticleJsonLd(html, expectedCanonical, url) {
+  const jsonLd = extractJsonLd(html);
+  const graphItems = jsonLd.flatMap((item) => (Array.isArray(item?.["@graph"]) ? item["@graph"] : [item]));
+  const article = graphItems.find((item) => item?.["@type"] === "BlogPosting" || item?.["@type"] === "Article");
+  const breadcrumb = graphItems.find((item) => item?.["@type"] === "BreadcrumbList");
+
+  check(Boolean(article), `missing Article/BlogPosting JSON-LD: ${url}`);
+  check(Boolean(breadcrumb), `missing BreadcrumbList JSON-LD: ${url}`);
+  if (!article) return;
+
+  check(Boolean(article.headline), `article JSON-LD headline missing: ${url}`);
+  check(Boolean(article.datePublished), `article JSON-LD datePublished missing: ${url}`);
+  check(Boolean(article.dateModified), `article JSON-LD dateModified missing: ${url}`);
+  check(
+    normalizeUrl(article.mainEntityOfPage?.["@id"] ?? "") === normalizeUrl(expectedCanonical),
+    `article JSON-LD mainEntityOfPage mismatch: ${url}`,
+  );
+
+  if (article.datePublished && article.dateModified) {
+    check(
+      new Date(article.dateModified).getTime() >= new Date(article.datePublished).getTime(),
+      `article JSON-LD dateModified is before datePublished: ${url}`,
+    );
+  }
 }
