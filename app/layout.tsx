@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Suspense } from "react";
 import GoogleAnalyticsTracker from "@/components/analytics/GoogleAnalyticsTracker";
 import { createSeoDescription, createSeoTitle } from "@/lib/metadata";
@@ -126,6 +127,19 @@ export default function RootLayout({
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsensePublisherId}`}
           crossOrigin="anonymous"
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${siteConfig.gaMeasurementId}', { send_page_view: false });
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
