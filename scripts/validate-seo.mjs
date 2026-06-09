@@ -41,6 +41,33 @@ if (ads.ok) {
   check(ads.text.includes("google.com, pub-3050601904412736, DIRECT"), "ads.txt does not contain the expected AdSense publisher row");
 }
 
+const rss = await fetchText(toAbsoluteUrl(siteUrl, "/rss.xml"));
+check(rss.ok, `rss.xml fetch failed: ${rss.status}`);
+if (rss.ok) {
+  check(/<rss[\s>]/i.test(rss.text), "rss.xml does not contain an rss root element");
+  check(rss.text.includes("<channel>"), "rss.xml does not contain a channel element");
+  check(rss.text.includes(`<atom:link href="${canonicalSiteUrl}/rss.xml"`), "rss.xml atom self link does not match canonical site URL");
+  check((rss.text.match(/<item>/g) ?? []).length > 0, "rss.xml has no feed items");
+  check(!hasMojibake(rss.text), "rss.xml appears to contain mojibake text");
+}
+
+const manifest = await fetchText(toAbsoluteUrl(siteUrl, "/manifest.json"));
+check(manifest.ok, `manifest.json fetch failed: ${manifest.status}`);
+if (manifest.ok) {
+  try {
+    const data = JSON.parse(manifest.text);
+    check(data.name === site.name, `manifest name mismatch: ${data.name}`);
+    check(typeof data.short_name === "string" && data.short_name.length > 0, "manifest short_name is missing");
+    check(typeof data.description === "string" && data.description.length >= 30, "manifest description is missing or thin");
+    check(data.start_url === "/", "manifest start_url should be /");
+    check(data.display === "standalone", "manifest display should be standalone");
+    check(Array.isArray(data.icons) && data.icons.length >= 2, "manifest should include at least 2 icons");
+    check(!hasMojibake(`${data.name} ${data.short_name} ${data.description}`), "manifest appears to contain mojibake text");
+  } catch (error) {
+    check(false, `manifest.json parse failed: ${error instanceof Error ? error.message : String(error)}`);
+  }
+}
+
 const sitemap = await fetchText(toAbsoluteUrl(siteUrl, "/sitemap.xml"));
 check(sitemap.ok, `sitemap.xml fetch failed: ${sitemap.status}`);
 const sitemapUrls = sitemap.ok ? extractSitemapUrls(sitemap.text) : [];
@@ -91,4 +118,8 @@ console.log(`seo validation ok: ${checked}/${sitemapUrls.length} sitemap pages c
 
 function normalizeUrl(value) {
   return value.replace(/\/$/, "");
+}
+
+function hasMojibake(value) {
+  return /(?:�|Ã|Â|ì|í|ê|ë|ð|þ|Ð|吏|濡|蹂|\?댁|\?꾩|\?먯)/.test(value);
 }
