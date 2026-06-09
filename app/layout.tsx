@@ -138,6 +138,7 @@ export default function RootLayout({
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsensePublisherId}`}
           crossOrigin="anonymous"
+          data-overlays="bottom"
         />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaMeasurementId}`}

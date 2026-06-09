@@ -20,6 +20,10 @@ check(
   "AdSense auto ads script is missing from app/layout.tsx",
 );
 check(
+  layout.includes('data-overlays="bottom"'),
+  "AdSense auto ads script should keep anchor overlays at the bottom to reduce layout shift",
+);
+check(
   layout.includes("google-adsense-account") && siteConfig.includes("ca-pub-3050601904412736"),
   "google-adsense-account meta or publisher id is missing",
 );
