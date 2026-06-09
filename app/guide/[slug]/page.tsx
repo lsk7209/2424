@@ -9,7 +9,7 @@ import ContentReadTracker from '@/components/ContentReadTracker';
 import PostCover from '@/components/PostCover';
 import TableOfContents from '@/components/TableOfContents';
 import RelatedPosts from '@/components/RelatedPosts';
-import { getPublicationIso } from '@/data/publish-schedule';
+import { getPublicationDate, getPublicationIso } from '@/data/publish-schedule';
 import { getPublishedGuidePostBySlug, getPublishedGuidePosts } from '@/lib/content';
 import { processContent } from '@/lib/toc';
 import { absoluteUrl, siteConfig } from '@/lib/site';
@@ -89,6 +89,9 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
 
   // Find related posts (same category)
   const relatedPosts = getPublishedGuidePosts().filter((p) => p.category === post.category);
+  const dateModified = new Date(
+    Math.max(getPublicationDate(post).getTime(), new Date(siteConfig.updatedAt).getTime()),
+  ).toISOString();
 
   // SEO/GEO/AEO 최적화: 구조화된 데이터
   const articleSchema = {
@@ -98,7 +101,7 @@ export default async function GuidePostPage(props: GuidePostPageProps) {
     description: post.excerpt,
     image: absoluteUrl(post.coverImage || '/opengraph-image'),
     datePublished: getPublicationIso(post),
-    dateModified: new Date(siteConfig.updatedAt).toISOString(),
+    dateModified,
     author: {
       '@type': 'Organization',
       name: siteConfig.organization.name,
