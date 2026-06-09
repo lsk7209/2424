@@ -50,7 +50,7 @@ if (ads.ok) {
   check(ads.text.trim() === expectedAdsTxt, "ads.txt does not exactly match the expected AdSense row");
 }
 
-const pages = ["/", "/about", "/privacy", "/terms", "/contact", "/disclosure", "/blog", "/guide"];
+const pages = ["/", "/about", "/privacy", "/terms", "/contact", "/disclosure", "/editorial-policy", "/blog", "/guide"];
 for (const path of pages) {
   const response = await fetchText(toAbsoluteUrl(siteUrl, path));
   check(response.ok, `required AdSense review page failed: ${response.status} ${path}`);

@@ -86,6 +86,11 @@ export default function Footer() {
                                     광고 및 제휴 안내
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/editorial-policy" className="hover:text-primary transition-colors">
+                                    콘텐츠 작성 기준
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
