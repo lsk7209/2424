@@ -106,6 +106,7 @@ if (home.ok) {
   const meta = extractHtmlMeta(home.text);
   check(meta.hasAdsenseScript, "home page does not include AdSense auto ads script");
   check(meta.hasAdsenseAccount, "home page does not include google-adsense-account meta");
+  validateHomeJsonLd(home.text);
   warn(meta.hasGa, "GA4 gtag script was not found in the initial HTML; verify with a browser because next/script can inject it after hydration");
 }
 
@@ -152,4 +153,22 @@ function validateArticleJsonLd(html, expectedCanonical, url) {
       `article JSON-LD dateModified is before datePublished: ${url}`,
     );
   }
+}
+
+function validateHomeJsonLd(html) {
+  const jsonLd = extractJsonLd(html);
+  const graphItems = jsonLd.flatMap((item) => (Array.isArray(item?.["@graph"]) ? item["@graph"] : [item]));
+  const organizationItems = graphItems.filter((item) => item?.["@type"] === "Organization");
+  const websiteItems = graphItems.filter((item) => item?.["@type"] === "WebSite");
+  const faqItems = graphItems.filter((item) => item?.["@type"] === "FAQPage");
+  const organization = organizationItems[0];
+  const website = websiteItems[0];
+
+  check(organizationItems.length === 1, `home should expose exactly one Organization JSON-LD (${organizationItems.length})`);
+  check(websiteItems.length === 1, `home should expose exactly one WebSite JSON-LD (${websiteItems.length})`);
+  check(faqItems.length === 1, `home should expose exactly one FAQPage JSON-LD (${faqItems.length})`);
+  check(Boolean(organization?.["@id"]), "home Organization JSON-LD is missing @id");
+  check(Boolean(organization?.contactPoint?.email), "home Organization JSON-LD is missing contact email");
+  check(Boolean(website?.publisher?.["@id"]), "home WebSite JSON-LD publisher is missing @id");
+  check(website?.potentialAction?.["@type"] === "SearchAction", "home WebSite JSON-LD is missing SearchAction");
 }

@@ -11,30 +11,48 @@ const rootDescription = createSeoDescription(siteConfig.description);
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.organization.name,
   legalName: siteConfig.organization.legalName,
   url: siteConfig.url,
   logo: absoluteUrl(siteConfig.organization.logoPath),
+  description: siteConfig.description,
   email: siteConfig.contactEmail,
   sameAs: siteConfig.organization.sameAs,
   knowsAbout: siteConfig.persona.knowsAbout,
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    email: siteConfig.contactEmail,
+    availableLanguage: "ko-KR",
+  },
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteConfig.url}/#website`,
   name: siteConfig.name,
   url: siteConfig.url,
   description: siteConfig.description,
   inLanguage: "ko-KR",
   publisher: {
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.organization.name,
     url: siteConfig.url,
   },
   audience: {
     "@type": "Audience",
     audienceType: siteConfig.persona.audience,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 

@@ -20,7 +20,6 @@ import {
 } from "@/components/ui/card";
 import { tools } from "@/data/tools";
 import { getPublishedBlogPosts, getPublishedGuidePosts } from "@/lib/content";
-import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const featuredTools = tools.filter((tool) => tool.isReady).slice(0, 6);
 
@@ -76,37 +75,6 @@ export default function Home() {
   const latestBlogPosts = getPublishedBlogPosts().slice(0, 3);
   const latestGuidePosts = getPublishedGuidePosts().slice(0, 3);
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    logo: absoluteUrl("/icons/icon-512.png"),
-    description: siteConfig.description,
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      email: siteConfig.contactEmail,
-      availableLanguage: "Korean",
-    },
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    description: siteConfig.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -122,14 +90,6 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-slate-950">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
