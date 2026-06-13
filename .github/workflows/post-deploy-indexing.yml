@@ -17,7 +17,7 @@ jobs:
       - name: IndexNow + Google sitemap ping
         run: |
           STATUS=$(curl -s -o /tmp/resp.json -w "%{http_code}" \
-            -X GET "https://www.today2424.kr/api/cron/indexing" \
+            -X GET "https://today2424.kr/api/cron/indexing" \
             -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}")
           echo "HTTP $STATUS"
           cat /tmp/resp.json
