@@ -94,7 +94,34 @@ export default function DisclosurePage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>5. 문의</CardTitle>
+              <CardTitle>5. 정보 확인과 공식 출처</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground leading-7">
+              <p>
+                부동산 계약, 이사 비용, 전월세 위험 진단은 사용자의 상황과 최신 제도에 따라 달라질 수 있습니다.
+                이사납니다의 계산기와 체크리스트는 의사결정을 돕는 참고 자료이며, 계약 체결 전에는 등기부등본,
+                건축물대장, 확정일자, 보증보험 가입 가능 여부를 직접 확인해야 합니다.
+              </p>
+              <div className="grid gap-3 md:grid-cols-3">
+                <a href="https://www.gov.kr" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-slate-200 p-4 text-sm hover:border-primary">
+                  <strong className="block text-foreground">정부24</strong>
+                  민원 서류와 공공 행정 정보를 확인합니다.
+                </a>
+                <a href="https://rt.molit.go.kr" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-slate-200 p-4 text-sm hover:border-primary">
+                  <strong className="block text-foreground">국토교통부 실거래가</strong>
+                  주변 거래 가격과 시세 흐름을 비교합니다.
+                </a>
+                <a href="https://www.khug.or.kr" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-slate-200 p-4 text-sm hover:border-primary">
+                  <strong className="block text-foreground">주택도시보증공사</strong>
+                  전세보증금 반환보증과 보증 제도를 확인합니다.
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>6. 문의</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground leading-7">
               <p>광고 및 제휴 운영 방식에 대한 문의는 문의 페이지 또는 이메일로 접수할 수 있습니다.</p>
