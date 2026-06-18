@@ -125,6 +125,16 @@ export default function DisclosurePage() {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground leading-7">
               <p>광고 및 제휴 운영 방식에 대한 문의는 문의 페이지 또는 이메일로 접수할 수 있습니다.</p>
+              <p>
+                문의를 보낼 때는 문제가 된 페이지 주소, 광고 또는 링크가 표시된 위치, 확인한 날짜를 함께
+                알려 주시면 검토가 빠릅니다. 단순 광고 노출 여부와 콘텐츠 오류는 분리해서 확인하며,
+                주거 계약이나 이사 견적에 대한 개별 판단은 해당 업체, 공공기관, 전문가 상담을 우선해야 합니다.
+              </p>
+              <p>
+                이사독립은 사용자가 광고와 본문을 혼동하지 않도록 정책 페이지를 공개합니다. 광고 수익은
+                사이트 운영을 보조할 수 있지만, 전세 위험 신호, 계약 체크리스트, 이사 비용 설명의 결론을
+                바꾸는 기준으로 사용하지 않습니다.
+              </p>
               <p className="font-semibold text-foreground">contact@indielife.kr</p>
             </CardContent>
           </Card>

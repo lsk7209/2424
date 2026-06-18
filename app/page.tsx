@@ -250,6 +250,30 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="border-y bg-white">
+          <div className="container mx-auto grid gap-6 px-4 py-14 text-sm leading-7 text-slate-700 md:grid-cols-2 md:px-6">
+            <div>
+              <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-950">이사독립 정보 사용 기준</h2>
+              <p>
+                이사독립은 이사 업체를 바로 추천하기보다 사용자가 먼저 확인해야 할 계약 조건과 일정,
+                비용 항목을 정리합니다. 방문 견적, 사다리차, 엘리베이터 사용료, 폐기물 처리, 보관 이사,
+                입주 청소처럼 빠지기 쉬운 비용을 분리해서 보면 실제 예산을 더 안정적으로 세울 수 있습니다.
+              </p>
+            </div>
+            <div>
+              <p>
+                전세와 월세 관련 안내는 등기부등본, 건축물대장, 확정일자, 전입신고, 보증보험 가능 여부처럼
+                공적 확인이 필요한 항목을 우선합니다. 사이트의 체크리스트는 참고용이며, 계약 전에는 주민센터,
+                정부24, 국토교통부 실거래가, 주택도시보증공사 안내를 함께 확인해야 합니다.
+              </p>
+              <p className="mt-3">
+                광고 또는 제휴가 포함될 수 있어도 본문은 사용자의 주거 안전과 비용 판단을 먼저 다룹니다.
+                계산기 결과는 입력값에 따른 추정치이므로 실제 계약서와 업체 견적서가 최종 기준입니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="border-t bg-slate-50">
           <div className="container mx-auto px-4 py-16 md:px-6">
             <div className="mb-8 max-w-2xl">
