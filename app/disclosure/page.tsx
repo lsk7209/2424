@@ -148,6 +148,31 @@ export default function DisclosurePage() {
               <p className="font-semibold text-foreground">contact@indielife.kr</p>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>7. 독자가 확인해야 할 기준</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground leading-7">
+              <p>
+                이사 비용, 중개보수, 전월세 계약, 보증보험, 청소·입주 서비스 안내는 지역과 계약 조건에 따라
+                달라질 수 있습니다. 본문이나 제휴 링크에서 특정 업체명 또는 서비스명이 언급되더라도 이는
+                확인 경로를 제공하기 위한 것이며, 실제 계약 전에는 견적서, 약관, 환불 조건, 방문 가능 시간,
+                보험 적용 범위를 직접 확인해야 합니다.
+              </p>
+              <p>
+                광고 또는 제휴 링크가 포함된 글에서도 편집 기준은 유지됩니다. 사용자가 주거 계약과 이사
+                준비 과정에서 놓치기 쉬운 서류, 비용, 일정, 안전 확인 항목을 먼저 설명하고, 광고성 문구와
+                정보성 안내가 혼동되지 않도록 페이지 단위로 고지합니다. 오류나 이해관계 표시가 부족한
+                부분을 발견하면 문의 페이지로 정정 요청을 보내 주세요.
+              </p>
+              <p>
+                계약 관련 판단은 가능한 한 공공기관, 임대차 신고 자료, 국토교통부 실거래가, 보증기관 안내,
+                지자체 공지와 함께 대조하는 것이 좋습니다. 이사독립은 독자가 광고 노출 여부와 별개로
+                필요한 체크리스트를 직접 검토할 수 있도록 운영 원칙과 연락 경로를 공개합니다.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </main>
 
