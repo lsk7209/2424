@@ -8,6 +8,12 @@ export const revalidate = 3600;
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
+const SEARCH_DISCOVERY_EXCLUDED_PATHS = new Set([
+  "/tools",
+  "/neighborhood-test",
+  "/feng-shui",
+]);
+
 function uniqueByUrl(entries: SitemapEntry[]) {
   return Array.from(new Map(entries.map((entry) => [entry.url, entry])).values());
 }
@@ -23,20 +29,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms",
     "/blog",
     "/guide",
-    "/tools",
-    "/neighborhood-test",
-    "/feng-shui",
     "/safety-check",
     "/checklist",
-  ].map((route) => ({
-    url: `${siteConfig.url}${route}`,
-    lastModified: new Date(siteConfig.updatedAt),
-    changeFrequency: "daily" as const,
-    priority: route === "" ? 1 : 0.8,
-  }));
+  ]
+    .filter((route) => !SEARCH_DISCOVERY_EXCLUDED_PATHS.has(route))
+    .map((route) => ({
+      url: `${siteConfig.url}${route}`,
+      lastModified: new Date(siteConfig.updatedAt),
+      changeFrequency: "daily" as const,
+      priority: route === "" ? 1 : 0.8,
+    }));
 
   const toolPages = tools
-    .filter((tool) => tool.isReady)
+    .filter((tool) => tool.isReady && !SEARCH_DISCOVERY_EXCLUDED_PATHS.has(tool.href))
     .map((tool) => ({
       url: `${siteConfig.url}${tool.href}`,
       lastModified: new Date(siteConfig.updatedAt),

@@ -12,13 +12,19 @@ import {
 import { tools } from "@/data/tools";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = createPageMetadata({
-  title: "도구 모음",
-  description:
-    "이사 견적 계산기, 전월세 전환율 계산기, 중개수수료 계산기, D-Day 카운터 등 실전 도구를 한 번에 모았습니다.",
-  path: "/tools",
-  keywords: ["이사 계산기", "중개수수료 계산기", "전월세 전환율"],
-});
+export const metadata = {
+  ...createPageMetadata({
+    title: "도구 모음",
+    description:
+      "이사 견적 계산기, 전월세 전환율 계산기, 중개수수료 계산기, D-Day 카운터 등 실전 도구를 한 번에 모았습니다.",
+    path: "/tools",
+    keywords: ["이사 계산기", "중개수수료 계산기", "전월세 전환율"],
+  }),
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function ToolsIndexPage() {
   const readyTools = tools.filter((tool) => tool.isReady);
