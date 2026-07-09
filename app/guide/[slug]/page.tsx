@@ -71,7 +71,9 @@ export async function generateMetadata(props: GuidePostPageProps) {
 }
 
 export async function generateStaticParams() {
-  return [];
+  return getPublishedGuidePosts().map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export default async function GuidePostPage(props: GuidePostPageProps) {

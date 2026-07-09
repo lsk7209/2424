@@ -71,7 +71,9 @@ export async function generateMetadata(props: BlogPostPageProps) {
 }
 
 export async function generateStaticParams() {
-  return [];
+  return getPublishedBlogPosts().map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
