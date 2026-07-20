@@ -10,6 +10,7 @@
     "validate:content": "node scripts/validate-content.mjs",
     "score:content": "node scripts/score-blog-expansion-quality.mjs",
     "score:all-content": "node scripts/score-all-content-quality.mjs",
+    "audit:publication-density": "node scripts/audit-publication-density.mjs",
     "generate:ai-index": "node scripts/generate-ai-index.mjs",
     "validate:seo": "node scripts/validate-seo.mjs",
     "audit:live": "node scripts/audit-live.mjs",
