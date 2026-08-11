@@ -58,6 +58,8 @@ export default function BlogIndexPage() {
             </p>
           </div>
 
+          <h2 className="text-2xl font-semibold tracking-tight">최신 이사·주거 정보</h2>
+
           <div className="grid gap-6 md:grid-cols-2">
             {posts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
