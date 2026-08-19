@@ -10,6 +10,12 @@
 - Deployment and live verification: commit `9a51c9e` was pushed to GitHub `main` and Vercel Git integration production deployment `https://2424-hnvp9qpjh-limsubs-projects.vercel.app` reached Ready. On `https://today2424.kr`, sitemap returned 200 with 78 URLs (down from 530); a representative withdrawn template URL returned 404 and was absent from the sitemap; a retained core article and `/moving/seoul-mapo` returned 200; homepage HTML no longer contained `SearchAction`. No additional GSC sitemap submission was made because the existing submission is healthy and Google is still processing it.
 - Gap / follow-up: PSI API calls were skipped after public endpoint 429 responses for mobile and desktop samples; no performance regression was inferred. Recheck CWV when API quota permits. After deployment, verify the reduced sitemap and then use GSC performance data to select high-intent articles for individual rewrites rather than restarting bulk generation.
 
+## Editorial recovery foundation (2026-08-19T16:05:00+09:00)
+
+- Created a truthful, non-recommendation editorial persona at `personas/today2424/persona.md` with two distinct short structural samples under `personas/today2424/samples/`.
+- The source direction for future moving-estimate articles is limited to current Korea Consumer Agency guidance and the National Law Information Center rules for moving-freight estimates, contracts, and evidence. No provider recommendation, live-price claim, or invented personal experience is permitted.
+- This is intentionally not publishable content yet: the two planned articles still require their own 3,500+ Korean-character drafts, `research.json`, `qa.json`, and manifest-level anti-template review under the persona-writer quality gates. Do not publish the samples.
+
 ## Local moving-content ranking reinforcement (2026-08-19T15:25:00+09:00)
 
 - User goal: strengthen the moving-provider regional pages for Google search quality without inventing provider quality, pricing, availability, or local facilities.
