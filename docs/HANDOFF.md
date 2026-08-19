@@ -1,5 +1,15 @@
 # 작업 인계
 
+## Production deployment and GSC checkpoint (2026-08-19T19:04:00+09:00)
+
+- Deployment: release commit `c806fe5` was pushed to GitHub `lsk7209/2424` `main`. Vercel deployment `dpl_EUwe7yKbS4BZMCinwmKHZHAkQR5E` is `Ready` in Production and has aliases `https://today2424.kr`, `https://www.today2424.kr`, and the project deployment URL.
+- Live content proof: the public sitemap still has 78 URLs. All 54 manifest routes that belong to the source inventory returned 200 and contain the generated `editorial-prose` body; the standalone `moving-estimate-contract-record` remains intentionally outside the live sitemap. Representative routes retain one H1, JSON-LD, and canonical URLs.
+- Live SEO/monetization proof: `validate:seo` passed 78/78 and `validate:adsense` passed. The SEO validator now reports article-title/description length warnings for the newly published long Korean titles plus the seven regional descriptions; these are non-blocking metadata review items, not indexing errors.
+- GSC: `npm run submit:gsc-sitemap -- --submit` returned `submit: ok` for `https://today2424.kr/sitemap.xml` at `2026-08-19T10:03:45.871Z` (UTC). The API reports `isPending=true`, warnings `0`, errors `0`; submitted/indexed contents remain the prior `530/0` until Google downloads the pending sitemap. No URL Inspection or Indexing API requests were sent.
+- Analytics: the read-only GSC performance window remains 2026-07-20..2026-08-16 with 6 pages, 5 queries, 0 clicks, 5 impressions. GA4 `G-N2V7ZZP184` / property `534327620` still matches and the API is healthy.
+- Rollback: previous known-good commit/deployment is `0602ddf`; Vercel can roll back to it if the new rendered content has a production defect. Existing user-dirty worktree files remain untouched and uncommitted.
+- Next step: let Vercel/GSC settle, then review the metadata warnings and GSC impressions before any further copy or indexing action; do not infer rankings from the current sample.
+
 ## Release candidate preparation (2026-08-19T18:59:35+09:00)
 
 - Previous remote/production baseline: `0602ddf` on GitHub `main`; the release candidate contains only the reviewed editorial override integration, 55 dossier artifacts, validators, and this handoff update.
