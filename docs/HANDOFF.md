@@ -1,5 +1,13 @@
 # 작업 인계
 
+## GitHub 배포 및 GSC 제출 완료 (2026-08-19T15:02:01+09:00)
+
+- 배포: 이사 pSEO 커밋 `6c83d2c`를 GitHub `main`에 push했고, Vercel Git 연동 Production deployment `dpl_4B4hr6bQpz6MQYtJaMV7dF3y1Yhn`이 Ready 상태가 됐다. alias는 `https://today2424.kr`이다.
+- 라이브 검증: `https://today2424.kr/moving` 200 및 마포 상세 `https://today2424.kr/moving/seoul-mapo` 200을 확인했고, 허브에는 마포 지역 링크가, 상세에는 68개 레코드가 표시됐다. live sitemap은 530개 URL을 제공한다.
+- GSC: `https://today2424.kr/` property에서 `https://today2424.kr/sitemap.xml`을 라이브 반영 후 재제출했다. API 응답은 errors 0, warnings 0, `isPending: true`, lastSubmitted `2026-08-19T06:02:01.200Z`다. 마지막 API contents 수치는 Google 재처리 전 507 / indexed 0이므로 새 530개 URL의 처리 완료를 뜻하지 않는다.
+- 사용자 기존 변경: `app/blog/[slug]/page.tsx`, `app/feed/route.ts`, `app/guide/[slug]/page.tsx`, `components/analytics/GoogleAnalyticsTracker.tsx`, `package-lock.json`은 배포 rebase 동안 stash로 보존 후 원상 복구했으며 커밋에 포함하지 않았다.
+- 다음 한 단계: GSC가 sitemap을 다시 읽은 뒤 제출 URL 수와 색인 상태를 재확인한다. 원격 페이지의 취소·재제출·개별 URL 색인 요청은 별도 지시 없이 수행하지 않는다.
+
 ## 이사 업체 pSEO 적용 완료 (2026-08-19)
 
 - 사용자 목표: `korea-local-business-datasets`의 이사 관련 원본에서 비관련 결과를 제외하고 `today2424.kr` pSEO에 적용.
