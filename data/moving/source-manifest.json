@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "topicId": "korea-moving-service-discovery",
+  "query": "이사",
+  "brainRepository": "https://github.com/lsk7209/lim-brain",
+  "brainRevision": "4318c80413750dd96219c71c0bd81eb96f22d2f9",
+  "sourceRevision": "57d85af24d146b2cc6f108ad46e06ebf87de235a",
+  "sourceRepository": "https://github.com/lsk7209/korea-local-business-datasets",
+  "rawDataPolicy": "metadata-only",
+  "lastVerifiedAt": "2026-08-19",
+  "sources": {
+    "naver-place": {
+      "runDate": "2026-08-06",
+      "uniqueSourceIdCount": 300,
+      "baselineUniqueSourceIdCount": 300,
+      "newUniqueSourceIdCount": 300,
+      "detailProcessedCount": 300,
+      "detailVisibleCount": 220,
+      "detailNotVisibleCount": 80,
+      "detailRemainingCount": 0,
+      "rawArtifactPath": "data/collection-runs/2026-08-06/naver-isa-corrected-results.json",
+      "rawArtifactSizeBytes": 212203,
+      "rawArtifactSha256": "bd52dda5cbe4355359936ceba1aabdd61a08cc10954ffb0ff72de0c1034d3964",
+      "rawArtifactStatus": "available"
+    },
+    "google-maps": {
+      "runDate": "2026-08-07",
+      "uniqueSourceIdCount": 118,
+      "baselineUniqueSourceIdCount": 118,
+      "newUniqueSourceIdCount": 118,
+      "detailProcessedCount": 118,
+      "detailVisibleCount": 14,
+      "detailNotVisibleCount": 104,
+      "detailRemainingCount": 0,
+      "rawArtifactPath": "data/collection-runs/2026-08-07/google-isa-all-unique-final.json",
+      "rawArtifactSizeBytes": 149639,
+      "rawArtifactSha256": "2c6f1c07d27107c738b7661d3d0aa0fd40f2cd47b2a81aa3a068a654e2403474",
+      "rawArtifactStatus": "available"
+    }
+  }
+}

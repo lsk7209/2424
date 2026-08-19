@@ -1,0 +1,101 @@
+# 작업 인계
+
+## 이사 업체 pSEO 적용 완료 (2026-08-19)
+
+- 사용자 목표: `korea-local-business-datasets`의 이사 관련 원본에서 비관련 결과를 제외하고 `today2424.kr` pSEO에 적용.
+- 적용 데이터: Naver 원본 300개에서 이사·포장이사·해외이사만, Google 원본 118개에서 이삿짐 운송·용달화물·운송 서비스·보관이사만 통과시켰다. 주소에서 서울 자치구를 확인할 수 없는 98개는 지역 pSEO에 넣지 않았다.
+- 결과: source-native ID를 병합하지 않은 284개 레코드가 생성됐다. 색인 가능 페이지는 서울 마포구 68, 서대문구 36, 영등포구 53, 은평구 30, 강서구 41, 양천구 26, 용산구 17의 7개다. 구로·강남·종로·동작·관악은 최소 5개 미만이라 sitemap/pSEO에서 제외된다.
+- 변경 파일: `data/moving/providers.json`, `data/moving/source-manifest.json`, `scripts/import-moving-baseline.mjs`, `package.json`, `app/moving/page.tsx`.
+- 재현: `npm run import:moving:baseline`은 `D:\web\korea-local-business-datasets`의 `origin/main` 원본을 읽어 providers 데이터를 다시 생성한다. 원본 revision은 `57d85af24d146b2cc6f108ad46e06ebf87de235a`이며 Naver/Google 원본 SHA-256도 manifest에 기록했다.
+- 검증: `npm run validate:moving:manifest`, `npm run validate:moving`, `npm run lint`, `npm run build` 모두 통과. build에서 `/moving` 및 7개 `/moving/[region]` 정적 경로가 생성됐다.
+- 부작용/경계: 지도 수집 시점의 검색 결과만 표시하며 추천·순위·가격·보험·현재 영업 또는 출처 간 동일 업체를 주장하지 않는다. 배포, GitHub push, GSC 제출/색인 요청은 실행하지 않았다.
+- 다음 한 단계: 로컬 preview에서 7개 지역 페이지의 원문 링크와 모바일 레이아웃을 확인한 후, 배포 여부를 별도로 결정한다.
+
+## 원본 저장소 정정 확인 (2026-08-19)
+
+- 앞선 "원본 export가 없다" 판단은 `korea-local-business-datasets`의 오래된 로컬 checkout만 확인한 오류였다. 사용자가 지정한 원격 `main`을 fetch해 revision `57d85af24d146b2cc6f108ad46e06ebf87de235a`에서 실제 원본을 확인했다.
+- Naver 원본: `data/collection-runs/2026-08-06/naver-isa-corrected-results.json`, 이사 검색 결과 300개. 범주 분포는 이사 127, 포장이사 133, 해외이사 18이며 홈크리닝/청소/아파트청소 22개도 함께 있어 pSEO 연결 때 제외해야 한다.
+- Google 원본: `data/collection-runs/2026-08-07/google-isa-all-unique-final.json`, 118개. 이삿짐 운송·용달화물·운송 서비스·보관이사 93개가 후보이고 은행·의류·청소·장비대여 등 관련 없는 25개는 제외 대상이다.
+- 두 원본 모두 source-native ID를 가진 공개 지도 관찰 결과다. 실제 영업, 품질, 가격, 보험, 가용성 또는 추천 순위를 입증하지 않으며, Naver 300개와 Google 118개는 이름/주소로 병합하지 않는다.
+- 다음 구현 단계: 관련 범주만 원본 ID 기준으로 정규화하고, 수집일·원문 링크·관찰 범위를 표시하는 마포권 이사 업체 검색 pSEO 페이지에 연결한다. 배포는 별도 승인 전까지 하지 않는다.
+
+## 재개 점검 (2026-08-19T14:34:56+09:00)
+
+- 사용자 요청: 중단된 이사 업체 원본 연결 작업을 재개함.
+- 확인 결과: 인계에 지정된 `D:\program-codex\naver\naver-place-find` 경로가 현재 존재하지 않는다. `D:\web\korea-local-business-datasets`의 현재 `origin/main` 트리에도 `2026-08-18-isa-national` 원본은 없고, 이사 관련 파일은 기존 도구 페이지뿐이다.
+- 대체 확인: `lim-brain` 원격 `main`은 manifest에 기록된 `4318c80413750dd96219c71c0bd81eb96f22d2f9`와 일치했다. 비인증 GitHub Tree API 조회는 private repository 때문에 404였으며, 원본을 회수할 수 있는 근거가 아니다.
+- 검증: `npm run validate:moving:manifest` 통과 (Naver 4,784 / Google 1,278, raw 상태 `not-in-brain-repository`), `npm run validate:moving` 통과 (0 records, `awaiting-raw-export`, 색인 가능 지역 0).
+- 변경/부작용: 애플리케이션 데이터나 코드는 수정하지 않았고, 이 인계 기록만 갱신했다. 현 데이터 해시: `providers.json` `AC1E55BB...54B6D9`, `source-manifest.json` `CD9C74FC...ED5C85`.
+- 현재 차단점: 원본 JSON 본문 또는 source-native ID, 링크, 지역, 관찰일, 상세 상태를 포함하는 동등한 검증 가능 export가 없다.
+- 다음 한 단계: 원본 export가 복구되면 먼저 별도 파일로 schema·행 수·SHA-256을 대조한 후에만 정규화 변환을 실행하고 `providers.json`을 연결한다. 이 상태에서는 지역 페이지 공개·배포·GSC 제출을 수행하지 않는다.
+
+## GitHub 원본 재확인 (2026-08-19)
+
+- 사용자 요청: `https://github.com/lsk7209/lim-brain`의 이사 업체를 pSEO에 적용.
+- `lim-brain` 로컬 clone에서 `git fetch origin main` 후 최신 원격 revision `4318c80413750dd96219c71c0bd81eb96f22d2f9`을 직접 확인했다.
+- 해당 revision의 `collections/topics/moving/`에는 Naver 4,784개와 Google 1,278개의 2026-08-18 지역 확장 요약, raw export 경로, SHA-256, 부분 detail checkpoint만 있다. `SOURCE_BOUNDARIES.md`와 두 source README는 원본 결과를 metadata-only Brain 밖의 `D:\program-codex\naver\naver-place-find`에 둔다고 명시한다.
+- 실제 업체명·source-native ID·원문 링크·지역·관찰일을 갖춘 provider 레코드는 GitHub 트리에 없다. 따라서 업체별 또는 지역별 업체 목록 pSEO를 현 GitHub 데이터만으로 생성하지 않았다.
+- 재개 조건은 변함없다: 원본 export 또는 동등한 provider-level export를 확보하고, manifest SHA-256/건수 대조와 `validate:moving`을 통과해야 한다.
+
+## 다른 컴퓨터 수집분 복구 조사 (2026-08-19)
+
+- `lim-brain` 원격의 2026-08-18 run summary는 수집이 실제 수행됐음을 뒷받침한다. Naver raw export는 4,739,915 bytes / SHA-256 `b71e54c4...880355e`, Google raw export는 1,532,466 bytes / SHA-256 `3d8d8604...1f3cbb`로 기록돼 있다.
+- 현 컴퓨터에서 명시된 원본 경로, Brain의 동기 경로 설정, `D:\program-codex`, `D:\claude-backup`, `D:\codex`, `D:\.codex`의 관련 파일명·manifest 문자열을 조회했으나 raw export를 찾지 못했다.
+- 결론: 다른 컴퓨터의 수집 원본이 GitHub metadata-only Brain에 동기화되지 않은 상태다. 해당 컴퓨터에서 두 raw JSON을 확보하거나 이 컴퓨터에 복사하면 해시와 행 수를 대조해 pSEO 변환을 재개할 수 있다.
+
+## 현재 상태
+
+- 기준 시각: 2026-08-19T14:15:10+09:00
+- 사용자 목표: `lim-brain`에 기록된 이사 업체 수집 결과를 `today2424.kr`의 지역별 pSEO 구조에 안전하게 연결
+- 현재 단계: GitHub `lim-brain`의 최신 moving manifest를 대조하고 `today2424`에 source manifest·검증·상태 표시를 연결했으며, 로컬 검증을 완료함
+
+## 확인된 사실
+
+- 대상 프로젝트: `D:\web\today2424\2424`, canonical `https://today2424.kr`
+- `lim-brain` moving topic에는 2026-08-18 기준 Naver 4,784개·Google 1,278개 고유 식별자와 detail checkpoint 요약이 있음
+- GitHub `lim-brain` 최신 main은 `4318c80413750dd96219c71c0bd81eb96f22d2f9`이며 `collections/topics/moving`에는 수집 요약·artifact 경로·SHA-256만 있음
+- moving README와 `SOURCE_BOUNDARIES.md`는 raw 결과를 `D:\program-codex\naver\naver-place-find` 외부 workspace에 둔다고 명시하고, 현재 checkout·전체 Git 이력에는 raw JSON이 없음
+- 확인된 raw artifact는 Naver 4,739,915 bytes / SHA-256 `b71e...355e`, Google 1,532,466 bytes / SHA-256 `3d8d...3cbb`로 manifest에 기록함. 파일 본문은 현재 환경에 없음
+- 현재 live sitemap은 507개 URL이며 기본 live/SEO/AdSense 검증은 통과했지만, 최신 GSC 수집 기간의 클릭은 0이고 sitemap API의 indexed contents는 0으로 보고됨
+- GSC URL Inspection 대표 확인에서 콘텐츠·도구 URL 3개는 `PASS / Submitted and indexed`; 홈은 사용자 canonical `https://today2424.kr/`에 대해 Google canonical을 `https://www.today2424.kr/`로 선택함
+- 현재 live 헤더에서 non-www 홈은 200, www 홈은 non-www로 307 redirect이므로 홈 canonical 차이는 stale GSC 신호인지 재수집 후 재확인해야 함
+- 따라서 원본 레코드를 추정하거나 지역별 빈 페이지를 먼저 공개하지 않음
+
+## 기존 변경 보존
+
+작업 시작 전부터 다음 파일은 사용자 변경으로 보존한다.
+
+- `app/blog/[slug]/page.tsx`
+- `app/feed/route.ts`
+- `app/guide/[slug]/page.tsx`
+- `components/analytics/GoogleAnalyticsTracker.tsx`
+- `package-lock.json`
+
+## 이번 작업의 변경 범위
+
+- `data/moving/`에 source-native 식별자, 관찰일, detail 상태, 지역 slug를 포함한 정규화 계약 추가
+- `data/moving/source-manifest.json`에 GitHub moving topic의 run 수량·detail checkpoint·raw artifact 경로·SHA-256 연결
+- `scripts/validate-moving-data.mjs`로 입력 JSON의 식별자 중복·원문 도메인·관찰일·지역 품질을 검사
+- `scripts/validate-moving-manifest.mjs`로 Brain manifest의 revision·source별 수량·SHA-256·raw 상태를 검사
+- 원본 파일이 없으면 빈 데이터셋으로 유지하고 indexable region을 0으로 계산
+- 검증된 지역만 `/moving/[region]`에 렌더링하고 sitemap에 추가
+- `sourceStatus=ready`, source ID/link 대응 확인, 중복 없는 전체 데이터, 최근 관찰일을 모두 만족해야 색인 가능
+- 합성 ready fixture에서 5개 레코드·상세 확인 2개·신선한 관찰일 조건으로 indexable region 생성까지 검증 후 fixture 삭제
+- Naver/Google 레코드는 이름·주소·전화번호만으로 합치지 않음
+- 수집 결과를 추천·순위·가격·보험·영업 상태로 표현하지 않음
+- `MovingDirectoryTracker`로 지역 디렉터리 조회를 `moving_directory_view`, 원문 링크 클릭을 `moving_source_click`으로 측정하되 지역 slug·source·상태·수량만 전송
+- 같은 `regionSlug`에 서로 다른 `regionName`이 섞이면 validator뿐 아니라 런타임 indexability도 차단
+- `/moving` 대기 상태에 lim-brain의 Naver 4,784개·Google 1,278개 수집 증거를 표시하되, 업체 레코드로 오인되지 않도록 raw 미연결 상태를 명시
+
+## 검증·부작용·롤백
+
+- 로컬 lint/typecheck/moving 데이터/기존 콘텐츠 검증과 live SEO·AdSense 검증을 실행했다.
+- `npm run build`: 통과, `/moving` 및 조건부 `/moving/[region]` 라우트 생성 확인
+- `npm run validate:moving:manifest`: 통과, Brain revision `4318c804...` 및 source별 수량·raw 상태 확인
+- GSC URL Inspection: 홈 `NEUTRAL / Duplicate`, 콘텐츠·도구 대표 3개 `PASS / Submitted and indexed`
+- `next build`, GitHub push, Vercel 배포, GSC 제출/색인 요청은 이 단계에서 실행하지 않는다.
+- 롤백은 새로 추가한 `data/moving/`, `lib/moving-directory.ts`, `app/moving/`, `components/MovingDirectoryTracker.tsx`, `components/MovingSourceLink.tsx`, `scripts/validate-moving-data.mjs`와 sitemap 변경을 되돌리면 된다.
+
+## 다음 한 단계
+
+외부 workspace에 기록된 Naver/Google raw artifact 본문을 확보해 schema를 먼저 확인하고, 그 다음 정규화된 레코드만 `data/moving/providers.json`에 연결한다. `npm run validate:moving:manifest`와 `npm run validate:moving`을 모두 통과한 지역만 preview에서 확인한 뒤 배포 여부를 별도로 판단한다.

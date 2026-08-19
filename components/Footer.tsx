@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { getIndexableMovingRegions } from '@/lib/moving-directory';
+
+const hasMovingDirectory = getIndexableMovingRegions().length > 0;
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -32,6 +35,13 @@ export default function Footer() {
                                     전세 사기 진단
                                 </Link>
                             </li>
+                            {hasMovingDirectory && (
+                                <li>
+                                    <Link href="/moving" className="hover:text-primary transition-colors">
+                                        지역별 이사 업체 찾기
+                                    </Link>
+                                </li>
+                            )}
                             <li>
                                 <Link href="/tools" className="hover:text-primary transition-colors">
                                     이사독립 도구함

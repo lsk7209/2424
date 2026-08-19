@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { getPublicationDate } from "@/data/publish-schedule";
 import { tools } from "@/data/tools";
 import { getPublishedBlogPosts, getPublishedGuidePosts } from "@/lib/content";
+import { getIndexableMovingRegions } from "@/lib/moving-directory";
 import { siteConfig } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -63,5 +64,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return uniqueByUrl([...staticPages, ...toolPages, ...blogPages, ...guidePages]);
+  const movingRegions = getIndexableMovingRegions();
+  const movingPages = movingRegions.length > 0
+    ? [
+        {
+          url: `${siteConfig.url}/moving`,
+          lastModified: new Date(
+            Math.max(...movingRegions.map((region) => new Date(region.latestObservedAt).getTime())),
+          ),
+          changeFrequency: "weekly" as const,
+          priority: 0.75,
+        },
+        ...movingRegions.map((region) => ({
+          url: `${siteConfig.url}/moving/${region.regionSlug}`,
+          lastModified: new Date(region.latestObservedAt),
+          changeFrequency: "weekly" as const,
+          priority: 0.65,
+        })),
+      ]
+    : [];
+
+  return uniqueByUrl([...staticPages, ...toolPages, ...blogPages, ...guidePages, ...movingPages]);
 }
