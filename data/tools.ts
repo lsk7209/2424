@@ -62,8 +62,8 @@ export const tools: Tool[] = [
   },
   {
     slug: 'moving-cost-calculator',
-    title: '이사 견적 계산기',
-    description: '짐 양, 거리, 층수를 기준으로 예상 이사 비용을 계산합니다.',
+      title: '이사 견적 비교 준비 도구',
+      description: '짐 양, 거리, 층수 등 견적 비교에 필요한 조건을 정리합니다.',
     icon: Truck,
     href: '/tools/moving-cost-calculator',
     category: '계산기',

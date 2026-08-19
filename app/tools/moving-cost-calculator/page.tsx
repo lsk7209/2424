@@ -15,7 +15,6 @@ import { Truck, Package, Home, ArrowRight, RefreshCcw, Calculator } from 'lucide
 
 export default function MovingCostCalculatorPage() {
   const [step, setStep] = useState(1);
-  const [result, setResult] = useState<number | null>(null);
 
   // State for inputs
   const [moveType, setMoveType] = useState('general'); // general(일반), semi(반포장), packing(포장)
@@ -25,52 +24,17 @@ export default function MovingCostCalculatorPage() {
   const [hasElevator, setHasElevator] = useState('yes');
 
   const calculateCost = () => {
-    let baseCost = 0;
-
-    // 1. 이사 종류 및 평수에 따른 기본 비용 (단위: 만원)
-    if (moveType === 'general') { // 일반이사 (용달)
-      if (roomSize === 'one-room') baseCost = 15;
-      else if (roomSize === 'two-room') baseCost = 30;
-      else baseCost = 50;
-    } else if (moveType === 'semi') { // 반포장이사
-      if (roomSize === 'one-room') baseCost = 30;
-      else if (roomSize === 'two-room') baseCost = 60;
-      else baseCost = 90;
-    } else { // 포장이사
-      if (roomSize === 'one-room') baseCost = 50;
-      else if (roomSize === 'two-room') baseCost = 90;
-      else baseCost = 140;
-    }
-
-    // 2. 거리 비용 추가 (10km 초과 시 10km당 2만원)
-    if (distance > 10) {
-      const extraDistance = distance - 10;
-      baseCost += Math.ceil(extraDistance / 10) * 2;
-    }
-
-    // 3. 층수 및 엘리베이터 비용 (사다리차 등)
-    if (hasElevator === 'no' && floor > 1) {
-      // 엘리베이터 없는 고층은 사다리차 필수 또는 인건비 추가
-      baseCost += (floor - 1) * 3; // 층당 3만원 추가
-    }
-
-    // 4. 성수기/손없는날 변동성 (단순 예시로 10% 범위 추가)
-    // 실제로는 날짜 입력받아 처리해야 하지만 여기선 범위로 보여줌
-
-    setResult(baseCost);
     setStep(2);
     trackEvent('tool_used', {
       tool_name: 'moving_cost_calculator',
       move_type: moveType,
       room_size: roomSize,
       distance_km: distance,
-      estimated_cost: baseCost,
     });
   };
 
   const resetCalculator = () => {
     setStep(1);
-    setResult(null);
     setMoveType('general');
     setRoomSize('one-room');
     setDistance(10);
@@ -81,10 +45,10 @@ export default function MovingCostCalculatorPage() {
   const appSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "이사 견적 계산기",
+    name: "이사 견적 비교 준비 도구",
     url: "https://www.today2424.kr/tools/moving-cost-calculator",
-    description: "이사 종류, 집 크기, 이동 거리, 층수를 입력하면 예상 이사 비용을 즉시 계산합니다.",
-    applicationCategory: "FinanceApplication",
+    description: "이사 조건을 정리해 업체 견적을 같은 기준으로 비교하도록 돕는 무료 도구입니다. 실제 견적이나 시세를 산출하지 않습니다.",
+    applicationCategory: "UtilityApplication",
     operatingSystem: "Web",
     offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
   };
@@ -98,10 +62,10 @@ export default function MovingCostCalculatorPage() {
         <div className="text-center mb-10">
           <h1 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
             <Truck className="w-8 h-8 text-blue-600" />
-            이사 견적 계산기
+            이사 견적 비교 준비 도구
           </h1>
           <p className="text-gray-600">
-            이사 종류, 집 크기, 거리를 입력하면<br className="md:hidden" /> 예상 이사 비용을 알려드립니다.
+            이사 조건을 정리해 업체에 같은 기준으로 문의할 수 있도록 돕습니다.<br className="md:hidden" /> 실제 견적·시세를 산출하는 도구는 아닙니다.
           </p>
         </div>
 
@@ -109,10 +73,10 @@ export default function MovingCostCalculatorPage() {
           <CardHeader className="bg-blue-600 text-white rounded-t-xl p-6">
             <CardTitle className="text-xl font-bold flex items-center gap-2">
               <Calculator className="w-5 h-5" />
-              {step === 1 ? '이사 정보 입력' : '견적 계산 결과'}
+              {step === 1 ? '이사 정보 입력' : '견적 비교 요청 요약'}
             </CardTitle>
             <CardDescription className="text-blue-100">
-              {step === 1 ? '정확한 견적을 위해 아래 정보를 입력해주세요.' : '입력하신 정보를 바탕으로 산출된 예상 비용입니다.'}
+              {step === 1 ? '업체에 같은 조건을 전달하기 위해 아래 정보를 정리하세요.' : '이 조건을 같은 범위로 전달해 받은 견적을 비교하세요.'}
             </CardDescription>
           </CardHeader>
 
@@ -187,7 +151,7 @@ export default function MovingCostCalculatorPage() {
                     step={5}
                     className="py-4"
                   />
-                  <p className="text-sm text-gray-500 text-right">서울 시내 평균 10~20km</p>
+                  <p className="text-sm text-gray-500 text-right">출발지와 도착지 기준의 예상 이동 거리</p>
                 </div>
 
                 {/* 4. 층수 및 엘리베이터 */}
@@ -220,19 +184,14 @@ export default function MovingCostCalculatorPage() {
                   onClick={calculateCost}
                   className="w-full h-14 text-xl font-bold bg-blue-600 hover:bg-blue-700 shadow-lg mt-8"
                 >
-                  견적 확인하기 <ArrowRight className="ml-2 w-5 h-5" />
+                  비교 조건 정리하기 <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             ) : (
               <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <div className="text-center space-y-2">
-                  <p className="text-gray-600 text-lg">고객님의 예상 이사 비용은</p>
-                  <div className="text-5xl font-bold text-blue-600 tracking-tight">
-                    {result?.toLocaleString()} <span className="text-2xl text-gray-500">만원 ~</span>
-                  </div>
-                  <p className="text-sm text-gray-400 mt-2">
-                    * 작업 환경, 날짜(손없는날), 옵션에 따라 실제 비용은 달라질 수 있습니다.
-                  </p>
+                <div className="rounded-xl border border-blue-200 bg-blue-50 p-6 text-center space-y-2">
+                  <p className="text-lg font-bold text-blue-950">업체에 전달할 비교 조건을 정리했습니다</p>
+                  <p className="text-sm leading-6 text-blue-900">이 도구는 실제 업체 견적이나 시장 시세를 계산하지 않습니다. 아래 조건과 작업 범위를 같은 방식으로 전달한 뒤 견적서를 비교하세요.</p>
                 </div>
 
                 <div className="bg-gray-50 rounded-xl p-6 space-y-4 border border-gray-100">
@@ -276,10 +235,10 @@ export default function MovingCostCalculatorPage() {
                         cta_name: 'moving_quote_compare',
                         tool_name: 'moving_cost_calculator',
                       });
-                      window.open('https://search.naver.com/search.naver?query=포장이사견적비교', '_blank', 'noopener,noreferrer');
+                      window.location.assign('/guide/moving-center-selection');
                     }}
                   >
-                    실제 견적 비교하기
+                    견적 비교 가이드 보기
                   </Button>
                 </div>
               </div>
@@ -289,15 +248,20 @@ export default function MovingCostCalculatorPage() {
 
         {/* SEO Content */}
         <article className="mt-16 prose prose-blue max-w-none">
-          <h2>이사 비용, 어떻게 결정되나요?</h2>
+          <h2>이사 견적 비교 전에 조건을 통일해야 하는 이유</h2>
           <p>
-            이사 비용은 크게 <strong>짐의 양(톤수)</strong>, <strong>작업 인원</strong>, <strong>이동 거리</strong>, 그리고 <strong>사다리차 사용 여부</strong>에 따라 결정됩니다.
+            이사 견적은 짐의 양, 작업 인원, 이동 거리, 출입·주차 환경, 날짜와 포함 작업에 따라 달라질 수 있습니다. 그래서 이 도구는 가격을 단정하지 않고, 업체마다 같은 조건을 전달하도록 돕습니다.
           </p>
+          <h3>견적서에서 함께 확인할 항목</h3>
           <ul>
-            <li><strong>일반이사:</strong> 짐을 고객이 직접 포장하고 정리하며, 업체는 운송만 담당합니다. 가장 저렴합니다.</li>
-            <li><strong>반포장이사:</strong> 업체가 포장과 운송을 돕지만, 큰 짐 정리 외 잔짐 정리는 고객이 합니다.</li>
-            <li><strong>포장이사:</strong> 포장부터 운송, 정리, 청소까지 업체가 모두 담당합니다. 가장 편하지만 비용이 높습니다.</li>
+            <li><strong>작업 범위:</strong> 포장·운반·배치·정리·가구 분해와 조립 중 어디까지 포함되는지</li>
+            <li><strong>조건부 비용:</strong> 사다리차, 주차, 계단, 장거리 운반, 날짜·시간 변경 시 어떤 기준이 적용되는지</li>
+            <li><strong>별도 작업:</strong> 에어컨·TV·정수기 등 설치·해체가 필요한 품목의 담당과 비용</li>
+            <li><strong>기록:</strong> 지급 시점·변경·취소 조건과 파손·분실 발생 시 연락 방법</li>
           </ul>
+          <p>
+            입력 결과를 견적 요청 메모로 사용한 뒤, 받은 견적서의 포함·제외 항목을 같은 순서로 표시해 보세요. 낮은 금액만으로는 같은 서비스 범위인지 판단하기 어렵습니다.
+          </p>
         </article>
       </main>
 

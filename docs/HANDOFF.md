@@ -1,5 +1,17 @@
 # 작업 인계
 
+## Local moving-content ranking reinforcement (2026-08-19T15:25:00+09:00)
+
+- User goal: strengthen the moving-provider regional pages for Google search quality without inventing provider quality, pricing, availability, or local facilities.
+- Completed locally: added `data/moving/region-guidance.ts` with distinct decision-support copy for all seven indexable Seoul regions. `app/moving/[region]/page.tsx` now renders source-derived category composition, region-specific comparison questions, one visible FAQ, region-specific title/description metadata, and matching visible-content `FAQPage` JSON-LD. Reworked `data/guides.ts` (`/guide/moving-center-selection`) to remove unsupported price/probability claims, add a comparison-and-contract-record checklist, a current official legal reference, and a contextual link to `/moving`.
+- Reworked the only currently GSC-visible moving tool (`/tools/moving-cost-calculator`): removed the unsupported fixed-price algorithm and external search handoff, changed it into a transparent quote-comparison preparation tool, updated its metadata/schema/tool-card copy, and linked its result state to the on-site comparison guide. It now clearly says it does not calculate a live quote or market price.
+- Validation: `npm run lint`, `npm run build`, and `git diff --check` passed. The build generated `/moving` plus all 7 `/moving/[region]` SSG paths (543 static pages total).
+- Rendered local verification: production-mode local server returned 200 for `/moving/seoul-mapo`, `/guide/moving-center-selection`, and `/tools/moving-cost-calculator`; each emitted its production canonical. The regional page rendered its visible FAQ plus `FAQPage` schema and source-derived category content, the guide emitted `Article` plus `FAQPage` schema, and the tool rendered its no-live-price disclosure. The temporary server was stopped after verification.
+- Read-only GSC/GA4 checkpoint: GSC was healthy (sitemap errors/warnings 0; last download `2026-08-19T06:02:02.371Z`) but still reports the prior 530 submitted / 0 indexed inventory. The latest available performance window (`2026-07-20` through `2026-08-16`) has only 6 pages and 5 queries with 0 clicks, so it cannot prove ranking or direct a query-level rewrite; GA4 measurement `G-N2V7ZZP184` and API health were confirmed.
+- Scope boundary: the provider data remains a collected-search-result directory only; no ranking, endorsement, price, availability, or unverified provider claims were added. Existing user modifications remain unstaged and untouched: `app/blog/[slug]/page.tsx`, `app/feed/route.ts`, `app/guide/[slug]/page.tsx`, `components/analytics/GoogleAnalyticsTracker.tsx`, and `package-lock.json`.
+- Current state: this content/metadata/schema reinforcement is committed locally as `feat: strengthen moving search content`, but has not been pushed, deployed, or submitted to GSC. Prior production deployment remains `6c83d2c` / Vercel `dpl_4B4hr6bQpz6MQYtJaMV7dF3y1Yhn`.
+- Next step: push the local moving-content commit through the GitHub-to-Vercel integration, then verify the live routes and submit the refreshed sitemap only if deployment authority is confirmed.
+
 ## GitHub 배포 및 GSC 제출 완료 (2026-08-19T15:02:01+09:00)
 
 - 배포: 이사 pSEO 커밋 `6c83d2c`를 GitHub `main`에 push했고, Vercel Git 연동 Production deployment `dpl_4B4hr6bQpz6MQYtJaMV7dF3y1Yhn`이 Ready 상태가 됐다. alias는 `https://today2424.kr`이다.

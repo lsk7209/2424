@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MovingDirectoryTracker from "@/components/MovingDirectoryTracker";
 import MovingSourceLink from "@/components/MovingSourceLink";
+import { movingRegionGuidance } from "@/data/moving/region-guidance";
 import { serializeJsonLd } from "@/lib/json-ld";
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
@@ -30,6 +31,7 @@ export function generateStaticParams() {
 export async function generateMetadata(props: MovingRegionPageProps) {
   const params = await props.params;
   const region = getIndexableMovingRegion(params.region);
+  const guidance = movingRegionGuidance[params.region];
 
   if (!region) {
     return {
@@ -39,8 +41,10 @@ export async function generateMetadata(props: MovingRegionPageProps) {
   }
 
   return createPageMetadata({
-    title: `${region.regionName} 이사 업체 검색 결과`,
-    description: `${region.regionName}에서 확인된 이사 업체 검색 결과를 원문 링크와 관찰 시각 기준으로 확인합니다. 업체 추천·순위 정보가 아닙니다.`,
+    title: `${region.regionName} 이사 업체 검색 | 견적 비교 기준`,
+    description: guidance
+      ? `${guidance.decisionIntro} ${region.regionName} 이사 업체 검색 결과와 원문 링크를 확인하세요.`
+      : `${region.regionName}에서 확인된 이사 업체 검색 결과를 원문 링크와 관찰 시각 기준으로 확인합니다. 업체 추천·순위 정보가 아닙니다.`,
     path: `/moving/${region.regionSlug}`,
     keywords: [`${region.regionName} 이사`, `${region.regionName} 포장이사`, `${region.regionName} 이삿짐센터`],
   });
@@ -69,6 +73,13 @@ export default async function MovingRegionPage(props: MovingRegionPageProps) {
   }
 
   const visibleProviders = region.providers.slice(0, MAX_VISIBLE_MOVING_PROVIDERS);
+  const guidance = movingRegionGuidance[region.regionSlug];
+  const categoryCounts = Array.from(
+    region.providers.reduce((counts, provider) => {
+      counts.set(provider.category || "기타 이사 관련", (counts.get(provider.category || "기타 이사 관련") ?? 0) + 1);
+      return counts;
+    }, new Map<string, number>()),
+  ).sort((a, b) => b[1] - a[1]);
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -86,6 +97,17 @@ export default async function MovingRegionPage(props: MovingRegionPageProps) {
       })),
     },
   };
+  const faqSchema = guidance
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: guidance.faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      }
+    : null;
   const observedDate = new Date(region.latestObservedAt).toLocaleDateString("ko-KR");
 
   return (
@@ -100,6 +122,12 @@ export default async function MovingRegionPage(props: MovingRegionPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(itemListSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqSchema) }}
+        />
+      )}
       <Header />
 
       <main className="flex-1 container mx-auto px-4 py-10 md:py-14">
@@ -152,6 +180,35 @@ export default async function MovingRegionPage(props: MovingRegionPageProps) {
               </div>
             </div>
           </aside>
+
+          {guidance && (
+            <section aria-labelledby="moving-decision-guide" className="space-y-5">
+              <div>
+                <p className="text-sm font-semibold text-primary">지역별 비교 가이드</p>
+                <h2 id="moving-decision-guide" className="mt-2 text-2xl font-bold text-slate-950">{guidance.decisionTitle}</h2>
+                <p className="mt-3 max-w-3xl leading-7 text-slate-600">{guidance.decisionIntro}</p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                <article className="rounded-2xl border bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-950">이 검색 결과에서 보이는 구성</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{guidance.focus}</p>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-700">
+                    {categoryCounts.map(([category, count]) => <li key={category}>{category} {count}개</li>)}
+                  </ul>
+                </article>
+                <article className="rounded-2xl border bg-white p-6 shadow-sm">
+                  <h3 className="text-lg font-bold text-slate-950">견적 전에 물어볼 질문</h3>
+                  <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-6 text-slate-700">
+                    {guidance.questions.map((question) => <li key={question}>{question}</li>)}
+                  </ol>
+                </article>
+              </div>
+              <article className="rounded-2xl border border-slate-200 bg-slate-100 p-6">
+                <h3 className="text-lg font-bold text-slate-950">{guidance.faq[0].question}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-700">{guidance.faq[0].answer}</p>
+              </article>
+            </section>
+          )}
 
           <section aria-labelledby="moving-provider-list" className="space-y-5">
             <div>

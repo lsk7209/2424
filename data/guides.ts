@@ -521,88 +521,77 @@ export const guidePosts: GuidePost[] = [
     },
     {
         slug: 'moving-center-selection',
-        title: '호구 당하지 않는 포장이사 업체 선정 체크리스트',
-        excerpt: '이사 비용, 부르는 게 값? 견적 비교하는 법부터 추가 비용 폭탄 피하는 노하우 공개.',
-        date: '2025-11-28',
+        title: '포장이사 업체 견적 비교 체크리스트: 계약 전 확인할 항목',
+        excerpt: '견적서의 작업 범위와 추가 비용 조건을 같은 기준으로 비교하고, 계약 전에 기록으로 남길 항목을 정리했습니다.',
+        date: '2026-08-19',
         category: '이사',
-        keywords: ['포장이사 견적', '이사업체 추천', '이사 비용 줄이기', '방문견적'],
+        keywords: ['포장이사 견적', '이사업체 비교', '이사 비용 확인', '방문견적', '이사 계약 체크리스트'],
         faq: [
             {
-                question: '방문 견적은 꼭 받아야 하나요?',
-                answer: '네, 전화 견적과 실제 짐 양이 다르면 당일 추가 비용 시비가 생길 수 있습니다. 최소 3곳 이상 방문 견적을 받아 비교하는 것이 좋습니다.'
+                question: '견적은 몇 곳에서 받아야 하나요?',
+                answer: '정해진 횟수보다 같은 짐·날짜·출발지와 도착지 조건으로 비교할 수 있는지가 중요합니다. 작업 범위와 제외 항목을 같은 표에 옮겨 적어 보세요.'
             },
             {
                 question: '이사 비용은 언제 지불하나요?',
-                answer: '일반적으로 이사 작업이 완료된 후 현금 또는 계좌이체로 지불합니다. 계약금을 요구하는 업체는 주의해야 하며, 반드시 영수증을 받아야 합니다.'
+                answer: '지급 시점과 방법은 업체·계약 조건에 따라 달라질 수 있습니다. 계약금·잔금의 금액과 지급 시점, 취소·변경 조건을 계약서나 견적서에 명확히 남기고 영수 기록을 보관하세요.'
             },
             {
                 question: '포장이사와 일반이사의 차이는?',
-                answer: '포장이사는 짐 싸기부터 풀기까지 업체가 전담하고, 일반이사는 짐만 운반합니다. 포장이사가 2-3배 비싸지만 시간과 노력을 절약할 수 있습니다.'
+                answer: '작업 범위는 업체마다 다를 수 있습니다. 포장, 가구 분해·조립, 정리, 폐기물 처리, 가전 설치가 각각 포함되는지 견적서 항목으로 확인해야 비교가 가능합니다.'
             },
             {
                 question: '이사 중 물건이 파손되면 보상받을 수 있나요?',
-                answer: '정식 허가업체는 적재물배상책임보험에 가입되어 있어 파손 시 보상받을 수 있습니다. 이사 전 보험 가입 여부를 확인하고, 파손 발생 시 즉시 사진을 찍어두세요.'
+                answer: '계약 전에 파손·분실 시 연락 창구, 처리 절차, 필요한 사진·기록을 물어보고 답변을 남겨두세요. 보험 또는 보상 범위는 업체마다 다를 수 있으므로 증빙을 직접 확인하는 편이 안전합니다.'
             }
         ],
         content: `
       <article class="prose prose-slate max-w-none">
-        <p class="lead text-xl text-slate-600 font-medium">이사업체 잘 고르면 이사가 편해지고, 잘못 고르면 가구가 상하고 마음도 상합니다. 호구 당하지 않는 견적 비교 노하우를 공개합니다.</p>
+        <p class="lead text-xl text-slate-600 font-medium">이사 견적은 금액만 놓고 고르면 비교가 어렵습니다. 같은 날짜와 짐을 기준으로 작업 범위, 제외 항목, 변경 조건을 한 장에 맞춰 보는 방법을 정리했습니다.</p>
 
-        <h2>1. 견적 비교의 정석</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
-                <div class="text-2xl mb-2">📞</div>
-                <div class="font-bold text-slate-800">전화 견적 (비추천)</div>
-                <p class="text-xs text-slate-500 mt-1">정확하지 않아 당일 추가 요금 발생 확률 99%</p>
-            </div>
-            <div class="bg-indigo-50 p-4 rounded-xl border-2 border-indigo-100 shadow-sm text-center transform scale-105">
-                <div class="text-2xl mb-2">👀</div>
-                <div class="font-bold text-indigo-800">방문 견적 (필수)</div>
-                <p class="text-xs text-indigo-600 mt-1">짐 양, 작업 환경을 직접 보고 정확한 금액 산출</p>
-            </div>
-            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
-                <div class="text-2xl mb-2">📱</div>
-                <div class="font-bold text-slate-800">비교 어플</div>
-                <p class="text-xs text-slate-500 mt-1">대략적인 시세 파악용으로 활용</p>
-            </div>
-        </div>
+        <h2>1. 견적을 요청하기 전에 같은 조건을 적어두세요</h2>
+        <p>서로 다른 조건의 견적서는 금액만 비교해도 결론이 나지 않습니다. 출발·도착 주소, 희망 날짜와 시간대, 엘리베이터·주차·계단 여부, 큰 가구·가전, 포장과 정리의 필요 범위를 먼저 적어 같은 내용으로 문의하세요.</p>
+        <p>사진이나 목록으로 전달한 짐은 나중에 서로 같은 범위를 확인하는 자료가 됩니다. 전화·방문·온라인 견적 중 어느 방식이든, 최종 금액에 반영된 작업 범위를 문서로 받아 두는 것이 핵심입니다.</p>
 
-        <h2>2. 허가 업체 확인하기</h2>
-        <p>무허가 업체는 이사 중 파손이나 분실 사고가 발생했을 때 보상받기 어렵습니다.</p>
+        <h2>2. 견적서에서 금액보다 먼저 맞춰 볼 항목</h2>
         <ul class="list-disc list-inside text-slate-700">
-            <li><strong>확인 방법:</strong> '허가이사종합정보' 사이트에서 업체명 검색</li>
-            <li><strong>필수 서류:</strong> 화물자동차운송주선사업 허가증, 적재물배상책임보험 가입 증명서</li>
+            <li>포장, 운반, 배치, 가구 분해·조립, 정리 중 어디까지 포함되는지</li>
+            <li>사다리차, 주차, 장거리 운반, 층수, 날짜·시간 변경처럼 비용이 달라질 수 있는 조건</li>
+            <li>에어컨·TV·정수기 등 별도 설치·해체가 필요한 품목과 담당 주체</li>
+            <li>작업 인원과 예상 시간, 출발지·도착지에서 필요한 출입·주차 예약</li>
         </ul>
+        <p>한 업체의 항목이 비어 있으면 “포함인지, 제외인지, 조건부인지”를 질문해 같은 표에 기록하세요. 포함·제외가 다르면 낮은 견적이 같은 서비스의 낮은 가격이라는 뜻은 아닐 수 있습니다.</p>
 
-        <hr class="my-8 border-slate-200" />
+        <h2>3. 사업자 정보와 보상 절차는 직접 확인하세요</h2>
+        <p>화물자동차 운송 또는 운송주선 사업은 관련 법령의 허가 체계와 연결됩니다. 업체가 제시하는 사업자·허가·보험 관련 자료의 명칭, 유효 여부, 계약 주체가 견적서의 업체명과 같은지를 확인하세요. 관련 제도는 <a href="https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000264616" target="_blank" rel="noopener noreferrer">국가법령정보센터의 화물자동차 운수사업 기준</a>에서도 확인할 수 있습니다.</p>
+        <p>파손·분실이 발생했을 때의 연락 창구, 사진 제출 방식, 처리 기한과 보상 범위는 상담에서 구체적으로 물어보고 답변을 남겨두세요. 이 가이드는 특정 업체의 허가·보험·보상을 보증하지 않습니다.</p>
 
-        <h2>3. 계약서에 반드시 적어야 할 것 (추가 비용 방지)</h2>
-        <p>구두 계약은 위험합니다. 아래 내용을 서면 계약서에 명시하세요.</p>
+        <h2>4. 계약서에는 변경 조건까지 남기세요</h2>
         <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-2">
-            <div class="flex items-center gap-2">
-                <input type="checkbox" checked readOnly class="text-indigo-600 rounded" />
-                <span>식대 및 수고비 포함 여부 (별도 요구 금지 명시)</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" checked readOnly class="text-indigo-600 rounded" />
-                <span>사다리차 비용 (층수, 조건에 따라 명확히)</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" checked readOnly class="text-indigo-600 rounded" />
-                <span>에어컨 탈부착, 벽걸이 TV 설치 비용</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <input type="checkbox" checked readOnly class="text-indigo-600 rounded" />
-                <span>작업 인원 (남자 N명, 여자 N명) 및 외국인 노동자 여부</span>
-            </div>
+            <div class="flex items-center gap-2"><input type="checkbox" checked readOnly class="text-indigo-600 rounded" /><span>최종 금액과 포함·제외 작업 범위</span></div>
+            <div class="flex items-center gap-2"><input type="checkbox" checked readOnly class="text-indigo-600 rounded" /><span>날짜·시간·주소와 변경 또는 취소 시 처리 기준</span></div>
+            <div class="flex items-center gap-2"><input type="checkbox" checked readOnly class="text-indigo-600 rounded" /><span>사다리차·주차·계단·설치 등 조건부 비용의 발생 조건</span></div>
+            <div class="flex items-center gap-2"><input type="checkbox" checked readOnly class="text-indigo-600 rounded" /><span>지급 시점·방법과 영수 기록, 사고 발생 시 연락 방법</span></div>
         </div>
+
+        <h2>5. 이사 전날과 당일에는 기록을 남기세요</h2>
+        <p>작업 전에는 고가품·파손 우려 물품과 현관·가구 상태를 사진으로 남기고, 도착 뒤에는 눈에 띄는 이상을 바로 확인하세요. 건물 출입과 엘리베이터 예약, 주차 가능 여부도 담당자에게 다시 공유하면 당일 혼선을 줄이는 데 도움이 됩니다.</p>
+
+        <h2>6. 비교 결과를 이렇게 결정하세요</h2>
+        <p>가장 낮은 금액을 고르는 대신, 내 이사 조건에서 빠지면 곤란한 항목이 무엇인지 먼저 정하세요. 그 항목이 모두 문서에 포함된 견적끼리 비교한 뒤, 답변 기록과 변경 조건을 함께 보고 결정하는 편이 합리적입니다.</p>
 
         <h2>다음에 같이 확인할 자료</h2>
         <p>이 주제는 관련 체크리스트와 함께 보면 실제 판단이 더 정확해집니다. 계약 전후 상황에 맞춰 아래 자료로 한 번 더 확인하세요.</p>
-        <div class="my-4 p-4 bg-slate-100 rounded-xl border border-slate-200">
-          <span class="font-bold text-slate-800">같이 보면 좋은 자료</span>
-          <p class="text-sm text-slate-600 mt-2">관련 글이나 도구로 한 번 더 확인하면 판단이 더 정확해집니다.</p>
-          <a href="/tools/moving-cost-calculator" class="text-blue-600 font-bold hover:underline text-sm">관련 자료 보기 →</a>
+        <div class="grid gap-4 md:grid-cols-2 my-4">
+          <div class="p-4 bg-slate-100 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-800">견적 요청 조건 정리</span>
+            <p class="text-sm text-slate-600 mt-2">거리·층수·짐을 입력해 상담 전에 빠뜨릴 항목을 정리하세요.</p>
+            <a href="/tools/moving-cost-calculator" class="text-blue-600 font-bold hover:underline text-sm">이사 비용 계산기 보기 →</a>
+          </div>
+          <div class="p-4 bg-slate-100 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-800">지역별 공개 검색 결과</span>
+            <p class="text-sm text-slate-600 mt-2">업체 추천 순위가 아닌 원문 링크와 관찰 시각을 확인할 수 있습니다.</p>
+            <a href="/moving" class="text-blue-600 font-bold hover:underline text-sm">지역별 이사 업체 검색 보기 →</a>
+          </div>
         </div></article>
     `
     },
