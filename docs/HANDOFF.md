@@ -1,5 +1,14 @@
 # 작업 인계
 
+## Whole-site Google visibility audit (2026-08-19T15:40:00+09:00)
+
+- User goal: continue improving the entire site for Google visibility until the actionable work is complete; do not confuse successful deployment with a promised ranking outcome.
+- Technical evidence: live SEO validation passed for 30 sampled sitemap URLs; live audit reports 530 sitemap URLs (426 blog, 80 guide, 5 tools, plus other routes) with 200 status, canonical, one H1, GA4, and AdSense markers on sampled hub pages. `robots.txt`, `rss.xml`, `ads.txt`, `llms.txt`, and `llms-full.txt` return 200; `ads.txt` has the configured direct Google publisher line. AdSense validation passed.
+- Content evidence: `score:all-content` passed for 904 articles (minimum 91, average 99); publication-density audit passed at a controlled maximum of two future publications per day; content validation passed for 904 slugs / 1,030 titles / 800 new articles. Those checks are only structural: direct source review found 402 currently public expanded blog posts and 50 expanded guides with repeated fixed paragraphs, summaries, comparison tables, checklists, and FAQ phrasing; 398 additional blog posts were scheduled to follow. This is not sufficient originality or first-hand evidence for ranking and is a scaled-content risk.
+- Search evidence: GSC property and sitemap are healthy, but the latest available period has only 5 queries / 6 pages / 0 clicks and the sitemap inventory remains 530 submitted / 0 indexed while Google processes it. This is insufficient to prove site-wide rankings or choose query-specific rewrites. GA4 collection is healthy but has a similarly small sample.
+- Remediation in progress: withhold all 850 template-expanded entries from published/scheduled content, leaving the hand-authored and separately scheduled inventory available. This deliberately makes prior template-only URLs unavailable rather than continuing to feed repetitive pages into the sitemap; reintroduce only after a source-backed, individually reviewed rewrite. Also remove the unsupported `SearchAction` schema because `/blog?q=` did not perform a search.
+- Gap / follow-up: PSI API calls were skipped after public endpoint 429 responses for mobile and desktop samples; no performance regression was inferred. Recheck CWV when API quota permits. After deployment, verify the reduced sitemap and then use GSC performance data to select high-intent articles for individual rewrites rather than restarting bulk generation.
+
 ## Local moving-content ranking reinforcement (2026-08-19T15:25:00+09:00)
 
 - User goal: strengthen the moving-provider regional pages for Google search quality without inventing provider quality, pricing, availability, or local facilities.

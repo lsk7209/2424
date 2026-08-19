@@ -46,14 +46,6 @@ const websiteSchema = {
     "@type": "Audience",
     audienceType: siteConfig.persona.audience,
   },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${siteConfig.url}/blog?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export const viewport: Viewport = {

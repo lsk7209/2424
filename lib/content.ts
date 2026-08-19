@@ -1,9 +1,7 @@
 import { blogPosts } from "@/data/blog-posts";
-import { expandedBlogDrafts } from "@/data/blog-expansion";
 import { scheduledBlogPosts } from "@/data/blog-posts-scheduled";
 import { extraScheduledBlogPosts } from "@/data/blog-posts-scheduled-extra";
 import { guidePosts } from "@/data/guides";
-import { expandedGuideDrafts } from "@/data/guide-expansion";
 import { scheduledGuidePosts } from "@/data/guides-scheduled";
 import { extraScheduledGuidePosts } from "@/data/guides-scheduled-extra";
 import {
@@ -84,13 +82,11 @@ const baseGuideSlugs = new Set(guidePosts.map((post) => post.slug));
 const futureBlogPosts = [
   ...scheduledBlogPosts.filter((post) => !baseBlogSlugs.has(post.slug)),
   ...extraScheduledBlogPosts,
-  ...expandedBlogDrafts,
 ];
 
 const futureGuidePosts = [
   ...scheduledGuidePosts.filter((post) => !baseGuideSlugs.has(post.slug)),
   ...extraScheduledGuidePosts,
-  ...expandedGuideDrafts,
 ];
 
 const interleavedScheduledContent = interleaveScheduledEntries(futureBlogPosts, futureGuidePosts);
