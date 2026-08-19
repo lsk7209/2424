@@ -1,0 +1,40 @@
+{
+  "article_id": "rainy-day-house-viewing",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 6275,
+    "hangul_characters": 3920,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/rainy-day-house-viewing.md",
+    "internal_links": ["/guide/entry-inspection-form-guide", "/guide/house-photo-record-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/entry-inspection-form-guide.mdx",
+    "output/today2424/drafts/winter-window-condensation-hacks.mdx",
+    "output/today2424/drafts/room-measurement-mistakes.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "기존의 비 오는 날 집보기 항목 나열을 날씨·위치 코드·사진 번호·답변·재확인 시점이 이어지는 관찰 로그로 재구성했다.",
+  "remaining_risks": [
+    "사진과 현장 관찰만으로 누수 원인이나 임대인의 책임을 확정할 수 없다.",
+    "하자 판정기준의 적용 대상과 실제 계약 내용은 별도로 확인해야 한다.",
+    "법령과 공식 절차는 변경될 수 있으므로 계약 분쟁 시 최신 안내와 전문가 상담이 필요하다."
+  ],
+  "next_action": "발행 전 링크 대상의 실제 공개 여부와 최신 법령·공식 절차 URL을 다시 확인한다."
+}

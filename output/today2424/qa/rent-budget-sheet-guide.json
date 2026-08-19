@@ -1,0 +1,56 @@
+{
+  "article_id": "rent-budget-sheet-guide",
+  "status": "done",
+  "score": 92,
+  "category_scores": {
+    "content_quality": 28,
+    "seo": 22,
+    "eeat": 15,
+    "technical_elements": 14,
+    "ai_citation_readiness": 13
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 3848,
+    "hangul_characters": 3470,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/rent-budget-sheet-guide.md",
+    "internal_links": ["/guide/monthly-rent-receipt-guide", "/guide/gas-electric-water-change-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "personas/today2424/samples/sample-1.md",
+    "personas/today2424/samples/sample-2.md",
+    "output/today2424/drafts/appliance-electric-bill-planning.mdx",
+    "output/today2424/drafts/moving-checklist-d30.mdx",
+    "output/today2424/drafts/room-measurement-mistakes.mdx"
+  ],
+  "similarity_signals": {
+    "reused_template_phrase": false,
+    "reused_heading_sequence": false,
+    "reused_intro_frame": false
+  },
+  "article_specific_detail_use": [
+    {"source_id": "S1", "draft_section": "관리비는 월세 옆에 합치지 말고 구성부터 확인합니다", "verified": true},
+    {"source_id": "S3", "draft_section": "공과금은 평균값 대신 고지의 경로를 적습니다", "verified": true},
+    {"source_id": "S5", "draft_section": "공과금은 평균값 대신 고지의 경로를 적습니다", "verified": true}
+  ],
+  "repair_attempted": "원문의 고정비 나열을 월세일 기준의 세 줄 현금흐름 보드와 확정 상태 기록으로 바꾸고, 관리비·공과금의 확인 경로와 첫 달·퇴실 달 분리를 추가했다.",
+  "remaining_risks": [
+    "관리비 구성, 고지일, 검침 기간, 공과금 명의와 금액은 주택·계약·지역에 따라 달라 계약서와 실제 고지서 확인이 필요하다.",
+    "이 글은 개인 재무의 적정 비율이나 금액을 제시하지 않는 기록 초안이며, 라이브 발행에는 별도 승인과 현행성 검토가 필요하다."
+  ],
+  "next_action": "별도 편집 검토 후 게시 후보에 편입한다."
+}

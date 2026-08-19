@@ -1,0 +1,68 @@
+{
+  "article_id": "house-viewing-checklist",
+  "status": "done",
+  "score": 93,
+  "category_scores": {
+    "content_quality": 29,
+    "seo": 22,
+    "eeat": 17,
+    "technical_elements": 13,
+    "ai_citation_readiness": 12
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "body_length": true,
+    "no_unsupported_claims": true
+  },
+  "evidence": {
+    "visible_body_length": 6204,
+    "visible_body_length_method": "frontmatter, Markdown syntax, URLs, source tags, tables' delimiter rows, and heading markers removed before counting",
+    "research_runs": 5,
+    "sources": 5,
+    "official_or_primary_sources": 5,
+    "article_persona": "article-personas/house-viewing-checklist.md",
+    "internal_links": [
+      "/blog/parking-and-delivery-noise-check",
+      "/blog/rainy-day-house-viewing",
+      "/blog/room-measurement-mistakes"
+    ],
+    "external_source_ids_used": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "drafts/parking-and-delivery-noise-check.mdx",
+    "drafts/one-room-security-check.mdx",
+    "drafts/room-measurement-mistakes.mdx",
+    "drafts/maintenance-fee-red-flags.mdx"
+  ],
+  "similarity_signals": {
+    "reused_template_phrase": false,
+    "reused_heading_sequence": false,
+    "reused_intro_frame": false,
+    "distinct_observation_decision_angle": true,
+    "article_specific_details_materially_used": true
+  },
+  "unsupported_claim_check": {
+    "status": "pass",
+    "method": "Numeric, legal, named-system, and scope claims were matched to S1-S5; subjective observations are framed as prompts for verification rather than facts or guarantees.",
+    "unresolved_claims": []
+  },
+  "originality_check": {
+    "status": "pass",
+    "distinct_contribution": "A time-and-place observation workflow that turns 30 viewing checks into photo, question, official verification, or hold actions rather than a generic pass/fail list.",
+    "blocking_overlap_found": false
+  },
+  "repair_attempted": "The initial broad checklist angle was narrowed to a five-stage observation-to-decision workflow, separating daily-living observations from management and formal verification paths.",
+  "remaining_risks": [
+    "Individual building management practices, repair histories, and contract terms require current confirmation from the relevant party.",
+    "This is a draft dossier only; it does not update the manifest or publish content."
+  ],
+  "next_action": "Run the final visible-body counter and write its actual result into evidence.visible_body_length before any manifest update."
+}

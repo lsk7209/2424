@@ -1,0 +1,45 @@
+{
+  "article_id": "moving-box-label-system",
+  "status": "research_complete",
+  "article_research_question": "이사 박스 라벨을 단순한 방 이름이 아니라 우선순위·취급 주의·개봉 순서·인수 확인까지 이어지는 기록으로 설계하려면 무엇을 적어야 하는가?",
+  "reader_outcome": "입주 첫날 필요한 상자와 나중에 열 상자를 구분하고, 파손·누락을 확인할 수 있는 라벨과 인수 기록을 만들 수 있다.",
+  "search_intent_insight": "박스 라벨 글은 방별 분류나 색상 추천에 치우치지만, 실제 이사 당일에는 개봉 순서와 취급 주의, 인수 상태 기록이 함께 필요하다.",
+  "competitor_gap": "색상·번호 체계만 제시하고 포장 전 목록과 운송 중 상태 확인을 연결하지 않는 글이 많다. 라벨이 계약·분쟁의 증거가 아니라 작업 흐름을 줄이는 도구라는 점도 빠져 있다.",
+  "information_gain": "라벨을 목적지·개봉 우선순위·취급 주의·수량·상태 확인의 다섯 칸으로 나누고, 포장 전과 인수 후 두 번 대조한다.",
+  "unique_angle": "‘예쁜 색상표’ 대신 첫날 동선과 인수 상태를 연결하는 박스 카드와 누락 기록으로 구성한다.",
+  "source_interpretation": "한국소비자원과 공정거래위원회 자료는 이사 화물의 상태 확인과 계약·증빙 보관의 필요성을 참고하게 한다. 라벨 자체가 손해배상이나 계약 이행을 보장하는 것은 아니며, 포장 목록·사진·계약서와 함께 사용한다.",
+  "article_specific_details": [
+    {"claim": "운송 전 물품 상태와 수량을 사진·목록으로 남기면 인수 후 비교가 쉬워진다.", "source_id": "S1"},
+    {"claim": "이사 계약과 분쟁조정에서는 계약 내용과 상태를 확인할 수 있는 서면·사진 자료가 중요하다.", "source_id": "S2"},
+    {"claim": "이사 화물 운송 계약에는 운송 범위와 손해 처리 조건을 확인할 필요가 있다.", "source_id": "S3"},
+    {"claim": "계약 조건과 작업 범위가 달라지면 라벨 기록만으로 결론 내리지 말고 계약서와 실제 작업을 함께 대조한다.", "source_id": "S4"},
+    {"claim": "포장·운반 전후 상태 확인은 현장에서 바로 기록해야 누락을 줄일 수 있다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "none",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["라벨은 계약상 손해배상이나 파손 책임을 자동으로 확정하지 않으며, 개별 계약과 실제 상태 확인이 우선이다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:kca.go.kr 이사 화물 운송 물품 상태 사진 확인", "date": "2026-08-19", "purpose": "운송 전후 상태 기록"},
+    {"query": "site:kca.go.kr 소비자분쟁조정 이사 계약 증빙 사진", "date": "2026-08-19", "purpose": "계약·분쟁 증빙"},
+    {"query": "site:law.go.kr 화물자동차 운수사업법 이사 운송 계약", "date": "2026-08-19", "purpose": "운송 계약의 법적 맥락"},
+    {"query": "site:ftc.go.kr 이사화물 표준약관 손해배상 계약", "date": "2026-08-19", "purpose": "계약 범위와 손해 처리 확인"},
+    {"query": "이사 박스 라벨 개봉 순서 파손 확인 목록", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 글 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "이사화물 운송 소비자 주의사항", "url": "https://www.kca.go.kr/kca/sub.do?menukey=5293&mode=view&no=1004455170", "publisher": "한국소비자원", "date": "2026-04-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "운송 전후 상태 확인"},
+    {"id": "S2", "title": "소비자분쟁조정 신청 절차", "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do", "publisher": "한국소비자원", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약·사진·서면 증빙"},
+    {"id": "S3", "title": "화물자동차 운수사업법 시행령", "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20220930&joAllCheck=Y&lsiSeq=244895", "publisher": "국가법령정보센터", "date": "2026-07-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "이사화물 운송 계약 맥락"},
+    {"id": "S4", "title": "공정거래위원회 이사화물 관련 약관·분쟁 자료", "url": "https://www.ftc.go.kr/www/selectBbsNttList.do?bordCd=201&key=202&pageIndex=6&pageUnit=10&searchCnd=all", "publisher": "공정거래위원회", "date": "2014-10-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약 조건과 손해 처리 확인"},
+    {"id": "S5", "title": "한국소비자원 이사서비스 주의사항", "url": "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1001604858&page=6", "publisher": "한국소비자원", "date": "2014-01-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "포장·운반 전후 확인"}
+  ],
+  "data_points": [
+    {"claim": "운송 전후 상태·수량 확인", "source_id": "S1", "claim_type": "procedure", "source_date": "2026-04-01", "supports_section": "인수 전 체크"},
+    {"claim": "계약·사진·서면 증빙", "source_id": "S2", "claim_type": "procedure", "source_date": "undated", "supports_section": "라벨과 기록"},
+    {"claim": "이사화물 운송 계약의 법적 맥락", "source_id": "S3", "claim_type": "legal_scope", "source_date": "2026-07-01", "supports_section": "계약 범위"},
+    {"claim": "약관·손해 처리 확인", "source_id": "S4", "claim_type": "legal_scope", "source_date": "2014-10-01", "supports_section": "파손 기록"},
+    {"claim": "포장·운반 전후 확인", "source_id": "S5", "claim_type": "procedure", "source_date": "2014-01-01", "supports_section": "작업 순서"}
+  ]
+}

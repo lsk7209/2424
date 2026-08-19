@@ -1,0 +1,42 @@
+{
+  "article_id": "appliance-electric-bill-planning",
+  "status": "research_complete",
+  "article_research_question": "원룸 가전 배치를 바꿀 때 전기요금 계산의 전제와 동시사용·열·물 안전을 어떤 순서로 확인해야 하는가?",
+  "reader_outcome": "요금이 오른 원인을 배치 하나로 단정하지 않고 청구 방식과 사용량, 안전 문제를 분리해 기록한다.",
+  "search_intent_insight": "기존 글은 멀티탭과 가전 간격을 절약법처럼 말하지만 주택용 저압·고압과 청구액 계산 항목을 설명하지 않는다.",
+  "competitor_gap": "고정 절약 금액 대신 KEPCO 공식 계산기와 약관, 전기용품 안전관리 규정을 사용해 확인 가능한 질문을 제공한다.",
+  "information_gain": "배치 변경 전후의 사용량·동시사용·발열·물 튐을 한 장의 카드로 기록하는 방법을 제시한다.",
+  "unique_angle": "전기요금을 줄이는 배치가 아니라 요금 전제와 안전 제약을 함께 만족하는 배치 기록으로 다룬다.",
+  "source_interpretation": "KEPCO는 계약종별·사용량·부가 항목을 나눠 청구액을 계산하므로 가전 배치만으로 금액 변화를 예측하지 않는다.",
+  "article_specific_details": [
+    {"claim": "KEPCO 전기요금 계산기는 기본요금·사용량요금·부가가치세·전력산업기반기금을 별도로 계산한다.", "source_id": "S1"},
+    {"claim": "아파트는 저압·고압과 계약 방식에 따라 주택용 전력 계산 구조가 달라질 수 있다.", "source_id": "S2"},
+    {"claim": "전기용품은 안전인증·안전확인·공급자적합성확인 등 제품별 안전관리 대상이 구분된다.", "source_id": "S3"}
+  ],
+  "ymyl_category": "household_finance_safety",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["개별 제품의 소비전력과 냉장고 이격거리는 모델 설명서와 제조사 안내가 우선이다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:home.kepco.co.kr 전기요금 계산기 주택용 저압 고압", "date": "2026-08-19", "purpose": "official billing calculation"},
+    {"query": "site:home.kepco.co.kr 주요 전기요금제도 주택용 누진제 아파트", "date": "2026-08-19", "purpose": "contract-type comparison"},
+    {"query": "site:law.go.kr 전기용품 생활용품 안전관리법 시행규칙 안전인증", "date": "2026-08-19", "purpose": "product safety verification"},
+    {"query": "site:home.kepco.co.kr 전기공급약관 주택용전력", "date": "2026-08-19", "purpose": "terms and billing context"},
+    {"query": "원룸 가전 배치 전기요금 멀티탭 검색 결과", "date": "2026-08-19", "purpose": "search-intent and competitor-gap review"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "전기요금계산기", "url": "https://home.kepco.co.kr/kepco/front/html/CY/J/A/CYJAPP010.html", "publisher": "한국전력공사", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "청구액 계산 항목"},
+    {"id": "S2", "title": "주요 전기요금제도", "url": "https://home.kepco.co.kr/kepco/front/html/CY/H/C/CYHCHP00207.html", "publisher": "한국전력공사", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "아파트 계약 방식과 주택용 전력"},
+    {"id": "S3", "title": "전기용품 및 생활용품 안전관리법 시행규칙", "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260603&lsiSeq=286389&urlMode=lsInfoP", "publisher": "국가법령정보센터", "date": "2026-06-03", "accessed": "2026-08-19", "source_role": "official", "used_for": "제품 안전관리 대상 구분"},
+    {"id": "S4", "title": "전기공급약관", "url": "https://home.kepco.co.kr/kepco/front/html/CY/D/C/CYDCHP00207.html", "publisher": "한국전력공사", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "주택용 전력 계약 맥락"},
+    {"id": "S5", "title": "한글 주택용 전기요금표", "url": "https://home.kepco.co.kr/kepco/front/html/CY/E/E/CYEEHP00101.html", "publisher": "한국전력공사", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "사용량 구간 확인 경로"}
+  ],
+  "data_points": [
+    {"claim": "청구액 계산 구성", "source_id": "S1", "claim_type": "calculation", "source_date": "2026-08-19", "supports_section": "청구서 확인"},
+    {"claim": "아파트 계약 방식", "source_id": "S2", "claim_type": "billing_context", "source_date": "2026-08-19", "supports_section": "계약종별"},
+    {"claim": "전기제품 안전관리 범위", "source_id": "S3", "claim_type": "safety", "source_date": "2026-06-03", "supports_section": "제품 확인"},
+    {"claim": "사용량 구간표", "source_id": "S5", "claim_type": "billing_context", "source_date": "2026-08-19", "supports_section": "사용량 카드"}
+  ]
+}

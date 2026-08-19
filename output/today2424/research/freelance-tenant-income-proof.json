@@ -1,0 +1,81 @@
+{
+  "article_id": "freelance-tenant-income-proof",
+  "status": "research_complete",
+  "research_runs": [
+    "기존 원문의 승인 가능성 암시와 근거 부족 분석",
+    "정부24 소득금액증명 발급 항목·공개범위·용도 확인",
+    "국세청 소득자료·지급명세서 제출 및 본인 소득 확인 안내 확인",
+    "HUG 전세보증금보증 FAQ의 소득증빙 서류 예시 확인",
+    "HUG 보증 신청 서류의 연간소득확인자료·추가서류 구조 확인"
+  ],
+  "article_research_question": "프리랜서 또는 비정규직이 대출·보증 결과를 단정하지 않고, 소득의 공식 기록과 실제 입금 자료를 발급시점·개인정보 공개범위에 맞춰 준비하는 방법은 무엇인가?",
+  "reader_outcome": "제출처의 최신 목록을 기준으로 소득금액증명·지급명세서 관련 자료·입금 원본·계약 자료를 분리하고, 발급일과 공개 범위를 확인한 제출용 사본을 만든다.",
+  "serp_gap": "프리랜서도 가능하다는 결론이나 통장 내역 개월 수만 제시하고, 귀속연도·발급일·소득발생처 공개 여부·상품별 추가서류를 한 흐름으로 설명하지 않는 글이 많다.",
+  "information_gain": "소득 증빙을 서류 개수 경쟁이 아니라 ‘세무상 소득 기록-실제 수입 흐름-제출처 요구 항목’의 연결 관계로 정리하고, 개인정보가 담긴 원본과 제출용 사본을 분리한다.",
+  "source_interpretation": "정부24·국세청·HUG 자료는 발급·제출 자료의 기능과 예시를 설명하기 위한 것이다. 대출·보증 심사 기준과 추가서류는 기관·상품·신청 시점에 따라 달라질 수 있으므로 승인, 한도, 금리 또는 보증 발급을 보장하지 않는다.",
+  "sources": [
+    {
+      "id": "S1",
+      "source_role": "official",
+      "title": "정부24 소득금액증명 이용 가이드",
+      "url": "https://foreigner.gov.kr/foreignerService/for_guide/kor/UserGuideForeigners_ko.pdf",
+      "accessed": "2026-08-19",
+      "used_for": "소득증명 기간·용도·제출처와 주민등록번호·주소·소득발생처 공개 여부를 선택하는 발급 항목"
+    },
+    {
+      "id": "S2",
+      "source_role": "official",
+      "title": "국세청 소득자료 제출방법 등",
+      "url": "https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239045&mi=40990",
+      "accessed": "2026-08-19",
+      "used_for": "소득자가 홈택스에서 사업자가 제출한 소득자료를 확인하고 사실과 다른 자료에 대응할 수 있다는 안내"
+    },
+    {
+      "id": "S3",
+      "source_role": "official",
+      "title": "국세청 간이지급명세서 거주자의 사업소득 안내",
+      "url": "https://s.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238925&mi=40349",
+      "accessed": "2026-08-19",
+      "used_for": "거주자의 사업소득 지급명세서와 간이지급명세서의 제도적 구분"
+    },
+    {
+      "id": "S4",
+      "source_role": "official",
+      "title": "HUG 전세보증금보증 FAQ 상환능력 심사 소득증빙",
+      "url": "https://m.khug.or.kr/hug/web/cs/el/csel000019.jsp",
+      "accessed": "2026-08-19",
+      "used_for": "보증부 전세대출 관련 추가 제출서류로 근로소득원천징수영수증·소득금액증명원 등이 제시되는 사례"
+    },
+    {
+      "id": "S5",
+      "source_role": "official",
+      "title": "HUG 임차료지급보증 이용절차 및 제출서류",
+      "url": "https://www.khug.or.kr/hug/web/ig/pr/igpr000002.jsp?tabMenu=Y",
+      "accessed": "2026-08-19",
+      "used_for": "연간소득확인자료·임대차계약서·개인신용정보 동의서와 기타 필요 서류의 제출 구조"
+    }
+  ],
+  "article_specific_details": [
+    {
+      "claim": "소득금액증명 발급 화면에서는 증명 기간·용도뿐 아니라 주민등록번호, 주소, 소득발생처 공개 여부를 선택할 수 있어 제출본의 공개 범위를 확인해야 한다.",
+      "source_id": "S1"
+    },
+    {
+      "claim": "보증 관련 기관 안내에 소득금액증명원과 원천징수영수증 등이 예시되지만, 추가 서류는 심사·상품에 따라 달라질 수 있다.",
+      "source_id": "S4"
+    }
+  ],
+  "data_points": [
+    {
+      "claim": "국세청은 소득자가 홈택스에서 사업자가 제출한 소득자료를 확인하고 사실과 다른 경우 신고할 수 있다고 안내한다.",
+      "source_id": "S2",
+      "supports_section": "세무 원본과 실제 수입을 연결하기"
+    },
+    {
+      "claim": "HUG의 보증 신청 안내는 연간소득확인자료, 임대차계약서, 개인신용정보 동의서 외 기타 필요한 서류를 함께 열거한다.",
+      "source_id": "S5",
+      "supports_section": "제출처의 최신 목록을 기준으로 묶기"
+    }
+  ],
+  "fact_traceability_pass": true
+}

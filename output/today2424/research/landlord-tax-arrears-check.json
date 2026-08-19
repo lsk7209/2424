@@ -1,0 +1,81 @@
+{
+  "article_id": "landlord-tax-arrears-check",
+  "status": "research_complete",
+  "research_runs": [
+    "기존 원문의 위험 단정 문구와 확인 공백 분석",
+    "국세징수법상 임차인의 미납국세 열람 권한·시점 확인",
+    "국세징수법 시행령상 신청 서류·보증금 기준 확인",
+    "지방세 미납 열람 신청서상 동의·신분 확인·열람 범위 확인",
+    "정부24 지방세 납세증명서의 발급일 현재 의미와 신청 자격 확인"
+  ],
+  "article_research_question": "임차인이 임대인의 세금 체납을 단정하지 않고도, 계약 전후 권한이 허용된 공식 자료를 요청·열람·기록하는 순서는 무엇인가?",
+  "reader_outcome": "임대인 동의 필요 여부와 계약·보증금 조건을 먼저 확인하고, 열람 또는 제출받은 공식 자료의 발급일·명의·범위를 계약 기록에 남긴다.",
+  "serp_gap": "등기부만으로 안전 여부를 결론내리거나 체납 가능성을 경고하는 글은 많지만, 임차인의 열람 권한·시점·동의·열람 결과의 보관 제한을 분리해 설명하는 글은 드물다.",
+  "information_gain": "‘체납 확인’ 대신 ‘권한 있는 자료 확인’으로 질문을 바꾸고, 임대인 동의 서류·열람신청·발급일 현재 증명의 차이를 하나의 기록표로 연결한다.",
+  "source_interpretation": "국세·지방세 제도는 열람 또는 증명서의 절차와 범위를 설명하는 데만 사용한다. 확인 결과가 곧 장래 체납 가능성, 보증금 회수 또는 계약의 안전성을 보장하지 않는다는 한계를 본문에 명시한다.",
+  "sources": [
+    {
+      "id": "S1",
+      "source_role": "official",
+      "title": "국세징수법 제109조 미납국세 등의 열람",
+      "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1031715859",
+      "accessed": "2026-08-19",
+      "used_for": "임대차계약 전 또는 임대차 기간 시작일까지 임대인 동의에 따른 국세 열람 및 일정 보증금 초과 계약의 동의 없는 열람 구조"
+    },
+    {
+      "id": "S2",
+      "source_role": "official",
+      "title": "국세징수법 시행령 제97조 미납국세 등의 열람 신청",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=165273",
+      "accessed": "2026-08-19",
+      "used_for": "열람 신청 시 동의 또는 계약 체결 사실 증명과 신분 증명 서류, 보증금 기준"
+    },
+    {
+      "id": "S3",
+      "source_role": "official",
+      "title": "국세청 미납국세등 열람신청 홈택스 화면 안내",
+      "url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2457&nttSn=1325154",
+      "accessed": "2026-08-19",
+      "used_for": "열람은 내역서 발급·복사·사진 촬영과 구분되며 열람 사실이 임대인에게 통지된다는 안내"
+    },
+    {
+      "id": "S4",
+      "source_role": "official",
+      "title": "지방세징수법 시행규칙 별지 제2호 미납지방세등열람신청서",
+      "url": "https://www.law.go.kr/flDownload.do?flNm=%5B%EB%B3%84%EC%A7%80+%EC%A0%9C2%ED%98%B8%EC%84%9C%EC%8B%9D%5D+%EB%AF%B8%EB%82%A9%EC%A7%80%EB%B0%A9%EC%84%B8+%EB%93%B1+%EC%97%B4%EB%9E%8C+%EC%8B%A0%EC%B2%AD%28%EC%A3%BC%ED%83%9D%EC%9E%84%EC%B0%A8%2C+%EC%83%81%EA%B0%80%EC%9E%84%EC%B0%A8%29%0A&flSeq=94580261",
+      "accessed": "2026-08-19",
+      "used_for": "지방세 열람 신청의 임대인 동의·신분 확인·건물 소재지 기재 및 신고기한 경과 관련 유의사항"
+    },
+    {
+      "id": "S5",
+      "source_role": "official",
+      "title": "정부24 지방세 납세증명서 발급",
+      "url": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000056&HighCtgCD=A03019002",
+      "accessed": "2026-08-19",
+      "used_for": "지방세 납세증명은 발급일 현재의 체납액이 없음을 증명하는 민원이며 본인 또는 대리인 신청 구조"
+    }
+  ],
+  "article_specific_details": [
+    {
+      "claim": "임대차계약 전부터 임대차 기간이 시작하는 날까지의 국세 열람은 원칙적으로 임대인 동의와 함께 신청하는 구조다.",
+      "source_id": "S1"
+    },
+    {
+      "claim": "국세 열람은 자료를 자유롭게 복사하는 절차와 같지 않으며, 국세청 안내상 열람 내역서 발급·복사·사진 촬영은 제한된다.",
+      "source_id": "S3"
+    }
+  ],
+  "data_points": [
+    {
+      "claim": "국세 열람 신청에는 임대인 동의 또는 계약 체결 사실을 증명하는 서류와 임차인의 신분 증명 서류가 필요할 수 있다.",
+      "source_id": "S2",
+      "supports_section": "요청 전 권한과 시점을 먼저 확인하기"
+    },
+    {
+      "claim": "지방세 납세증명서는 발급일 현재 일정 유예액 등을 제외한 다른 체납액이 없음을 증명하는 민원이다.",
+      "source_id": "S5",
+      "supports_section": "증명서 한 장의 범위를 과대해석하지 않기"
+    }
+  ],
+  "fact_traceability_pass": true
+}

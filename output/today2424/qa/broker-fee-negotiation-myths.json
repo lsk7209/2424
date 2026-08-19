@@ -1,0 +1,37 @@
+{
+  "article_id": "broker-fee-negotiation-myths",
+  "status": "done",
+  "score": 93,
+  "category_scores": {
+    "intent": 19,
+    "evidence": 19,
+    "originality": 19,
+    "utility": 20,
+    "voice": 16
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "no_fee_or_outcome_guarantee": true
+  },
+  "visible_body_characters": 3748,
+  "compared_rows": [
+    "brokerage-fee-dispute-guide",
+    "lease-early-termination-settlement-guide",
+    "monthly-rent-receipt-guide"
+  ],
+  "similarity_signals": [],
+  "repair_attempted": "협상 문구와 강한 요구 중심 원문을 요율표·계산 메모·지급 영수증의 3장 대조 절차로 전면 재구성",
+  "remaining_risks": [
+    "실제 적용 요율과 거래금액 산식은 물건 소재지·유형·계약 조건에 따라 달라짐",
+    "개별 청구의 적법성 또는 분쟁 결과는 문서와 사실관계 검토가 필요함"
+  ]
+}

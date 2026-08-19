@@ -1,0 +1,42 @@
+{
+  "article_id": "moving-checklist-d30",
+  "status": "research_complete",
+  "article_research_question": "이사 한 달 전 무엇을 어떤 순서로 정해야 예약 변경 행정 기록이 서로 꼬이지 않는가?",
+  "reader_outcome": "입주일을 기준으로 확정해야 할 예약과 실제 입주 뒤 처리할 행정을 나누고 각 결정의 근거를 남긴다.",
+  "search_intent_insight": "기존 D-30 글은 고정된 한 달 전 규칙과 업체 수를 제시하지만 주거 형태와 일정에 따른 의존 관계를 설명하지 않는다.",
+  "competitor_gap": "검색 결과의 일률적인 주차별 목록 대신 일정이 바뀔 때 먼저 확인할 조건과 공식 행정 절차의 시점을 연결한다.",
+  "information_gain": "날짜를 외우는 대신 예약 변경 비용과 행정 처리 시점을 기준으로 순서를 재배치하는 판단표를 제공한다.",
+  "unique_angle": "D-30을 고정 체크리스트가 아니라 입주일을 향해 되돌아가는 의사결정 기록으로 다룬다.",
+  "source_interpretation": "전입신고의 법정 기한과 방문·온라인 신청 경로는 고정된 이사 전 날짜가 아니므로 실제 입주 사실과 증빙을 기준으로 분리해 기록한다.",
+  "article_specific_details": [
+    {"claim": "전입신고는 새 거주지로 이동한 날부터 14일 이내에 해야 한다.", "source_id": "S1"},
+    {"claim": "방문 신청은 이사한 곳을 관할하는 읍·면·동 주민센터에서 진행한다.", "source_id": "S2"},
+    {"claim": "견적·계약 조건은 차량과 인원, 출발·도착지, 작업 범위를 한 문서에서 대조해야 한다.", "source_id": "S4"}
+  ],
+  "ymyl_category": "government_support",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["관리사무소의 차량 출입 규칙과 공과금 접수 채널은 건물·지역별로 달라 해당 기관 확인이 필요하다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:gov.kr 전입신고 이사 준비 방법", "date": "2026-08-19", "purpose": "official procedure discovery"},
+    {"query": "site:law.go.kr 주민등록법 전입신고 14일", "date": "2026-08-19", "purpose": "current legal verification"},
+    {"query": "site:law.go.kr 주민등록 전입신고 신청서", "date": "2026-08-19", "purpose": "required information check"},
+    {"query": "site:consumer.go.kr 이사화물 계약 견적 피해 예방", "date": "2026-08-19", "purpose": "consumer risk check"},
+    {"query": "이사 D-30 체크리스트 검색 결과", "date": "2026-08-19", "purpose": "search-intent and competitor-gap review"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "주민등록법 시행령 전입신고 조문 연결", "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026240139", "publisher": "국가법령정보센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "전입신고 기한 확인"},
+    {"id": "S2", "title": "전입신고 방법", "url": "https://www.law.go.kr/LSW/cgmExpcInfoP.do?cgmExpcDatSeq=361170&mode=2&ofiClsCd=350104", "publisher": "국가법령정보센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "방문 신청 기관과 절차 확인"},
+    {"id": "S3", "title": "전입신고서 서식", "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=146083939&gubun=", "publisher": "국가법령정보센터", "date": "2024-12-03", "accessed": "2026-08-19", "source_role": "official", "used_for": "신고서 기재 항목 확인"},
+    {"id": "S4", "title": "이사화물 운송주선사업 견적·계약 규정", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=190945", "publisher": "국가법령정보센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "견적·계약 기록 항목 확인"},
+    {"id": "S5", "title": "이사화물 표준약관 목록", "url": "https://www.ftc.go.kr/www/selectBbsNttList.do?bordCd=201&key=202&pageIndex=6&pageUnit=10&searchCnd=all", "publisher": "공정거래위원회", "date": "2014-10-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약 조건 확인 경로"}
+  ],
+  "data_points": [
+    {"claim": "전입신고 기한", "source_id": "S1", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "D-13부터 D-7"},
+    {"claim": "방문 신청 기관", "source_id": "S2", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "행정 처리"},
+    {"claim": "신고서 기재 항목", "source_id": "S3", "claim_type": "procedure", "source_date": "2024-12-03", "supports_section": "서류 준비"},
+    {"claim": "견적·계약 기재 범위", "source_id": "S4", "claim_type": "consumer_protection", "source_date": "2026-08-19", "supports_section": "D-30부터 D-21"}
+  ]
+}

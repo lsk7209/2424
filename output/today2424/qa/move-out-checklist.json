@@ -1,0 +1,40 @@
+{
+  "article_id": "move-out-checklist",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 5074,
+    "hangul_characters": 3031,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/move-out-checklist.md",
+    "internal_links": ["/guide/online-transfer-address-guide", "/guide/gas-electric-water-change-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/moving-checklist-d30.mdx",
+    "output/today2424/drafts/move-out-cleaning-budget.mdx",
+    "output/today2424/drafts/deposit-transfer-checklist.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "퇴거 항목 나열을 반출·상태·접근·정산 네 카드와 인도 시각·열린 행·요약 메시지로 재구성했다.",
+  "remaining_risks": [
+    "보증금 반환일·공제액·원상복구 책임은 계약과 사실관계에 따라 달라진다.",
+    "입주·퇴거 사진만으로 생활마모와 과실을 자동 확정할 수 없다.",
+    "이사서비스 피해 절차와 제출 자료는 최신 한국소비자원 안내를 확인해야 한다."
+  ],
+  "next_action": "발행 전 공식 출처 링크와 연결된 내부 가이드의 실제 공개 여부를 확인한다."
+}

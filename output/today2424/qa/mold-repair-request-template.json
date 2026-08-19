@@ -1,0 +1,13 @@
+{
+  "article_id": "mold-repair-request-template",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 20, "utility": 19, "voice": 16},
+  "hard_gate_results": {"persona_consistency": true, "fact_traceability": true, "research_gate": true, "content_uniqueness": true, "article_contract_uniqueness": true, "title_template_uniqueness": true, "structure_variation": true, "content_template_variation": true, "heading_quality": true, "visible_body_length": true, "no_medical_overclaim": true, "no_legal_overclaim": true},
+  "evidence": {"visible_body_characters": 4838, "research_runs": 5, "sources": 5, "official_or_primary_sources": 5, "article_persona": "article-personas/mold-repair-request-template.md", "internal_links": ["/blog/studio-mold-signs", "/blog/winter-window-condensation-hacks", "/guide/entry-inspection-form-guide", "/guide/rental-contract-special-clauses-guide"], "external_source_links": ["S1", "S2", "S3", "S4", "S5"]},
+  "compared_rows": ["studio-mold-signs", "winter-window-condensation-hacks", "entry-inspection-form-guide"],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false, "distinct_angle": "repair-request message, status confirmation, and receipt ledger"},
+  "repair_attempted": "곰팡이 제거법이나 법적 책임 설명을 배제하고, 최초 요청의 질문과 답변 수령 상태를 한 장부에서 이어 보게 하는 왕복 구조로 작성했다.",
+  "remaining_risks": ["개별 원인·하자·비용·책임은 메시지나 사진만으로 판단할 수 없다.", "건강 증상과 곰팡이의 인과관계는 진단하지 않는다."],
+  "next_action": "초안 상태 유지. 발행·관리주체 연락·법률 판단은 이 산출물의 범위 밖이다."
+}

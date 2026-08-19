@@ -1,0 +1,22 @@
+{
+  "article_id": "auction-process-guide", "status": "research_complete",
+  "research_runs": [
+    {"query":"법원경매정보 사건 물건 조회","date":"2026-08-19","purpose":"공고 확인 범위"}, {"query":"대법원 인터넷등기소 등기기록 열람","date":"2026-08-19","purpose":"현재 등기 확인"}, {"query":"민사집행법 매각물건명세서","date":"2026-08-19","purpose":"문서 역할 확인"}, {"query":"대한법률구조공단 경매 상담","date":"2026-08-19","purpose":"개별 상담 경로"}, {"query":"부동산 경매 현황조사서 확인","date":"2026-08-19","purpose":"점유 기록 시점"}
+  ],
+  "article_research_question":"입찰자가 가격 판단 전 서로 다른 작성 시점의 경매 문서를 어떻게 분리 기록할 수 있는가?",
+  "reader_outcome":"사건번호·문서 시점·현장 질문을 한 메모에 분리해 입찰 중단 기준을 세운다.",
+  "original_contribution":{"type":"record-workflow","description":"매각물건명세서와 현황조사서를 결론이 아닌 질문표로 읽는 입찰 중단 메모","supporting_source_ids":["S1","S2","S3"]},
+  "unique_angle":"가격 공식 대신 문서의 작성일과 열람일을 분리하는 경매 검토 순서",
+  "information_gain":"서류별 기능과 시점 차이를 이용해 확인 불가 항목을 명시적 중단 신호로 바꾼다.",
+  "source_interpretation":"공식 경매·등기·법령 자료를 투자 추천이 아니라 현재 문서 확인과 질문 분리에만 사용한다.",
+  "sources":[
+    {"id":"S1","title":"법원경매정보","url":"https://www.courtauction.go.kr","publisher":"대한민국 법원","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"사건·물건·기일 공고 확인"},
+    {"id":"S2","title":"인터넷등기소","url":"https://www.iros.go.kr","publisher":"대법원","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"현재 등기기록 열람 경로"},
+    {"id":"S3","title":"민사집행법","url":"https://www.law.go.kr/법령/민사집행법","publisher":"국가법령정보센터","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"경매 절차 용어의 현행 법령 확인"},
+    {"id":"S4","title":"대한법률구조공단","url":"https://www.klac.or.kr","publisher":"대한법률구조공단","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"개별 권리관계 상담 경로"},
+    {"id":"S5","title":"정부24","url":"https://www.gov.kr","publisher":"행정안전부","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"공적 증명·민원 안내 확인"}
+  ],
+  "article_specific_details":[{"claim":"사건번호와 물건번호를 먼저 고정해 다른 호실 문서를 섞지 않는다.","source_id":"S1"},{"claim":"등기기록은 현재 발급 기준으로 다시 확인하고 경매 문서의 시점과 구분한다.","source_id":"S2"}],
+  "data_points":[{"claim":"법원경매정보는 사건별 물건·기일 공고를 확인하는 공식 출발점이다.","source_id":"S1","claim_type":"procedure","source_date":"current","supports_section":"첫 화면"},{"claim":"등기기록은 인터넷등기소의 현재 열람 자료와 대조한다.","source_id":"S2","claim_type":"procedure","source_date":"current","supports_section":"등기부"},{"claim":"법령 문구는 국가법령정보센터 현행 본문으로 확인한다.","source_id":"S3","claim_type":"legal","source_date":"current","supports_section":"권리 검토"}],
+  "visual_elements":["document-timeline","bid-stop-memo","cost-uncertainty-ledger"],"fact_traceability_pass":true,"volatile":true,"ymyl_category":"housing_legal"
+}

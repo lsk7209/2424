@@ -1,0 +1,37 @@
+{
+  "article_id": "house-photo-record-guide",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 20, "utility": 19, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "privacy_check": true,
+    "legal_overclaim_check": true
+  },
+  "evidence": {
+    "visible_body_characters": 3808,
+    "research_runs": 5,
+    "sources": 5,
+    "official_or_primary_sources": 5,
+    "article_persona": "article-personas/house-photo-record-guide.md",
+    "internal_links": ["/guide/entry-inspection-form-guide", "/blog/rainy-day-house-viewing", "/blog/studio-mold-signs", "/guide/move-out-checklist"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": ["entry-inspection-form-guide", "rainy-day-house-viewing", "studio-mold-signs", "move-out-cleaning-budget"],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false, "angle_overlap": false},
+  "originality_check": "통상적인 전체·근접·작동 촬영법이나 위치코드 점검표가 아니라, 원본·공유본·답변·재촬영본을 덮어쓰지 않고 연결하는 사진 출처 이력과 재촬영 장부를 중심 구조로 삼았다.",
+  "privacy_check": "공유본에서 불필요한 얼굴·호수·연락처·계약서·신분증 정보를 제외하고, 가림·주석은 원본이 아닌 공유본에만 적용하도록 안내했다.",
+  "legal_overclaim_check": "사진·EXIF·파일명이 책임, 누수 원인, 보상, 법적 증명력을 자동으로 확정한다고 주장하지 않았고 민법과 개인정보 보호법은 일반적 맥락으로만 사용했다.",
+  "repair_attempted": "초기 촬영 체크리스트형 전개를 제거하고, 파일이 촬영 뒤 거치는 원본 보관·설명 메모·공유·답변·재촬영의 이력 구조로 재작성했다.",
+  "remaining_risks": ["메신저와 편집 앱의 메타데이터 처리 방식은 서비스·기기·설정별로 다를 수 있다.", "개별 임대차의 책임과 개인정보 공유 가능 범위는 계약·사실관계에 따라 달라질 수 있다."],
+  "next_action": "발행 전 실제 라우트와 내부 링크 대상의 공개 여부를 확인한다."
+}

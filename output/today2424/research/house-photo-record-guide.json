@@ -1,0 +1,56 @@
+{
+  "article_id": "house-photo-record-guide",
+  "status": "research_complete",
+  "research_runs": [
+    {"query": "NARA Digital Photographic Records metadata EXIF first generation JPEG", "date": "2026-08-19", "purpose": "원본·파일명·설명 메타데이터와 재저장 파일의 구분 원칙 확인"},
+    {"query": "NIST SP 800-101 preservation acquisition reporting digital information", "date": "2026-08-19", "purpose": "디지털 정보의 보존·수집·보고 순서가 기록 사슬 설계에 주는 범위 확인"},
+    {"query": "National Archives born-digital photographs metadata EXIF date taken", "date": "2026-08-19", "purpose": "EXIF가 자동 생성될 수 있으나 모든 파일에 존재하지는 않는다는 한계 확인"},
+    {"query": "site:law.go.kr 개인정보 보호법 제15조 수집 이용", "date": "2026-08-19", "purpose": "공유 목적에 필요한 정보만 다루는 개인정보 주의의 법적 맥락 확인"},
+    {"query": "site:law.go.kr 민법 제623조 임대인의 의무", "date": "2026-08-19", "purpose": "집 상태 기록이 책임 확정이 아니라 인도·유지 의무 맥락의 사실 기록이라는 한계 확인"}
+  ],
+  "article_research_question": "입주 또는 퇴실 때 찍은 집 상태 사진을 원본·전달본·재촬영본으로 구분해, 시간이 지난 뒤에도 무엇이 언제 어떻게 바뀌었는지 설명 가능한 기록 사슬로 만들려면 어떤 최소 규칙이 필요한가?",
+  "reader_outcome": "사진마다 위치 코드와 촬영 묶음을 붙이고, 원본을 보존한 채 공유본과 후속 사진을 별도 이력으로 연결할 수 있다.",
+  "search_intent_insight": "검색 결과는 촬영할 공간 목록이나 전체·근접 사진 수에 머무는 경우가 많다. 메신저로 보낸 압축본과 원본을 구분하고 같은 위치의 재촬영을 연결하는 방법은 상대적으로 비어 있다.",
+  "competitor_gap": "일반적인 집 사진 가이드는 촬영 순간만 다룬다. 이 글은 사진 파일의 이름·원본 보관·공유 이력·후속 재촬영을 하나의 전후 비교 카드로 묶어, 기억이 아니라 기록으로 대화할 수 있게 한다.",
+  "information_gain": "사진을 ‘증거 사진’으로 단정하지 않고, 원본 보존 폴더와 전달본 폴더를 분리한 뒤 같은 위치의 재촬영을 연결하는 4단계 체인으로 제시한다.",
+  "unique_angle": "사진의 구도보다 파일의 이력에 초점을 둔다. 위치 코드 하나에 원본, 전달한 사본, 상대 답변, 재촬영본을 매달아 수정·압축·재확인 과정을 잃지 않게 한다.",
+  "primary_reader_situation": "입주 직후 찍은 사진을 관리인이나 임대인에게 보내려는데, 나중에 원본과 보낸 파일, 수리 뒤 사진을 어떻게 구분할지 미리 정해야 하는 상황.",
+  "search_intent": "informational",
+  "decision_criterion": "같은 대상을 나중에 다시 찾아 원본·전달·후속 상태를 시간 순서로 설명할 수 있는가.",
+  "structure_type": "photo provenance chain with retake ledger",
+  "structure_reason": "사진의 품질보다 파일 이력과 재촬영의 연결이 핵심이므로, 공간별 체크리스트 대신 한 대상이 거치는 보관·공유·확인 단계를 따라간다.",
+  "visual_elements": ["provenance-chain", "file-name-card", "retake-ledger", "privacy-redaction-callout"],
+  "semantic_colors": ["slate for originals", "amber for pending retakes"],
+  "reader_job": "집 상태 사진 묶음을 나중에 다시 설명할 수 있는 파일 기록으로 정리한다.",
+  "decision_moment": "사진을 찍은 직후 원본을 편집하거나 메신저로 보내기 전.",
+  "answer_claim": "원본·공유본·재촬영본을 한 파일로 덮어쓰지 않고 위치 코드와 이력표로 연결하면, 사진이 무엇을 뜻하는지 다시 찾기 쉬워진다.",
+  "evidence_plan": "NARA의 고유 파일명·설명 메타데이터·EXIF 보존 권고와 NIST의 보존·수집·보고 절차를 기록 설계의 원칙으로 사용하고, 국내 법령은 개인정보와 임대차 결론을 과장하지 않는 한계로만 사용한다.",
+  "non_overlap_claim": "입주 점검표 글이 관찰 대상과 상태를 기록하는 방법이라면, 이 글은 촬영 뒤 파일이 어떻게 바뀌고 전달되며 같은 장소를 다시 찍는지를 관리한다.",
+  "not_answered_here": "누수 원인, 하자 책임, 수리비 부담, 계약 분쟁의 법적 결론은 다루지 않는다.",
+  "source_interpretation": "NARA와 NIST 자료는 공공 기록·디지털 포렌식의 보존 원칙이다. 이를 개인 임대차 사진의 법적 증명력으로 확대하지 않고, 원본을 덮어쓰지 않고 파일의 식별·보관·설명·전달 이력을 남기는 생활 규칙으로만 적용한다. 개인정보 보호법과 민법은 공유 범위와 책임 단정의 경계를 설명하는 데만 쓴다.",
+  "sources": [
+    {"id": "S1", "title": "Digital Photographic Records", "url": "https://www.archives.gov/records-mgmt/initiatives/digital-photo-records.html", "publisher": "U.S. National Archives and Records Administration", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "고유 파일명, 설명 메타데이터, EXIF 보존 및 반복 재저장에 따른 품질 저하 맥락"},
+    {"id": "S2", "title": "SP 800-101 Rev. 1: Guidelines on Mobile Device Forensics", "url": "https://csrc.nist.gov/pubs/sp/800/101/r1/final", "publisher": "National Institute of Standards and Technology", "date": "2014-05", "accessed": "2026-08-19", "source_role": "official", "used_for": "디지털 정보의 보존·수집·검토·보고 단계를 분리하는 기록 사슬의 맥락"},
+    {"id": "S3", "title": "Visual Cues and Clues: Born-Digital Photographs and their Metadata", "url": "https://unwritten-record.blogs.archives.gov/2021/10/05/visual-cues-and-clues-born-digital-photographs-and-their-metadata/", "publisher": "U.S. National Archives and Records Administration", "date": "2021-10-05", "accessed": "2026-08-19", "source_role": "official", "used_for": "EXIF에 촬영 시각·픽셀 크기 등의 정보가 들어갈 수 있지만 모든 사진에 완전한 메타데이터가 있는 것은 아니라는 한계"},
+    {"id": "S4", "title": "개인정보 보호법 제15조", "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1020398485", "publisher": "국가법령정보센터", "date": "2025-03-13", "accessed": "2026-08-19", "source_role": "official", "used_for": "공유 목적과 무관한 얼굴·연락처·호수 등 개인정보를 함께 전달하지 않도록 하는 주의의 법적 맥락"},
+    {"id": "S5", "title": "민법 제623조(임대인의 의무)", "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0623&lsiSeq=284415&urlMode=lsScJoRltInfoR", "publisher": "국가법령정보센터", "date": "2026-03-17", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대 목적물의 인도·유지 의무 맥락과 사진만으로 개별 책임을 확정하지 않는 한계"}
+  ],
+  "article_specific_details": [
+    {"claim": "원본 JPEG를 편집·재저장한 파일과 메신저 전송본은 같은 파일 역할을 하지 않으므로, 원본 보관 폴더를 따로 두고 공유본에는 전달 날짜를 붙인다.", "source_id": "S1"},
+    {"claim": "EXIF에는 촬영 시각이나 기기 정보 등이 들어갈 수 있지만 사진마다 모든 메타데이터가 보장되지는 않으므로, 위치 코드와 관찰 메모를 별도로 남긴다.", "source_id": "S3"},
+    {"claim": "재촬영은 처음 사진을 교체하는 행위가 아니라, 같은 위치 코드 아래에 새 시점과 상태를 추가하는 후속 기록이다.", "source_id": "S2"}
+  ],
+  "data_points": [
+    {"claim": "NARA는 사진별 고유 식별번호 또는 파일명과 설명 메타데이터를 요구하며, 가능한 EXIF 정보를 보존하도록 안내한다.", "source_id": "S1", "claim_type": "recordkeeping", "source_date": "undated", "supports_section": "파일명은 사진 제목이 아니라 찾는 열쇠입니다"},
+    {"claim": "NIST는 모바일 기기의 디지털 정보를 보존, 수집, 검사, 분석, 보고하는 절차를 다룬다.", "source_id": "S2", "claim_type": "process", "source_date": "2014-05", "supports_section": "원본·전달본·후속 사진을 섞지 않는 기록 사슬"},
+    {"claim": "태생 디지털 사진의 EXIF는 촬영 시각·픽셀 크기 같은 기술 정보를 포함할 수 있지만, 모든 사진이 모두 또는 일부 메타데이터를 가진다고 볼 수는 없다.", "source_id": "S3", "claim_type": "technical_limit", "source_date": "2021-10-05", "supports_section": "메타데이터는 보조 정보이지 혼자 결론이 아닙니다"},
+    {"claim": "개인정보 보호법 제15조는 개인정보 처리자의 수집·이용을 법정 근거나 동의 등 요건과 수집 목적 범위에 연결한다.", "source_id": "S4", "claim_type": "legal_context", "source_date": "2025-03-13", "supports_section": "공유본에는 필요한 장면만 남깁니다"},
+    {"claim": "민법 제623조는 임대인의 목적물 인도 및 사용·수익에 필요한 상태 유지 의무를 규정한다.", "source_id": "S5", "claim_type": "legal_context", "source_date": "2026-03-17", "supports_section": "사진은 결론문이 아니라 상태 기록입니다"}
+  ],
+  "ymyl_category": "legal_privacy_context",
+  "ymyl_review": "pass: 법률상 책임·증명력·보상 결과를 단정하지 않고 기록 및 개인정보 최소화의 일반적 맥락으로만 서술",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["EXIF와 파일명만으로 촬영 장소·상태·책임이 자동으로 증명되지는 않는다.", "개별 임대차의 수리 책임과 분쟁 절차는 계약 내용과 사실관계에 따라 달라진다.", "사진 속 인물·호수·연락처의 개인정보 해당성 및 공유 가능 범위는 구체적 상황에 따라 확인이 필요하다."],
+  "source_conflicts": []
+}

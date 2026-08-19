@@ -1,0 +1,41 @@
+{
+  "article_id": "how-to-read-registry",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "no_legal_overclaim": true
+  },
+  "evidence": {
+    "visible_body_characters": 4772,
+    "hangul_characters": 3005,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/how-to-read-registry.md",
+    "internal_links": ["/guide/online-transfer-address-guide", "/guide/jeonse-loan-documents-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/deposit-loan-timeline.mdx",
+    "output/today2424/drafts/landlord-tax-arrears-check.mdx",
+    "output/today2424/drafts/jeonse-loan-documents-guide.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "갑구·을구 용어 풀이를 주소·소유자·권리 순서 대조와 질문·재발급·중단 기준으로 연결했다.",
+  "remaining_risks": [
+    "등기부 한 장으로 보증금 회수 가능성이나 전세사기 여부를 확정할 수 없다.",
+    "대항력·우선변제권은 인도·전입·확정일자와 구체적인 시점을 별도로 확인해야 한다.",
+    "발급 화면·법령·공식 안내는 계약 시점에 최신 상태를 다시 확인해야 한다."
+  ],
+  "next_action": "발행 전 국가법령정보센터·인터넷등기소 링크와 내부 연결 대상의 공개 상태를 확인한다."
+}

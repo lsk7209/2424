@@ -1,0 +1,48 @@
+{
+  "article_id": "gas-electric-water-change-guide",
+  "status": "research_complete",
+  "article_research_question": "이사할 때 전기·가스·수도·지역난방의 해지·명의·전입·정산을 어떻게 분리하고, 마지막·첫 검침을 어떤 증거로 연결할 것인가?",
+  "reader_outcome": "공과금 종류마다 계약 주체와 검침일을 확인하고, 이사 전후 계량기 사진·접수번호·최종 고지서를 한 장의 정산표로 남길 수 있다.",
+  "search_intent_insight": "이사 공과금 글은 전화번호와 신청 시점만 나열하지만, 관리비 포함 여부·명의·자동이체·검침 기준이 서로 다른 문제라는 점과 이사 당일 기록을 충분히 설명하지 않는다.",
+  "competitor_gap": "전기·가스·수도를 한꺼번에 해지하라고 안내하거나 특정 지역 절차를 전국 규칙처럼 쓴다. 공급기관·관리사무소·임대인의 역할과 계량기 사진·정산 증거를 분리한 자료가 부족하다.",
+  "information_gain": "서비스 확인→계약 주체 확인→마지막 검침→해지·전입 접수→첫 검침→최종 고지서 대조의 여섯 시점으로 이사 체크를 재구성한다.",
+  "unique_angle": "공과금 신청 방법 자체보다 ‘어느 기관이 어떤 기간의 사용량을 책임지는가’를 확인하는 정산 카드로 구성한다.",
+  "source_interpretation": "정부24의 전입 관련 서비스와 전기·가스 공급기관의 공식 안내는 신청 경로를 확인하는 참고로 사용한다. 수도·지역난방은 지역·건물별 관리 주체가 다를 수 있어 관리사무소나 관할 기관의 최신 안내를 우선한다. 공과금 금액이나 처리 완료 시간을 보장하지 않는다.",
+  "article_specific_details": [
+    {"claim": "전기·가스·수도·지역난방은 공급기관과 관리주체, 검침 방식이 다를 수 있어 각각 해지·전입·명의를 확인해야 한다.", "source_id": "S1"},
+    {"claim": "전입신고·주소 변경은 공과금 해지나 명의변경과 별도의 행정 절차이므로 각각 완료 여부를 기록한다.", "source_id": "S2"},
+    {"claim": "도시가스는 지역 공급사와 계약·안전 점검 일정이 다를 수 있으므로 이사 날짜와 주소를 알려 최신 절차를 확인한다.", "source_id": "S3"},
+    {"claim": "관리비에 수도·난방이 포함되는 건물은 개별 계량기와 관리비 고지서의 정산 기준을 관리주체에게 확인한다.", "source_id": "S4"},
+    {"claim": "공과금 분쟁이 생기면 계량기 사진·접수번호·고지서·임대차 기간을 함께 정리해 공식 상담 경로에 문의한다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "household_finance",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "지역·건물·계약 유형에 따라 수도·난방·도시가스 처리 주체와 방문 일정이 달라진다.",
+    "계량기 숫자만으로 최종 사용량이나 요금이 확정되는 것은 아니며 공급기관의 검침·정산 기준을 확인해야 한다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:home.kepco.co.kr 이사 전입 전출 전기 명의변경 계량기", "date": "2026-08-19", "purpose": "전기 전출·전입 공식 경로"},
+    {"query": "site:gov.kr 전입신고 주소 변경 이사 서비스", "date": "2026-08-19", "purpose": "행정 주소 변경 분리"},
+    {"query": "site:kogas.or.kr 도시가스 전입 전출 이사 검침", "date": "2026-08-19", "purpose": "도시가스 공급사 절차"},
+    {"query": "site:law.go.kr 임대차 관리비 사용료 수도 난방 정산", "date": "2026-08-19", "purpose": "관리비·계약 정산 맥락"},
+    {"query": "이사 전기 가스 수도 계량기 사진 명의변경 최종 고지서", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 글 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "한국전력 공식 고객서비스", "url": "https://home.kepco.co.kr/kepco/main.do", "publisher": "한국전력공사", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "전기 전출·전입·명의 확인 경로"},
+    {"id": "S2", "title": "정부24 전입신고 서비스", "url": "https://www.gov.kr/portal/service/serviceInfo/PTR000050110", "publisher": "행정안전부 정부24", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "주소 변경과 공과금 절차 분리"},
+    {"id": "S3", "title": "한국가스공사 공식 홈페이지", "url": "https://www.kogas.or.kr/", "publisher": "한국가스공사", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "도시가스 지역 공급사 확인"},
+    {"id": "S4", "title": "주택임대차보호법·임대차 계약 법령", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=245913", "publisher": "국가법령정보센터", "date": "2022-12-13", "accessed": "2026-08-19", "source_role": "official", "used_for": "관리비·사용료 계약 정산 맥락"},
+    {"id": "S5", "title": "소비자24 공식 상담 경로", "url": "https://www.consumer.go.kr/", "publisher": "소비자24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "공과금 정산 분쟁 상담"}
+  ],
+  "data_points": [
+    {"claim": "전기 전출·전입 확인 경로", "source_id": "S1", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "서비스 분류"},
+    {"claim": "전입신고와 공과금 절차 분리", "source_id": "S2", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "이사 전 일정"},
+    {"claim": "도시가스 지역 공급사 확인", "source_id": "S3", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "가스 접수"},
+    {"claim": "관리비·사용료 계약 맥락", "source_id": "S4", "claim_type": "legal_scope", "source_date": "2022-12-13", "supports_section": "수도·난방"},
+    {"claim": "공식 상담 경로", "source_id": "S5", "claim_type": "procedure", "source_date": "undated", "supports_section": "이견 단계"}
+  ]
+}

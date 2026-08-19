@@ -170,5 +170,10 @@ function validateHomeJsonLd(html) {
   check(Boolean(organization?.["@id"]), "home Organization JSON-LD is missing @id");
   check(Boolean(organization?.contactPoint?.email), "home Organization JSON-LD is missing contact email");
   check(Boolean(website?.publisher?.["@id"]), "home WebSite JSON-LD publisher is missing @id");
-  check(website?.potentialAction?.["@type"] === "SearchAction", "home WebSite JSON-LD is missing SearchAction");
+  // `/blog?q=` is not a site-search endpoint, so do not advertise a
+  // SearchAction that would send crawlers to a non-search result page.
+  check(
+    website?.potentialAction?.["@type"] !== "SearchAction",
+    "home WebSite JSON-LD must not advertise an unsupported SearchAction",
+  );
 }

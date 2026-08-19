@@ -1,0 +1,48 @@
+{
+  "article_id": "move-out-cleaning-budget",
+  "status": "research_complete",
+  "article_research_question": "퇴거할 때 청소비·폐기비·수리비·원상복구 비용을 한꺼번에 보지 않고, 입주 전 상태와 계약상 변경 사항을 어떤 증거로 나눠 대조할 것인가?",
+  "reader_outcome": "퇴거 전 비용 항목을 네 칸으로 나누고, 같은 위치의 사진·계약서·견적서를 대조해 임대인에게 확인할 질문을 만들 수 있다.",
+  "search_intent_insight": "퇴거 청소 글은 평수별 가격이나 청소 순서에 집중하지만, 보증금 공제와 연결되는 원상복구 범위·통상 사용 흔적·견적 증빙을 나눠 설명하는 자료는 부족하다.",
+  "competitor_gap": "‘깨끗하게 청소하면 된다’는 조언과 ‘집주인이 모두 부담한다’는 단정이 공존한다. 청소와 수리의 구분, 입주 전 사진의 역할, 비용 확인 메시지까지 이어지는 기록 흐름이 필요하다.",
+  "information_gain": "청소·폐기·수리·변경 복구를 별도 행으로 만든 뒤 입주 전 사진→계약 특약→퇴거 사진→견적·영수증 순으로 확인한다.",
+  "unique_angle": "청소 예산을 낮추는 글이 아니라, 비용 청구의 근거가 무엇인지 확인하는 퇴거 정산표로 구성한다.",
+  "source_interpretation": "민법의 임대차·원상회복 원칙과 판례는 계약 종료 시 반환·원상회복 범위를 사실관계와 약정에 따라 살펴본다는 점을 보여 준다. 분쟁조정 자료는 계약서·사진·견적서·영수증을 정리하는 절차의 참고로 사용하며, 특정 공제 금액의 정당성을 판단하지 않는다.",
+  "article_specific_details": [
+    {"claim": "임대차 종료 후 반환과 원상회복 범위는 계약 내용과 임차인이 변경한 부분, 입주 당시 상태를 함께 확인해야 한다.", "source_id": "S1"},
+    {"claim": "민법상 임대차 관계의 의무는 목적물 반환·사용 방식·원상회복과 연결되므로 청소와 수리를 하나의 총액으로 판단하지 않는다.", "source_id": "S2"},
+    {"claim": "판례는 별도 약정이 없는 경우 임차인이 자신이 변경한 범위와 실제 손해를 중심으로 원상회복 범위를 살펴야 한다는 취지를 보여 준다.", "source_id": "S3"},
+    {"claim": "분쟁조정 절차를 준비할 때 계약서·사진·견적·영수증 등 사실관계 자료를 모아야 한다.", "source_id": "S4"},
+    {"claim": "공식 상담에서는 당사자·계약일·퇴거일·공제 항목과 자료를 분리해 설명하는 것이 확인에 도움이 된다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "통상적인 사용에 따른 마모와 임차인의 과실·변경에 따른 손해는 주택 상태와 계약 내용에 따라 달라진다.",
+    "청소·수리 업체의 견적만으로 임차인의 법적 부담이 확정되는 것은 아니다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:law.go.kr 민법 임대차 원상회복 제615조 제654조", "date": "2026-08-19", "purpose": "원상회복 법적 근거"},
+    {"query": "site:law.go.kr 주택임대차보호법 임대차 종료 반환", "date": "2026-08-19", "purpose": "주거 임대차 맥락"},
+    {"query": "site:law.go.kr 임차보증금 원상회복 판례 입주 당시 상태", "date": "2026-08-19", "purpose": "판례의 사실관계 범위"},
+    {"query": "site:kca.go.kr 소비자분쟁조정 임대차 사진 견적서 영수증", "date": "2026-08-19", "purpose": "분쟁 증빙 준비"},
+    {"query": "퇴거 청소비 원상복구 비용 보증금 공제 사진 견적 비교", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 글 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "민법 임대차 관련 조문", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=245913", "publisher": "국가법령정보센터", "date": "2022-12-13", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대차 반환·원상회복 원칙"},
+    {"id": "S2", "title": "주택임대차보호법", "url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=900368308", "publisher": "국가법령정보센터", "date": "2026-01-02", "accessed": "2026-08-19", "source_role": "official", "used_for": "주거용 임대차의 보호 맥락"},
+    {"id": "S3", "title": "임차보증금 관련 대법원 판례", "url": "https://www.law.go.kr/LSW/precInfoP.do?evtNo=90%EB%8B%A4%EC%B9%B412035", "publisher": "국가법령정보센터", "date": "1990-10-30", "accessed": "2026-08-19", "source_role": "official", "used_for": "원상회복 범위의 사실관계"},
+    {"id": "S4", "title": "소비자분쟁조정 신청 절차", "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do", "publisher": "한국소비자원", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "사진·견적·영수증 증빙"},
+    {"id": "S5", "title": "소비자24 상담 경로", "url": "https://www.consumer.go.kr/", "publisher": "소비자24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "공식 상담 시 정보 정리"}
+  ],
+  "data_points": [
+    {"claim": "임대차 반환·원상회복 원칙", "source_id": "S1", "claim_type": "legal_scope", "source_date": "2022-12-13", "supports_section": "네 칸 비용표"},
+    {"claim": "주거용 임대차 보호 맥락", "source_id": "S2", "claim_type": "legal_scope", "source_date": "2026-01-02", "supports_section": "계약서 확인"},
+    {"claim": "원상회복 범위는 실제 변경·상태 중심", "source_id": "S3", "claim_type": "case_law", "source_date": "1990-10-30", "supports_section": "입주 전후 사진"},
+    {"claim": "분쟁 증빙 자료", "source_id": "S4", "claim_type": "procedure", "source_date": "undated", "supports_section": "견적 대조"},
+    {"claim": "공식 상담 경로", "source_id": "S5", "claim_type": "procedure", "source_date": "undated", "supports_section": "갈등 단계"}
+  ]
+}

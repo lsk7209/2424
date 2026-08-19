@@ -1,0 +1,42 @@
+{
+  "article_id": "deposit-transfer-checklist",
+  "status": "research_complete",
+  "article_research_question": "전세 계약금 송금 전에 계약 대상·소유자·수령 권한·조건을 어떤 증거로 연결해야 하는가?",
+  "reader_outcome": "송금 전 확인할 문서와 송금 후 남길 증빙을 구분하고 계좌 명의가 다를 때의 확인 질문을 갖는다.",
+  "search_intent_insight": "기존 글은 최신 등기부와 계좌 명의 일치를 강조하지만 대리·법인 거래와 확정일자·임대차 정보 확인의 경계를 설명하지 않는다.",
+  "competitor_gap": "가계약금 반환이나 안전을 약속하지 않고 국가법령정보센터와 정부24의 공식 정보 확인 경로를 거래 체인에 배치한다.",
+  "information_gain": "송금 전 4개 증거를 같은 거래 행에 연결하고, 개인정보를 최소화한 보관 규칙을 제공한다.",
+  "unique_angle": "계좌 확인 글이 아니라 돈의 이동과 계약 문서의 대응 관계를 추적하는 증빙 설계 글이다.",
+  "source_interpretation": "확정일자 정보 제공은 법에서 정한 이해관계와 동의 요건이 있으므로 누구나 임대차 정보를 조회할 수 있다고 쓰지 않는다.",
+  "article_specific_details": [
+    {"claim": "확정일자 부여기관과 임대차 정보 제공 범위는 주택임대차보호법에 정해져 있다.", "source_id": "S1"},
+    {"claim": "확정일자 신청 시 완성된 계약서와 본인 확인 자료가 필요하다.", "source_id": "S2"},
+    {"claim": "정부24 전입세대확인서는 대상과 신청인 자격에 따라 확인 가능한 정보가 다르다.", "source_id": "S3"}
+  ],
+  "ymyl_category": "finance_housing",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["가계약금의 반환 여부와 대리인의 수령 권한은 구체적 계약 문구와 사실관계에 따라 달라진다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:law.go.kr 주택임대차보호법 확정일자 임대차 정보 제공", "date": "2026-08-19", "purpose": "legal information scope"},
+    {"query": "site:law.go.kr 확정일자 신청 계약서 신분증 규칙", "date": "2026-08-19", "purpose": "document requirement"},
+    {"query": "site:gov.kr 전입세대확인서 열람 발급 신청 자격", "date": "2026-08-19", "purpose": "official record access"},
+    {"query": "site:law.go.kr 민법 대리인 계약 권한 임대차", "date": "2026-08-19", "purpose": "authority distinction"},
+    {"query": "전세 계약금 송금 계좌 명의 가계약 체크리스트 검색 결과", "date": "2026-08-19", "purpose": "search-intent and competitor-gap review"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "주택임대차보호법 제3조의6", "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032085413", "publisher": "국가법령정보센터", "date": "2026-01-02", "accessed": "2026-08-19", "source_role": "official", "used_for": "확정일자와 임대차 정보 제공 범위"},
+    {"id": "S2", "title": "주택임대차계약증서 확정일자 부여 규칙", "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=130116", "publisher": "국가법령정보센터", "date": "2022-02-07", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약서·신분증 확인 절차"},
+    {"id": "S3", "title": "전입세대확인서 열람·발급", "url": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000305&tp_seq=01", "publisher": "정부24", "date": "2025-12-09", "accessed": "2026-08-19", "source_role": "official", "used_for": "신청 자격과 확인 정보"},
+    {"id": "S4", "title": "주택임대차 정보제공요청서 서식", "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=112678655&gubun=", "publisher": "국가법령정보센터", "date": "2020-09-29", "accessed": "2026-08-19", "source_role": "official", "used_for": "요청 정보와 대상 주택 기재"},
+    {"id": "S5", "title": "주민등록 관련 통보서비스", "url": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13110000039&HighCtgCD=A01008", "publisher": "정부24", "date": "2025-12-09", "accessed": "2026-08-19", "source_role": "official", "used_for": "전입 사실 통보와 증빙 구분"}
+  ],
+  "data_points": [
+    {"claim": "확정일자 정보 제공 기관", "source_id": "S1", "claim_type": "legal_procedure", "source_date": "2026-01-02", "supports_section": "계약 대상 확인"},
+    {"claim": "완성된 계약서와 본인 확인", "source_id": "S2", "claim_type": "documents", "source_date": "2022-02-07", "supports_section": "송금 전 서류"},
+    {"claim": "전입세대확인서 신청 자격", "source_id": "S3", "claim_type": "official_record", "source_date": "2025-12-09", "supports_section": "권리 확인"},
+    {"claim": "임대차 정보 요청 항목", "source_id": "S4", "claim_type": "documents", "source_date": "2020-09-29", "supports_section": "증빙 보관"}
+  ]
+}

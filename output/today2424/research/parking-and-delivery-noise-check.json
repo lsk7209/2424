@@ -1,0 +1,42 @@
+{
+  "article_id": "parking-and-delivery-noise-check",
+  "status": "research_complete",
+  "article_research_question": "주차장·배달 동선에서 생기는 밤 소리를 계약 전에 어떻게 관찰하고 어떤 기관의 기준으로 구분할 수 있는가?",
+  "reader_outcome": "소음원을 집 안 층간소음, 사업장·공사장 생활소음, 관리규약 문제로 나누고 확인할 기록을 만든다.",
+  "search_intent_insight": "기존 글은 밤에 다시 방문하라고만 권하지만 소음의 발생 지점과 적용 규정을 구분하지 않는다.",
+  "competitor_gap": "법적 기준을 만능 숫자로 쓰지 않고 환경부·법령·층간소음 이웃사이센터의 범위와 실제 계약 전 관찰을 연결한다.",
+  "information_gain": "배달 대기·차량 램프·공동현관·창문 전달 경로를 15분 기록표로 비교하고, 거주 후 문의 주체까지 정한다.",
+  "unique_angle": "조용함을 평가하는 글이 아니라 소리의 출발점과 책임 주체를 찾는 현장 기록으로 구성한다.",
+  "source_interpretation": "층간소음 상담기관과 생활소음 규제는 대상과 절차가 다르므로 주차·배달 소리를 자동으로 층간소음이라고 단정하지 않는다.",
+  "article_specific_details": [
+    {"claim": "공동주택 층간소음 상담과 측정에는 발생일지 등 별도 절차가 있다.", "source_id": "S1"},
+    {"claim": "소음·진동관리법 시행규칙은 사업장·공사장 등 생활소음의 대상과 시간대별 기준을 별표 8로 정한다.", "source_id": "S2"},
+    {"claim": "층간소음 이웃사이센터는 비공동주택의 경우 법적 기준이 없을 수 있음을 안내한다.", "source_id": "S3"}
+  ],
+  "ymyl_category": "housing_safety",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["건물 관리규약과 사업장별 운영시간은 현장·관리주체에 따라 달라 계약 전 직접 확인해야 한다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:floor.noiseinfo.or.kr 층간소음 상담 측정 발생일지", "date": "2026-08-19", "purpose": "official complaint procedure"},
+    {"query": "site:law.go.kr 소음 진동 관리법 시행규칙 생활소음 별표 8", "date": "2026-08-19", "purpose": "legal scope and time bands"},
+    {"query": "site:me.go.kr 공동주택 층간소음 범위 기준", "date": "2026-08-19", "purpose": "classification check"},
+    {"query": "site:law.go.kr 생활소음 사업장 소음 규제 기준", "date": "2026-08-19", "purpose": "business-noise distinction"},
+    {"query": "주차장 배달 동선 밤 소음 집 보러 갈 때 검색 결과", "date": "2026-08-19", "purpose": "search-intent and competitor-gap review"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "층간소음 이웃사이센터 측정 신청 안내", "url": "https://floor.noiseinfo.or.kr/floornoise/home/complaint/mesure/nmbrCheck.do", "publisher": "한국환경공단 층간소음 이웃사이센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "상담·측정과 발생일지 확인"},
+    {"id": "S2", "title": "소음·진동관리법 시행규칙 제20조 및 별표 8", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=287427", "publisher": "국가법령정보센터", "date": "2026-06-22", "accessed": "2026-08-19", "source_role": "official", "used_for": "생활소음 대상·시간대 기준"},
+    {"id": "S3", "title": "층간소음 이웃사이센터 FAQ", "url": "https://floor.noiseinfo.or.kr/floornoise/home/notice/faq.do", "publisher": "한국환경공단 층간소음 이웃사이센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "공동주택·비공동주택 적용 범위"},
+    {"id": "S4", "title": "생활소음·진동 규제기준 법령해석", "url": "https://www.law.go.kr/DRF/lawService.do?ID=340297&OC=unicpla&mobileYn=Y&target=expc&type=HTML", "publisher": "법제처 국가법령정보센터", "date": "2024-12-20", "accessed": "2026-08-19", "source_role": "official", "used_for": "사업장·공사장 소음 구분"},
+    {"id": "S5", "title": "공동주택 생활소음 기준 설명", "url": "https://me.go.kr/home/web/board/read.do?boardCategoryId=39&boardId=345862&boardMasterId=1", "publisher": "기후에너지환경부", "date": "2013-06-03", "accessed": "2026-08-19", "source_role": "official", "used_for": "층간소음 범위와 측정 개념"}
+  ],
+  "data_points": [
+    {"claim": "발생일지와 측정 신청 절차", "source_id": "S1", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "거주 후 기록"},
+    {"claim": "생활소음 규제 대상과 시간대", "source_id": "S2", "claim_type": "legal_scope", "source_date": "2026-06-22", "supports_section": "소음 분류"},
+    {"claim": "비공동주택 적용 한계", "source_id": "S3", "claim_type": "legal_scope", "source_date": "2026-08-19", "supports_section": "계약 전 주의"},
+    {"claim": "사업장·공사장 소음 구분", "source_id": "S4", "claim_type": "legal_scope", "source_date": "2024-12-20", "supports_section": "관리주체 확인"}
+  ]
+}

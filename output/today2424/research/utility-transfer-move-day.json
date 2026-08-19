@@ -1,0 +1,59 @@
+{
+  "article_id": "utility-transfer-move-day",
+  "status": "research_complete",
+  "article_research_question": "이사 당일 이전 집의 마지막 사용 경계와 새 집의 첫 사용 경계를 전기·도시가스·수도별로 어떻게 기록하고, 최종 고지서가 오기 전까지 어떤 정산 행을 열린 상태로 남겨야 하는가?",
+  "reader_outcome": "독자는 두 주소의 계량기 읽음값·시각·인도 상대·접수 상태를 한 장의 이동일 계기판에 남기고, 공급기관 또는 관리주체의 고지서와 대조할 질문까지 준비한다.",
+  "search_intent_insight": "‘이사 당일 공과금 명의 변경’ 검색 결과는 전출·전입 예약 또는 기관 연락처에 집중한다. 그러나 실제 당일에는 이전 집의 마지막 수치와 새 집의 첫 수치를 어떤 상태로 인계하고, 자동이체·관리비·최종 고지서처럼 아직 끝나지 않은 일을 어떻게 구분할지가 결정에 더 직접적이다.",
+  "competitor_gap": "일반적인 서비스별 신청 목록 대신, 한 서비스가 ‘측정됨·접수됨·상대 확인됨·고지서 대조됨’ 중 어디에 있는지를 표시하는 당일 인수인계 계기판과 안전한 문의 문장을 제공한다.",
+  "information_gain": "신청 완료 여부를 하나의 체크 표시로 닫지 않고, 두 주소의 계량기 수치와 열쇠 인도 시각을 기준으로 4단계 상태등과 열린 정산 행을 설계한다.",
+  "unique_angle": "공과금 이전을 기관별 신청 절차가 아니라 이전 집에서 새 집으로 사용 경계를 넘기는 ‘계량기 인수인계’로 재구성한다.",
+  "source_interpretation": "한국전력은 전기 고객 서비스 확인 경로, 서울도시가스는 전출입 시 검침·자동이체·명의변경 및 안전 작업을 구체화하는 사례, 서울아리수는 이사 시 수도계량기 지침을 이용한 정산 안내의 근거로 사용한다. 정부24는 전입신고가 별도 행정 서비스임을 구분하는 배경이고, 소비자24는 이견이 계속될 때 기록을 들고 상담할 수 있는 공식 경로로만 쓴다. 지역·건물마다 실제 공급자와 관리 방식이 달라 특정 지역 절차를 전국 규칙으로 일반화하지 않는다.",
+  "article_specific_details": [
+    {"claim": "서울도시가스는 전출 시 철거 작업과 함께 검침으로 사용요금을 정산하도록 안내하고, 자동이체 고객은 이사 전 해지를 신청하도록 안내한다.", "source_id": "S2"},
+    {"claim": "서울아리수본부는 이사할 때 수도계량기 지침을 알려주면 그동안 사용한 수도요금 정산을 안내한다고 밝힌다.", "source_id": "S3"},
+    {"claim": "서울도시가스는 전입 시 계량기를 확인해 이전 거주자의 체납 여부와 요금 정산을 요청하도록 안내한다.", "source_id": "S2"}
+  ],
+  "ymyl_category": "household_finance",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "전기·도시가스·수도의 관할 기관, 방문 필요 여부, 검침일, 관리비 포함 범위와 최종 정산 기준은 주소·건물·계약에 따라 달라진다.",
+    "계량기 사진이나 수치만으로 최종 요금, 체납 책임, 명의변경 완료 또는 방문 일정을 확정할 수 없다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "한국전력 공식 고객서비스 이사 전출입 전기 사용계약", "date": "2026-08-19", "purpose": "전기 사용계약 확인의 공식 경로 조사"},
+    {"query": "서울도시가스 전출입 서비스 검침 자동이체 명의변경 공식", "date": "2026-08-19", "purpose": "이사 당일 도시가스 검침·정산·안전 절차 확인"},
+    {"query": "서울아리수 이사 수도계량기 지침 정산 공식", "date": "2026-08-19", "purpose": "수도 계량기 수치와 이사 정산의 공식 안내 확인"},
+    {"query": "정부24 전입신고 공식 서비스 안내", "date": "2026-08-19", "purpose": "주소 행정과 공급계약 업무의 구분 검토"},
+    {"query": "소비자24 1372 거래내역 증빙서류 상담 공식", "date": "2026-08-19", "purpose": "공과금 이견 시 증빙 기반 공식 상담 경로 확인"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "한국전력 공식 고객서비스", "url": "https://home.kepco.co.kr/kepco/main.do", "publisher": "한국전력공사", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "전기 사용계약·고객서비스 확인은 관할 공급기관의 최신 안내로 재확인해야 한다는 경로"},
+    {"id": "S2", "title": "서울도시가스 전출입 서비스", "url": "https://www.seoulgas.co.kr/front/customer/checkInOut", "publisher": "서울도시가스", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "전출 검침·요금 정산·자동이체 해지, 전입 계량기 확인·명의변경·안전 작업의 사례"},
+    {"id": "S3", "title": "서울아리수본부 우리의 이행표준", "url": "https://arisu.seoul.go.kr/home/sub?menukey=7642", "publisher": "서울아리수본부", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "이사 시 수도계량기 지침과 사용분 정산 안내의 사례"},
+    {"id": "S4", "title": "정부24", "url": "https://www.gov.kr/portal/main", "publisher": "행정안전부 정부24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "전입신고 등 행정서비스와 공급계약 기록을 구분하는 배경"},
+    {"id": "S5", "title": "소비자24 소비자상담·피해구제 안내", "url": "https://www.consumer.go.kr/", "publisher": "한국소비자원·공정거래위원회", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "거래내역과 증빙서류를 갖춘 공식 상담·피해구제 경로"}
+  ],
+  "data_points": [
+    {"claim": "전기 계약 확인은 한국전력의 공식 고객서비스에서 최신 안내를 확인한다.", "source_id": "S1", "claim_type": "procedure", "source_date": "undated", "supports_section": "전기 행은 접수와 고지서 대조를 분리한다"},
+    {"claim": "서울도시가스 전출 안내는 철거 작업 시 검침과 사용요금 정산, 자동이체 해지 확인을 포함한다.", "source_id": "S2", "claim_type": "procedure", "source_date": "undated", "supports_section": "도시가스 행은 안전과 정산을 한 번에 닫지 않는다"},
+    {"claim": "서울아리수본부는 이사 시 수도계량기 지침을 알려 사용분 수도요금 정산을 안내한다.", "source_id": "S3", "claim_type": "procedure", "source_date": "undated", "supports_section": "수도 행은 수치·시각·정산 문의를 함께 남긴다"},
+    {"claim": "정부24는 전입신고 등 행정 민원서비스를 제공한다.", "source_id": "S4", "claim_type": "service_scope", "source_date": "undated", "supports_section": "주소 변경과 공급계약은 별도 행이다"},
+    {"claim": "소비자24는 거래내역과 증빙서류를 갖춘 상담 또는 피해구제 신청 경로를 안내한다.", "source_id": "S5", "claim_type": "dispute_route", "source_date": "undated", "supports_section": "이견은 숫자보다 기록 묶음으로 문의한다"}
+  ],
+  "visual_elements": ["move-day-meter-board", "status-light-table", "handoff-message-card"],
+  "semantic_colors": ["amber-for-open-items", "green-for-confirmed-records"],
+  "structure_type": "two-address meter handoff board",
+  "primary_reader_situation": "열쇠 인도와 입주가 같은 날 이어져 이전 집과 새 집의 공과금 사용 경계를 동시에 남겨야 하는 임차인",
+  "search_intent": "이사 당일 공과금 명의 변경과 계량기 정산 기록의 실제 순서 확인",
+  "decision_criterion": "처리 완료라는 말 대신 수치·시각·상대·접수·고지서 대조 중 무엇이 확인됐는가",
+  "reader_job": "당일 두 주소의 공과금 인수인계 기록을 만들어 후속 고지서를 판단할 기준을 확보한다",
+  "decision_moment": "이전 집 열쇠를 넘기기 직전과 새 집에서 처음 계량기를 확인한 직후",
+  "answer_claim": "서비스별 신청을 반복하지 않아도, 두 주소의 수치와 상태를 분리한 계기판으로 누락과 설명 비용을 줄일 수 있다",
+  "evidence_plan": "공식 기관별 안내를 수치·검침·안전·행정·상담의 범위로 제한해 인용하고, 당일 기록 양식으로 연결한다",
+  "non_overlap_claim": "기존 공과금 변경 가이드가 전출·전입·명의변경의 전체 흐름을 다룬다면, 이 글은 이사 당일의 사용 경계와 열린 정산 행만 다룬다",
+  "not_answered_here": "지역별 예약 가능 시간, 요금, 수수료, 최종 청구액, 개별 주소의 공급사·관리비 규칙",
+  "structure_reason": "시간 순서가 아니라 이전 집과 새 집의 수치가 한 장에서 만나는 인수인계 보드가 독자의 즉시 판단에 적합하다"
+}

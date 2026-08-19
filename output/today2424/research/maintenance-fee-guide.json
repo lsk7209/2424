@@ -1,0 +1,13 @@
+{
+  "article_id":"maintenance-fee-guide","status":"research_complete",
+  "research_runs":[{"query":"K-apt 관리비 공개","date":"2026-08-19","purpose":"공개 정보 범위"},{"query":"공동주택관리법 관리비","date":"2026-08-19","purpose":"법령 용어"},{"query":"정부24 전입신고","date":"2026-08-19","purpose":"입주 날짜 기록"},{"query":"한국소비자원 관리비 상담","date":"2026-08-19","purpose":"상담 경로"},{"query":"공동주택 계량기 검침 관리비","date":"2026-08-19","purpose":"고지 기간 질문"}],
+  "article_research_question":"입주·퇴거 시 관리비 고지서의 항목과 부과 기간을 어떻게 계약 문구·계량기 기록에 연결할 수 있는가?",
+  "reader_outcome":"고정·사용량·설명 필요 항목을 나누고 마지막 달 정산 질문을 문서화한다.",
+  "original_contribution":{"type":"comparison-table","description":"고지서를 세 바구니로 분류해 금액보다 산정 기준을 묻는 표","supporting_source_ids":["S1","S2"]},
+  "unique_angle":"평균 금액이 아닌 고지 기간과 계량기 연결로 보는 관리비 정산","information_gain":"고지서·계약서·계량기·입퇴거일을 한 날짜선에 배치한다.",
+  "source_interpretation":"K-apt 공개 정보를 특정 주거 형태의 청구 결과로 일반화하지 않고 질문 항목의 기준으로만 쓴다.",
+  "sources":[{"id":"S1","title":"공동주택관리정보시스템","url":"https://www.k-apt.go.kr","publisher":"한국부동산원","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"관리비 공개 정보 확인"},{"id":"S2","title":"공동주택관리법","url":"https://www.law.go.kr/법령/공동주택관리법","publisher":"국가법령정보센터","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"관리비 용어 확인"},{"id":"S3","title":"정부24","url":"https://www.gov.kr","publisher":"행정안전부","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"입주일 행정 기록 참고"},{"id":"S4","title":"한국소비자원","url":"https://www.kca.go.kr","publisher":"한국소비자원","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"소비자 상담 경로"},{"id":"S5","title":"국토교통부","url":"https://www.molit.go.kr","publisher":"국토교통부","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"주거 관리 정책 안내"}],
+  "article_specific_details":[{"claim":"관리비는 공용·사용량·설명 필요 항목으로 나눠 고지 기간과 함께 비교한다.","source_id":"S1"},{"claim":"공동주택 관리 관련 용어와 공개 범위는 건물별 실제 청구서를 자동 설명하지 않는다.","source_id":"S2"}],
+  "data_points":[{"claim":"K-apt는 공동주택 관리비 공개 정보를 제공한다.","source_id":"S1","claim_type":"procedure","source_date":"current","supports_section":"고지서 분류"},{"claim":"관리비 공개·관리의 법령 용어는 현행 본문으로 확인한다.","source_id":"S2","claim_type":"legal","source_date":"current","supports_section":"계약 정산"},{"claim":"입주 날짜는 이후 정산 기간을 질문할 기준이 된다.","source_id":"S3","claim_type":"procedure","source_date":"current","supports_section":"기간 비교"}],
+  "visual_elements":["three-bucket-bill","meter-photo-log","moveout-settlement-envelope"],"fact_traceability_pass":true,"volatile":true,"ymyl_category":"housing_contract"
+}

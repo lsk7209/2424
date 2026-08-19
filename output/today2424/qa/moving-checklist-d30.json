@@ -1,0 +1,49 @@
+{
+  "article_id": "moving-checklist-d30",
+  "status": "done",
+  "score": 93,
+  "category_scores": {
+    "content_quality": 29,
+    "seo": 23,
+    "eeat": 15,
+    "technical_elements": 13,
+    "ai_citation_readiness": 13
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 3688,
+    "hangul_characters": 3338,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/moving-checklist-d30.md",
+    "internal_links": ["/guide/moving-center-selection", "/moving"],
+    "external_source_links": ["S1", "S2", "S3", "S4"]
+  },
+  "compared_rows": [
+    "personas/today2424/samples/sample-1.md",
+    "personas/today2424/samples/sample-2.md",
+    "output/today2424/drafts/moving-estimate-contract-record.mdx"
+  ],
+  "similarity_signals": {
+    "reused_template_phrase": false,
+    "reused_heading_sequence": false,
+    "reused_intro_frame": false
+  },
+  "repair_attempted": "날짜별 고정 목록을 예약·행정·기록의 의존 관계로 재구성하고 공식 행정 출처와 이사화물 계약 항목을 연결했다.",
+  "remaining_risks": [
+    "관리사무소·공과금·설치 예약은 건물과 지역에 따라 달라 게시 전 해당 기관의 현재 안내를 다시 확인해야 한다.",
+    "초안 상태이며 라이브 발행은 별도 승인과 현행성 검토가 필요하다."
+  ],
+  "next_action": "별도 편집 검토 후 게시 후보에 편입한다."
+}

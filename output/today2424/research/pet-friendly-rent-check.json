@@ -1,0 +1,48 @@
+{
+  "article_id": "pet-friendly-rent-check",
+  "status": "research_complete",
+  "article_research_question": "반려동물과 함께 살 집을 찾을 때 ‘가능’이라는 광고 문구를 계약 조항·관리규약·공용부 이용수칙·분쟁 증거로 어떻게 나눠 확인할 것인가?",
+  "reader_outcome": "계약 전에 허용 범위와 책임 항목을 질문하고, 답변·사진·관리규약을 한 묶음으로 보관해 입주 후 갈등의 확인 순서를 만들 수 있다.",
+  "search_intent_insight": "반려동물 가능 매물을 찾는 글은 많지만, 품종·마릿수·공용부 이동·소음·냄새·훼손·퇴거 청소를 하나의 계약 확인표로 연결한 자료는 적다.",
+  "competitor_gap": "‘펫 가능’ 또는 ‘집주인에게 물어보세요’로 끝나는 글이 대부분이며, 관리규약과 임대차계약이 서로 다른 문서라는 점, 답변을 증거로 남기는 방법, 분쟁 시 공식 조정 경로를 구분하지 않는다.",
+  "information_gain": "허용 여부를 예·아니오로 단정하지 않고 주거 유형→관리규약→개별 특약→공용부 규칙→사진·문자 기록 순서의 결정 트리를 제시한다.",
+  "unique_angle": "반려동물 양육을 추천하거나 금지하지 않고, ‘누가 무엇을 언제까지 확인했는지’가 남는 계약 카드로 재구성한다.",
+  "source_interpretation": "주택임대차보호법은 주거용 임대차의 기본 보호 틀을 제공하지만 특정 동물의 허용 여부를 자동으로 정하지 않는다. 공동주택 관리규약은 공용부 사용과 생활질서를 정할 수 있으므로, 개별 계약 특약과 별도로 확인해야 한다. 소비자분쟁조정 안내는 분쟁이 생겼을 때 사실관계·계약·증빙을 정리하는 절차의 참고로 사용한다.",
+  "article_specific_details": [
+    {"claim": "반려동물 동거 가능 여부는 매물 광고 한 줄보다 임대차계약의 특약과 건물 관리규약·생활수칙을 함께 확인해야 한다.", "source_id": "S1"},
+    {"claim": "공동주택의 관리규약은 주거생활의 질서와 관리·사용에 관한 기준이 될 수 있으므로 공용부 이동·배변·소음 관련 조항을 별도로 확인한다.", "source_id": "S2"},
+    {"claim": "계약 관련 서면 문서는 구두 설명과 달리 분쟁에서 확인할 수 있는 기록이 되므로 특약의 대상·기한·책임 범위를 구체화한다.", "source_id": "S3"},
+    {"claim": "소비자분쟁조정 신청 안내는 계약서·영수증·문자·사진 등 사실관계 자료를 준비하도록 안내한다.", "source_id": "S4"},
+    {"claim": "공식 상담 창구를 이용할 때는 동물의 존재 자체보다 계약 조항, 관리규약, 실제 발생한 손해·민원과 날짜를 구분해 제시해야 한다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "개별 특약의 유효성이나 손해배상 책임은 계약서 전체와 실제 사실관계에 따라 달라진다.",
+    "관리규약의 반려동물 관련 조항과 지방자치단체의 생활규칙은 건물·지역에 따라 다를 수 있다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:law.go.kr 주택임대차보호법 임대차 계약 특약 반려동물", "date": "2026-08-19", "purpose": "주거용 임대차 기본 법적 틀"},
+    {"query": "site:law.go.kr 공동주택관리법 제18조 관리규약 생활질서", "date": "2026-08-19", "purpose": "공동주택 관리규약 적용 확인"},
+    {"query": "site:law.go.kr 표준임대차계약서 특약 임대차계약증서", "date": "2026-08-19", "purpose": "계약 문서와 특약 기록 확인"},
+    {"query": "site:kca.go.kr 소비자분쟁조정 신청 계약서 문자 사진 증빙", "date": "2026-08-19", "purpose": "분쟁조정 증빙 절차 확인"},
+    {"query": "반려동물 가능 원룸 계약 관리규약 공용부 소음 훼손 특약", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 문서 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "주택임대차보호법", "url": "https://law.go.kr/lsInfoP.do?efYd=20230719&lsiSeq=249999", "publisher": "국가법령정보센터", "date": "2023-07-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "주거용 임대차의 기본 보호 틀"},
+    {"id": "S2", "title": "공동주택관리법 제18조 관리규약", "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0018&lsiSeq=284009&urlMode=lsScJoRltInfoR", "publisher": "국가법령정보센터", "date": "2026-07-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "공동주택 관리·사용 기준과 관리규약"},
+    {"id": "S3", "title": "민간임대주택에 관한 특별법", "url": "https://law.go.kr/LSW/lsInfoP.do?lsiSeq=251381", "publisher": "국가법령정보센터", "date": "2026-01-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대차 계약 서면 기록의 법적 맥락"},
+    {"id": "S4", "title": "소비자분쟁조정 신청 절차", "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do", "publisher": "한국소비자원", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "분쟁조정과 증빙 준비"},
+    {"id": "S5", "title": "1372 소비자상담센터", "url": "https://www.consumer.go.kr/user/ftc/consumer/dmrecnslt/300/selectDmreCnsltList.do", "publisher": "소비자24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "공식 상담 경로 안내"}
+  ],
+  "data_points": [
+    {"claim": "주거용 임대차의 기본 법적 틀", "source_id": "S1", "claim_type": "legal_scope", "source_date": "2023-07-19", "supports_section": "계약 문서"},
+    {"claim": "관리규약은 공동주택 관리·사용 기준이 됨", "source_id": "S2", "claim_type": "legal_scope", "source_date": "2026-07-01", "supports_section": "건물 규칙"},
+    {"claim": "임대차 계약 서면 기록의 법적 맥락", "source_id": "S3", "claim_type": "legal_scope", "source_date": "2026-01-01", "supports_section": "특약 카드"},
+    {"claim": "분쟁조정 신청 시 자료 준비", "source_id": "S4", "claim_type": "procedure", "source_date": "undated", "supports_section": "갈등 기록"},
+    {"claim": "공식 상담 경로", "source_id": "S5", "claim_type": "procedure", "source_date": "undated", "supports_section": "상담 전 정리"}
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "secondhand-furniture-checklist",
+  "status": "done",
+  "score": 92,
+  "category_scores": {"intent": 19, "evidence": 18, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 3717,
+    "hangul_characters": 2920,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/secondhand-furniture-checklist.md",
+    "internal_links": ["/guide/studio-storage-planning-guide", "/blog/room-measurement-mistakes"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/studio-storage-planning-guide.mdx",
+    "output/today2424/drafts/move-out-cleaning-budget.mdx",
+    "output/today2424/drafts/moving-box-label-system.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "중고 가구 추천이나 가격 흥정 대신 상태 질문·현장 작동·반입·거래 유형·수령 직후 인수 기록을 하나의 점검 카드로 구성했습니다.",
+  "remaining_risks": [
+    "개인 간 거래와 사업자 판매의 보호 범위·분쟁 절차가 다를 수 있습니다.",
+    "사진과 짧은 점검만으로 냄새·해충·내부 손상을 모두 판정할 수 없습니다.",
+    "초안 상태이며 라이브 발행 전 최신 소비자 기준과 제품 안전 정보를 재확인해야 합니다."
+  ],
+  "next_action": "편집 검토와 발행 승인 후에만 라이브 반영을 검토합니다."
+}

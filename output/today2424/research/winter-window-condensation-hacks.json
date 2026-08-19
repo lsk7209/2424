@@ -1,0 +1,48 @@
+{
+  "article_id": "winter-window-condensation-hacks",
+  "status": "research_complete",
+  "article_research_question": "겨울 창문에 물방울이나 곰팡이가 보일 때 생활 습관 탓으로 단정하지 않고, 위치·시간·실내 조건·환기·건물 상태를 어떤 기록으로 구분할 것인가?",
+  "reader_outcome": "결로를 발견한 날부터 위치·표면 상태·실내 습도·환기·날씨를 기록하고, 청소로 끝낼 상황과 관리주체에 점검을 요청할 상황을 나눌 수 있다.",
+  "search_intent_insight": "일반적인 결로 글은 환기와 제습을 반복하지만, 창 주변의 위치 차이와 시간대, 표면 온도에 영향을 주는 구조·시공 요인, 임대차 수리 요청용 증거를 연결하지 않는다.",
+  "competitor_gap": "‘하루 몇 번 환기’ 같은 고정 숫자나 제품 추천이 많고, 같은 집에서도 방·창·날짜에 따라 재현 조건이 달라진다는 점과 곰팡이를 곧바로 하자로 판정할 수 없다는 한계를 설명하는 자료가 부족하다.",
+  "information_gain": "결로 관찰을 발견→조건 기록→안전한 임시 조치→반복 여부 확인→서면 요청의 다섯 단계로 나눠, 생활 관리와 원인 점검을 섞지 않는다.",
+  "unique_angle": "제습 제품이나 하자 책임을 단정하지 않고, ‘어디에 언제 어떤 조건에서 생겼는지’가 남는 창문 기록표를 중심으로 안내한다.",
+  "source_interpretation": "공동주택 결로 방지 설계기준은 온도·습도 조건과 결로 성능을 평가하는 기술적 기준을 제공하지만, 사진 한 장으로 개별 세대의 원인을 판정하는 규정은 아니다. 주택임대차와 분쟁조정 자료는 수리 요청의 계약·증빙 맥락으로 사용하며, 곰팡이 제거 과정에서는 제품 설명과 안전수칙을 우선한다.",
+  "article_specific_details": [
+    {"claim": "결로는 실내외 온도와 습도, 표면 온도, 환기·난방 조건이 함께 변하는 현상이므로 한 번의 물방울만으로 원인을 확정하지 않는다.", "source_id": "S1"},
+    {"claim": "공동주택 결로 방지 설계기준은 특정 온습도 조건에서 결로 방지 성능을 평가하는 기술 기준이며, 모든 기존 주택의 하자 여부를 자동 판정하는 기준은 아니다.", "source_id": "S1"},
+    {"claim": "임대차에서 수리 요청을 할 때는 발생 위치·기간·사진·연락 기록을 함께 남겨 사실관계를 확인할 수 있게 한다.", "source_id": "S2"},
+    {"claim": "소비자분쟁조정 절차는 계약과 사실관계를 뒷받침하는 서면·사진·영수증 등 자료를 준비하는 데 도움을 준다.", "source_id": "S3"},
+    {"claim": "건물의 구조·단열·창호 상태와 생활 습관의 영향은 서로 구분해 점검해야 하며, 곰팡이의 책임 소재는 개별 사실관계에 따라 달라진다.", "source_id": "S4"}
+  ],
+  "ymyl_category": "housing_safety",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "결로·곰팡이의 원인과 수리 책임은 건물 상태, 환기·난방, 계약·관리규약, 발생 시점에 따라 달라진다.",
+    "곰팡이 제거제 사용과 환기는 제품 라벨과 실내 안전 지침을 우선하며, 호흡기 증상이 있으면 전문기관에 문의해야 한다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:law.go.kr 공동주택 결로 방지를 위한 설계기준 온도 습도", "date": "2026-08-19", "purpose": "결로 기술 기준 확인"},
+    {"query": "site:law.go.kr 주택임대차보호법 임대인 수선 의무 임대차", "date": "2026-08-19", "purpose": "수리 요청의 임대차 맥락"},
+    {"query": "site:kca.go.kr 소비자분쟁조정 신청 사진 계약서 증빙", "date": "2026-08-19", "purpose": "증빙과 분쟁조정 절차 확인"},
+    {"query": "site:consumer.go.kr 곰팡이 제거 환기 안전 안내", "date": "2026-08-19", "purpose": "임시 조치와 안전 범위 확인"},
+    {"query": "겨울 창문 결로 곰팡이 원인 기록표 임대차 수리 요청", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 글 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "공동주택 결로 방지를 위한 설계기준", "url": "https://law.go.kr/admRulLsInfoP.do?admRulSeq=2100000067930", "publisher": "국가법령정보센터", "date": "2016-12-30", "accessed": "2026-08-19", "source_role": "official", "used_for": "온도·습도 조건과 결로 성능 기준"},
+    {"id": "S2", "title": "주택임대차보호법", "url": "https://law.go.kr/lsInfoP.do?efYd=20230719&lsiSeq=249999", "publisher": "국가법령정보센터", "date": "2023-07-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대차 수리 요청의 법적 맥락"},
+    {"id": "S3", "title": "소비자분쟁조정 신청 절차", "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do", "publisher": "한국소비자원", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "사진·서면·영수증 등 증빙 준비"},
+    {"id": "S4", "title": "소비자24 공식 상담·분쟁 안내", "url": "https://www.consumer.go.kr/", "publisher": "소비자24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "상담 경로와 사실관계 정리"},
+    {"id": "S5", "title": "공동주택관리법 시행령", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=286477", "publisher": "국가법령정보센터", "date": "2026-07-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "공용부 유지관리·하자보수 기록 맥락"}
+  ],
+  "data_points": [
+    {"claim": "결로 방지 성능 평가의 온습도 기준", "source_id": "S1", "claim_type": "technical_scope", "source_date": "2016-12-30", "supports_section": "원인 구분"},
+    {"claim": "임대차 수리 요청의 계약 맥락", "source_id": "S2", "claim_type": "legal_scope", "source_date": "2023-07-19", "supports_section": "관리주체 연락"},
+    {"claim": "분쟁조정 증빙 준비", "source_id": "S3", "claim_type": "procedure", "source_date": "undated", "supports_section": "기록 카드"},
+    {"claim": "공식 상담 경로", "source_id": "S4", "claim_type": "procedure", "source_date": "undated", "supports_section": "갈등 단계"},
+    {"claim": "공동주택 유지관리·하자보수 기록", "source_id": "S5", "claim_type": "legal_scope", "source_date": "2026-07-01", "supports_section": "반복 발생 점검"}
+  ]
+}

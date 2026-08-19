@@ -1,0 +1,46 @@
+{
+  "article_id": "rainy-day-house-viewing",
+  "status": "research_complete",
+  "research_runs": [
+    {"query": "기상청 강수 관측 및 날씨 정보 집보기 비 오는 날 기록", "date": "2026-08-19", "purpose": "방문 당시 강수 여부와 시간을 기록해야 하는 이유를 확인"},
+    {"query": "site:law.go.kr 민법 제623조 임대인의 의무 사용 수익 유지", "date": "2026-08-19", "purpose": "임대차 목적물의 인도·유지 의무를 설명하는 기본 법령 확인"},
+    {"query": "site:law.go.kr 건축법 시행규칙 제26조의5 누수 누전 배수 환기", "date": "2026-08-19", "purpose": "실내 전기·가스·급수·배수·환기 시설을 관찰 항목으로 번역"},
+    {"query": "site:law.go.kr 누수 하자 범위 창호 빗물 스며듦 일시 흔적", "date": "2026-08-19", "purpose": "빗물 유입과 물 흔적을 한 가지 결론으로 단정하지 않도록 구분 기준 확인"},
+    {"query": "site:kca.go.kr 임대차 분쟁조정 증거 사진 기록 상담", "date": "2026-08-19", "purpose": "사진·문자·계약서를 묶어 문의·분쟁 상담 자료로 남기는 경로 확인"}
+  ],
+  "article_research_question": "비 오는 날 집보기에서 관찰 사실과 추정·법적 판단을 분리해, 계약 전 질문과 재확인 기록을 어떻게 만들 것인가?",
+  "reader_outcome": "강수 시각과 위치 코드를 붙인 사진·메모를 남기고 비가 그친 뒤 다시 확인할 질문을 정리한다.",
+  "search_intent_insight": "검색 결과는 천장이나 창틀을 보라는 항목 나열이 많지만 강수 조건·사진 순서·재확인 시점이 연결된 기록법은 드물다.",
+  "competitor_gap": "누수 여부를 단정하거나 공포를 키우는 표현이 많아, 빗물·결로·배관 흔적을 관찰 사실과 질문으로 나누는 실무표가 부족하다.",
+  "information_gain": "날씨 로그, 위치 코드, 전체·근접 사진, 냄새·배수 작동 기록, 임대인 답변을 하나의 점검 폴더로 연결한다.",
+  "unique_angle": "비가 하자를 ‘증명’하는 날이라는 주장이 아니라, 같은 장소를 서로 다른 날씨 조건에서 비교할 수 있게 하는 관찰 로그 설계다.",
+  "source_interpretation": "민법과 판례는 목적물의 사용·수익을 위한 일반 의무 맥락으로만 사용하며, 관찰만으로 특정 책임이나 계약 결론을 내리지 않는다. 건축·하자 기준은 체크 항목을 세분화하는 참고로 사용한다.",
+  "sources": [
+    {"id": "S1", "title": "기상청 날씨누리", "url": "https://www.weather.go.kr/", "publisher": "기상청", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "방문일 강수·시간대 확인과 현장 로그의 날씨 칸 설계"},
+    {"id": "S2", "title": "민법 제623조 임대인의 의무", "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0623&lsiSeq=284415&urlMode=lsScJoRltInfoR", "publisher": "국가법령정보센터", "date": "2026-03-17", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대인이 목적물을 인도하고 사용·수익에 필요한 상태를 유지한다는 일반 기준"},
+    {"id": "S3", "title": "건축법 시행규칙 제26조의5 실내건축 기준", "url": "https://www.law.go.kr/lsLinkProc.do?chrClsCd=010202&datClsCd=010102&gubun=admRul&joNo=002605000&lsId=2089968&lsNm=%EA%B1%B4%EC%B6%95%EB%B2%95%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99&mode=10", "publisher": "국가법령정보센터", "date": "2026-03-17", "accessed": "2026-08-19", "source_role": "official", "used_for": "전기·가스·급수·배수·환기 설비의 누수·누전 안전 관찰 범위"},
+    {"id": "S4", "title": "공동주택 하자 판정기준 누수 하자 범위", "url": "https://www.law.go.kr/flDownload.do?bylClsCd=200201&flNm=%5B%EB%B3%84%ED%91%9C+2%5D+%EB%88%84%EC%88%98+%ED%95%98%EC%9E%90+%EB%B2%94%EC%9C%84%28%EC%A0%9C10%EC%A1%B0%EC%A0%9C2%ED%95%AD%29&flSeq=148806759", "publisher": "국가법령정보센터", "date": "2024-05-22", "accessed": "2026-08-19", "source_role": "official", "used_for": "창호 빗물 유입, 물 흔적, 배관 누수의 구분을 참고하는 기준"},
+    {"id": "S5", "title": "분쟁조정 절차 안내", "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do", "publisher": "한국소비자원", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약서·사진·대화 기록을 정리해 공식 상담·조정 경로를 찾는 방법"}
+  ],
+  "article_specific_details": [
+    {"claim": "비가 시작된 시각과 촬영 시각을 적으면 나중에 같은 위치를 다른 날씨에서 비교할 수 있다.", "source_id": "S1"},
+    {"claim": "창호의 빗물 유입과 내부에 남은 물 흔적은 관찰 항목으로 분리하고 원인을 바로 확정하지 않는다.", "source_id": "S4"},
+    {"claim": "사진과 질문 답변을 계약서·문자와 함께 보관하면 문의나 조정 상담 때 사실관계를 설명하기 쉽다.", "source_id": "S5"}
+  ],
+  "data_points": [
+    {"claim": "민법 제623조는 임대인의 인도 및 사용·수익에 필요한 상태 유지 의무를 규정한다.", "source_id": "S2", "supports_section": "관찰과 법적 판단을 나누는 이유"},
+    {"claim": "건축법 시행규칙은 실내 전기·가스·급수·배수·환기시설의 누수·누전 안전을 다룬다.", "source_id": "S3", "supports_section": "현장 동선"},
+    {"claim": "하자 판정기준에는 창호 외부 빗물 유입과 물 흔적을 구분한 항목이 있다.", "source_id": "S4", "supports_section": "창틀 기록표"},
+    {"claim": "한국소비자원은 분쟁조정 절차와 자료 제출 경로를 안내한다.", "source_id": "S5", "supports_section": "문의가 길어질 때"}
+  ],
+  "fact_traceability_pass": true,
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "unresolved_claims": [
+    "현장 사진만으로 누수 원인이나 책임 소재를 확정할 수 없다.",
+    "계약 해제·차임 조정·손해배상 여부는 계약 내용과 사실관계에 따라 달라질 수 있다.",
+    "하자 판정기준은 적용 대상과 건물 유형을 확인해야 하며 모든 임대차에 자동 적용되는 것은 아니다."
+  ],
+  "source_conflicts": []
+}

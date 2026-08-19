@@ -1,0 +1,40 @@
+{
+  "article_id": "lease-end-notice-template",
+  "status": "done",
+  "score": 93,
+  "category_scores": {"intent": 19, "evidence": 19, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 3806,
+    "hangul_characters": 3000,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/lease-end-notice-template.md",
+    "internal_links": ["/guide/move-out-checklist", "/guide/rental-contract-special-clauses-guide", "/blog/deposit-transfer-checklist", "/blog/move-out-cleaning-budget"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/rental-contract-special-clauses-guide.mdx",
+    "output/today2424/drafts/move-out-cleaning-budget.mdx",
+    "output/today2424/drafts/deposit-transfer-checklist.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "고정 통지 문구나 날짜 약속 대신 갱신·퇴거·조기 종료·정산을 분리하고, 계약서·발송·수령·후속 일정의 기록 카드와 빈칸 문안으로 재구성했습니다.",
+  "remaining_risks": [
+    "통지기간·갱신 여부·문자나 우편의 효력은 계약 유형과 실제 수령 사실에 따라 달라집니다.",
+    "보증금 정산일과 공제 항목은 별도 합의와 주택 상태를 확인해야 합니다.",
+    "초안 상태이며 라이브 발행 전 최신 법령과 계약서 검토가 필요합니다."
+  ],
+  "next_action": "편집 검토와 발행 승인 후에만 라이브 반영을 검토합니다."
+}

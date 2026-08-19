@@ -1,0 +1,41 @@
+{
+  "article_id": "utility-transfer-move-day",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 20, "utility": 20, "voice": 15},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "unsupported_provider_or_price_guarantee": true
+  },
+  "evidence": {
+    "visible_body_characters": 6206,
+    "research_runs": 5,
+    "sources": 5,
+    "official_or_primary_sources": 5,
+    "article_persona": "article-personas/utility-transfer-move-day.md",
+    "internal_links": ["/guide/gas-electric-water-change-guide", "/guide/move-out-checklist", "/blog/maintenance-fee-red-flags", "/guide/utility-meter-photo-log-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/gas-electric-water-change-guide.mdx",
+    "output/today2424/drafts/move-out-checklist.mdx",
+    "output/today2424/drafts/move-out-cleaning-budget.mdx",
+    "output/today2424/drafts/internet-install-booking-guide.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false, "distinct_meter_board_angle": true},
+  "repair_attempted": "기존 서비스별 전출·전입 신청 안내와 겹치지 않도록, 이사 당일 이전 집 마지막 수치와 새 집 첫 수치를 상태등·열린 행·인수인계 메시지로 연결하는 구조로 전환했다.",
+  "remaining_risks": [
+    "지역·건물·계약 유형에 따라 실제 공급기관, 검침 방식, 방문 필요 여부, 관리비 포함 범위가 달라진다.",
+    "계량기 사진과 접수 기록은 최종 금액 또는 명의변경 완료를 보장하지 않으며, 고지서와 관할 기관의 최신 안내를 대조해야 한다."
+  ],
+  "next_action": "발행 전 관할 공급기관·관리사무소의 최신 안내와 연결된 내부 경로의 실제 공개 여부를 확인한다."
+}

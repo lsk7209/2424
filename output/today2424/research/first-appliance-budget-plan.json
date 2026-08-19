@@ -1,0 +1,58 @@
+{
+  "article_id": "first-appliance-budget-plan",
+  "status": "research_complete",
+  "article_research_question": "첫 자취자가 제품 가격만 합산하지 않고, 설치 조건·반입·첫 달 생활비·기존 가전 처리까지 포함해 어떤 가전은 입주 전 확정하고 어떤 가전은 보류해야 하는가?",
+  "reader_outcome": "독자는 제품별 총비용 결정표를 채워 입주 전 결제할 가전, 현장 확인 뒤 결제할 가전, 빌리거나 보류할 가전을 나눌 수 있다.",
+  "search_intent_insight": "‘자취 가전 우선순위’ 결과는 냉장고·세탁기·전자레인지의 순서를 제시하는 경우가 많지만, 가격 외 설치·반입·처분 조건이 달라질 때 결제를 멈추는 기준은 약하다.",
+  "competitor_gap": "일반적인 추천 목록 대신, 같은 제품이라도 입주일·통로·통풍 여백·폐기물 상태가 다르면 총지출이 달라진다는 점을 한 장의 결정표와 보류 규칙으로 연결한다.",
+  "information_gain": "가전별 순위를 정답으로 고정하지 않고 ‘생활 중단 비용’과 ‘결제 후 되돌리기 어려운 비용’을 분리해, 현장 확인 전 결제를 미루는 항목을 찾아낸다.",
+  "unique_angle": "첫 자취 가전 예산을 제품가 합계가 아니라 반입·설치·첫 사용·처분까지의 확인 가능한 총비용으로 설계한다.",
+  "source_interpretation": "제조사 구매·설치 안내는 특정 제품 추천 근거가 아니라 모델별 공간과 설치 조건을 제품값과 분리해 확인해야 하는 근거로 사용한다. 폐가전 수거 안내는 새 제품 할인이나 처분 비용을 약속하는 근거가 아니라, 기존 물건의 대상·철거 상태에 따라 처리 계획을 따로 적어야 하는 이유로 사용한다. 효율등급 정보는 전기요금 절감액을 계산하지 않고 라벨의 소비전력 정보를 모델 비교의 입력값으로만 다룬다.",
+  "primary_reader_situation": "입주 1~2주 전, 여러 가전을 장바구니에 담았지만 배송·설치·처분과 첫 달 생활비를 아직 분리하지 못한 1인 가구 예비 입주자",
+  "search_intent": "첫 자취 가전 구매 순서와 예산을 실제 결제 전 점검하려는 비교·의사결정형 검색",
+  "decision_criterion": "제품값이 아니라 생활 중단 위험, 설치·반입 확인 완료 여부, 첫 달 현금 여유, 처분 경로의 확정 여부",
+  "ending_cta_direction": "오늘 결제할 항목 하나와 현장 확인 뒤 결정할 항목 하나를 총비용 결정표에 표시하도록 안내",
+  "reader_job": "입주일까지 생활을 시작할 최소 기능을 확보하면서 확인 전 부대비용을 떠안지 않도록 구매 시점을 나눈다.",
+  "decision_moment": "입주 전 장바구니 결제 또는 카드 할부를 누르기 직전",
+  "answer_claim": "가전 우선순위는 품목의 고정 순위가 아니라, 생활 중단 위험과 설치·처분 확인 상태를 함께 적은 총비용 표로 결정하는 편이 안전하다.",
+  "evidence_plan": "공식 제조사 설치·구매 안내, 효율등급 제도 안내, 폐가전 수거 기준을 각각 사용해 공간·라벨·처분을 제품값과 별도 확인 항목으로 제시한다.",
+  "non_overlap_claim": "원룸 실측 글이 반입 경로를 기록하는 법에 집중한다면, 이 글은 그 기록을 포함해 가전별 결제 시점과 현금 여유를 결정한다.",
+  "not_answered_here": "개별 모델 추천, 최저가 비교, 중고 거래 상태 점검, 특정 판매처의 설치비 견적은 다루지 않는다.",
+  "structure_type": "decision-workbook",
+  "structure_reason": "입주 전 결제라는 단일 순간에서 출발해 표 작성, 보류 신호, 사례 적용, 실행 순서로 독자의 결정을 전진시키는 구조가 필요하다.",
+  "visual_elements": ["total-cost-decision-table", "hold-warning-callout", "worked-example", "three-step-checklist"],
+  "semantic_colors": ["amber for hold conditions", "blue for confirmed evidence"],
+  "angle_supporting_detail": "삼성전자의 전자레인지 FAQ는 일반형 설치 때 후면·상면·좌우에 필요한 간격을 안내하면서도 모델별 사용설명서를 확인하라고 명시한다. 따라서 제품 외형 치수만으로 설치 완료를 가정하면 안 된다.",
+  "article_specific_details": [
+    {"claim": "삼성전자의 전자레인지 FAQ는 일반형 기준 후면 10cm(후면 콘센트·멀티탭이 있으면 15cm), 상면 20cm, 좌우 10cm 이상의 간격을 안내하며 모델 설명서를 우선 확인하도록 한다.", "source_id": "S2"},
+    {"claim": "폐가전 무상방문수거는 냉장고·세탁기·전자레인지 등을 단일 수거 가능 품목으로 안내하지만, 설치·고정 제품은 수거 가능한 상태로 철거되어 있어야 한다고 FAQ에서 밝힌다.", "source_id": "S4"},
+    {"claim": "삼성 냉장고 구매 가이드는 용량과 설치 타입을 분리된 구매 전 체크포인트로 제시하므로, 용량이 맞아도 설치 타입과 공간 확인은 별도 항목으로 남겨야 한다.", "source_id": "S1"}
+  ],
+  "ymyl_category": "consumer_decision",
+  "ymyl_review": "pass; no price, savings, delivery-date, warranty, or eligibility guarantee is made.",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["배송비·설치비·철거비·반품비와 일정은 판매처, 모델, 주소, 현장 조건에 따라 달라지므로 독자별 견적 확인이 필요하다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:samsung.com/sec 냉장고 구매 가이드 용량 설치 타입", "date": "2026-08-19", "purpose": "제품 가격과 설치 조건을 분리하는 공식 구매 기준 확인"},
+    {"query": "site:samsung.com/sec 전자레인지 FAQ 설치 공간 간격", "date": "2026-08-19", "purpose": "소형 가전의 외형 치수 외 통풍 여백 확인"},
+    {"query": "site:eep.energy.or.kr 에너지소비효율등급 표시 제품 정보", "date": "2026-08-19", "purpose": "에너지 라벨을 모델 비교 입력값으로 쓰는 공식 제도 확인"},
+    {"query": "site:15990903.or.kr 폐가전 무상방문수거 수거품목 철거", "date": "2026-08-19", "purpose": "기존 가전 처분 계획과 철거 조건 확인"},
+    {"query": "자취 가전 우선순위 예산 제품 가격 설치비 검색 결과", "date": "2026-08-19", "purpose": "검색 의도와 일반 구매 목록의 총비용 공백 검토"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "냉장고 구매 가이드", "url": "https://www.samsung.com/sec/home-appliances/buying-guide/refrigerators-buying-guide/", "publisher": "삼성전자", "date": "current page", "accessed": "2026-08-19", "source_role": "official", "used_for": "냉장고 구매에서 용량과 설치 타입을 별도로 확인해야 한다는 근거"},
+    {"id": "S2", "title": "전자레인지 FAQ", "url": "https://www.samsung.com/sec/home-appliances/faq-micro-wave-ovens/", "publisher": "삼성전자", "date": "current page", "accessed": "2026-08-19", "source_role": "official", "used_for": "전자레인지의 설치 간격과 모델별 설명서 확인 근거"},
+    {"id": "S3", "title": "에너지소비효율등급표시 신고 안내", "url": "https://eep.energy.or.kr/download/%ED%95%9C%EA%B5%AD%EC%97%90%EB%84%88%EC%A7%80%EA%B3%B5%EB%8B%A8%EC%8B%A0%EA%B3%A0_%EC%95%88%EB%82%B4%EC%9E%90%EB%A3%8C_%EC%97%85%EC%B2%B4%EC%95%88%EB%82%B4%EC%9A%A9%28%ED%9A%A8%EC%9C%A8%29.pdf", "publisher": "한국에너지공단", "date": "current document", "accessed": "2026-08-19", "source_role": "official", "used_for": "효율등급 라벨 정보가 제품 비교용 공식 표시 체계임을 확인"},
+    {"id": "S4", "title": "폐가전 무상 방문수거 수거품목 및 수거기준", "url": "https://www.15990903.or.kr/portal/cnts/selectContents.do?cntnts_id=A1000005", "publisher": "폐가전 무상방문수거", "date": "current page", "accessed": "2026-08-19", "source_role": "official", "used_for": "기존 냉장고·세탁기·전자레인지의 처분 경로와 품목 기준 확인"},
+    {"id": "S5", "title": "폐가전 무상 방문수거 FAQ", "url": "https://www.15990903.or.kr/portal/faq/selectPageListFaq.do", "publisher": "폐가전 무상방문수거", "date": "current page", "accessed": "2026-08-19", "source_role": "official", "used_for": "설치·고정 제품의 철거 상태 확인 필요성"}
+  ],
+  "data_points": [
+    {"claim": "냉장고 구매 가이드는 용량과 설치 타입을 별도의 구매 전 체크포인트로 둔다.", "source_id": "S1", "claim_type": "product_guidance", "source_date": "current page", "supports_section": "제품값보다 먼저 적을 설치 확인 칸"},
+    {"claim": "전자레인지 설치 간격은 일반형 기준 후면·상면·좌우로 제시되며 모델 설명서를 확인해야 한다.", "source_id": "S2", "claim_type": "product_instruction", "source_date": "current page", "supports_section": "총비용 결정표의 반입·설치 확인"},
+    {"claim": "에너지소비효율등급은 공식 표시·신고 체계로 관리된다.", "source_id": "S3", "claim_type": "official_program", "source_date": "current document", "supports_section": "첫 달 변동비를 금액 보장 없이 비교하는 법"},
+    {"claim": "냉장고·세탁기·전자레인지는 단일 수거 가능 품목에 포함된다.", "source_id": "S4", "claim_type": "service_eligibility", "source_date": "current page", "supports_section": "기존 가전의 처분·반품 칸"},
+    {"claim": "설치·고정 제품은 수거 가능한 상태로 철거되어 있어야 한다.", "source_id": "S5", "claim_type": "service_condition", "source_date": "current page", "supports_section": "처분이 확정되지 않은 가전의 보류 신호"}
+  ]
+}

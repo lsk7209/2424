@@ -1,0 +1,41 @@
+{
+  "article_id": "internet-install-booking-guide",
+  "status": "research_complete",
+  "article_research_question": "이사 전 인터넷 이전·해지·사업자 전환을 판단할 때, 설치 가능 여부와 기존 약정·장비·결합 조건을 어떤 날짜와 문서로 기록해야 공백을 줄일 수 있는가?",
+  "reader_outcome": "현재 회선의 종료·반납 조건과 새 주소의 설치 확인, 방문 예약, 개통 확인을 같은 일정표에 두고 공백일과 중복일을 확인한다.",
+  "search_intent_insight": "기존 글은 이전·신규 설치 순서만 나열하고, 해지 확인 과정에서 안내되는 할인반환금·장비임대료·결합상품 변화와 설치 실패 가능성을 기록하지 않는다.",
+  "competitor_gap": "통신사·속도 추천 대신 회선 전환 카드로 계약·주소·건물 배선·방문 시간·장비 반납을 각각 확인하도록 한다.",
+  "information_gain": "이사일을 중심으로 서비스 공백·중복을 표시하고, 비용은 추정액이 아니라 사업자가 안내한 항목명·안내 날짜로 남기는 기록 양식을 제공한다.",
+  "unique_angle": "인터넷 설치 예약을 주문 순서가 아니라 현재 회선의 종료와 새 주소의 개통이 맞물리는 전환 기록으로 다룬다.",
+  "source_interpretation": "KTOA 전환 규정은 기존 사업자가 해지 확인 과정에서 할인반환금·장비임대료·결합·장비회수 등을 안내하는 구조를 확인하는 데 쓴다. KT 약관 설명서는 약정·장비·경품 조건에 따라 비용 항목이 달라질 수 있는 사례로, 스마트초이스는 해지 뒤 정산·미환급 확인의 범위를 이해하는 경로로만 사용한다.",
+  "article_specific_details": [
+    {"claim": "KTOA의 초고속인터넷 전환 안내는 해지 확인 때 할인반환금, 장비임대료, 결합상품 변화, 기존 서비스 해지 희망일과 장비회수일을 안내하도록 한다.", "source_id": "S1"},
+    {"claim": "KT의 초고속인터넷 약관 주요내용 설명서는 약정 중 해지 시 할인반환금뿐 아니라 장비 미반납·훼손에 대한 손실보상금과 가입설치비 반환금 등 항목이 생길 수 있음을 예시한다.", "source_id": "S3"},
+    {"claim": "스마트초이스는 해지 정산 후 과납요금·선납금 등의 미수령 금액이 발견될 수 있고, 초고속인터넷 미환급액은 해당 사업자에게 문의하도록 안내한다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "telecom_contract",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["새 주소의 실제 설치 가능 회선, 건물 MDF·단자 상태, 방문 가능 시간, 이전 설치비·해지 비용은 계약·주소·사업자 조건에 따라 달라 고객센터와 건물 관리주체 확인이 필요하다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:kt.com 인터넷 이전설치 해지 위약금 공식", "date": "2026-08-19", "purpose": "기존 계약 해지·장비 비용 항목 확인"},
+    {"query": "site:ktoa.or.kr 초고속인터넷 사업자 전환 해지 확인", "date": "2026-08-19", "purpose": "전환 절차와 해지 확인 안내 확인"},
+    {"query": "site:kt.com 초고속인터넷 약관 주요내용 설명서", "date": "2026-08-19", "purpose": "약정·장비·가입설치비 반환 항목 확인"},
+    {"query": "site:smartchoice.or.kr 초고속인터넷 해지 정산", "date": "2026-08-19", "purpose": "해지 후 정산·미환급 확인 경로 조사"},
+    {"query": "이사 인터넷 이전 설치 건물 배선 확인 공식", "date": "2026-08-19", "purpose": "주소·건물 조건을 사전 확인해야 하는 검색 의도 검토"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "초고속인터넷서비스 등 사업자 전환절차", "url": "https://www.ktoa.or.kr/common/kr/download/%EB%B6%99%EC%9E%841.%EC%B4%88%EA%B3%A0%EC%86%8D%EC%9D%B8%ED%84%B0%EB%84%B7%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%93%B1%20%EC%82%AC%EC%97%85%EC%9E%90%20%EC%A0%84%ED%99%98%EC%A0%88%EC%B0%A8%28%EC%9B%90%EC%8A%A4%ED%86%B1%EC%A0%84%ED%99%98%EC%84%9C%EB%B9%84%EC%8A%A4%29%20%EC%9A%B4%EC%98%81%EA%B7%9C%EC%A0%95%20%EA%B0%9C%EC%A0%95%20%EC%A0%84%EB%AC%B8%2820240430%29.pdf", "publisher": "한국통신사업자연합회", "date": "2024-04-30", "accessed": "2026-08-19", "source_role": "official", "used_for": "전환 해지 확인 시 안내·확인 항목"},
+    {"id": "S2", "title": "초고속인터넷서비스 등 사업자 전환절차 안내문", "url": "https://www.ktoa.or.kr/common/en/download/%EB%B6%99%EC%9E%841.%EC%B4%88%EA%B3%A0%EC%86%8D%EC%9D%B8%ED%84%B0%EB%84%B7%EC%84%9C%EB%B9%84%EC%8A%A4%EB%93%B1%EC%82%AC%EC%97%85%EC%9E%90%EC%A0%84%ED%99%98%EC%9A%B4%EC%98%81%EA%B7%9C%EC%A0%95%28%EC%A0%9C4%EC%B0%A81%29220706.pdf", "publisher": "한국통신사업자연합회", "date": "2022-07-06", "accessed": "2026-08-19", "source_role": "official", "used_for": "변경 전 사업자의 MMS·해지확인 전화 및 서비스 중단 유의"},
+    {"id": "S3", "title": "초고속인터넷서비스 약관의 주요내용 설명서", "url": "https://m.corp.kt.com/attach/board/BS00000005/69/%28%EC%A3%BC%EC%9A%94%EB%82%B4%EC%9A%A9%2B%EC%84%A4%EB%AA%85%EC%84%9C%29%2B%EC%9D%B8%ED%84%B0%EB%84%B7%EC%84%9C%EB%B9%84%EC%8A%A4%2B%EC%9D%B4%EC%9A%A9%EC%95%BD%EA%B4%80_202507.pdf", "publisher": "KT", "date": "2025-07", "accessed": "2026-08-19", "source_role": "official", "used_for": "약정 해지·장비·가입설치비 관련 비용 항목의 조건부 발생"},
+    {"id": "S4", "title": "스마트초이스 초고속인터넷 원스톱 전환 안내", "url": "https://www.ktoa.or.kr/ko/civil-complaint/faq/page", "publisher": "한국통신사업자연합회", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "원스톱 전환서비스와 통신요금 정보포털 안내"},
+    {"id": "S5", "title": "통신요금 미환급 FAQ", "url": "https://www.smartchoice.or.kr/smc/support/faq.do?tab=C", "publisher": "스마트초이스", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "해지 뒤 정산·미환급 확인의 범위와 사업자 문의 경로"}
+  ],
+  "data_points": [
+    {"claim": "전환 시 해지 확인에서 할인반환금·장비임대료·결합 변화·장비회수일이 안내된다", "source_id": "S1", "claim_type": "contract_procedure", "source_date": "2024-04-30", "supports_section": "현재 회선을 먼저 닫지 않는 이유"},
+    {"claim": "약정·장비·가입 조건에 따라 여러 비용 항목이 발생할 수 있다", "source_id": "S3", "claim_type": "contract_procedure", "source_date": "2025-07", "supports_section": "비용은 숫자 대신 안내 항목명으로 기록"},
+    {"claim": "해지 후 정산과 초고속인터넷 미환급 문의 경로가 별도로 있다", "source_id": "S5", "claim_type": "official_service", "source_date": "2026-08-19", "supports_section": "마지막 정산 확인"}
+  ]
+}

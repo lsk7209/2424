@@ -1,0 +1,47 @@
+{
+  "article_id": "how-to-read-registry",
+  "status": "research_complete",
+  "research_runs": [
+    {"query": "찾기쉬운 생활법령 등기부의 확인 임대차 표제부 갑구 을구", "date": "2026-08-19", "purpose": "등기부 구성과 계약 전 확인 범위 확인"},
+    {"query": "주택임대차보호법 제3조 대항력 국가법령정보센터", "date": "2026-08-19", "purpose": "등기부 확인과 전입·인도 요건을 분리할 근거 확인"},
+    {"query": "부동산등기법 등기 순위 등기한 순서 국가법령정보센터", "date": "2026-08-19", "purpose": "권리 순서와 발급 시점 기록의 의미 확인"},
+    {"query": "인터넷등기소 등기사항증명서 발급 공식", "date": "2026-08-19", "purpose": "최신 문서 발급과 문서 진위 확인 경로 확인"},
+    {"query": "전세사기피해자법 대항력 확정일자 공식 서식", "date": "2026-08-19", "purpose": "대항력·확정일자 관련 요건을 보장 표현 없이 설명할 범위 확인"}
+  ],
+  "article_research_question": "등기사항증명서의 표제부·갑구·을구를 읽고 계약 전 질문과 재발급 시점을 어떻게 기록할 것인가?",
+  "reader_outcome": "문서의 주소·소유자·권리 순서를 대조하고 이상 행을 질문·보류·재확인으로 분류한다.",
+  "search_intent_insight": "등기부 읽기 글은 용어 풀이에 그치거나 ‘안전한 집’으로 결론 내리는 경우가 많아, 문서 행을 실제 계약 질문으로 연결하는 방법이 부족하다.",
+  "competitor_gap": "발급일과 계약일의 시간 차이, 소유자와 임대인 권한, 갑구·을구의 순서를 한 장의 대조표로 관리하는 안내가 드물다.",
+  "information_gain": "표제부·갑구·을구마다 대조 대상과 중단 기준을 두고, 새 문서 재발급·전입·확정일자를 별도 단계로 구분한다.",
+  "unique_angle": "등기부를 읽고 안전 판정을 내리는 글이 아니라, 한 줄마다 ‘무엇을 물어보고 어떤 증거를 다시 받을지’를 정하는 의사결정표다.",
+  "source_interpretation": "생활법령·법령·공식 서식은 등기부 구성과 보호요건의 배경으로만 사용하며, 개인의 보증금 회수·전세사기 여부·계약 유효성을 확정하지 않는다.",
+  "sources": [
+    {"id": "S1", "title": "주택임대차 계약 전 등기부의 확인", "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=1&csmSeq=629&popMenu=ov", "publisher": "찾기쉬운 생활법령정보", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "등기부 정의·표제부·소유권·권리관계 확인의 기본 흐름"},
+    {"id": "S2", "title": "주택임대차보호법 제3조 대항력", "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0003&lsiSeq=276291&urlMode=lsScJoRltInfoR", "publisher": "국가법령정보센터", "date": "2026-01-02", "accessed": "2026-08-19", "source_role": "official", "used_for": "주택 인도·주민등록 등 별도 요건의 존재"},
+    {"id": "S3", "title": "찾기쉬운 생활법령 등기 순위 안내", "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=1&csmSeq=629&popMenu=ov", "publisher": "찾기쉬운 생활법령정보", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "등기한 순서와 권리관계 대조의 맥락"},
+    {"id": "S4", "title": "인터넷등기소", "url": "https://www.iros.go.kr/", "publisher": "대법원 인터넷등기소", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "등기사항증명서 발급·열람 경로와 발급 시점 기록"},
+    {"id": "S5", "title": "전세사기피해자 지원 특별법 시행규칙 서식", "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=156407297&gubun=", "publisher": "국가법령정보센터", "date": "2024-11-11", "accessed": "2026-08-19", "source_role": "official", "used_for": "인도·전입신고·확정일자를 별도 충족요건으로 다루는 공식 서식"}
+  ],
+  "article_specific_details": [
+    {"claim": "표제부에서 주소·동·층·호와 계약 목적물을 먼저 대조한다.", "source_id": "S1"},
+    {"claim": "갑구는 소유권과 처분 제한을 확인하고 계약 상대방의 권한을 질문한다.", "source_id": "S1"},
+    {"claim": "을구의 담보·용익 권리는 등기 시점과 순서를 함께 기록한다.", "source_id": "S3"},
+    {"claim": "등기부 확인은 전입신고·주택 인도·확정일자 같은 별도 요건을 대신하지 않는다.", "source_id": "S2"}
+  ],
+  "data_points": [
+    {"claim": "부동산등기부는 부동산의 표시와 권리관계를 적는 공적 장부다.", "source_id": "S1", "supports_section": "표제부"},
+    {"claim": "주택임대차보호법은 주택의 인도와 주민등록을 대항력 요건으로 둔다.", "source_id": "S2", "supports_section": "등기부 밖의 확인"},
+    {"claim": "공식 등기사항증명서는 인터넷등기소에서 발급·열람 경로를 확인한다.", "source_id": "S4", "supports_section": "발급 시점"},
+    {"claim": "공식 서식도 인도·전입신고·확정일자를 구분해 기재한다.", "source_id": "S5", "supports_section": "별도 요건"}
+  ],
+  "fact_traceability_pass": true,
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "unresolved_claims": [
+    "등기부만으로 임대인의 채무나 보증금 회수 가능성을 확정할 수 없다.",
+    "권리의 실제 효력과 우선순위는 문서·시점·절차에 따라 전문가 확인이 필요할 수 있다.",
+    "인터넷등기소 발급 수수료·화면·본인 확인 방식은 신청 시점에 달라질 수 있다."
+  ],
+  "source_conflicts": []
+}

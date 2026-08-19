@@ -1,0 +1,43 @@
+{
+  "article_id": "deposit-loan-timeline",
+  "status": "research_complete",
+  "article_research_question": "전세대출의 계약·신청·보증심사·실행·잔금 날짜를 어떤 인수인계 기준으로 맞춰야 일정 착오를 줄일 수 있는가?",
+  "reader_outcome": "승인 여부와 실행 날짜를 같은 뜻으로 취급하지 않고 담당 기관과 확인할 항목을 날짜별로 기록한다.",
+  "search_intent_insight": "기존 글은 승인 문자 뒤에 서류와 실행이 남는다는 점만 말하고 상품별 신청 시기·보증 절차·입주 행정의 연결을 구분하지 않는다.",
+  "competitor_gap": "고정된 처리기간이나 대출 가능성을 약속하지 않고, HF·HUG·주택도시기금의 공식 안내를 확인 지점으로 배치한다.",
+  "information_gain": "실행일을 기준으로 역산하는 인수인계표와 일정 변경 시 확인할 세 기관의 질문을 제공한다.",
+  "unique_angle": "대출을 금융 계산이 아니라 잔금일에 필요한 서류와 자금의 인수인계 문제로 설명한다.",
+  "source_interpretation": "공식 기관은 상품별 대상·신청시기·제출서류를 따로 안내하므로 하나의 보편적 타임라인으로 합치지 않고 상품 확인 링크와 기록 칸을 분리한다.",
+  "article_specific_details": [
+    {"claim": "HF 일반 전세자금보증은 상품 조회에서 보증 대상과 한도를 개별 조건으로 제시한다.", "source_id": "S1"},
+    {"claim": "HUG 전세금안심대출보증은 확정일자부 계약서와 계약금 지급 영수증 등 서류를 요구하며 은행을 통해 절차가 진행된다.", "source_id": "S2"},
+    {"claim": "전입신고와 확정일자는 대항력·우선변제권과 연결되는 별도 행정·법률 요건이다.", "source_id": "S3"}
+  ],
+  "ymyl_category": "finance_housing",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["은행 내부 심사기간과 실행 가능 시간은 금융기관·상품·개인 서류에 따라 달라져 기관 확인이 필요하다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:hf.go.kr 전세자금보증 찾기 신청 조건", "date": "2026-08-19", "purpose": "official product criteria"},
+    {"query": "site:khug.or.kr 전세금안심대출보증 이용절차 제출서류", "date": "2026-08-19", "purpose": "loan-guarantee handoff"},
+    {"query": "site:nhuf.molit.go.kr 전세자금대출 신청시기 계약 개시일", "date": "2026-08-19", "purpose": "fund loan timing check"},
+    {"query": "site:law.go.kr 주택임대차보호법 전입신고 확정일자", "date": "2026-08-19", "purpose": "legal protection verification"},
+    {"query": "전세대출 실행 타임라인 승인 잔금일 검색 결과", "date": "2026-08-19", "purpose": "search-intent and gap review"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "전세자금보증 찾기", "url": "https://www.hf.go.kr/ko/sub02/sub02_01_01.do?srAge=B1&srChldCnt=D1&srUseCd=E1&srWeddProdCd=C1&srZoneCd=A1", "publisher": "한국주택금융공사", "date": "2026-07-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "상품별 대상·한도 확인 경로"},
+    {"id": "S2", "title": "전세금안심대출보증 이용절차 및 제출서류", "url": "https://m.khug.or.kr/hug/web/ig/dl/igdl000002.jsp?tabMenu=Y", "publisher": "주택도시보증공사", "date": "2026-07-29", "accessed": "2026-08-19", "source_role": "official", "used_for": "보증·은행 인수인계와 서류 확인"},
+    {"id": "S3", "title": "주택임대차보호법 확정일자 조문", "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032085413", "publisher": "국가법령정보센터", "date": "2026-01-02", "accessed": "2026-08-19", "source_role": "official", "used_for": "확정일자 부여기관과 법적 요건"},
+    {"id": "S4", "title": "주택임대차보호법 대항력 관련 조문 연결", "url": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1018971415", "publisher": "국가법령정보센터", "date": "2026-05-12", "accessed": "2026-08-19", "source_role": "official", "used_for": "주택 인도·주민등록·확정일자 구분"},
+    {"id": "S5", "title": "주택도시기금 전세자금대출 통합검색 안내", "url": "https://nhuf.molit.go.kr/FP/FP03/FP0301.jsp?searchWord=", "publisher": "주택도시기금", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "상품별 신청시기 확인 경로"}
+  ],
+  "data_points": [
+    {"claim": "상품별 보증 조건", "source_id": "S1", "claim_type": "eligibility", "source_date": "2026-07-19", "supports_section": "상품 확인"},
+    {"claim": "확정일자부 계약서와 계약금 영수증", "source_id": "S2", "claim_type": "documents", "source_date": "2026-07-29", "supports_section": "서류 인수인계"},
+    {"claim": "확정일자 부여기관", "source_id": "S3", "claim_type": "procedure", "source_date": "2026-01-02", "supports_section": "입주 후 행정"},
+    {"claim": "주택 인도와 전입신고", "source_id": "S4", "claim_type": "legal_protection", "source_date": "2026-05-12", "supports_section": "대항력 구분"},
+    {"claim": "상품별 신청시기", "source_id": "S5", "claim_type": "timing", "source_date": "2026-08-19", "supports_section": "역산표"}
+  ]
+}

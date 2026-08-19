@@ -1,0 +1,40 @@
+{
+  "article_id": "online-transfer-address-guide",
+  "status": "done",
+  "score": 94,
+  "category_scores": {"intent": 20, "evidence": 19, "originality": 20, "utility": 19, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 6484,
+    "hangul_characters": 4007,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/online-transfer-address-guide.md",
+    "internal_links": ["/guide/gas-electric-water-change-guide", "/guide/move-in-day-document-pack"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/gas-electric-water-change-guide.mdx",
+    "output/today2424/drafts/moving-checklist-d30.mdx",
+    "output/today2424/drafts/entry-inspection-form-guide.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "전입신고 클릭 안내를 주민등록·임대차·생활주소 세 봉투와 접수·완료·다음 확인일을 관리하는 인수인계표로 재구성했다.",
+  "remaining_risks": [
+    "정부24의 온라인 신청 대상·인증·처리시간은 신청 시점 화면을 다시 확인해야 한다.",
+    "전입신고와 확정일자가 개인의 모든 보증금 권리를 자동 보장하지 않는다.",
+    "민간 서비스 주소 변경은 각 사업자의 정책과 청구서에서 별도 확인해야 한다."
+  ],
+  "next_action": "발행 전 정부24·국가법령정보센터·생활법령 링크의 최신 상태와 실제 내부 링크 공개 여부를 확인한다."
+}

@@ -1,0 +1,38 @@
+{
+  "article_id": "monthly-rent-receipt-guide",
+  "status": "done",
+  "score": 93,
+  "category_scores": {
+    "intent": 19,
+    "evidence": 19,
+    "originality": 19,
+    "utility": 20,
+    "voice": 16
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "no_tax_outcome_guarantee": true,
+    "personal_data_minimization": true
+  },
+  "visible_body_characters": 3612,
+  "compared_rows": [
+    "rent-budget-sheet-guide",
+    "monthly-rent-receipt-money-proof",
+    "deposit-transfer-checklist"
+  ],
+  "similarity_signals": [],
+  "repair_attempted": "기존의 일반 폴더 정리 글을 계약·지급·세무 확인의 3층 증빙 체계와 원본·설명본·공유본 구분으로 재구성",
+  "remaining_risks": [
+    "세액공제·소득공제 적용과 환급 결과는 개인 조건과 신고 내용에 따라 달라짐",
+    "제출처별 요구 범위는 별도 확인 필요"
+  ]
+}

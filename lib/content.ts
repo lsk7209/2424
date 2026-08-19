@@ -4,6 +4,7 @@ import { extraScheduledBlogPosts } from "@/data/blog-posts-scheduled-extra";
 import { guidePosts } from "@/data/guides";
 import { scheduledGuidePosts } from "@/data/guides-scheduled";
 import { extraScheduledGuidePosts } from "@/data/guides-scheduled-extra";
+import { editorialOverrides } from "@/data/editorial-overrides";
 import {
   applySequentialSchedule,
   CONTENT_REVALIDATE_SECONDS,
@@ -51,6 +52,13 @@ function sortByDateDesc<T extends PublishableEntry>(items: T[]) {
   return [...items].sort((a, b) => getPublicationDate(b).getTime() - getPublicationDate(a).getTime());
 }
 
+function applyEditorialOverrides<T extends { slug: string }>(items: T[]) {
+  return items.map((item) => {
+    const override = editorialOverrides[item.slug];
+    return override ? { ...item, ...override } : item;
+  });
+}
+
 function interleaveScheduledEntries<T extends object, U extends object>(blogs: T[], guides: U[]) {
   const scheduledBlogs: Array<T & PublishableEntry> = [];
   const scheduledGuides: Array<U & PublishableEntry> = [];
@@ -91,8 +99,8 @@ const futureGuidePosts = [
 
 const interleavedScheduledContent = interleaveScheduledEntries(futureBlogPosts, futureGuidePosts);
 
-const allBlogPosts = [...blogPosts, ...interleavedScheduledContent.scheduledBlogs];
-const allGuidePosts = [...guidePosts, ...interleavedScheduledContent.scheduledGuides];
+const allBlogPosts = applyEditorialOverrides([...blogPosts, ...interleavedScheduledContent.scheduledBlogs]);
+const allGuidePosts = applyEditorialOverrides([...guidePosts, ...interleavedScheduledContent.scheduledGuides]);
 
 export function getAllBlogPosts() {
   return sortByDateDesc(allBlogPosts);

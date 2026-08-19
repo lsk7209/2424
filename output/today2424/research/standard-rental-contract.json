@@ -1,0 +1,13 @@
+{
+  "article_id":"standard-rental-contract","status":"research_complete",
+  "research_runs":[{"query":"국토교통부 주택임대차 표준계약서","date":"2026-08-19","purpose":"양식 역할 확인"},{"query":"주택임대차보호법 현행","date":"2026-08-19","purpose":"법령 용어 확인"},{"query":"정부24 전입신고","date":"2026-08-19","purpose":"계약 뒤 행정 절차"},{"query":"인터넷등기소 등기기록 열람","date":"2026-08-19","purpose":"권리 확인 자료"},{"query":"주택임대차분쟁조정위원회","date":"2026-08-19","purpose":"개별 분쟁 상담"}],
+  "article_research_question":"표준계약서를 쓰더라도 서명 전 어떤 빈칸을 실제 자료와 대조해야 하는가?",
+  "reader_outcome":"주소·당사자·금액·기간·특약을 분리 확인하고 계약 뒤 문서 보관 순서를 만든다.",
+  "original_contribution":{"type":"four-line-check","description":"계약서 첫 장의 목적물·당사자·금액·기간을 실제 자료와 맞추는 점검","supporting_source_ids":["S1","S3","S4"]},
+  "unique_angle":"표준 양식의 법적 만능성을 전제하지 않고 빈칸과 첨부 기록을 검수하는 계약 전 점검","information_gain":"계약서 한 장의 문구보다 계약 당일 확인 자료와 송금·입주 기록의 연결을 강조한다.",
+  "source_interpretation":"공식 표준계약서와 법령은 개별 조항 효력 판정이 아니라 질문 목록과 외부 상담 경로를 확인하는 데 쓴다.",
+  "sources":[{"id":"S1","title":"국토교통부","url":"https://www.molit.go.kr","publisher":"국토교통부","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"주택임대차 표준계약서 안내"},{"id":"S2","title":"주택임대차보호법","url":"https://www.law.go.kr/법령/주택임대차보호법","publisher":"국가법령정보센터","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"현행 법령 용어"},{"id":"S3","title":"정부24","url":"https://www.gov.kr","publisher":"행정안전부","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"전입신고 안내"},{"id":"S4","title":"인터넷등기소","url":"https://www.iros.go.kr","publisher":"대법원","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"등기기록 열람 경로"},{"id":"S5","title":"주택임대차분쟁조정위원회","url":"https://www.hldcc.or.kr","publisher":"대한법률구조공단","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"개별 분쟁 조정 안내"}],
+  "article_specific_details":[{"claim":"표준계약서는 목적물·당사자·금액·기간·특약을 확인하는 출발점이며 실제 약속을 자동 보장하지 않는다.","source_id":"S1"},{"claim":"전입신고와 확정일자는 계약서 작성과 별도의 행정 절차다.","source_id":"S3"}],
+  "data_points":[{"claim":"국토교통부 표준계약서 안내는 계약 항목 점검의 기준을 제공한다.","source_id":"S1","claim_type":"procedure","source_date":"current","supports_section":"표준계약서"},{"claim":"주택임대차 관련 법령 용어는 현행 본문으로 확인한다.","source_id":"S2","claim_type":"legal","source_date":"current","supports_section":"특약 경계"},{"claim":"등기기록은 인터넷등기소에서 현재 기준으로 열람한다.","source_id":"S4","claim_type":"procedure","source_date":"current","supports_section":"당사자 확인"}],
+  "visual_elements":["four-line-contract-check","clause-to-evidence-map","document-archive"],"fact_traceability_pass":true,"volatile":true,"ymyl_category":"housing_legal"
+}

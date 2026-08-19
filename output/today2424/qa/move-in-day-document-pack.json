@@ -1,0 +1,14 @@
+{
+  "article_id": "move-in-day-document-pack",
+  "status": "done",
+  "score": 93,
+  "category_scores": {"intent": 19, "evidence": 19, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {"persona_consistency": true, "fact_traceability": true, "research_gate": true, "content_uniqueness": true, "article_contract_uniqueness": true, "title_template_uniqueness": true, "structure_variation": true, "content_template_variation": true, "heading_quality": true, "visible_body_length": true},
+  "evidence": {"visible_body_characters": 3655, "research_runs": 5, "sources": 5, "article_persona": "article-personas/move-in-day-document-pack.md", "internal_links": ["/guide/house-photo-record-guide", "/guide/jeonse-loan-documents-guide", "/guide/gas-electric-water-change-guide"], "external_source_links": ["S1", "S2", "S3", "S4", "S5"]},
+  "compared_rows": ["rental-contract-special-clauses-guide", "house-viewing-checklist", "moving-checklist-d30", "officetel-contract-checklist"],
+  "similarity_signals": {"method": "7-token shingle Jaccard", "maximum_jaccard": 0.0, "threshold": 0.05, "reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "입주 첫날 증빙 폴더 색인과 시간순 기록 운영 글로 전면 재작성했습니다.",
+  "remaining_risks": ["전입신고·확정일자의 개별 효력은 계약과 점유 사실에 따라 달라질 수 있어 공식 기관 안내를 확인해야 합니다."],
+  "structure_type": "three-folder evidence index",
+  "visual_elements": ["folder-role-table", "room-photo-sequence", "first-week-record-log"]
+}

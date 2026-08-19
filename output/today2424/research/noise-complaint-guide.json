@@ -1,0 +1,13 @@
+{
+  "article_id":"noise-complaint-guide","status":"research_complete",
+  "research_runs":[{"query":"층간소음 이웃사이센터 상담","date":"2026-08-19","purpose":"공식 상담 절차"},{"query":"국가소음정보시스템 층간소음","date":"2026-08-19","purpose":"공식 정보 확인"},{"query":"공동주택관리법 생활 분쟁","date":"2026-08-19","purpose":"관리 주체 범위"},{"query":"환경부 층간소음 안내","date":"2026-08-19","purpose":"생활 소음 구분"},{"query":"대한법률구조공단 주택 상담","date":"2026-08-19","purpose":"개별 상담 경로"}],
+  "article_research_question":"원인이 확정되지 않은 반복 소음을 어떻게 시간·유형·요청 기록으로 바꾸어 안전하게 상담할 수 있는가?",
+  "reader_outcome":"7일 일지와 사실 중심 요청 문구로 관리 주체·상담 창구에 같은 사실을 전달한다.",
+  "original_contribution":{"type":"log-and-script","description":"원인 추정을 빼고 소리 패턴과 요청 이력을 남기는 7일 일지","supporting_source_ids":["S1","S2"]},
+  "unique_angle":"가해 세대 단정 대신 반복 시간과 소리 유형을 기록하는 중재형 대응","information_gain":"소음 기록을 해결 보장이 아닌 대화·상담의 재현 가능한 입력으로 사용한다.",
+  "source_interpretation":"공식 층간소음 안내를 이웃 비난이나 처벌 조언이 아닌 상담 전 정보 정리 기준으로 해석한다.",
+  "sources":[{"id":"S1","title":"층간소음 이웃사이센터","url":"https://www.noiseinfo.or.kr","publisher":"한국환경공단","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"층간소음 상담 안내"},{"id":"S2","title":"국가소음정보시스템","url":"https://www.noiseinfo.or.kr","publisher":"한국환경공단","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"소음 정보 확인"},{"id":"S3","title":"공동주택관리법","url":"https://www.law.go.kr/법령/공동주택관리법","publisher":"국가법령정보센터","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"공동주택 관리 관련 용어"},{"id":"S4","title":"환경부","url":"https://www.me.go.kr","publisher":"환경부","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"생활환경 정책 안내"},{"id":"S5","title":"대한법률구조공단","url":"https://www.klac.or.kr","publisher":"대한법률구조공단","date":"current","accessed":"2026-08-19","source_role":"official","used_for":"개별 사실관계 상담 경로"}],
+  "article_specific_details":[{"claim":"소음 기록은 날짜·시각·소리 유형·발생 장소·요청 이력을 나눠 적는다.","source_id":"S1"},{"claim":"공식 상담 전에도 원인을 단정하지 않고 현재 관찰과 이전 대응을 정리한다.","source_id":"S2"}],
+  "data_points":[{"claim":"층간소음 관련 공식 안내와 상담 정보는 이웃사이센터에서 확인한다.","source_id":"S1","claim_type":"procedure","source_date":"current","supports_section":"상담 경로"},{"claim":"공동주택 관리 주체의 역할은 건물·관리 형태에 따라 다를 수 있다.","source_id":"S3","claim_type":"policy","source_date":"current","supports_section":"연락 순서"},{"claim":"개별 분쟁의 법률 효과는 사실관계 자료로 별도 상담한다.","source_id":"S5","claim_type":"procedure","source_date":"current","supports_section":"안전과 상담"}],
+  "visual_elements":["seven-day-sound-log","neutral-request-script","escalation-path"],"fact_traceability_pass":true,"volatile":true,"ymyl_category":"housing_dispute"
+}

@@ -1,0 +1,162 @@
+{
+  "article_id": "administrative-welfare-center",
+  "status": "research_complete",
+  "research_runs": [
+    {
+      "query": "정부24 전입신고 행정복지센터 공식 안내",
+      "date": "2026-08-19",
+      "purpose": "이사 뒤 주소 변경의 공식 민원 경로와 창구 확인 범위를 분리한다"
+    },
+    {
+      "query": "국가법령정보센터 주민등록법 전입신고 거주지 변경",
+      "date": "2026-08-19",
+      "purpose": "전입신고를 주소 사실 신고로 설명할 법령 근거를 확인한다"
+    },
+    {
+      "query": "복지로 복지서비스 찾기 모의계산 공식",
+      "date": "2026-08-19",
+      "purpose": "서비스 검색과 모의계산의 참고용 성격을 확인한다"
+    },
+    {
+      "query": "복지로 맞춤형급여안내 복지멤버십 이용 방법 행정복지센터",
+      "date": "2026-08-19",
+      "purpose": "복지멤버십의 안내 기능과 창구 신청 경로를 확인한다"
+    },
+    {
+      "query": "복지로 복지멤버십 실제 선정 여부 공적자료 조사 공식",
+      "date": "2026-08-19",
+      "purpose": "안내·모의계산이 실제 수급 선정 보장이 아니라는 경계를 검증한다"
+    }
+  ],
+  "article_research_question": "이사 후 행정복지센터를 방문하는 사람이 전입신고 완료를 복지 자격 확정으로 오해하지 않으면서, 어떤 사실과 서류를 어떤 순서로 확인·기록해야 하는가?",
+  "reader_outcome": "독자는 새 주소·가구 변화·현재 급여·필요 서류·다음 확인일을 한 장의 인계표로 나눠 창구 상담과 온라인 확인을 준비한다.",
+  "search_intent_insight": "일반 검색 결과는 행정복지센터 위치나 복지제도 목록에 치우치기 쉽다. 이 글은 이사 직후의 독자가 실제로 겪는 ‘주소 신고는 끝났는데 무엇이 반영됐는지 모르는’ 공백을 다룬다.",
+  "competitor_gap": "센터 방문 준비물이나 복지혜택을 포괄적으로 나열하는 대신, 전입 사실·가구 변동·급여 신청·선정 결과를 서로 다른 상태로 기록하는 인계 절차를 제시한다.",
+  "information_gain": "주소 변경 후의 행정복지센터 방문을 혜택 탐색이 아니라 상태 확인 회의로 바꾸고, 창구에서 들은 답을 다음 확인일과 증빙 형태까지 남기는 실무용 표를 제공한다.",
+  "unique_angle": "이사 뒤 행정복지센터에서 ‘무슨 혜택이 있나요?’라고 묻기 전에, 전입·가구·기존 급여·복지멤버십·개별 신청을 인계표로 분리해 확인하는 방법.",
+  "source_interpretation": "주민등록법은 주소 사실 신고의 기준으로만, 복지로 자료는 서비스 탐색·안내·모의계산 및 실제 조사 구분의 근거로 사용한다. 어느 출처도 특정 가구의 선정이나 급여 변경을 보장하는 근거로 사용하지 않는다.",
+  "angle_supporting_detail": {
+    "claim": "복지로의 모의계산은 입력 자료를 바탕으로 한 참고 결과이며 실제 선정 여부는 서비스 신청 뒤 공적자료 조사로 판단된다고 안내한다.",
+    "source_id": "S5"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "정부24",
+      "url": "https://www.gov.kr/portal/main",
+      "publisher": "행정안전부",
+      "date": "undated",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "전입신고 등 전자정부 민원의 공식 확인 경로를 안내하는 데 사용"
+    },
+    {
+      "id": "S2",
+      "title": "주민등록법",
+      "url": "https://www.law.go.kr/법령/주민등록법",
+      "publisher": "국가법령정보센터",
+      "date": "current",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "전입신고가 거주지 변동의 주민등록 절차라는 설명의 법령 근거"
+    },
+    {
+      "id": "S3",
+      "title": "나를 위한 복지혜택을 찾고!",
+      "url": "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/intro/intro/info/01/index.html",
+      "publisher": "복지로·한국사회보장정보원",
+      "date": "undated",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "복지서비스 찾기와 모의계산이 별도 기능임을 설명하는 데 사용"
+    },
+    {
+      "id": "S4",
+      "title": "맞춤형급여안내(복지멤버십) 이용 방법",
+      "url": "https://www.bokjiro.go.kr/ssis-tbu/twatza/wmAplyMng/selectWmJoinProcGdnc.do",
+      "publisher": "복지로·한국사회보장정보원",
+      "date": "undated",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "복지멤버십의 단독·동시 신청 및 주민센터 방문 경로, 안내 기능을 설명하는 데 사용"
+    },
+    {
+      "id": "S5",
+      "title": "복지사업 선택 화면의 모의계산 안내사항",
+      "url": "https://www.bokjiro.go.kr/ssis-tbu/twatbz/mkclAsis/mkclPage.do",
+      "publisher": "복지로·한국사회보장정보원",
+      "date": "undated",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "모의계산 결과가 참고용이며 실제 선정은 신청 후 공적자료 조사에 따른다는 한계를 설명하는 데 사용"
+    }
+  ],
+  "article_specific_details": [
+    {
+      "claim": "복지멤버십은 신규 사회보장급여 신청 때 동시 신청하거나 별도로 신청할 수 있고, 가까운 전국 행정복지센터에서도 문의·신청 경로를 확인할 수 있다.",
+      "source_id": "S4"
+    },
+    {
+      "claim": "복지로는 서비스찾기, 모의계산, 맞춤형급여안내를 구분해 제공하므로 검색 결과·모의계산·안내 메시지를 각각 확정 통지와 분리해 기록해야 한다.",
+      "source_id": "S3"
+    },
+    {
+      "claim": "모의계산은 입력 자료 기반 참고 결과이고 실제 선정 여부는 서비스 신청 뒤 공적자료 조사로 달라질 수 있다.",
+      "source_id": "S5"
+    }
+  ],
+  "data_points": [
+    {
+      "claim": "전입신고는 주민등록상 거주지 변동을 신고하는 절차이며, 이를 근거로 개별 복지급여의 선정이 자동 확정되는 것은 아니다.",
+      "source_id": "S2",
+      "claim_type": "policy",
+      "source_date": "current",
+      "supports_section": "전입 완료와 자격 확정을 분리할 때"
+    },
+    {
+      "claim": "복지로는 복지서비스 찾기, 모의계산, 맞춤형급여안내 기능을 제공한다.",
+      "source_id": "S3",
+      "claim_type": "procedure",
+      "source_date": "undated",
+      "supports_section": "온라인 확인은 세 종류로 나눌 때"
+    },
+    {
+      "claim": "복지멤버십은 급여 신청과 동시 또는 단독으로 신청할 수 있으며, 안내 결과는 신청자가 요청한 수단으로 알린다.",
+      "source_id": "S4",
+      "claim_type": "procedure",
+      "source_date": "undated",
+      "supports_section": "창구에서 요청할 인계 질문"
+    },
+    {
+      "claim": "복지로 모의계산 결과는 참고용이며 실제 선정 여부는 서비스 신청 후 공적자료 조사에 따라 판단된다.",
+      "source_id": "S5",
+      "claim_type": "policy",
+      "source_date": "undated",
+      "supports_section": "자격을 확답받으려 하지 않는 이유"
+    }
+  ],
+  "ymyl_category": "government_support",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [],
+  "source_conflicts": [],
+  "conflict_note": "지역별 사업, 가구별 소득·재산·구성 및 개별 서비스 신청 결과는 이 글의 범위에서 확정하지 않는다.",
+  "visual_elements": ["status-handoff-table", "question-card", "evidence-ledger"],
+  "semantic_colors": ["amber-for-unconfirmed", "blue-for-recorded"]
+}

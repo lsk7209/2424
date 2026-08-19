@@ -1,0 +1,46 @@
+{
+  "article_id": "move-out-checklist",
+  "status": "research_complete",
+  "research_runs": [
+    {"query": "찾기쉬운 생활법령 임대차 계약 종료 목적물 반환 퇴거", "date": "2026-08-19", "purpose": "퇴거와 목적물 반환의 기본 흐름 확인"},
+    {"query": "site:law.go.kr 임대차보증금 목적물 인도 반환 판례", "date": "2026-08-19", "purpose": "열쇠 인도·보증금 정산을 법적 결론 없이 기록하는 근거 확인"},
+    {"query": "site:kca.go.kr 이사서비스 피해 파손 분실 계약 증거", "date": "2026-08-19", "purpose": "이사 당일 파손·분실 기록과 계약 자료 보관 방법 확인"},
+    {"query": "site:gov.kr 전입신고 이사 후 공식", "date": "2026-08-19", "purpose": "퇴거 후 주소 정리와 새 주소 신고를 분리하는 안내 확인"},
+    {"query": "site:law.go.kr 공동주택 관리비 인도 보증금 반환 판례", "date": "2026-08-19", "purpose": "퇴거일 이후 점유·관리비 정산을 단정하지 않고 확인 질문으로 바꾸기"}
+  ],
+  "article_research_question": "퇴거 당일 물건·상태·열쇠·정산을 어떻게 분리 인수인계해야 나중에 완료 시점과 미정산 항목을 설명할 수 있는가?",
+  "reader_outcome": "마지막 날 동선을 네 개 인수인계로 나누고 사진·계량기·열쇠·정산 메시지를 각각 남긴다.",
+  "search_intent_insight": "퇴실 글은 청소·열쇠 항목을 나열하지만 실제 분쟁에서 중요한 인도 시각, 상태 사진, 계량기, 미정산 목록의 연결이 약하다.",
+  "competitor_gap": "보증금 반환을 확정적으로 말하거나 생활마모 기준을 단정하는 글이 많아, 합의되지 않은 항목을 열린 상태로 관리하는 실무표가 부족하다.",
+  "information_gain": "퇴거를 비우기·상태 확인·접근권한 전달·정산 닫기의 네 카드로 분리하고 각 카드에 증거와 다음 담당자를 붙인다.",
+  "unique_angle": "퇴거 완료를 한 시점이 아니라 인수인계 기록이 차례로 닫히는 과정으로 보는 마지막 날 운영표다.",
+  "source_interpretation": "법령·판례는 목적물 인도와 사용·수익 관계를 설명하는 배경으로만 사용하며, 특정 공제액·보증금 반환일·책임을 단정하지 않는다.",
+  "sources": [
+    {"id": "S1", "title": "주택임대차 이사 후 체크리스트", "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=2&cnpClsNo=1&csmSeq=629&menuType=cnpcls&popMenu=ov", "publisher": "찾기쉬운 생활법령정보", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "이사 후 전입신고·확정일자 등 행정 흐름을 퇴거 후 작업과 구분"},
+    {"id": "S2", "title": "대법원 2024다256116 임대차보증금 판결", "url": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=241573", "publisher": "국가법령정보센터", "date": "2024-09-13", "accessed": "2026-08-19", "source_role": "official", "used_for": "목적물 인도와 사용·수익 의무가 대응한다는 판시 맥락"},
+    {"id": "S3", "title": "한국소비자원 이사서비스 피해구제 분석", "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2606&linkId=1026&menuId=MENU00307", "publisher": "한국소비자원", "date": "2026-06-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "이사 중 파손·분실과 추가 비용 관련 기록 필요성"},
+    {"id": "S4", "title": "정부24", "url": "https://www.gov.kr/portal/main", "publisher": "행정안전부", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "새 주소 전입신고 등 퇴거와 분리된 행정 작업 확인"},
+    {"id": "S5", "title": "대법원 2020다286102 건물명도·보증금반환", "url": "https://www.law.go.kr/LSW/precInfoP.do?precSeq=218749", "publisher": "국가법령정보센터", "date": "2021-04-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약 종료 후 점유·관리비 관련 사실관계가 중요하다는 판례 맥락"}
+  ],
+  "article_specific_details": [
+    {"claim": "퇴거 완료를 물건 반출·상태 확인·접근권한 전달·정산으로 나눠 기록한다.", "source_id": "S2"},
+    {"claim": "이사 중 파손·분실이 발생하면 계약 조건과 사진·수량 기록을 함께 보관한다.", "source_id": "S3"},
+    {"claim": "관리비·공과금·보증금은 계약서와 실제 합의에 따라 정산하며 미확정 행을 남긴다.", "source_id": "S5"}
+  ],
+  "data_points": [
+    {"claim": "목적물 인도와 사용·수익 관계는 임대차 종료 과정에서 함께 확인할 요소다.", "source_id": "S2", "supports_section": "네 번의 인수인계"},
+    {"claim": "이사서비스 피해에는 물품 파손·분실과 추가 비용 요구가 포함될 수 있다.", "source_id": "S3", "supports_section": "이사차량 카드"},
+    {"claim": "계약 종료 후 점유와 관리비는 구체적인 사용·인도 사실관계를 따져야 한다.", "source_id": "S5", "supports_section": "미정산 항목"},
+    {"claim": "새 주소 전입신고는 정부24 등 별도 행정 절차다.", "source_id": "S4", "supports_section": "퇴거 후 행정"}
+  ],
+  "fact_traceability_pass": true,
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "unresolved_claims": [
+    "보증금 반환일과 공제 항목은 계약서·합의·실제 상태에 따라 달라진다.",
+    "생활마모와 임차인 과실의 구분은 사진만으로 확정되지 않을 수 있다.",
+    "이사서비스 피해구제 요건과 제출 자료는 최신 한국소비자원 안내를 확인해야 한다."
+  ],
+  "source_conflicts": []
+}

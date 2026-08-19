@@ -1,0 +1,40 @@
+{
+  "article_id": "pet-friendly-rent-check",
+  "status": "done",
+  "score": 92,
+  "category_scores": {"intent": 19, "evidence": 18, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 4161,
+    "hangul_characters": 3304,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/pet-friendly-rent-check.md",
+    "internal_links": ["/guide/entry-inspection-form-guide", "/guide/noise-complaint-guide", "/guide/deposit-return-delay", "/guide/move-out-checklist"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/rental-contract-special-clauses-guide.mdx",
+    "output/today2424/drafts/entry-inspection-form-guide.mdx",
+    "output/today2424/drafts/deposit-transfer-checklist.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "‘반려동물 가능’ 여부를 단정하는 체크리스트 대신 관리규약·특약·공용부 동선·입주 전후 사진을 연결한 결정 트리와 증빙 카드로 재구성했습니다.",
+  "remaining_risks": [
+    "개별 특약의 유효성·손해배상 책임은 계약서 전체와 실제 사실관계에 따라 달라집니다.",
+    "건물 유형과 지역에 따라 관리규약·공용부 규칙의 공개 범위가 다를 수 있습니다.",
+    "초안 상태이며 라이브 발행 전 최신 법령과 건물별 규정을 재확인해야 합니다."
+  ],
+  "next_action": "편집 검토와 발행 승인을 거친 뒤에만 라이브 반영을 검토합니다."
+}

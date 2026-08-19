@@ -1,0 +1,48 @@
+{
+  "article_id": "maintenance-fee-red-flags",
+  "status": "research_complete",
+  "article_research_question": "원룸·오피스텔·공동주택의 관리비 명세서에서 금액만 보고 비싸다고 결론 내리지 않고, 항목·공개 경로·장기수선충당금·계약 전후 증거를 어떤 순서로 확인할 것인가?",
+  "reader_outcome": "관리비 고지서의 항목을 같은 기준으로 읽고, K-apt 또는 관리사무소 공개 자료에서 확인할 내용과 계약서에 미리 적어 둘 질문을 구분해 기록할 수 있다.",
+  "search_intent_insight": "검색 결과는 평균 관리비나 단순 절약 팁에 치우치지만, 실제 입주자는 고정비·사용료·장기수선충당금이 섞인 명세서를 계약 전 예상과 입주 후 실제로 나눠 읽는 방법을 찾는다.",
+  "competitor_gap": "관리비를 하나의 숫자로 비교하거나 특정 금액을 정상선으로 제시하는 글이 많다. 법령상 항목 구분, K-apt 공개 범위, 건물별 예외, 계약서와 고지서의 증거 연결을 한 흐름으로 설명하는 자료는 부족하다.",
+  "information_gain": "명세서를 고정비·사용량 연동비·공용관리비·장기수선충당금·개별 청구로 분해하고, 공개자료 확인→관리주체 질문→입주 후 대조의 세 시점을 기록표로 연결한다.",
+  "unique_angle": "관리비가 비싸다는 결론을 대신 내리지 않고, ‘명세서의 항목이 설명되는가’를 판별하는 독해표와 재확인 경로를 제공한다.",
+  "source_interpretation": "공동주택관리법과 시행령은 관리비 공개·부과 및 장기수선충당금의 근거를 제공하지만, 모든 원룸·오피스텔에 동일한 공개 방식이나 금액 기준을 보장하지 않는다. 따라서 법령은 확인 항목의 근거로, K-apt는 공개자료 탐색 경로로 사용한다.",
+  "article_specific_details": [
+    {"claim": "공동주택 관리비는 법령상 일반관리비·청소비·경비비·승강기유지비 등 세부 항목으로 나뉘어 공개·부과될 수 있다.", "source_id": "S1"},
+    {"claim": "장기수선충당금은 일상적인 사용료와 구분되는 적립금이며, 소유자 부담 여부와 임차인의 정산 방식은 계약·법령 적용관계를 따로 확인해야 한다.", "source_id": "S2"},
+    {"claim": "K-apt는 공동주택 단지의 관리비와 유지관리 이력 등을 확인하는 공개 시스템이지만, 모든 유형의 임대주택과 모든 건물의 자료가 동일하게 제공되는 것은 아니다.", "source_id": "S3"},
+    {"claim": "관리비 공개·부과의 세부 절차와 대상은 공동주택관리법 및 시행령의 적용 대상과 건물 유형에 따라 달라질 수 있다.", "source_id": "S4"},
+    {"claim": "계약 전에는 관리사무소·임대인에게 최근 고지서와 별도 청구 항목을 요청하고, 입주 후 첫 고지서와 비교해 차이를 기록하는 것이 사실 확인에 도움이 된다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "housing_finance",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "오피스텔·소규모 공동주택은 관리비 공개 시스템과 의무 범위가 다를 수 있으므로 건물 관리주체와 관할 행정기관의 최신 안내를 확인해야 한다.",
+    "개별 세대의 관리비 금액은 면적·사용량·공용시설·관리계약에 따라 달라지므로 평균값이나 적정 금액으로 단정하지 않는다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:k-apt.go.kr 관리비 공개 항목 장기수선충당금", "date": "2026-08-19", "purpose": "official management-fee search path"},
+    {"query": "site:law.go.kr 공동주택관리법 시행령 관리비 비목 일반관리비 청소비 경비비", "date": "2026-08-19", "purpose": "statutory item categories"},
+    {"query": "site:law.go.kr 공동주택관리법 제23조 관리비 부과 공개", "date": "2026-08-19", "purpose": "legal basis for billing and disclosure"},
+    {"query": "site:law.go.kr 공동주택관리법 제30조 장기수선충당금", "date": "2026-08-19", "purpose": "long-term repair reserve distinction"},
+    {"query": "관리비 명세서 오피스텔 계약 전 확인 항목 공개자료 비교", "date": "2026-08-19", "purpose": "search-intent and competitor-gap review"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "K-apt 공동주택관리정보시스템 관리비 공개 안내", "url": "https://www.k-apt.go.kr/cmmn/kaptsystemintro.do", "publisher": "한국부동산원 K-apt", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "공개 항목과 검색 경로 확인"},
+    {"id": "S2", "title": "공동주택관리법 시행령 장기수선충당금 관련 조항", "url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=012644&lsJoLnkSeq=1000654081&print=print", "publisher": "국가법령정보센터", "date": "2026-07-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "장기수선충당금과 일반 관리비 구분"},
+    {"id": "S3", "title": "K-apt 공동주택관리정보시스템", "url": "https://www.k-apt.go.kr/web/main/index.do", "publisher": "한국부동산원 K-apt", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "단지별 관리비·유지관리 정보 탐색"},
+    {"id": "S4", "title": "공동주택관리법 제23조 관리비 등의 납부 및 공개", "url": "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsId=012345&lsJoLnkSeq=1000787134&print=print", "publisher": "국가법령정보센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "관리비 부과·공개 적용 범위"},
+    {"id": "S5", "title": "공동주택관리법 제30조 장기수선충당금", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=208474", "publisher": "국가법령정보센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "계약 전후 증거와 정산 질문의 법적 맥락"}
+  ],
+  "data_points": [
+    {"claim": "관리비 공개 항목과 단지별 조회 경로", "source_id": "S1", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "공개자료 확인"},
+    {"claim": "장기수선충당금의 별도 성격", "source_id": "S2", "claim_type": "legal_scope", "source_date": "2026-07-01", "supports_section": "명세서 분해"},
+    {"claim": "K-apt 단지별 정보 검색", "source_id": "S3", "claim_type": "official_data", "source_date": "2026-08-19", "supports_section": "계약 전 확인"},
+    {"claim": "공동주택관리법상 관리비 부과·공개 근거", "source_id": "S4", "claim_type": "legal_scope", "source_date": "2026-08-19", "supports_section": "적용 범위"},
+    {"claim": "장기수선충당금 관련 법 조항", "source_id": "S5", "claim_type": "legal_scope", "source_date": "2026-08-19", "supports_section": "퇴거·정산 기록"}
+  ]
+}

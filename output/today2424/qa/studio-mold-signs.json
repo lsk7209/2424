@@ -1,0 +1,34 @@
+{
+  "article_id": "studio-mold-signs",
+  "status": "done",
+  "score": 93,
+  "category_scores": {"intent": 19, "evidence": 19, "originality": 20, "utility": 19, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "no_medical_overclaim": true,
+    "no_legal_overclaim": true
+  },
+  "evidence": {
+    "visible_body_characters": 4000,
+    "research_runs": 5,
+    "sources": 5,
+    "official_or_primary_sources": 5,
+    "article_persona": "article-personas/studio-mold-signs.md",
+    "internal_links": ["/blog/winter-window-condensation-hacks", "/guide/entry-inspection-form-guide", "/guide/rental-contract-special-clauses-guide", "/blog/rainy-day-house-viewing"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": ["winter-window-condensation-hacks", "rainy-day-house-viewing", "entry-inspection-form-guide"],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false, "distinct_angle": "humidity-event-surface request ledger"},
+  "repair_attempted": "습도 수치 중심의 제거 조언을 삭제하고, 72시간 관찰 장부와 관리주체 요청 로그를 중심 구조로 재작성했다.",
+  "remaining_risks": ["현장 점검 없이 원인·하자·책임을 판단할 수 없다.", "건강 관련 내용은 안전 경계만 제시하며 증상 진단을 하지 않는다."],
+  "next_action": "초안 상태 유지. 발행 또는 관리주체 연락은 이 산출물의 범위 밖이다."
+}

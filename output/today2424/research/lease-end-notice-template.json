@@ -1,0 +1,48 @@
+{
+  "article_id": "lease-end-notice-template",
+  "status": "research_complete",
+  "article_research_question": "임대차 만료·갱신·퇴거 의사를 알릴 때 계약서의 종료일·통지 조항·수령 증거·보증금 정산을 어떤 순서로 기록할 것인가?",
+  "reader_outcome": "계약서를 먼저 읽고 통지 목적을 구분한 뒤, 발송 문안·수령 확인·후속 일정이 남는 통지 기록을 만들 수 있다.",
+  "search_intent_insight": "임대차 종료 통지 글은 정해진 날짜와 문구를 단정하는 경우가 많지만, 계약 형태·갱신 여부·통지 수령·보증금 정산이 별개의 단계라는 점을 충분히 설명하지 않는다.",
+  "competitor_gap": "문자 예시 하나만 제공하고 계약서 확인, 상대방 수령 확인, 등기·전자문서 증거, 열쇠·보증금 후속 일정을 연결하지 않는다.",
+  "information_gain": "종료 의사 확인→계약 조항 점검→통지 문안→발송·수령→퇴거·정산의 다섯 칸으로 기록 흐름을 만든다.",
+  "unique_angle": "법정 통지기간을 외워 적용하는 글이 아니라, ‘무슨 의사를 언제 어떤 증거로 전달했는가’를 남기는 통지 카드로 구성한다.",
+  "source_interpretation": "주택임대차보호법과 찾기쉬운 생활법령 자료는 갱신·종료 관계를 확인하는 공식 참고로 사용한다. 우편·전자문서의 발송 기록은 전달 증거의 한 형태일 뿐, 개별 분쟁의 효력을 대신 판단하지 않는다. 계약서와 사실관계가 우선이다.",
+  "article_specific_details": [
+    {"claim": "임대차 종료·갱신 관련 통지의 기준은 계약 유형과 계약서 내용, 주택임대차보호법 적용 관계를 함께 확인해야 한다.", "source_id": "S1"},
+    {"claim": "갱신요구·갱신거절·퇴거 예정 통지는 서로 다른 의사표시이므로 문안에 목적을 명확히 적는다.", "source_id": "S2"},
+    {"claim": "통지 내용과 발송·수령 날짜를 확인할 수 있는 기록을 보관하면 후속 정산·열쇠 인도 일정을 조율하기 쉽다.", "source_id": "S3"},
+    {"claim": "계약·통지·보증금 정산에 이견이 생기면 계약서와 대화·우편·송금 자료를 함께 정리해 상담한다.", "source_id": "S4"},
+    {"claim": "공식 상담기관에 문의할 때는 당사자·주소·계약기간·통지 목적·수령 여부를 구분해 제시한다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "통지기간·갱신 여부·계약 해지 사유는 계약 유형과 체결 시점에 따라 달라질 수 있다.",
+    "문자·이메일·등기우편의 효력은 개별 계약과 실제 수령 사실을 함께 확인해야 한다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:law.go.kr 주택임대차보호법 계약갱신요구권 갱신거절 통지", "date": "2026-08-19", "purpose": "갱신·종료 법적 틀"},
+    {"query": "site:easylaw.go.kr 주택 임대차 계약 종료 통지 퇴거", "date": "2026-08-19", "purpose": "공식 생활법령 설명"},
+    {"query": "site:epost.go.kr 내용증명 발송 증거 우편", "date": "2026-08-19", "purpose": "우편 발송·수령 기록"},
+    {"query": "site:kca.go.kr 임대차 분쟁조정 계약서 통지 보증금", "date": "2026-08-19", "purpose": "분쟁 증빙 준비"},
+    {"query": "임대차 만료 통지 문자 등기우편 보증금 정산 문안", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 글 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "주택임대차보호법", "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0003&lsiSeq=276291&urlMode=lsScJoRltInfoR", "publisher": "국가법령정보센터", "date": "2026-01-02", "accessed": "2026-08-19", "source_role": "official", "used_for": "갱신·종료 통지 법적 틀"},
+    {"id": "S2", "title": "찾기쉬운 생활법령정보 주택임대차", "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=2&cnpClsNo=2&csmSeq=629&popMenu=ov", "publisher": "법제처", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "갱신·퇴거 설명"},
+    {"id": "S3", "title": "인터넷우체국 내용증명 서비스", "url": "https://service.epost.go.kr/", "publisher": "우정사업본부", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "발송·수령 기록 경로"},
+    {"id": "S4", "title": "한국소비자원 분쟁조정 신청 절차", "url": "https://www.kca.go.kr/odr/pg/ma/pgProcssInfo2.do", "publisher": "한국소비자원", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "통지·보증금 분쟁 증빙"},
+    {"id": "S5", "title": "소비자24 공식 상담", "url": "https://www.consumer.go.kr/", "publisher": "소비자24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "공식 상담 정보 정리"}
+  ],
+  "data_points": [
+    {"claim": "갱신·종료 통지 법적 틀", "source_id": "S1", "claim_type": "legal_scope", "source_date": "2026-01-02", "supports_section": "계약서 확인"},
+    {"claim": "공식 생활법령 설명", "source_id": "S2", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "통지 목적"},
+    {"claim": "발송·수령 기록 경로", "source_id": "S3", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "증거 카드"},
+    {"claim": "분쟁 증빙 준비", "source_id": "S4", "claim_type": "procedure", "source_date": "undated", "supports_section": "이견 단계"},
+    {"claim": "공식 상담 정보", "source_id": "S5", "claim_type": "procedure", "source_date": "undated", "supports_section": "상담 요약"}
+  ]
+}

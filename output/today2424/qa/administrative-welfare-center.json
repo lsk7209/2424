@@ -1,0 +1,52 @@
+{
+  "article_id": "administrative-welfare-center",
+  "status": "done",
+  "score": 93,
+  "category_scores": {
+    "intent": 19,
+    "evidence": 19,
+    "originality": 19,
+    "utility": 20,
+    "voice": 16
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true,
+    "unsupported_eligibility_guarantee": true
+  },
+  "evidence": {
+    "visible_body_characters": 6008,
+    "hangul_characters": 4306,
+    "research_runs": 5,
+    "sources": 5,
+    "official_or_primary_sources": 5,
+    "article_persona": "article-personas/administrative-welfare-center.md",
+    "internal_links": ["/guide/online-transfer-address-guide", "/guide/move-in-day-document-pack", "/guide/jeonse-loan-documents-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/online-transfer-address-guide.mdx",
+    "output/today2424/drafts/move-out-checklist.mdx",
+    "output/today2424/drafts/jeonse-loan-documents-guide.mdx"
+  ],
+  "similarity_signals": {
+    "reused_template_phrase": false,
+    "reused_heading_sequence": false,
+    "reused_intro_frame": false,
+    "angle_overlap": false
+  },
+  "repair_attempted": "주소 변경 절차 안내와 복지 자격 확정을 분리하고, 제도 나열을 이사 후 창구 인계표와 후속 확인 기록으로 재구성했다.",
+  "remaining_risks": [
+    "사업별 대상·금액·서류·처리 일정은 지역과 가구 상황 및 신청 시점에 따라 달라질 수 있다.",
+    "복지멤버십 안내와 모의계산 결과는 실제 선정 통지가 아니며, 개별 서비스 신청 뒤 공적자료 조사와 담당기관 확인이 필요하다."
+  ],
+  "next_action": "발행 전 복지로와 정부24의 현재 화면·신청 경로 및 거주지 행정복지센터의 운영 정보를 다시 확인한다."
+}

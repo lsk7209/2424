@@ -1,0 +1,41 @@
+{
+  "article_id": "one-room-security-check",
+  "status": "research_complete",
+  "article_research_question": "혼자 사는 사람이 현관·도어락·공용부·귀가 동선·개인정보에서 불안을 과장하지 않고 확인 가능한 상태와 공식 도움 경로를 어떻게 기록하는가?",
+  "reader_outcome": "입주 전·후 관찰한 상태를 담당자 확인과 사진·연락 기록으로 연결하고, 지역 안전 서비스와 긴급 신고 경로를 별도 카드에 남긴다.",
+  "search_intent_insight": "기존 글은 CCTV와 골목 조도를 안전 판정 기준처럼 나열하며, 실제 작동 여부·관리 책임·개인정보 노출·긴급 대응의 기록 경로를 설명하지 않는다.",
+  "competitor_gap": "CCTV나 도어락의 존재를 안전 보장으로 쓰지 않고, 현관·공용부·개인정보를 관찰·문의·기록·대응으로 나눈다.",
+  "information_gain": "집을 고르는 체크리스트가 아니라 입주 안전 카드로 상태, 담당자, 증빙, 긴급 연락 경로를 한 칸씩 남기는 방법을 제공한다.",
+  "unique_angle": "자취방 보안을 장비 유무가 아니라 생활 공간에서 확인할 수 있는 상태와 도움 요청 경로를 보관하는 일로 다룬다.",
+  "source_interpretation": "경찰청 자료는 범죄예방·민원·112 순찰 같은 공적 도움 경로를, 서울시 안심이 자료는 서울 시민 대상 귀가모니터링·긴급신고·안심경로 같은 지역 서비스를 확인하는 경로로 쓴다. 개인정보보호위원회·KISA 자료는 비밀번호와 주소·연락처를 생활 기록에서 불필요하게 노출하지 않는 일반 원칙의 근거로 제한한다.",
+  "article_specific_details": [
+    {"claim": "서울시 안심이 앱은 귀가모니터링, 긴급신고, 안심경로, 안심시설물 정보 제공 기능을 안내한다.", "source_id": "S2"},
+    {"claim": "경찰청 생활안전경찰은 112 기동순찰 활동과 경찰관서 방범과·민원실 상담 경로를 안내한다.", "source_id": "S1"},
+    {"claim": "안심이 앱의 긴급신고는 자치구 CCTV 관제센터와 연계되지만 서비스 범위와 이용 조건은 지역 안내를 확인해야 한다.", "source_id": "S3"}
+  ],
+  "ymyl_category": "personal_safety_privacy",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": ["건물 CCTV의 실제 촬영 범위·영상 보관·공동현관 관리·도어락 교체 가능 여부는 각 건물의 관리주체와 임대차 조건에 따라 다르므로 현장과 관리 규정을 확인해야 한다."],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:police.go.kr 1인 가구 범죄예방 현관 도어락 안전", "date": "2026-08-19", "purpose": "경찰 상담·순찰·긴급 대응 공식 경로 조사"},
+    {"query": "site:seoul.go.kr 여성안심귀갓길 CCTV 안심이", "date": "2026-08-19", "purpose": "지역 안전 서비스와 기능 확인"},
+    {"query": "site:seoul.go.kr 안심이 앱 긴급신고 귀가모니터링", "date": "2026-08-19", "purpose": "안심이 서비스 범위·이용 조건 확인"},
+    {"query": "site:privacy.go.kr 개인정보 주소 연락처 공개 주의", "date": "2026-08-19", "purpose": "생활기록 개인정보 노출 최소화 원칙 조사"},
+    {"query": "site:kisa.or.kr 비밀번호 관리 안내", "date": "2026-08-19", "purpose": "도어락·계정 비밀번호 기록 주의의 공식 근거 조사"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "경찰청 서비스헌장: 생활안전경찰", "url": "https://www.police.go.kr/www/agency/intro/intro0601.jsp", "publisher": "경찰청", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "범죄예방·112 기동순찰·방범 상담의 공적 대응 경로"},
+    {"id": "S2", "title": "서울시 안심이 앱 안전안심 정보", "url": "https://culture.seoul.go.kr/night/sub/safety/view.do?pageIndex=1&safeId=28", "publisher": "서울특별시", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "안심경로·귀가모니터링·긴급신고·안심시설물 정보 확인"},
+    {"id": "S3", "title": "안심영상 서비스 시작", "url": "https://mediahub.seoul.go.kr/archives/2013766", "publisher": "서울특별시", "date": "2025-03-18", "accessed": "2026-08-19", "source_role": "official", "used_for": "지역 CCTV 관제 연계 서비스의 범위와 지역 확인 필요성"},
+    {"id": "S4", "title": "개인정보보호위원회 개인정보 보호 안내", "url": "https://www.privacy.go.kr/front/contents/cntntsView.do?contsNo=142", "publisher": "개인정보보호위원회", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "생활 기록에서 주소·연락처 등 개인정보 최소 노출 원칙"},
+    {"id": "S5", "title": "한국인터넷진흥원 ISMS 안내서", "url": "https://isms.kisa.or.kr/board/file/bbs_0000000000000001/41/FILE_000000000000074/2017032716011382674.pdf", "publisher": "한국인터넷진흥원", "date": "2017-03-27", "accessed": "2026-08-19", "source_role": "official", "used_for": "비밀번호를 평문·공개 기록에 두지 않는 정보보호 일반 원칙"}
+  ],
+  "data_points": [
+    {"claim": "경찰청은 112 기동순찰과 방범·민원 상담 경로를 안내한다", "source_id": "S1", "claim_type": "official_service", "source_date": "2026-08-19", "supports_section": "긴급한 상황은 체크리스트보다 도움 요청"},
+    {"claim": "서울 안심이는 귀가모니터링·긴급신고·안심경로·안심시설물 정보 제공 기능을 안내한다", "source_id": "S2", "claim_type": "official_service", "source_date": "2026-08-19", "supports_section": "귀가 동선을 한 번 직접 기록"},
+    {"claim": "지역 안전 서비스는 이용 조건과 관제 범위를 공식 안내에서 다시 확인해야 한다", "source_id": "S3", "claim_type": "official_service", "source_date": "2025-03-18", "supports_section": "지역 서비스는 보장 문구가 아니다"}
+  ]
+}

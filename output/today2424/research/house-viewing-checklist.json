@@ -1,0 +1,167 @@
+{
+  "article_id": "house-viewing-checklist",
+  "status": "research_complete",
+  "article_research_question": "원룸·오피스텔을 짧게 볼 때 생활 하자 관찰, 건물 정보 확인, 계약 전 권리 확인을 섞지 않고 어떤 기록과 다음 행동으로 분리할 수 있는가?",
+  "reader_outcome": "독자는 체크 항목을 암기하지 않고도 각 매물에서 같은 순서로 관찰한 뒤, 재방문·서면 질문·공식 조회·계약 보류 중 다음 행동을 고를 수 있다.",
+  "search_intent_insight": "검색 결과에는 채광·수압·곰팡이 목록이 많지만, 그 결과를 비교 가능한 기록과 계약 전 확인 순서로 연결하는 자료는 상대적으로 적다.",
+  "competitor_gap": "일반 체크리스트는 방 안 항목을 한 번에 나열한다. 이 글은 관찰 장소와 시점을 분리하고, 생활상 불편·관리 정보·권리 확인을 서로 다른 결정 경로로 보낸다.",
+  "information_gain": "30개 항목을 점수표로 쓰지 않고, 각 항목을 사진·메모·질문·보류로 귀결시키는 현장 기록 카드와 두 매물 비교 예시를 제공한다.",
+  "unique_angle": "좋은 방을 고르는 목록이 아니라, 첫 방문의 인상을 계약 전 검증 과제로 바꾸는 관찰-결정 체크리스트다.",
+  "source_interpretation": "주택임대차보호법은 입주 뒤의 법적 요건을, 건축물대장 규칙은 건물 정보와 열람 범위를, K-apt는 공개 대상 공동주택의 관리 정보를, 이웃사이센터는 소음 민원의 적용 범위를 설명한다. 따라서 이 글은 어느 하나를 현장 체감의 만능 판정 기준으로 쓰지 않고, 관찰 뒤에 확인할 공식 경로로만 연결한다.",
+  "angle_supporting_detail": {
+    "claim": "원룸·오피스텔의 생활 소음을 곧바로 공동주택 층간소음 전문기관의 대상이라고 단정할 수 없으므로, 소리의 발생 위치와 건물 형태를 먼저 기록해야 한다.",
+    "source_id": "S4"
+  },
+  "article_specific_details": [
+    {
+      "claim": "K-apt의 관리비·유지관리 정보는 의무관리대상 공동주택 중심 공개 정보이므로, 조회되지 않는 소규모 원룸을 ‘관리 정보가 없다’고 해석하지 않고 임대인 또는 관리주체에게 항목별 자료를 요청해야 한다.",
+      "source_id": "S3"
+    },
+    {
+      "claim": "건축물현황도에는 주차장·도로·출입구 같은 배치 정보가 포함될 수 있지만, 평면도와 단위세대평면도 열람에는 제한이 있어 현장 관찰을 서류 한 장으로 대체할 수 없다.",
+      "source_id": "S2"
+    },
+    {
+      "claim": "원룸·오피스텔은 층간소음 이웃사이센터 업무 대상에서 제외될 수 있으므로, 소음은 법적 명칭을 붙이기보다 발생원·시간·전달 경로를 기록해 관리주체에 질문하는 편이 안전하다.",
+      "source_id": "S4"
+    }
+  ],
+  "ymyl_category": "housing_safety",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [],
+  "source_conflicts": [],
+  "conflict_note": "개별 건물의 관리 방식과 계약 조건은 공개 정보만으로 확정할 수 없으므로, 본문은 개별 거래의 법적 효력이나 관리비 수준을 단정하지 않는다.",
+  "research_runs": [
+    {
+      "query": "site:law.go.kr 주택임대차보호법 제3조 대항력 주민등록 인도",
+      "date": "2026-08-19",
+      "purpose": "계약 뒤 요건과 현장 관찰의 경계를 확인"
+    },
+    {
+      "query": "site:law.go.kr 건축물대장의 기재 및 관리 등에 관한 규칙 건축물현황도",
+      "date": "2026-08-19",
+      "purpose": "건물 배치 정보와 열람 범위 확인"
+    },
+    {
+      "query": "site:k-apt.go.kr 공동주택관리정보시스템 관리비 유지관리이력 공개",
+      "date": "2026-08-19",
+      "purpose": "관리비 비교에 쓸 수 있는 공식 공개 정보의 범위 확인"
+    },
+    {
+      "query": "site:floor.noiseinfo.or.kr 원룸 오피스텔 층간소음 업무 대상",
+      "date": "2026-08-19",
+      "purpose": "소음 관찰을 법적 분류로 성급히 단정하지 않기 위한 적용 범위 확인"
+    },
+    {
+      "query": "집 보러 갈 때 체크리스트 원룸 오피스텔",
+      "date": "2026-08-19",
+      "purpose": "검색 의도와 일반 목록형 콘텐츠의 정보 공백 검토"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "주택임대차보호법 제3조(대항력 등)",
+      "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031734243",
+      "publisher": "국가법령정보센터",
+      "date": "2026-01-02",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "입주와 주민등록 요건은 계약 전 현장 체크와 별개의 단계라는 경계 설정"
+    },
+    {
+      "id": "S2",
+      "title": "건축물대장의 기재 및 관리 등에 관한 규칙 관련 해석례",
+      "url": "https://www.law.go.kr/LSW/expcInfoP.do?expcSeq=317631&mode=2",
+      "publisher": "국가법령정보센터",
+      "date": "2016-11-02",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "recent",
+      "used_for": "건축물현황도에 포함되는 배치 정보와 평면도 열람 제한 설명"
+    },
+    {
+      "id": "S3",
+      "title": "K-apt 공동주택관리정보시스템 개요 및 체계",
+      "url": "https://www.k-apt.go.kr/cmmn/kaptsystemintro.do",
+      "publisher": "공동주택관리정보시스템(K-apt)",
+      "date": "2024-10-01",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "공개 관리비·유지관리 정보의 활용 범위와 미조회 건물의 질문 경로 설정"
+    },
+    {
+      "id": "S4",
+      "title": "층간소음 이웃사이센터 업무 안내 및 FAQ",
+      "url": "https://floor.noiseinfo.or.kr/floornoise/home/guide/process.do",
+      "publisher": "층간소음 이웃사이센터",
+      "date": "2026-08-19",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "원룸·오피스텔과 공동주택의 소음 상담 적용 범위를 구분하는 주의 문구"
+    },
+    {
+      "id": "S5",
+      "title": "주택임대차보호법 제3조의6(확정일자 부여 및 임대차 정보제공 등)",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032085413",
+      "publisher": "국가법령정보센터",
+      "date": "2026-01-02",
+      "accessed": "2026-08-19",
+      "source_type": "official",
+      "source_role": "official",
+      "is_official": true,
+      "freshness": "current",
+      "used_for": "계약 체결 전 임대차 정보 확인은 현장 감상과 다른 공식 확인 단계라는 설명"
+    }
+  ],
+  "data_points": [
+    {
+      "claim": "입주와 주민등록을 마친 임차인의 대항력 관련 규정은 계약 전 집보기와 별도의 단계다.",
+      "source_id": "S1",
+      "claim_type": "policy",
+      "source_date": "2026-01-02",
+      "supports_section": "생활 체크와 권리 확인을 섞지 않는 이유"
+    },
+    {
+      "claim": "건축물현황도에는 배치도와 각 층·단위세대 평면도 등이 포함되나 일부 도면 열람에는 제한이 있다.",
+      "source_id": "S2",
+      "claim_type": "procedure",
+      "source_date": "2016-11-02",
+      "supports_section": "주소와 건물 종류를 확인하는 카드"
+    },
+    {
+      "claim": "K-apt는 의무관리대상 공동주택의 관리비·유지관리이력 등의 정보를 공개한다.",
+      "source_id": "S3",
+      "claim_type": "procedure",
+      "source_date": "2024-10-01",
+      "supports_section": "관리비 질문을 숫자 하나로 끝내지 않는 법"
+    },
+    {
+      "claim": "층간소음 이웃사이센터는 원룸과 오피스텔을 업무 대상에서 제외한다고 안내한다.",
+      "source_id": "S4",
+      "claim_type": "policy",
+      "source_date": "2026-08-19",
+      "supports_section": "소음은 민원 이름보다 발생 경로를 기록한다"
+    },
+    {
+      "claim": "주택임대차보호법은 계약 체결을 하려는 자의 확정일자 부여현황 등 임대차 정보 제공 근거를 둔다.",
+      "source_id": "S5",
+      "claim_type": "procedure",
+      "source_date": "2026-01-02",
+      "supports_section": "귀가 후 공식 확인으로 넘길 항목"
+    }
+  ]
+}

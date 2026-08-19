@@ -1,0 +1,40 @@
+{
+  "article_id": "studio-storage-planning-guide",
+  "status": "done",
+  "score": 92,
+  "category_scores": {"intent": 19, "evidence": 18, "originality": 20, "utility": 19, "voice": 16},
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "visible_body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 3584,
+    "hangul_characters": 2950,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/studio-storage-planning-guide.md",
+    "internal_links": ["/blog/room-measurement-mistakes", "/guide/rental-contract-special-clauses-guide", "/guide/entry-inspection-form-guide"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/room-measurement-mistakes.mdx",
+    "output/today2424/drafts/appliance-electric-bill-planning.mdx",
+    "output/today2424/drafts/entry-inspection-form-guide.mdx"
+  ],
+  "similarity_signals": {"reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "수납 제품 추천 대신 반입 경로·생활 통로·안전 설비·벽 고정·퇴거 복구를 한 장의 실측 흐름으로 연결했습니다.",
+  "remaining_risks": [
+    "건물 구조·관리규약·임대차 특약에 따라 반입·고정 조건이 달라집니다.",
+    "안전 기준은 개별 가구 배치를 자동 판정하지 않으므로 현장 확인이 필요합니다.",
+    "초안 상태이며 라이브 발행 전 최신 건물 규정과 임대인 동의를 재확인해야 합니다."
+  ],
+  "next_action": "편집 검토와 발행 승인 후에만 라이브 반영을 검토합니다."
+}

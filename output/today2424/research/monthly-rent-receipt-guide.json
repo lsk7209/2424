@@ -1,0 +1,81 @@
+{
+  "article_id": "monthly-rent-receipt-guide",
+  "status": "research_complete",
+  "research_runs": [
+    "기존 원문의 증빙 항목과 누락 분석",
+    "국세청 주택 임차료 신고·현금영수증 절차 확인",
+    "월세액 세액공제 관련 현행 법령 범위 확인",
+    "현금영수증 조회·자진발급 전환 기능 확인",
+    "임대차 자료의 주민등록번호 보관 위험 검토"
+  ],
+  "article_research_question": "월세를 냈다는 사실과 월세의 성격을 혼동하지 않으면서, 필요한 자료를 빠르게 찾고 개인정보 노출을 줄이는 보관 체계는 무엇인가?",
+  "reader_outcome": "계약 원본, 월별 지급 원본, 제출용 설명본을 분리하고 매달 한 번의 검산으로 누락을 찾는다.",
+  "serp_gap": "대개 영수증을 보관하라고만 말하고, 이체 화면·현금영수증·계약서가 각각 무엇을 보여 주는지와 공유용 사본의 개인정보 처리를 구분하지 않는다.",
+  "information_gain": "월세 증빙을 세무 결과를 위한 한 장의 서류가 아니라 지급 사실, 지급 명목, 계약 관계를 서로 교차 확인하는 3층 기록으로 설계한다.",
+  "source_interpretation": "국세청·법령 자료는 제도와 신고·조회 가능 여부를 설명하는 데만 사용한다. 개인의 공제·환급 가능 여부와 최종 세무 처리는 소득·주택·계약·신고 조건에 따라 달라질 수 있으므로 보장하지 않는다.",
+  "sources": [
+    {
+      "id": "S1",
+      "source_role": "official",
+      "title": "국세청 현금거래확인신청 및 주택임차료 신고",
+      "url": "https://j.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7798&mi=2473",
+      "accessed": "2026-08-19",
+      "used_for": "주택 임차료 신고 후 계약기간 중 현금영수증 자동 발급 안내와 계약 변경 시 별도 신고 필요성"
+    },
+    {
+      "id": "S2",
+      "source_role": "official",
+      "title": "국세청 손택스 현금영수증 미발급·발급거부 신고",
+      "url": "https://mob.tbcr.hometax.go.kr/jsonAction.do?actionId=UTBCRJB014F001",
+      "accessed": "2026-08-19",
+      "used_for": "근로자의 주택 임차료 신고와 계약기간 중 자동 발급 제도 안내"
+    },
+    {
+      "id": "S3",
+      "source_role": "official",
+      "title": "조세특례제한법 시행령 제95조 월세 세액공제",
+      "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0095&lsiSeq=286053&urlMode=lsScJoRltInfoR",
+      "accessed": "2026-08-19",
+      "used_for": "월세액 산정이 임대차계약서상 기간과 지급 월세액을 전제로 한다는 법령 맥락"
+    },
+    {
+      "id": "S4",
+      "source_role": "official",
+      "title": "국세청 손택스 현금영수증 발급현황 조회",
+      "url": "https://mob.tbcr.hometax.go.kr/jsonAction.do?actionId=UTBCRCB044F001",
+      "accessed": "2026-08-19",
+      "used_for": "현금영수증을 연도별·월별로 조회할 수 있는 기능"
+    },
+    {
+      "id": "S5",
+      "source_role": "official",
+      "title": "개인정보 보호법 제24조의2 주민등록번호 처리의 제한",
+      "url": "https://law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1020399263",
+      "accessed": "2026-08-19",
+      "used_for": "주민등록번호가 포함된 임대차 자료를 무심코 공유하지 않도록 하는 개인정보 최소화 원칙"
+    }
+  ],
+  "article_specific_details": [
+    {
+      "claim": "주택 임차료 신고는 최초 신고 뒤 계약기간 중 자동 발급되는 방식으로 안내되지만, 계약 연장·변경은 별도 신고가 필요할 수 있다.",
+      "source_id": "S1"
+    },
+    {
+      "claim": "계약서와 지급 기록은 각각 계약기간·약정과 실제 지급 시점·금액을 설명하는 서로 다른 원자료다.",
+      "source_id": "S3"
+    }
+  ],
+  "data_points": [
+    {
+      "claim": "손택스에서는 현금영수증 발급현황을 최근 3개년까지 연도별·월별로 조회할 수 있다고 안내한다.",
+      "source_id": "S4",
+      "supports_section": "현금영수증은 별도 층으로 보관하기"
+    },
+    {
+      "claim": "주민등록번호는 법령상 제한된 경우 외 처리 제한 대상이므로 계약서 사본을 공유할 때는 불필요한 식별정보 노출을 줄여야 한다.",
+      "source_id": "S5",
+      "supports_section": "공유본을 따로 만드는 이유"
+    }
+  ],
+  "fact_traceability_pass": true
+}

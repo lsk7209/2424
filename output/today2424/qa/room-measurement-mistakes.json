@@ -1,0 +1,56 @@
+{
+  "article_id": "room-measurement-mistakes",
+  "status": "done",
+  "score": 92,
+  "category_scores": {
+    "content_quality": 28,
+    "seo": 22,
+    "eeat": 15,
+    "technical_elements": 14,
+    "ai_citation_readiness": 13
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "body_length": true
+  },
+  "evidence": {
+    "visible_body_characters": 3606,
+    "hangul_characters": 3292,
+    "research_runs": 5,
+    "sources": 5,
+    "article_persona": "article-personas/room-measurement-mistakes.md",
+    "internal_links": ["/guide/studio-storage-planning-guide", "/checklist"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "personas/today2424/samples/sample-1.md",
+    "personas/today2424/samples/sample-2.md",
+    "output/today2424/drafts/appliance-electric-bill-planning.mdx",
+    "output/today2424/drafts/moving-checklist-d30.mdx"
+  ],
+  "similarity_signals": {
+    "reused_template_phrase": false,
+    "reused_heading_sequence": false,
+    "reused_intro_frame": false
+  },
+  "article_specific_detail_use": [
+    {"source_id": "S1", "draft_section": "냉장고는 제품 크기, 포장 상태, 설치 조건을 따로 봅니다", "verified": true},
+    {"source_id": "S3", "draft_section": "주문·배송·입주 사진을 하나의 기록 묶음으로 남깁니다", "verified": true},
+    {"source_id": "S5", "draft_section": "냉장고는 제품 크기, 포장 상태, 설치 조건을 따로 봅니다", "verified": true}
+  ],
+  "repair_attempted": "원문의 방 가로세로 중심 목록을 냉장고 제품치수·문폭·엘리베이터·공용부·설치 뒤 열림 여백을 순서대로 대조하는 반입 경로 기록으로 재구성했다.",
+  "remaining_risks": [
+    "제품의 포장 상태, 도어·손잡이 돌출, 설치 여유와 반입 가능 여부는 구매 모델과 판매처·설치 조건에 따라 달라 현행 안내를 다시 확인해야 한다.",
+    "엘리베이터·복도·관리규정은 건물별로 다르므로 현장 실측과 관리주체 확인이 필요하다.",
+    "초안 상태이며 라이브 발행은 별도 승인과 현행성 검토가 필요하다."
+  ],
+  "next_action": "별도 편집 검토 후 게시 후보에 편입한다."
+}

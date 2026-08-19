@@ -1,0 +1,59 @@
+{
+  "article_id": "first-appliance-budget-plan",
+  "status": "done",
+  "score": 93,
+  "category_scores": {
+    "content_quality": 29,
+    "seo": 22,
+    "eeat": 15,
+    "technical_elements": 14,
+    "ai_citation_readiness": 13
+  },
+  "hard_gate_results": {
+    "persona_consistency": true,
+    "fact_traceability": true,
+    "research_gate": true,
+    "content_uniqueness": true,
+    "article_contract_uniqueness": true,
+    "title_template_uniqueness": true,
+    "structure_variation": true,
+    "content_template_variation": true,
+    "heading_quality": true,
+    "body_length": true,
+    "no_unsupported_price_or_savings_guarantee": true
+  },
+  "evidence": {
+    "visible_body_characters": 3739,
+    "research_runs": 5,
+    "sources": 5,
+    "official_or_primary_sources": 5,
+    "article_persona": "article-personas/first-appliance-budget-plan.md",
+    "internal_links": ["/blog/appliance-electric-bill-planning", "/guide/appliance-inspection-form-guide", "/blog/room-measurement-mistakes", "/blog/moving-checklist-d30"],
+    "external_source_links": ["S1", "S2", "S3", "S4", "S5"]
+  },
+  "compared_rows": [
+    "output/today2424/drafts/appliance-electric-bill-planning.mdx",
+    "output/today2424/drafts/room-measurement-mistakes.mdx",
+    "output/today2424/drafts/secondhand-furniture-checklist.mdx",
+    "data/blog-posts.ts:first-appliance-budget-plan"
+  ],
+  "similarity_signals": {
+    "reused_template_phrase": false,
+    "reused_heading_sequence": false,
+    "reused_intro_frame": false,
+    "angle_overlap": "none; existing post lists priority items, while this draft uses a total-cost decision workbook with payment-timing hold rules."
+  },
+  "article_specific_detail_use": [
+    {"source_id": "S1", "draft_section": "제품값 옆에 총비용 결정표를 붙이세요", "verified": true},
+    {"source_id": "S2", "draft_section": "제품값 옆에 총비용 결정표를 붙이세요", "verified": true},
+    {"source_id": "S4", "draft_section": "처분 계획은 나중에 버리기가 아니라 입주 일정의 한 칸입니다", "verified": true},
+    {"source_id": "S5", "draft_section": "처분 계획은 나중에 버리기가 아니라 입주 일정의 한 칸입니다", "verified": true}
+  ],
+  "repair_attempted": "기존의 품목 순위·예산별 구성 중심 초안을 사용하지 않고, 입주 직전의 결제 보류 규칙과 반입·설치·처분 확인을 묶는 결정표 구조로 새로 작성했다.",
+  "remaining_risks": [
+    "모델별 설치 간격과 배관·전기 조건은 설명서 및 판매처 설치 안내를 다시 확인해야 한다.",
+    "배송·설치·철거·반품 비용과 일정은 주소·판매처·현장 조건에 따라 달라진다.",
+    "초안이므로 발행 전 내부 링크와 실제 콘텐츠 스키마를 별도로 점검해야 한다."
+  ],
+  "next_action": "발행하지 않음; 편집 검토 시 독자의 실제 입주 공간과 선택 모델에 맞게 빈칸을 채운다."
+}

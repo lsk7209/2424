@@ -1,0 +1,47 @@
+{
+  "article_id": "online-transfer-address-guide",
+  "status": "research_complete",
+  "research_runs": [
+    {"query": "정부24 온라인 전입신고 신청 공식", "date": "2026-08-19", "purpose": "온라인 신청 경로와 서비스 상태 확인 지점을 확인"},
+    {"query": "주민등록법 제16조 전입신고 14일 국가법령정보센터", "date": "2026-08-19", "purpose": "주소 이동 신고 기한과 관할 기준 확인"},
+    {"query": "주민등록법 시행령 전입신고 서식 유의사항 14일", "date": "2026-08-19", "purpose": "신고서의 유의사항·사실 확인·과태료 안내 확인"},
+    {"query": "찾기쉬운 생활법령 전입신고 확정일자 대항력", "date": "2026-08-19", "purpose": "전입신고와 임대차계약서 확정일자를 분리해 설명할 근거 확인"},
+    {"query": "정부24 주민등록 관련 통보서비스 주소변경사실", "date": "2026-08-19", "purpose": "전입신고 사실 통보와 주소변경 알림을 별도 절차로 기록하는 방법 확인"}
+  ],
+  "article_research_question": "온라인 전입신고를 제출한 뒤 주소·임대차·통보·민간 서비스 변경을 어떻게 분리 기록해야 누락을 찾을 수 있는가?",
+  "reader_outcome": "전입신고와 확정일자, 통보서비스, 민간 주소 변경을 각각 접수·완료 증거와 다음 확인일로 관리한다.",
+  "search_intent_insight": "검색 결과는 정부24 클릭 절차 또는 14일 기한을 알려주지만, 신청 완료 뒤 등본·계약서·우편물까지 이어지는 인수인계표는 부족하다.",
+  "competitor_gap": "전입신고만 하면 모든 주소가 자동으로 바뀐다는 오해가 많고, 확정일자·통보서비스·카드·통신 주소의 별도 처리와 증거 보관이 분리되어 있지 않다.",
+  "information_gain": "행정 신고와 민간 변경을 3개 묶음으로 나누고, 접수번호·완료 화면·등본 확인·개인정보 가림 상태를 체크하게 한다.",
+  "unique_angle": "전입신고 방법 안내가 아니라 이사 후 주소 변경 작업을 인수인계 봉투처럼 관리하는 증거·확인 순서다.",
+  "source_interpretation": "법령·생활법령은 신고 의무와 임대차 관련 확인의 배경으로만 사용한다. 개별 사건의 대항력·우선변제권 또는 신고 수리 결과를 보장한다고 단정하지 않는다.",
+  "sources": [
+    {"id": "S1", "title": "정부24", "url": "https://www.gov.kr/portal/main", "publisher": "행정안전부", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "정부24 민원 신청·조회 경로와 온라인 서비스 상태 확인"},
+    {"id": "S2", "title": "주민등록법 제16조 거주지의 이동", "url": "https://www.law.go.kr/LSW/lsPdfPrint.do?ancYnChk=0&bylChaChk=N&efGubun=Y&efYd=20240217&joAllCheck=Y&joEfOutPutYn=on&lsiSeq=253961&mokChaChk=N", "publisher": "국가법령정보센터", "date": "2024-02-17", "accessed": "2026-08-19", "source_role": "official", "used_for": "신거주지 전입 후 14일 이내 신고라는 기본 기한"},
+    {"id": "S3", "title": "주민등록법 시행령 전입신고서 유의사항", "url": "https://law.go.kr/LSW/flDownload.do?bylClsCd=110202&flSeq=163702297&gubun=", "publisher": "국가법령정보센터", "date": "2026-04-28", "accessed": "2026-08-19", "source_role": "official", "used_for": "신고 사실 확인·서식 유의사항·허위 신고 주의"},
+    {"id": "S4", "title": "주택임대차 전입신고 등 안내", "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=2&cnpClsNo=1&csmSeq=629&menuType=cnpcls&popMenu=ov", "publisher": "찾기쉬운 생활법령정보", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "전입신고와 임대차계약서 확정일자 확인의 관계"},
+    {"id": "S5", "title": "주민등록 관련 통보서비스", "url": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13110000039&HighCtgCD=A01008", "publisher": "정부24", "date": "undated", "accessed": "2026-08-19", "source_role": "official", "used_for": "전입신고 사실 통보·주소변경 사실 통보를 별도 신청하는 절차"}
+  ],
+  "article_specific_details": [
+    {"claim": "전입신고의 제출일과 처리 결과 확인일을 별도 칸으로 기록한다.", "source_id": "S1"},
+    {"claim": "새 거주지로 이동한 날부터 14일 이내 신고라는 기한을 일정표의 마감일로 둔다.", "source_id": "S2"},
+    {"claim": "전입신고만으로 임대차계약서 확정일자나 민간 주소가 모두 처리된다고 보지 않는다.", "source_id": "S4"},
+    {"claim": "전입신고 사실 통보서비스는 별도 민원으로 신청·확인할 수 있다.", "source_id": "S5"}
+  ],
+  "data_points": [
+    {"claim": "주민등록법 제16조는 신거주지에 전입한 날부터 14일 이내 전입신고를 규정한다.", "source_id": "S2", "supports_section": "마감일"},
+    {"claim": "전입신고 서식에는 사실 확인과 허위 신고 관련 유의사항이 있다.", "source_id": "S3", "supports_section": "신고 후 확인"},
+    {"claim": "임대차 관련 안내는 전입신고와 확정일자를 함께 확인할 필요를 설명한다.", "source_id": "S4", "supports_section": "임대차 봉투"},
+    {"claim": "정부24 통보서비스는 전입신고 사실 등을 문자 등으로 통보받는 별도 민원이다.", "source_id": "S5", "supports_section": "알림 레이어"}
+  ],
+  "fact_traceability_pass": true,
+  "ymyl_category": "legal",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "unresolved_claims": [
+    "온라인 전입신고의 대상·본인 인증·처리시간은 신청 시점 정부24 안내를 확인해야 한다.",
+    "전입신고와 확정일자가 개인의 모든 보증금 권리를 자동 보장하는 것은 아니다.",
+    "카드·통신·배송 주소는 각 사업자의 변경 정책과 계약에 따라 별도 처리해야 한다."
+  ],
+  "source_conflicts": []
+}

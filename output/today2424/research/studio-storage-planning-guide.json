@@ -1,0 +1,48 @@
+{
+  "article_id": "studio-storage-planning-guide",
+  "status": "research_complete",
+  "article_research_question": "좁은 원룸의 수납을 늘리기 전에 가구의 반입 경로·문폭·통로·비상 동선·퇴거 시 원상복구를 어떤 순서로 확인할 것인가?",
+  "reader_outcome": "수납가구를 사기 전에 실측값과 반입 경로를 기록하고, 통로를 막지 않는 배치와 임대차상 설치 조건을 확인할 수 있다.",
+  "search_intent_insight": "원룸 수납 글은 제품 추천과 면적별 가구 배치에 치우치지만, 현관·엘리베이터·회전 공간을 포함한 반입 검증과 임대차 기록을 연결하지 않는다.",
+  "competitor_gap": "수납량 계산만 제공하고 가구를 실제로 들여오는 경로, 창문·분전반·소화기·대피 동선의 여유, 벽 고정과 퇴거 복구를 함께 점검하는 글은 부족하다.",
+  "information_gain": "수납 계획을 물건 목록→가구 외곽 치수→반입 경로→생활 통로→고정·원상복구의 다섯 단계로 바꿔 구매 전 실패를 줄인다.",
+  "unique_angle": "좁은 방에 무엇을 더 넣을지보다, 들어오는 순간부터 나갈 때까지 가구의 ‘경로와 책임’을 기록하는 설계표로 구성한다.",
+  "source_interpretation": "건축·주택 관련 공식 규정은 안전과 구조, 공용·피난 동선을 확인하는 배경으로 사용한다. 민법상 임대인의 사용·수익 상태 유지와 계약 특약은 벽 고정·변경의 사전 동의와 퇴거 복구를 확인하는 맥락으로만 제시하며, 특정 가구의 설치 가능 여부를 법적으로 단정하지 않는다.",
+  "article_specific_details": [
+    {"claim": "가구의 반입 가능 여부는 방의 면적만이 아니라 현관·복도·엘리베이터·회전 공간의 실제 치수를 함께 확인해야 한다.", "source_id": "S1"},
+    {"claim": "수납가구가 문·분전반·소화기·피난 동선을 가리거나 공용부 통행을 방해하지 않는지 배치 전에 확인한다.", "source_id": "S2"},
+    {"claim": "벽·천장 고정이나 구조 변경은 임대차계약과 건물 규정에 따라 사전 동의·복구 조건을 확인해야 한다.", "source_id": "S3"},
+    {"claim": "입주 상태와 설치 전후 사진·문자 기록은 퇴거 시 변경 범위를 비교하는 자료가 될 수 있다.", "source_id": "S4"},
+    {"claim": "건물 유형과 관리규약에 따라 공용부 이용·반입 시간·엘리베이터 보호 규정이 다를 수 있다.", "source_id": "S5"}
+  ],
+  "ymyl_category": "housing_safety",
+  "ymyl_review": "pass",
+  "volatile": true,
+  "fact_traceability_pass": true,
+  "unresolved_claims": [
+    "가구 설치의 허용 여부는 건물 구조·관리규약·임대차 특약에 따라 달라진다.",
+    "법령의 안전 기준이 모든 소형 임대주택의 실내 배치를 직접 판정하는 것은 아니다."
+  ],
+  "source_conflicts": [],
+  "research_runs": [
+    {"query": "site:law.go.kr 건축법 시행령 피난 통로 출입구 장애물", "date": "2026-08-19", "purpose": "안전·통행 기준 확인"},
+    {"query": "site:law.go.kr 건축물 화재 안전 소화기 피난 동선", "date": "2026-08-19", "purpose": "공간 배치의 안전 범위"},
+    {"query": "site:law.go.kr 민법 제623조 임대인 수선의무 임대차 변경", "date": "2026-08-19", "purpose": "벽 고정과 임대차 맥락"},
+    {"query": "site:easylaw.go.kr 임대차 계약 원상회복 설치물", "date": "2026-08-19", "purpose": "설치 전후 기록과 복구"},
+    {"query": "원룸 수납 가구 반입 문폭 엘리베이터 통로 실측 체크", "date": "2026-08-19", "purpose": "검색 의도와 경쟁 글 공백 점검"}
+  ],
+  "sources": [
+    {"id": "S1", "title": "건축법 시행령 관련 조문", "url": "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026018353", "publisher": "국가법령정보센터", "date": "2026-03-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "반입 경로와 건축 기준의 배경"},
+    {"id": "S2", "title": "건축물 안전·피난 관련 법령 정보", "url": "https://www.law.go.kr/LSW/lsInfoP.do?ancYnChk=0&chrClsCd=010202&efYd=20260301&lsiSeq=279911&urlMode=lsInfoP", "publisher": "국가법령정보센터", "date": "2026-03-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "통로와 안전 설비 확인"},
+    {"id": "S3", "title": "민법 제623조 임대인의 의무", "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0623&lsiSeq=284415&urlMode=lsScJoRltInfoR", "publisher": "국가법령정보센터", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대차 상태 유지와 설치 동의"},
+    {"id": "S4", "title": "찾기쉬운 생활법령정보 임대차 안내", "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=2&cnpClsNo=2&csmSeq=629&popMenu=ov", "publisher": "법제처 찾기쉬운 생활법령정보", "date": "2026-08-19", "accessed": "2026-08-19", "source_role": "official", "used_for": "임대차 기록과 복구 확인"},
+    {"id": "S5", "title": "건축법 시행규칙·건물 관리 관련 법령", "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=279911", "publisher": "국가법령정보센터", "date": "2026-03-01", "accessed": "2026-08-19", "source_role": "official", "used_for": "건물 유형별 관리·공용부 확인"}
+  ],
+  "data_points": [
+    {"claim": "반입 경로와 안전 기준", "source_id": "S1", "claim_type": "technical_scope", "source_date": "2026-03-01", "supports_section": "실측 순서"},
+    {"claim": "통로와 안전 설비 확인", "source_id": "S2", "claim_type": "safety_scope", "source_date": "2026-03-01", "supports_section": "배치 금지선"},
+    {"claim": "임대차 상태 유지·설치 동의", "source_id": "S3", "claim_type": "legal_scope", "source_date": "2026-08-19", "supports_section": "벽 고정"},
+    {"claim": "임대차 기록과 복구", "source_id": "S4", "claim_type": "procedure", "source_date": "2026-08-19", "supports_section": "입주 기록"},
+    {"claim": "공용부 관리 확인", "source_id": "S5", "claim_type": "legal_scope", "source_date": "2026-03-01", "supports_section": "반입 예약"}
+  ]
+}

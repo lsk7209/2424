@@ -1,0 +1,14 @@
+{
+  "article_id": "officetel-contract-checklist",
+  "status": "done",
+  "score": 93,
+  "category_scores": {"intent": 19, "evidence": 19, "originality": 19, "utility": 20, "voice": 16},
+  "hard_gate_results": {"persona_consistency": true, "fact_traceability": true, "research_gate": true, "content_uniqueness": true, "article_contract_uniqueness": true, "title_template_uniqueness": true, "structure_variation": true, "content_template_variation": true, "heading_quality": true, "visible_body_length": true},
+  "evidence": {"visible_body_characters": 3960, "research_runs": 5, "sources": 5, "article_persona": "article-personas/officetel-contract-checklist.md", "internal_links": ["/guide/jeonse-insurance-guide", "/blog/deposit-transfer-checklist", "/guide/rental-contract-special-clauses-guide"], "external_source_links": ["S1", "S2", "S3", "S4", "S5"]},
+  "compared_rows": ["rental-contract-special-clauses-guide", "house-viewing-checklist", "moving-checklist-d30", "jeonse-insurance-guide"],
+  "similarity_signals": {"method": "7-token shingle Jaccard", "maximum_jaccard": 0.0, "threshold": 0.05, "reused_template_phrase": false, "reused_heading_sequence": false, "reused_intro_frame": false},
+  "repair_attempted": "계약서·확인설명서·등기 자료의 세 문서 대조 방식으로 전면 재작성했습니다.",
+  "remaining_risks": ["오피스텔의 보증·대출·세금 적용은 개별 용도와 계약 조건에 따라 달라질 수 있어 공식 기관 또는 전문가 확인이 필요합니다."],
+  "structure_type": "three-document contradiction scan",
+  "visual_elements": ["document-crosscheck-table", "use-purpose-triad", "closing-ten-minute-review"]
+}
