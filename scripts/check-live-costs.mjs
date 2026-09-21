@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { execFileSync, execSync } from "node:child_process";
+import { pathToFileURL } from "node:url";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
@@ -8,16 +9,42 @@ const failures = [];
 const warnings = [];
 const reports = [];
 
-function money(value) {
-  const number = Number(value);
-  return Number.isFinite(number) ? number : 0;
+function nonnegativeNumber(value, label, integer = false) {
+  const validType = typeof value === "number" ||
+    (typeof value === "string" && /^(?:0|[1-9]\d*)(?:\.\d+)?$/.test(value));
+  const number = validType ? Number(value) : NaN;
+  if (!Number.isFinite(number) || number < 0 || number > Number.MAX_SAFE_INTEGER ||
+      (integer && !Number.isSafeInteger(number))) {
+    throw new Error(`Invalid or missing ${label}`);
+  }
+  return number;
+}
+
+export function parseTursoUsage(body) {
+  const database = body?.database;
+  const total = database && Object.hasOwn(database, "usage") ? database.usage : database?.total;
+  return Object.fromEntries(["rows_read", "rows_written", "storage_bytes", "bytes_synced"].map(
+    (key) => [key, nonnegativeNumber(total?.[key], `Turso ${key}`, true)],
+  ));
+}
+
+export function parseVercelUsage(body) {
+  const totals = body && Object.hasOwn(body, "totals") ? body.totals : body?.grandTotal;
+  const billedCost = nonnegativeNumber(totals?.billedCost ?? totals?.billed_cost, "Vercel billed cost");
+  const effective = totals?.effectiveCost ?? totals?.effective_cost;
+  const effectiveCost = effective === undefined ? undefined : nonnegativeNumber(effective, "Vercel effective cost");
+  return { billedCost, effectiveCost };
 }
 
 function threshold(name, fallback) {
   const raw = process.env[name];
   if (raw == null || raw.trim() === "") return fallback;
   const value = Number(raw);
-  return Number.isFinite(value) ? value : fallback;
+  if (!Number.isFinite(value) || value < 0) {
+    failures.push(`Invalid threshold ${name}; expected a nonnegative finite number.`);
+    return fallback;
+  }
+  return value;
 }
 
 function emitNotice(kind, message) {
@@ -29,6 +56,9 @@ function emitNotice(kind, message) {
 }
 
 function checkThreshold(label, value, warnAt, failAt, unit = "") {
+  if (!Number.isFinite(warnAt) && !Number.isFinite(failAt)) {
+    warnings.push(`${label} has no configured budget threshold; usage is reported without budget alerts.`);
+  }
   if (Number.isFinite(failAt) && value >= failAt) {
     failures.push(`${label} is ${value}${unit}, at or above fail threshold ${failAt}${unit}.`);
   } else if (Number.isFinite(warnAt) && value >= warnAt) {
@@ -88,16 +118,20 @@ function checkVercelUsage() {
     }
     parsed = JSON.parse(stdout);
   } catch (error) {
-    const message = `Vercel usage check failed: ${error.message}`;
-    if (requireLiveSecrets) failures.push(message);
-    else warnings.push(message);
+    failures.push("Vercel usage check failed: CLI execution or JSON decoding failed. Verify credentials and CLI response.");
     return;
   }
 
-  const totals = parsed.totals || parsed.grandTotal || {};
-  const billedCost = money(totals.billedCost ?? totals.billed_cost ?? totals.cost ?? totals.effectiveCost);
-  const effectiveCost = money(totals.effectiveCost ?? totals.effective_cost ?? billedCost);
-  reports.push(`Vercel usage: billed cost ${billedCost} USD, effective cost ${effectiveCost} USD.`);
+  let usage;
+  try {
+    usage = parseVercelUsage(parsed);
+  } catch (error) {
+    failures.push(`Vercel usage check failed: ${error.message}`);
+    return;
+  }
+  const { billedCost, effectiveCost } = usage;
+  reports.push(`Vercel usage: billed cost ${billedCost} USD` +
+    (effectiveCost === undefined ? "." : `, effective cost ${effectiveCost} USD.`));
   checkThreshold(
     "Vercel billed cost",
     billedCost,
@@ -156,9 +190,10 @@ async function checkTursoUsage() {
     url.searchParams.set("from", from.toISOString());
     url.searchParams.set("to", to.toISOString());
 
-    let body;
+    let usage;
     try {
       const response = await fetch(url, {
+        signal: AbortSignal.timeout(30_000),
         headers: {
           Authorization: `Bearer ${token}`,
           Accept: "application/json",
@@ -167,19 +202,15 @@ async function checkTursoUsage() {
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
       }
-      body = await response.json();
+      usage = parseTursoUsage(await response.json());
     } catch (error) {
       const message = `Turso usage check failed for ${database}: ${error.message}`;
-      if (requireLiveSecrets) failures.push(message);
-      else warnings.push(message);
+      failures.push(message);
       continue;
     }
 
-    const total = body?.database?.total || {};
-    const rowsRead = Number(total.rows_read || 0);
-    const rowsWritten = Number(total.rows_written || 0);
-    const storageBytes = Number(total.storage_bytes || 0);
-    const bytesSynced = Number(total.bytes_synced || 0);
+    const { rows_read: rowsRead, rows_written: rowsWritten,
+      storage_bytes: storageBytes, bytes_synced: bytesSynced } = usage;
     reports.push(
       `Turso ${database}: rows_read ${rowsRead}, rows_written ${rowsWritten}, storage_bytes ${storageBytes}, bytes_synced ${bytesSynced}.`,
     );
@@ -199,26 +230,28 @@ async function checkTursoUsage() {
   }
 }
 
-console.log("# Live Cost Watch");
-checkVercelUsage();
-await checkTursoUsage();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  console.log("# Live Cost Watch");
+  checkVercelUsage();
+  await checkTursoUsage();
 
-for (const report of reports) console.log(`- ${report}`);
-for (const warning of warnings) emitNotice("warning", warning);
-for (const failure of failures) emitNotice("error", failure);
+  for (const report of reports) console.log(`- ${report}`);
+  for (const warning of warnings) emitNotice("warning", warning);
+  for (const failure of failures) emitNotice("error", failure);
 
-if (process.env.GITHUB_STEP_SUMMARY) {
-  const lines = [
-    "# Live Cost Watch",
-    "",
-    ...reports.map((line) => `- ${line}`),
-    ...warnings.map((line) => `- Warning: ${line}`),
-    ...failures.map((line) => `- Error: ${line}`),
-    "",
-  ];
-  await import("node:fs").then(({ appendFileSync }) => appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n")));
-}
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    const lines = [
+      "# Live Cost Watch",
+      "",
+      ...reports.map((line) => `- ${line}`),
+      ...warnings.map((line) => `- Warning: ${line}`),
+      ...failures.map((line) => `- Error: ${line}`),
+      "",
+    ];
+    await import("node:fs").then(({ appendFileSync }) => appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n")));
+  }
 
-if (failures.length > 0) {
-  process.exitCode = 1;
+  if (failures.length > 0) {
+    process.exitCode = 1;
+  }
 }

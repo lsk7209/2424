@@ -2,8 +2,8 @@ name: Live Cost Watch
 
 on:
   schedule:
-    # Weekly at 09:20 KST on Monday. GitHub cron uses UTC.
-    - cron: "20 0 * * 1"
+    # One representative daily check covers the trailing 24-hour usage window.
+    - cron: "20 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -25,6 +25,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Cost monitor regression guard
+        run: node --test scripts/check-live-costs.test.mjs
 
       - name: Static hosting cost audit
         run: node scripts/audit-hosting-costs.mjs --fail-on=critical
