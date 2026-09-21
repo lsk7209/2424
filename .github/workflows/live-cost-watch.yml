@@ -39,6 +39,7 @@ jobs:
           RUN_VERCEL_LIVE_CHECK: ${{ vars.RUN_VERCEL_LIVE_CHECK }}
           RUN_TURSO_LIVE_CHECK: ${{ vars.RUN_TURSO_LIVE_CHECK }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_TOKEN_EXPIRES_ON: ${{ vars.VERCEL_TOKEN_EXPIRES_ON }}
           VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
           VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
           VERCEL_BILLED_COST_WARN_USD: ${{ vars.VERCEL_BILLED_COST_WARN_USD }}

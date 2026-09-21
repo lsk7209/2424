@@ -36,6 +36,100 @@ export function parseVercelUsage(body) {
   return { billedCost, effectiveCost };
 }
 
+export function evaluateTokenExpiry(value, now = Date.now()) {
+  if (value == null || value === "") {
+    return { kind: "warning", message: "VERCEL_TOKEN_EXPIRES_ON is not configured; token expiry is unknown." };
+  }
+  const expiry = typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? Date.parse(`${value}T00:00:00.000Z`) : NaN;
+  if (!Number.isFinite(expiry) || new Date(expiry).toISOString().slice(0, 10) !== value) {
+    return { kind: "error", message: "Invalid VERCEL_TOKEN_EXPIRES_ON; expected a valid YYYY-MM-DD date." };
+  }
+  const remaining = expiry - now;
+  const daysRemaining = Math.ceil(remaining / 86_400_000);
+  if (remaining <= 0) {
+    return { kind: "error", daysRemaining, message: `VERCEL_TOKEN_EXPIRES_ON ${value} has passed (start of date UTC); rotate the Vercel token.` };
+  }
+  return { kind: remaining <= 14 * 86_400_000 ? "warning" : "report", daysRemaining,
+    message: `Vercel token expiry ${value}: ${daysRemaining} days remaining (start of date UTC).` };
+}
+
+const TURSO_BUDGET_MS = 240_000;
+const RETRYABLE_HTTP = new Set([408, 429, 500, 502, 503, 504]);
+const defaultSleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function tursoError(message, retryable = false) {
+  return Object.assign(new Error(message), { retryable });
+}
+
+function cancelBody(response) {
+  try { Promise.resolve(response?.body?.cancel()).catch(() => {}); } catch { /* Best effort. */ }
+}
+
+export async function readTursoUsage(url, token, options = {}) {
+  const now = options.now ?? Date.now;
+  const fetchUsage = options.fetch ?? globalThis.fetch;
+  const sleep = options.sleep ?? defaultSleep;
+  const deadline = options.deadline ?? now() + TURSO_BUDGET_MS;
+  const requestTimeoutMs = Math.min(options.requestTimeoutMs ?? 30_000, 30_000);
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const remaining = deadline - now();
+    if (remaining <= 0) throw tursoError("Turso time budget exhausted.");
+    const controller = new AbortController();
+    let timer, response;
+    const timedOut = new Promise((_, reject) => {
+      timer = setTimeout(() => {
+        controller.abort();
+        cancelBody(response);
+        reject(tursoError("Turso request timed out.", true));
+      }, Math.min(requestTimeoutMs, remaining));
+    });
+    let failure;
+    try {
+      return await Promise.race([timedOut, (async () => {
+        try {
+          response = await fetchUsage(url, { signal: controller.signal,
+            headers: { Authorization: `Bearer ${token}`, Accept: "application/json" } });
+        } catch {
+          throw tursoError("Turso network request failed.", true);
+        }
+        if (controller.signal.aborted) {
+          cancelBody(response);
+          throw tursoError("Turso request timed out.", true);
+        }
+        if (!response.ok) {
+          cancelBody(response);
+          throw tursoError(`HTTP ${response.status}`, RETRYABLE_HTTP.has(response.status));
+        }
+        let body;
+        try { body = await response.json(); } catch (error) {
+          cancelBody(response);
+          const networkFailure = error instanceof TypeError ||
+            error?.name === "AbortError" || error?.name === "TimeoutError";
+          throw tursoError(networkFailure ? "Turso response read failed." : "Invalid Turso JSON response.", networkFailure);
+        }
+        let usage;
+        try { usage = parseTursoUsage(body); } catch {
+          throw tursoError("Invalid or missing Turso usage counters.");
+        }
+        if (now() >= deadline) throw tursoError("Turso time budget exhausted.");
+        if (controller.signal.aborted) throw tursoError("Turso request timed out.", true);
+        return usage;
+      })()]);
+    } catch (error) {
+      failure = error;
+    } finally {
+      clearTimeout(timer);
+    }
+    if (now() >= deadline) throw tursoError("Turso time budget exhausted.");
+    if (!failure.retryable || attempt === 2) throw failure;
+    const delay = (attempt + 1) * 1000;
+    if (deadline - now() <= delay) throw tursoError("Turso time budget exhausted.");
+    options.onRetry?.(attempt + 1);
+    await sleep(delay);
+  }
+}
+
 function threshold(name, fallback) {
   const raw = process.env[name];
   if (raw == null || raw.trim() === "") return fallback;
@@ -79,6 +173,9 @@ function checkVercelUsage() {
     else warnings.push(message);
     return;
   }
+
+  const expiry = evaluateTokenExpiry(process.env.VERCEL_TOKEN_EXPIRES_ON);
+  (expiry.kind === "error" ? failures : expiry.kind === "warning" ? warnings : reports).push(expiry.message);
 
   const usageArgs = ["usage", "--format", "json", "--no-color", "--non-interactive"];
   if (process.env.VERCEL_SCOPE) usageArgs.push("--scope", process.env.VERCEL_SCOPE);
@@ -183,6 +280,7 @@ async function checkTursoUsage() {
   const to = new Date();
   const from = new Date(to.getTime() - 24 * 60 * 60 * 1000);
 
+  const deadline = Date.now() + TURSO_BUDGET_MS;
   for (const database of databases) {
     const url = new URL(
       `https://api.turso.tech/v1/organizations/${encodeURIComponent(organization)}/databases/${encodeURIComponent(database)}/usage`,
@@ -191,24 +289,16 @@ async function checkTursoUsage() {
     url.searchParams.set("to", to.toISOString());
 
     let usage;
+    let retries = 0;
     try {
-      const response = await fetch(url, {
-        signal: AbortSignal.timeout(30_000),
-        headers: {
-          Authorization: `Bearer ${token}`,
-          Accept: "application/json",
-        },
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-      usage = parseTursoUsage(await response.json());
+      usage = await readTursoUsage(url, token, { deadline, onRetry: count => { retries = count; } });
     } catch (error) {
       const message = `Turso usage check failed for ${database}: ${error.message}`;
       failures.push(message);
       continue;
     }
 
+    if (retries > 0) reports.push(`Turso ${database}: recovered after ${retries} ${retries === 1 ? "retry" : "retries"}.`);
     const { rows_read: rowsRead, rows_written: rowsWritten,
       storage_bytes: storageBytes, bytes_synced: bytesSynced } = usage;
     reports.push(
