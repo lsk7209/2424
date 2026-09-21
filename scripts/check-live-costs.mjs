@@ -264,6 +264,15 @@ async function checkTursoUsage() {
     .split(",")
     .map((value) => value.trim())
     .filter(Boolean);
+  const idleDatabases = new Set((process.env.TURSO_IDLE_DATABASES || "")
+    .split(",").map(value => value.trim()).filter(Boolean));
+  const unmonitoredIdleDatabases = [...idleDatabases].filter(database => !databases.includes(database));
+  if (unmonitoredIdleDatabases.length > 0) {
+    for (const database of unmonitoredIdleDatabases) {
+      failures.push(`Invalid TURSO_IDLE_DATABASES: ${database} is not listed in TURSO_DATABASES.`);
+    }
+    return;
+  }
 
   if (!token || !organization || databases.length === 0) {
     const missing = [
@@ -304,6 +313,12 @@ async function checkTursoUsage() {
     reports.push(
       `Turso ${database}: rows_read ${rowsRead}, rows_written ${rowsWritten}, storage_bytes ${storageBytes}, bytes_synced ${bytesSynced}.`,
     );
+    if (idleDatabases.has(database)) {
+      reports.push(`Turso ${database} idle-write guard active (warn on any writes).`);
+      if (rowsWritten > 0) {
+        warnings.push(`Turso ${database} is configured idle, but rows_written is ${rowsWritten} in the last 24 hours; check unexpected writes.`);
+      }
+    }
 
     checkThreshold(
       `Turso ${database} rows_read`,

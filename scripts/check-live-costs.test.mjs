@@ -39,7 +39,7 @@ function runTurso(body, overrides = {}, status = 200, prelude = "") {
   }; ${prelude} process.argv[1] = ${JSON.stringify(script)}; await import(${JSON.stringify(new URL('./check-live-costs.mjs', import.meta.url).href)});`;
   return spawnSync(process.execPath, ['--input-type=module', '-e', code], {
     encoding: 'utf8', timeout: 10000,
-    env: { ...process.env, GITHUB_STEP_SUMMARY: '', GITHUB_ACTIONS: '', RUN_VERCEL_LIVE_CHECK: '0', RUN_TURSO_LIVE_CHECK: '1', REQUIRE_LIVE_COST_SECRETS: '0', TURSO_API_TOKEN: 'fixture', TURSO_ORG_SLUG: 'fixture', TURSO_DATABASES: 'fixture', TURSO_ROWS_READ_WARN: '900000000', TURSO_ROWS_READ_FAIL: '1000000000', TURSO_ROWS_WRITTEN_WARN: '', TURSO_ROWS_WRITTEN_FAIL: '', ...overrides },
+    env: { ...process.env, GITHUB_STEP_SUMMARY: '', GITHUB_ACTIONS: '', RUN_VERCEL_LIVE_CHECK: '0', RUN_TURSO_LIVE_CHECK: '1', REQUIRE_LIVE_COST_SECRETS: '0', TURSO_API_TOKEN: 'fixture', TURSO_ORG_SLUG: 'fixture', TURSO_DATABASES: 'fixture', TURSO_IDLE_DATABASES: '', TURSO_ROWS_READ_WARN: '900000000', TURSO_ROWS_READ_FAIL: '1000000000', TURSO_ROWS_WRITTEN_WARN: '', TURSO_ROWS_WRITTEN_FAIL: '', ...overrides },
   });
 }
 test('CLI enforces thresholds against actual usage and records valid zero writes', () => {
@@ -59,6 +59,44 @@ test('CLI passes below budget with validated counters', () => {
   const result = runTurso({ database: { usage } });
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /rows_read 855000000/);
+});
+
+test('CLI warns once for writes to trimmed, deduplicated idle databases only', () => {
+  const result = runTurso({ database: { usage: { ...usage, rows_written: 1 } } }, {
+    TURSO_DATABASES: 'fixture,active', TURSO_IDLE_DATABASES: ' fixture, ,fixture ',
+    TURSO_ROWS_WRITTEN_WARN: '10', TURSO_ROWS_WRITTEN_FAIL: '20',
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.equal(result.stdout.match(/\[WARNING\] Turso fixture is configured idle/g)?.length, 1);
+  assert.match(result.stdout, /rows_written is 1 in the last 24 hours/);
+  assert.doesNotMatch(result.stdout, /Turso active is configured idle|at or above/);
+  const over = runTurso({ database: { usage: { ...usage, rows_written: 20 } } }, {
+    TURSO_IDLE_DATABASES: 'fixture', TURSO_ROWS_WRITTEN_FAIL: '20',
+  });
+  assert.equal(over.status, 1, over.stderr);
+  assert.match(over.stdout, /Turso fixture is configured idle/);
+  assert.match(over.stdout, /at or above fail threshold 20/);
+});
+
+test('CLI does not issue idle write warnings for zero writes or failed queries', () => {
+  for (const [body, status] of [[{ database: { usage } }, 0], [{ database: {} }, 1]]) {
+    const result = runTurso(body, { TURSO_IDLE_DATABASES: 'fixture' });
+    assert.equal(result.status, status, result.stderr);
+    assert.doesNotMatch(result.stdout, /is configured idle/);
+    if (status === 0) assert.match(result.stdout, /Turso fixture idle-write guard active \(warn on any writes\)/);
+    else assert.doesNotMatch(result.stdout, /idle-write guard active/);
+  }
+});
+
+test('CLI rejects idle databases absent from monitored databases before querying', () => {
+  for (const databases of ['fixture', '']) {
+    const result = runTurso({}, { TURSO_DATABASES: databases, TURSO_IDLE_DATABASES: ' missing,missing ' }, 200,
+      "globalThis.fetch = async () => { console.log('UNEXPECTED_FETCH'); throw new Error('unexpected'); };");
+    assert.equal(result.status, 1, result.stderr);
+    assert.match(result.stdout, /Invalid TURSO_IDLE_DATABASES: missing is not listed in TURSO_DATABASES/);
+    assert.equal(result.stdout.match(/Invalid TURSO_IDLE_DATABASES/g)?.length, 1);
+    assert.doesNotMatch(result.stdout, /UNEXPECTED_FETCH|rows_read/);
+  }
 });
 
 test('CLI exposes missing alert budgets and fails invalid configured thresholds', () => {
