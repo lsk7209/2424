@@ -3,9 +3,10 @@
 > 코드/아키텍처, SEO·AdSense·콘텐츠, 보안, CI/운영 4개 영역을 병렬 조사한 결과를 종합했습니다.
 > 코드 수정은 하지 않았고, 우선순위별 실행 항목만 정리했습니다.
 
-## 요약 (Top 5 즉시 조치 권장)
+## 요약 (Top 6 즉시 조치 권장)
 
-1. **CI에 빌드/린트/타입체크/콘텐츠 품질 게이트가 전혀 연결되어 있지 않음** — 현재 GitHub Actions는 비용 감시·배포 후 인덱싱만 돌고, `lint`/`tsc --noEmit`/`build`/`validate-seo`/`validate-content`/`validate-adsense` 등은 로컬 수동 실행 전용. 깨진 빌드나 정책 위반 콘텐츠가 그대로 배포될 수 있음.
+0. **[신규] Next.js 16.2.4에 미인증 원격 코드 실행(RCE) 취약점 2건 포함** — GitHub이 push 시 알린 "47개 취약점(심각 2, 높음 27, 보통 15, 낮음 3)"을 `npm audit`으로 직접 확인한 결과, 원인은 설치된 `next@16.2.4`. `>=16.0.0 <16.3.3` 범위 전체에 **CVSS 9.0 미인증 RCE**(Windows 호스팅 서버, [GHSA-p293-qw3h-jr36](https://github.com/advisories/GHSA-p293-qw3h-jr36))와 **Image Optimization API의 AVIF 처리 RCE**([GHSA-2xp9-vwfh-vxw4](https://github.com/advisories/GHSA-2xp9-vwfh-vxw4))가 존재. 같은 버전 범위에 미들웨어/프록시 우회, SSRF(Server Actions/rewrites), DoS(Cache Components/Image Optimization) 등 high 등급 24건이 추가로 걸림. **`next`를 16.3.3 이상(현재 최신 안정 16.3.6)으로 업그레이드하면 전부 해소됨** — 다른 어떤 항목보다 우선순위가 높음.
+1. **CI에 빌드/린트/타입체크/콘텐츠 품질 게이트가 전혀 연결되어 있지 않음** — 현재 GitHub Actions는 비용 감시·배포 후 인덱싱만 돌고, `lint`/`tsc --noEmit`/`build`/`validate-seo`/`validate-content`/`validate-adsense` 등은 로컬 수동 실행 전용. 깨진 빌드나 정책 위반 콘텐츠가 그대로 배포될 수 있음. (이 게이트가 있었다면 `npm audit`을 CI에 넣어 critical RCE도 자동 감지됐을 것.)
 2. **CSP가 `unsafe-inline`/`unsafe-eval`을 전면 허용** (`next.config.ts`) — XSS 방어 효과가 사실상 없음.
 3. **체크리스트/D-Day 페이지의 localStorage 초기화 방식이 하이드레이션 불일치를 유발** — 로드 시 화면이 깜빡이거나 SSR/CSR 불일치 경고 발생 가능.
 4. **`app/` 전체에 error.tsx/loading.tsx/not-found.tsx 없음** — 런타임 에러 시 스타일 없는 기본 에러 화면 노출.
@@ -14,6 +15,20 @@
 ---
 
 ## 1. 보안
+
+### Critical (신규 — 2026-09-27 추가 확인)
+- **의존성 취약점: `next@16.2.4`에 미인증 RCE 2건 포함, GitHub Dependabot 47건과 일치 확인**
+  - `npm audit --json` 결과: 총 14개 패키지, 취약점 합계 **critical 1 / high 9 / moderate 3 / low 1**. `next` 패키지 하나에만 개별 권고문(advisory) 26건이 걸려있어(패키지당 최고 심각도만 집계하는 npm audit과 달리 advisory 단위로 세는 GitHub 카운트와 합산하면 47건과 일치).
+  - **Critical (CVSS 9.0)**: [`GHSA-p293-qw3h-jr36`](https://github.com/advisories/GHSA-p293-qw3h-jr36) — Windows 호스팅 서버 대상 미인증 RCE. 영향 범위 `>=16.0.0 <16.3.3`.
+  - **Critical**: [`GHSA-2xp9-vwfh-vxw4`](https://github.com/advisories/GHSA-2xp9-vwfh-vxw4) — Image Optimization API가 AVIF 파일을 처리할 때 발생하는 미인증 RCE. 영향 범위 `>=16.0.0 <16.3.3`.
+  - **High 다수(24건)**: Server Components DoS, 미들웨어/프록시 우회(세그먼트 프리페치, i18n, Turbopack), Server Actions/rewrites SSRF, Cache Components 연결 고갈 DoS 등 — 전부 `<16.2.5`~`<16.3.3` 범위에서 수정됨.
+  - **현재 설치 버전 `16.2.4`는 위 모든 영향 범위 안에 포함** — 프로덕션이 그대로 노출된 상태.
+  - **조치**: `next`를 **16.3.3 이상(가장 최신 안정판 16.3.6 권장)**으로 업그레이드. `package.json`은 `^16.2.4`로 caret 범위가 열려 있으나 lockfile이 16.2.4에 고정되어 자동으로 올라가지 않았음 — `npm install next@latest` 후 회귀 테스트 필요.
+  - 그 외 transitive 의존성 high 취약점(전부 `fixAvailable: true`, `npm audit fix`로 해결 가능):
+    - `sharp` (high) — libvips/libheif CVE 다건, 이미지 처리 파이프라인에서 사용되므로 Next.js 업그레이드와 별개로 갱신 권장.
+    - `postcss` (high) — sourceMappingURL 경로 순회로 인한 임의 파일 읽기.
+    - `nanoid`, `js-yaml`, `browserslist`, `minimatch`, `brace-expansion`, `picomatch` (high) — 대부분 빌드 타임 전용 의존성의 ReDoS/DoS성 이슈로 런타임 노출은 낮지만, 무료로 고칠 수 있으므로 함께 정리 권장.
+  - **CI 게이트 부재와 직결**: 위 4번 항목("CI에 빌드/린트/타입체크 게이트 없음")이 해결되어 `npm audit --audit-level=high`가 PR/스케줄 워크플로우에 있었다면 이 critical RCE는 배포 전에 자동으로 잡혔을 문제.
 
 ### High
 - **CSP `unsafe-inline`/`unsafe-eval` 허용** — `next.config.ts:8` `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com ...`. GA4/AdSense 인라인 스니펫 때문에 열어둔 것으로 보이나, nonce/hash 기반 CSP로 전환하면 제거 가능.
@@ -95,18 +110,19 @@
 
 ---
 
-## 우선순위 실행 리스트 (영역 통합, 상위 10개)
+## 우선순위 실행 리스트 (영역 통합, 상위 11개)
 
-1. CI에 `lint` + `tsc --noEmit` + `build` 게이트 추가 (push/PR 시 실행)
-2. CSP에서 `unsafe-inline`/`unsafe-eval` 제거 (nonce/hash 방식 전환)
-3. `validate-seo`/`validate-content`/`validate-adsense`/`score-all-content-quality`를 CI 워크플로우에 연결
-4. 체크리스트/D-Day 페이지 localStorage 초기화를 `useEffect` 기반으로 수정 (하이드레이션 불일치 해소)
-5. CI 실패 알림 채널 추가 (Slack webhook 또는 이슈 자동 생성)
-6. `app/` 전역 `error.tsx`/`not-found.tsx` 추가
-7. GSC sitemap 재제출을 CI/cron으로 이전 (로컬 머신 의존 제거, `D:/env/...` 하드코딩 제거)
-8. OG 이미지를 글별 동적 생성으로 전환 (`next/og` 동적 세그먼트)
-9. BreadcrumbList JSON-LD 추가
-10. cron 인증 비교를 `crypto.timingSafeEqual`로 교체 + rate limit 검토
+1. **[최우선/신규] `next`를 16.3.3 이상(권장 16.3.6)으로 업그레이드** — 미인증 RCE 2건(critical) 해소, 회귀 테스트 필수
+2. `npm audit fix`로 sharp/postcss/nanoid/js-yaml 등 나머지 high 취약점 정리
+3. CI에 `lint` + `tsc --noEmit` + `build` + `npm audit --audit-level=high` 게이트 추가 (push/PR 시 실행)
+4. CSP에서 `unsafe-inline`/`unsafe-eval` 제거 (nonce/hash 방식 전환)
+5. `validate-seo`/`validate-content`/`validate-adsense`/`score-all-content-quality`를 CI 워크플로우에 연결
+6. 체크리스트/D-Day 페이지 localStorage 초기화를 `useEffect` 기반으로 수정 (하이드레이션 불일치 해소)
+7. CI 실패 알림 채널 추가 (Slack webhook 또는 이슈 자동 생성)
+8. `app/` 전역 `error.tsx`/`not-found.tsx` 추가
+9. GSC sitemap 재제출을 CI/cron으로 이전 (로컬 머신 의존 제거, `D:/env/...` 하드코딩 제거)
+10. OG 이미지를 글별 동적 생성으로 전환 (`next/og` 동적 세그먼트)
+11. BreadcrumbList JSON-LD 추가, cron 인증 비교를 `crypto.timingSafeEqual`로 교체
 
 ---
 
