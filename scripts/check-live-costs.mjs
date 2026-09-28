@@ -215,36 +215,16 @@ function checkVercelUsage() {
 
   let parsed;
   try {
-    const vercel = process.platform === "win32" ? "vercel.cmd" : "vercel";
-    let stdout;
-    try {
-      stdout =
-        process.platform === "win32"
-          ? execSync(["vercel", ...usageArgs].map((arg) => `"${String(arg).replace(/"/g, '\\"')}"`).join(" "), {
-              encoding: "utf8",
-              stdio: ["ignore", "pipe", "pipe"],
-              timeout: 120000,
-            })
-          : execFileSync(vercel, usageArgs, {
-              encoding: "utf8",
-              stdio: ["ignore", "pipe", "pipe"],
-              timeout: 120000,
-            });
-    } catch {
-      const npxArgs = ["--yes", "vercel@latest", ...usageArgs];
-      stdout =
-        process.platform === "win32"
-          ? execSync(["npx", ...npxArgs].map((arg) => `"${String(arg).replace(/"/g, '\\"')}"`).join(" "), {
-              encoding: "utf8",
-              stdio: ["ignore", "pipe", "pipe"],
-              timeout: 120000,
-            })
-          : execFileSync("npx", npxArgs, {
-              encoding: "utf8",
-              stdio: ["ignore", "pipe", "pipe"],
-              timeout: 120000,
-            });
-    }
+    // Vercel CLI 60 changed totals.billedCost to totals.cost (before credits).
+    // Pin the CLI whose billed-cost schema this alert validates.
+    const npxArgs = ["--yes", "vercel@50.44.0", ...usageArgs];
+    const stdout = process.platform === "win32"
+      ? execSync(["npx", ...npxArgs].map((arg) => `"${String(arg).replace(/"/g, '\\"')}"`).join(" "), {
+          encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], timeout: 120000,
+        })
+      : execFileSync("npx", npxArgs, {
+          encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], timeout: 120000,
+        });
     parsed = JSON.parse(stdout);
   } catch (error) {
     failures.push("Vercel usage check failed: CLI execution or JSON decoding failed. Verify credentials and CLI response.");
