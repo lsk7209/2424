@@ -42,6 +42,7 @@ test('Vercel response diagnostics disclose only allowlisted field names and valu
   assert.equal(shape, 'root=object; fields=totals:object,error:object,other:1,totals.fields:3,totals.names:billedCost|effectiveCost|other,totals.billedCost:string,totals.effectiveCost:number,error.code:string,error.message:string');
   assert.doesNotMatch(shape, /secret/);
   assert.equal(describeVercelResponseShape({ totals: { 'unsafe-secret/key': 1 } }), 'root=object; fields=totals:object,totals.fields:1,totals.names:other');
+  assert.equal(describeVercelResponseShape({ totals: { cost: { billed: 'secret-value', effective: 42 } } }), 'root=object; fields=totals:object,totals.fields:1,totals.names:cost,totals.cost.fields:2,totals.cost.names:billed|effective');
 });
 
 function runTurso(body, overrides = {}, status = 200, prelude = "") {
