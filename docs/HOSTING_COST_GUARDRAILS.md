@@ -68,7 +68,7 @@ Optional GitHub Variables for thresholds:
 - `RUN_VERCEL_LIVE_CHECK`
 - `RUN_TURSO_LIVE_CHECK`
 
-The Vercel cost thresholds apply to the selected team's cumulative current billing cycle, not a trailing 24-hour window or one project's cost. Once the threshold is exceeded, daily runs continue to fail for the rest of that billing cycle. Set the thresholds to the team's actual billing-cycle budget; keep the check failing when that budget is exceeded.
+The pinned Vercel CLI 50.44.0 reports the selected team's cumulative calendar-month-to-date billed cost when no date range is supplied. These thresholds do not apply to a trailing 24-hour window, the team's subscription billing cycle, or one project's cost. Once the threshold is exceeded, daily runs continue to fail until the calendar month resets. Set the thresholds to the team's intended calendar-month budget; keep the check failing when that budget is exceeded. Check the response `period` when changing CLI versions, since newer versions may use a different default window.
 
 ## Local Command
 

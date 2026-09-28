@@ -2,7 +2,7 @@ name: Live Cost Watch
 
 on:
   schedule:
-    # Daily check of billing-cycle Vercel totals and current Turso counters.
+    # Daily check of calendar-month-to-date Vercel totals and current Turso counters.
     - cron: "20 0 * * *"
   workflow_dispatch:
 
