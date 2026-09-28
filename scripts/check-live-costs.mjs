@@ -49,6 +49,11 @@ export function describeVercelResponseShape(body) {
   if (otherFields > 0) details.push(`other:${otherFields}`);
   for (const key of ["totals", "grandTotal", "error"]) {
     if (valueShape(body[key]) !== "object") continue;
+    if (key === "totals" || key === "grandTotal") {
+      const fieldNames = Object.keys(body[key]);
+      details.push(`${key}.fields:${fieldNames.length}`);
+      details.push(`${key}.names:${fieldNames.map(name => /^[A-Za-z][A-Za-z0-9_]{0,39}$/.test(name) ? name : "other").join("|") || "none"}`);
+    }
     for (const field of key === "error" ? ["code", "message", "status"] : ["billedCost", "billed_cost", "effectiveCost", "effective_cost"]) {
       if (Object.hasOwn(body[key], field)) details.push(`${key}.${field}:${valueShape(body[key][field])}`);
     }
