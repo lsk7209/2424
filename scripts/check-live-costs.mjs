@@ -36,6 +36,26 @@ export function parseVercelUsage(body) {
   return { billedCost, effectiveCost };
 }
 
+function valueShape(value) {
+  return value === null ? "null" : Array.isArray(value) ? "array" : typeof value;
+}
+
+export function describeVercelResponseShape(body) {
+  if (valueShape(body) !== "object") return `root=${valueShape(body)}`;
+  const knownFields = ["totals", "grandTotal", "error", "errors", "message", "code", "status"];
+  const presentFields = knownFields.filter(key => Object.hasOwn(body, key));
+  const otherFields = Object.keys(body).length - presentFields.length;
+  const details = presentFields.map(key => `${key}:${valueShape(body[key])}`);
+  if (otherFields > 0) details.push(`other:${otherFields}`);
+  for (const key of ["totals", "grandTotal", "error"]) {
+    if (valueShape(body[key]) !== "object") continue;
+    for (const field of key === "error" ? ["code", "message", "status"] : ["billedCost", "billed_cost", "effectiveCost", "effective_cost"]) {
+      if (Object.hasOwn(body[key], field)) details.push(`${key}.${field}:${valueShape(body[key][field])}`);
+    }
+  }
+  return `root=object; fields=${details.join(",") || "none"}`;
+}
+
 export function evaluateTokenExpiry(value, now = Date.now()) {
   if (value == null || value === "") {
     return { kind: "warning", message: "VERCEL_TOKEN_EXPIRES_ON is not configured; token expiry is unknown." };
@@ -223,7 +243,7 @@ function checkVercelUsage() {
   try {
     usage = parseVercelUsage(parsed);
   } catch (error) {
-    failures.push(`Vercel usage check failed: ${error.message}`);
+    failures.push(`Vercel usage check failed: ${error.message}; response shape: ${describeVercelResponseShape(parsed)}`);
     return;
   }
   const { billedCost, effectiveCost } = usage;

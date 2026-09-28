@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { parseTursoUsage, parseVercelUsage, evaluateTokenExpiry, readTursoUsage } from './check-live-costs.mjs';
+import { parseTursoUsage, parseVercelUsage, describeVercelResponseShape, evaluateTokenExpiry, readTursoUsage } from './check-live-costs.mjs';
 
 const usage = { rows_read: 855000000, rows_written: 0, storage_bytes: 120000, bytes_synced: 0 };
 test('Turso current usage and legacy total preserve real values and zero', () => {
@@ -29,6 +29,18 @@ test('Vercel billed cost is validated separately from effective cost', () => {
     assert.throws(() => parseVercelUsage({ totals }));
   }
   assert.throws(() => parseVercelUsage(null));
+});
+
+test('Vercel response diagnostics disclose only allowlisted field names and value types', () => {
+  assert.equal(describeVercelResponseShape(null), 'root=null');
+  assert.equal(describeVercelResponseShape([]), 'root=array');
+  const shape = describeVercelResponseShape({
+    totals: { billedCost: 'secret-cost', effectiveCost: 42, 'secret-nested-key': 'secret-nested-value' },
+    error: { code: 'secret-code', message: 'secret-message' },
+    'secret-top-level-key': 'secret-top-level-value',
+  });
+  assert.equal(shape, 'root=object; fields=totals:object,error:object,other:1,totals.billedCost:string,totals.effectiveCost:number,error.code:string,error.message:string');
+  assert.doesNotMatch(shape, /secret/);
 });
 
 function runTurso(body, overrides = {}, status = 200, prelude = "") {
@@ -132,6 +144,20 @@ test('Vercel CLI never reports effective-only or malformed totals as billed zero
   const over = runVercel({ totals: { billedCost: 41 } });
   assert.equal(over.status, 1, over.stderr);
   assert.match(over.stdout, /at or above fail threshold 40 USD/);
+});
+
+test('Vercel CLI failure distinguishes usage and error response shapes without exposing content', () => {
+  for (const [body, expected] of [
+    [{ totals: { effectiveCost: 99, billedCost: 'secret-billed-value' } }, /totals:object.*totals\.billedCost:string.*totals\.effectiveCost:number/],
+    [{ error: { code: 'secret-error-code', message: 'secret-error-message' }, 'secret-key': 'secret-value' }, /error:object,other:1,error\.code:string,error\.message:string/],
+    [[{ token: 'secret-array-value' }], /root=array/],
+  ]) {
+    const result = runVercel(body);
+    assert.equal(result.status, 1, result.stderr);
+    assert.match(result.stdout, /Invalid or missing Vercel billed cost; response shape:/);
+    assert.match(result.stdout, expected);
+    assert.doesNotMatch(result.stdout + result.stderr, /secret|billed cost 0 USD|at or above fail threshold/);
+  }
 });
 
 const zeros = { rows_read: 0, rows_written: 0, storage_bytes: 0, bytes_synced: 0 };
