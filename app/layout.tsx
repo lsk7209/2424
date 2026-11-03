@@ -168,6 +168,7 @@ export default function RootLayout({
           <GoogleAnalyticsTracker />
         </Suspense>
         {children}
+      <Script id="affiliate-os-fleet" src="https://multi-dashboard-one.vercel.app/fleet-widget.js" strategy="afterInteractive" />
       </body>
     </html>
   );
